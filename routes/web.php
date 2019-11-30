@@ -32,4 +32,5 @@ Route::group(['middleware' => 'auth'], function () {
     // FORUM
     Route::get('/forum/{csrf_token}', 'ForumController@index');
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
+    Route::get('/my-profile', 'profileController@index');
 });

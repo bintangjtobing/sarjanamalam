@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sarjanamalam Forum @yield('title')</title>
+    <title>Sarjanamalam Forum :: @yield('title')</title>
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -86,8 +86,8 @@
                                 <li role="presentation"><a href="#"
                                         role="menuitem"><strong>{{auth()->user()->name}}</strong></a></li>
                                 {{ csrf_field() }}
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">My Profile</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Inbox</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="/my-profile">My
+                                        Profile</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-3"
                                         href="/logout/{{auth()->user()->id}}{{$tokens}}">Log Out</a></li>
                             </ul>
@@ -101,6 +101,12 @@
 
         <section class="content">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 breadcrumbf">
+                        <a href="#">Sarjanamalam</a> <span class="diviver">&gt;</span> <a href="#">@yield('title')</a>
+                    </div>
+                </div>
+
                 @yield('content')
                 <div class="col-lg-4 col-md-4">
 

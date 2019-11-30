@@ -1,15 +1,6 @@
 @extends('forum.layouts.frontpage')
-@section('title',':: Add new threads')
+@section('title','Add new threads')
 @section('content')
-<div class="row">
-    <div class="col-lg-8 breadcrumbf">
-        <a href="#">Sarjanamalam</a> <span class="diviver">&gt;</span> <a href="#">General Discussion</a> <span
-            class="diviver">&gt;</span> <a href="#">New Topic</a>
-    </div>
-</div>
-</div>
-
-
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-8">

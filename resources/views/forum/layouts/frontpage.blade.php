@@ -83,7 +83,7 @@
                                     alt="avatar"><b class="caret"></b></a>
                             <div class="status green">&nbsp;</div>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="/{{Auth()->user()->username}}"
+                                <li role="presentation"><a href="/{{auth()->user()->username}}"
                                         role="menuitem"><strong>{{auth()->user()->name}}</strong></a></li>
                                 {{ csrf_field() }}
                                 <li role="presentation"><a role="menuitem" tabindex="-1"

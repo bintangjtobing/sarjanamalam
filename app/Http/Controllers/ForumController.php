@@ -25,12 +25,13 @@ class ForumController extends Controller
     public function addnewtopic()
     {
         $category_data = DB::table('category')
-            ->select('category.*')
+            ->join('sub_category', 'category.category_id', '=', 'sub_category.sub_category_id')
+            ->select('category.*', 'sub_category.*')
             ->get();
-        $subcat_data = DB::table('sub_category')
-            ->select('sub_category.*')
-            ->get();
-        return view('forum.fill.create_threads', ['category_data' => $category_data, 'subcat_data' => $subcat_data]);
+        // $subcat_data = DB::table('sub_category')
+        //     ->select('sub_category.*')
+        //     ->get();
+        return view('forum.fill.create_threads', ['category_data' => $category_data]);
     }
     /**
      * Show the form for creating a new resource.

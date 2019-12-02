@@ -39,7 +39,7 @@
                                 <div class="col-lg-6 col-md-6">
                                     <select name="subcategory" id="subcategory" class="form-control" required>
                                         <option value="" disabled selected>Select Subcategory</option>
-                                        @foreach ($subcat_data as $subcat)
+                                        @foreach ($category_data as $subcat)
                                         <option value="{{$subcat->sub_category}}">{{$subcat->sub_category}}</option>
                                         @endforeach
                                     </select>

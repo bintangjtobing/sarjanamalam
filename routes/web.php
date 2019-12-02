@@ -34,3 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
     Route::get('/{username}', 'profileController@index');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

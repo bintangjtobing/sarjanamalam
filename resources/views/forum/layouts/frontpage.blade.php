@@ -7,6 +7,8 @@
     <title>Sarjanamalam Forum :: @yield('title')</title>
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
     <!-- Bootstrap -->
     <link href="{{asset('/css/forum/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -117,15 +119,10 @@
                         <div class="divline"></div>
                         <div class="blocktxt">
                             <ul class="cats">
-                                <li><a href="#">Trading for Money <span class="badge pull-right">20</span></a></li>
-                                <li><a href="#">Vault Keys Giveway <span class="badge pull-right">10</span></a></li>
-                                <li><a href="#">Misc Guns Locations <span class="badge pull-right">50</span></a></li>
-                                <li><a href="#">Looking for Players <span class="badge pull-right">36</span></a></li>
-                                <li><a href="#">Stupid Bugs &amp; Solves <span class="badge pull-right">41</span></a>
-                                </li>
-                                <li><a href="#">Video &amp; Audio Drivers <span class="badge pull-right">11</span></a>
-                                </li>
-                                <li><a href="#">2K Official Forums <span class="badge pull-right">5</span></a></li>
+                                @foreach ($category_data as $cat)
+                                <li><a href="#">{{$cat->category}} <span
+                                            class="badge pull-right">{{$cat->count}}</span></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -257,9 +254,12 @@
                 <div class="col-lg-8 col-xs-9 col-sm-5 ">&copy; Copyrights 2019 <a href="/">Sarjanamalam</a></div>
                 <div class="col-lg-3 col-xs-12 col-sm-5 sociconcent">
                     <ul class="socialicons">
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://facebook.com/sarjanamalamdotcom" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://instagram.com/sarjanamalamdotcom" target="_blank"><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/sarjanamalamcom" target="_blank"><i
+                                    class="fab fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>

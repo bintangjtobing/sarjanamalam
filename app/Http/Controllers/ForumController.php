@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ForumController extends Controller
 {
@@ -13,11 +14,23 @@ class ForumController extends Controller
      */
     public function index()
     {
-        return view('forum.fill.home');
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $subcat_data = DB::table('sub_category')
+            ->select('sub_category.*')
+            ->get();
+        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data]);
     }
     public function addnewtopic()
     {
-        return view('forum.fill.create_threads');
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $subcat_data = DB::table('sub_category')
+            ->select('sub_category.*')
+            ->get();
+        return view('forum.fill.create_threads', ['category_data' => $category_data, 'subcat_data' => $subcat_data]);
     }
     /**
      * Show the form for creating a new resource.

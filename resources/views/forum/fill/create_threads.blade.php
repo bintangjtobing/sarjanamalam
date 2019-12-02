@@ -23,29 +23,32 @@
                         <div class="posttext pull-left">
 
                             <div>
-                                <input type="text" placeholder="Enter Topic Title" class="form-control" />
+                                <input type="text" name="subject" placeholder="Enter Topic Title" class="form-control"
+                                    required>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
-                                    <select name="category" id="category" class="form-control">
+                                    <select name="category" id="category" class="form-control custom-select" required>
                                         <option value="" disabled selected>Select Category</option>
-                                        <option value="op1">Option1</option>
-                                        <option value="op2">Option2</option>
+                                        @foreach ($category_data as $cat)
+                                        <option value="{{$cat->category}}">{{$cat->category}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <select name="subcategory" id="subcategory" class="form-control">
+                                    <select name="subcategory" id="subcategory" class="form-control" required>
                                         <option value="" disabled selected>Select Subcategory</option>
-                                        <option value="op1">Option1</option>
-                                        <option value="op2">Option2</option>
+                                        @foreach ($subcat_data as $subcat)
+                                        <option value="{{$subcat->sub_category}}">{{$subcat->sub_category}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div>
-                                <textarea name="desc" id="desc" placeholder="Description"
-                                    class="form-control"></textarea>
+                                <textarea name="thread" id="thread" placeholder="Type your discussion here..."
+                                    class="form-control" autofocus></textarea>
                             </div>
                             <div class="row newtopcheckbox">
                                 <div class="col-lg-6 col-md-6">
@@ -117,7 +120,8 @@
 
                         <div class="pull-right postreply">
                             <div class="pull-left smile"><a href="#"><i class="fa fa-smile-o"></i></a></div>
-                            <div class="pull-left"><button type="submit" class="btn btn-primary">Post</button></div>
+                            <div class="pull-left"><button type="submit" class="btn btn-primary">New topic
+                                    discussion</button></div>
                             <div class="clearfix"></div>
                         </div>
 

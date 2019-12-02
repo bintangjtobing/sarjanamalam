@@ -7,9 +7,21 @@
     <title>Sarjanamalam Forum :: @yield('title')</title>
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
-    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
-    <!-- Bootstrap -->
+    <meta name="title" content="Sarjanamalam Forum :: @yield('title')">
+    <meta name="description"
+        content="Complex search engine, including discussions in the community system. Sarjanamalam can help you in your lectures and daily activities.">
+    <meta name="keywords" content="sarjanamalam, sarjana, malam, forum sarjana, forum sarjana malam, forum,">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Sarjanamalam Forum">
+    <meta name="description"
+        content="Complex search engine, including discussions in the community system. Sarjanamalam can help you in your lectures and daily activities.">
+    <meta name="keywords" content="sarjanamalam, sarjana, malam, forum sarjana, forum sarjana malam, forum,">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Sarjanamalam.">
+
     <link href="{{asset('/css/forum/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom -->

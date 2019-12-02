@@ -14,7 +14,16 @@
 
     <!-- Custom -->
     <link href="{{asset('/css/forum/forum.css')}}" rel="stylesheet">
+    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js">
+    </script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            menubar: false,
+            toolbar: true,
+        });
 
+    </script>
     <!-- CSS STYLE-->
     <link rel="stylesheet" type="text/css" href="{{asset('/css/forum/style.css')}}" media="screen" />
 
@@ -26,7 +35,6 @@
 <body>
 
     <div class="container-fluid">
-
         <!-- Slider -->
         <div class="tp-banner-container">
             <div class="tp-banner">
@@ -47,17 +55,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-1 col-xs-3 col-sm-2 col-md-2 logo "><a href="/forum/{{$tokens}}"><img
-                                src="{{asset('storage/icon/logoforum.png')}}" alt="" /></a></div>
+                                src="{{asset('storage/icon/webicon-2.png')}}" class="weblogoforum"></a>
+                    </div>
                     <div class="col-lg-3 col-xs-9 col-sm-5 col-md-3 selecttopic">
-                        {{-- <div class="dropdown">
-                            <a data-toggle="dropdown" class="amenu" href="#">Title <b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Borderlands 1</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-2" href="#">Borderlands 2</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-3" href="#">Borderlands 3</a></li>
-
-                            </ul>
-                        </div> --}}
                     </div>
                     <div class="col-lg-4 search hidden-xs hidden-sm col-md-3">
                         <div class="wrap">
@@ -74,10 +74,55 @@
                         <div class="stnt pull-left">
 
                             <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
-                            <form action="/add-new-topic/{{$tokens}}" method="get" class="form">
-                                <button class="btn btn-primary">Start New Topic</button>
-                            </form>
+                            {{-- <form action="/add-new-topic/{{$tokens}}" method="get" class="form">
+                            <button class="btn btn-primary">Start New Topic</button>
+                            </form> --}}
+                            <button class="btn btn-primary" type="button" data-toggle="modal"
+                                data-target="#newDiscussion">Start New Topic</button>
                         </div>
+                        {{-- MODAL NEW TOPIC --}}
+                        <div class="modal fade" id="newDiscussion" tabindex="-1" role="dialog"
+                            aria-labelledby="newDiscussion" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newDiscussion">Topik Diskusi Baru</h5>
+                                        <small class="text-muted">Isi informasi dibawah untuk memulai diskusi
+                                            baru.</small>
+                                    </div>
+                                    <form action="/verify-add-new-topic/{{$tokens}}" method="post">
+                                        {{ csrf_field() }}
+                                        <div class="modal-body">
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <input type="text" name="subject" id="subject" class="form-control"
+                                                        placeholder="Judul diskusi">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <select name="category" class="form-control custom-select">
+                                                        <option selected disabled>Pilih kategori</option>
+                                                        @foreach ($category_data as $cat)
+                                                        <option value="{{$cat->category_id}}">
+                                                            {{$cat->category}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <textarea name="threads" id="" cols="30" rows="10"
+                                                        class="form-control">Tulis disini pembahasan diskusimu...</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-custom-sarjana"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- END MODAL NEW TOPIC --}}
                         <div class="env pull-left"><i class="fa fa-envelope"></i></div>
 
                         <div class="avatar pull-left dropdown">

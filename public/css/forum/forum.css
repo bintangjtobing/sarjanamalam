@@ -1299,3 +1299,80 @@ a.down:hover {
         padding: 0;
     }
 }
+
+.modal-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.modal-header .text-muted {
+    font-size: 13px;
+}
+
+.tox-statusbar__branding {
+    display: none !important;
+}
+
+.modal-footer {
+    border-top: 0px !important;
+}
+
+.modal-content {
+    background-color: #323232 !important;
+}
+
+.modal-content .form-control {
+    background-color: #323232 !important;
+    color: #fff !important;
+    border: 1px solid #fff;
+}
+
+.modal-content .form-group textarea {
+    background-color: #323232 !important;
+    color: #999 !important;
+    border: 1px solid #fff;
+}
+
+.btn-custom-sarjana {
+    background-color: transparent !important;
+    border: 2px solid var(--steel-blue) !important;
+    border-radius: 20px;
+    color: var(--steel-blue) !important;
+}
+
+.btn-custom-sarjana:hover {
+    border: 2px solid #4072bf !important;
+    color: #4072bf !important;
+    transition: .3s ease-in-out;
+}
+
+.weblogoforum {
+    max-width: 50px;
+    max-height: 100%;
+    margin-top: 10px;
+}
+
+.modal-body .col-md-12 {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.modal-header {
+    border-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.greenpost {
+    background-color: var(--steel-blue-s) !important;
+    border: 2px solid #d3e4fe;
+}
+
+.greenpost .posttext {
+    padding-top: 10px !important;
+}
+
+.greenpost small {
+    color: #fff !important;
+    font-size: 14px;
+}

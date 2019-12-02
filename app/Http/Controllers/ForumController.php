@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use \App\Thread;
 
 class ForumController extends Controller
 {
@@ -20,7 +21,10 @@ class ForumController extends Controller
         $subcat_data = DB::table('sub_category')
             ->select('sub_category.*')
             ->get();
-        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data]);
+        $threadsdata = DB::table('threads')
+            ->select('threads.*')
+            ->get();
+        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata]);
     }
     public function addnewtopic()
     {
@@ -38,9 +42,20 @@ class ForumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function verifyadd(Request $request)
     {
-        //
+        // $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
+        $threadsnew = new \App\Thread;
+        $threadsnew->subject = $request->subject;
+        $threadsnew->category_id = $request->category;
+        $threadsnew->sub_category_id = '0';
+        $threadsnew->thread = $request->threads;
+        $threadsnew->logIp = $request->getClientIp();
+        $threadsnew->created_by = auth()->user()->name;
+        $threadsnew->updated_by = auth()->user()->name;
+        $threadsnew->save();
+
+        return back()->with('suksestambahdiskusi', 'Berhasil');
     }
 
     /**

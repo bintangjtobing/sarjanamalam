@@ -138,10 +138,10 @@
                         <div class="env pull-left"><i class="fa fa-envelope"></i></div>
 
                         <div class="avatar pull-left dropdown">
-                            <a data-toggle="dropdown" href="#"><img src="{{asset('storage/img/user.jpg')}}"
-                                    alt="avatar"><b class="caret"></b></a>
+                            <a data-toggle="collapse" href="#" data-target=".navHeader"><img
+                                    src="{{asset('storage/img/user.jpg')}}" alt="avatar"><b class="caret"></b></a>
                             <div class="status green">&nbsp;</div>
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu navHeader" role="menu">
                                 <li role="presentation"><a href="/{{auth()->user()->username}}"
                                         role="menuitem"><strong>{{auth()->user()->name}}</strong></a></li>
                                 {{ csrf_field() }}
@@ -324,7 +324,9 @@
     </div>
 
     <!-- get jQuery from the google apis -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
     <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->

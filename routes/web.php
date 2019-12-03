@@ -13,6 +13,9 @@ Route::get('/', function () {
 Route::get('/signin/{tokens}', function () {
     return view('homepage.signin');
 })->name('login');
+Route::get('/signin', function () {
+    return view('homepage.signin');
+});
 Route::get('/daftar/{csrf_token}', function () {
     return view('homepage.daftar');
 });

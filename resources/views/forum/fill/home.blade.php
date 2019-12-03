@@ -19,7 +19,6 @@
                 <li class="hidden-xs hidden-md"><a href="#">11</a></li>
                 <li class="hidden-xs hidden-md"><a href="#">12</a></li>
                 <li class="hidden-xs hidden-sm hidden-md"><a href="#">13</a></li>
-                <li><a href="#">1586</a></li>
             </ul>
         </div>
         <div class="pull-left"><a href="#" class="prevnext last"><i class="fa fa-angle-right"></i></a></div>

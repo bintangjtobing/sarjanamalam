@@ -1,5 +1,6 @@
 @extends('forum.layouts.frontpage')
 @section('title','Home')
+@inject('userMod', 'App\UserMod')
 @section('content')
 <div class="row">
     <div class="col-lg-8 col-xs-12 col-md-8">
@@ -55,8 +56,13 @@
                 <div class="wrap-ut pull-left">
                     <div class="userinfo pull-left">
                         <div class="avatar">
-                            <img src="{{asset('storage/img/user.jpg')}}" alt="" />
-                            <div class="status green">&nbsp;</div>
+                            <img src="{{$userMod->getAvatar()}}" alt="" />
+                            <div class="status
+                                @if(auth()->user()->status=='active') green
+                                @else
+                                    red
+                                @endif
+                            ">&nbsp;</div>
                         </div>
 
                         <div class="icons">
@@ -67,6 +73,7 @@
                     <div class="posttext pull-left">
                         <h2><a href="#">{{$thread->subject}}</a></h2>
                         <p>{{$thread->thread}}</p>
+                        <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -78,7 +85,8 @@
                         </div>
                     </div>
                     <div class="views"><i class="fa fa-eye"></i> 1,568</div>
-                    <div class="time"><i class="fa fa-clock-o"></i> {{$thread->created_at}}</div>
+                    <?php $tanggalformat = date('d-m-Y',strtotime($thread->created_at)) ?>
+                    <div class="time"><i class="fa fa-clock-o"></i> {{$tanggalformat}}</div>
                 </div>
                 <div class="clearfix"></div>
             </div>

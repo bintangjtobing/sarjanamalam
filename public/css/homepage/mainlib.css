@@ -439,6 +439,9 @@ a {
 .avatar img {
     border-radius: 50%;
     margin-right: 5rem;
+    width: 37px;
+    height: 100%;
+
 }
 
 .avatar .status {

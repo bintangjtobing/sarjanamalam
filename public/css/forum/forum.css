@@ -242,6 +242,8 @@ ul.socialicons li a:hover {
 
 .avatar img {
     border-radius: 50%;
+    width: 37px;
+    height: 100%;
 }
 
 .avatar .status {

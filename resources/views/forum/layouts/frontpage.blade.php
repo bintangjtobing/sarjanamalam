@@ -1,3 +1,4 @@
+@inject('userMod', 'App\UserMod')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,16 +27,7 @@
 
     <!-- Custom -->
     <link href="{{asset('/css/forum/forum.css')}}" rel="stylesheet">
-    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js">
-    </script>
-    <script>
-        tinymce.init({
-            selector: 'textarea',
-            menubar: false,
-            toolbar: true,
-        });
 
-    </script>
     <!-- CSS STYLE-->
     <link rel="stylesheet" type="text/css" href="{{asset('/css/forum/style.css')}}" media="screen" />
 
@@ -121,7 +113,8 @@
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <textarea name="threads" id="" cols="30" rows="10"
-                                                        class="form-control">Tulis disini pembahasan diskusimu...</textarea>
+                                                        class="form-control"
+                                                        placeholder="Tulis disini pembahasan diskusimu..."></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -139,8 +132,11 @@
 
                         <div class="avatar pull-left dropdown">
                             <a data-toggle="collapse" href="#" data-target=".navHeader"><img
-                                    src="{{asset('storage/img/user.jpg')}}" alt="avatar"><b class="caret"></b></a>
-                            <div class="status green">&nbsp;</div>
+                                    src="{{$userMod->getAvatar()}}" alt="avatar"><b class="caret"></b></a>
+                            <div class="status @if(auth()->user()->status=='active') green
+                                @else
+                                    red
+                                @endif">&nbsp;</div>
                             <ul class="dropdown-menu navHeader" role="menu">
                                 <li role="presentation"><a href="/{{auth()->user()->username}}"
                                         role="menuitem"><strong>{{auth()->user()->name}}</strong></a></li>
@@ -184,7 +180,18 @@
                         </div>
                     </div>
 
-                    <!-- -->
+                    <!--ACTIVE THREADS -->
+                    <div class="sidebarblock">
+                        <h3>My Active Threads</h3>
+                        @foreach ($threadsdata as $threads)
+                        <div class="divline"></div>
+                        <div class="blocktxt">
+                            <a href="#">{{$threads->subject}}</a>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <!-- POLL OF THE WEEK-->
                     <div class="sidebarblock">
                         <h3>Poll of the Week</h3>
                         <div class="divline"></div>
@@ -240,30 +247,7 @@
                         </div>
                     </div>
 
-                    <!-- -->
-                    <div class="sidebarblock">
-                        <h3>My Active Threads</h3>
-                        <div class="divline"></div>
-                        <div class="blocktxt">
-                            <a href="#">This Dock Turns Your iPhone Into a Bedside Lamp</a>
-                        </div>
-                        <div class="divline"></div>
-                        <div class="blocktxt">
-                            <a href="#">Who Wins in the Battle for Power on the Internet?</a>
-                        </div>
-                        <div class="divline"></div>
-                        <div class="blocktxt">
-                            <a href="#">Sony QX10: A Funky, Overpriced Lens Camera for Your Smartphone</a>
-                        </div>
-                        <div class="divline"></div>
-                        <div class="blocktxt">
-                            <a href="#">FedEx Simplifies Shipping for Small Businesses</a>
-                        </div>
-                        <div class="divline"></div>
-                        <div class="blocktxt">
-                            <a href="#">Loud and Brave: Saudi Women Set to Protest Driving Ban</a>
-                        </div>
-                    </div>
+
 
 
                 </div>

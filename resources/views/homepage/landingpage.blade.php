@@ -1,4 +1,5 @@
 @extends('homepage.welcome')
+@inject('userMod', 'App\UserMod')
 @section('content')
 <div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
     <header class="masthead mb-auto">
@@ -8,8 +9,11 @@
                 <a href="/forum/{{$tokens}}" class="nav-link">Forum</a>
                 <a class="nav-link" disabled><span style="font-size: 14px;"><i class="fas fa-ellipsis-v"></i></span></a>
                 <div class="avatar pull-left dropdown">
-                    <a data-toggle="dropdown" href="#"><img src="{{asset('storage/img/user.jpg')}}" alt="avatar"></a>
-                    <div class="status green">&nbsp;</div>
+                    <a data-toggle="dropdown" href="#"><img src="{{$userMod->getAvatar()}}" alt="avatar"></a>
+                    <div class="status @if(auth()->user()->status=='active') green
+                        @else
+                            red
+                        @endif">&nbsp;</div>
                     <ul class="dropdown-menu text-center">
                         <li role="presentation"><a role="menuitem" href="/{{Auth()->user()->name}}"
                                 tabindex="-1"><strong>{{Auth()->user()->name}}</strong></a></li>

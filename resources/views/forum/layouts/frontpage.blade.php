@@ -183,12 +183,19 @@
                     <!--ACTIVE THREADS -->
                     <div class="sidebarblock">
                         <h3>My Active Threads</h3>
+                        @if(count($threadsdata)>0)
                         @foreach ($threadsdata as $threads)
                         <div class="divline"></div>
                         <div class="blocktxt">
                             <a href="#">{{$threads->subject}}</a>
                         </div>
                         @endforeach
+                        @else
+                        <div class="divline"></div>
+                        <div class="blocktxt">
+                            <a href="#">Gada topik yang aktif @emojione(':disappointed:')</a>
+                        </div>
+                        @endif
                     </div>
 
                     <!-- POLL OF THE WEEK-->

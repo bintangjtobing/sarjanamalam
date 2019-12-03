@@ -106,7 +106,7 @@
                     </div>
                     <div class="posttext pull-left">
                         <h2><a>
-                                Yahh... Belum ada postingan topik pembahasan nih! @emoji(':smile:');</a></h2>
+                                Yahh... Belum ada postingan topik pembahasan nih! @emojione(':cry:')</a></h2>
                         <small>Yuk buat topik pembahasan seputar apapun.<a data-toggle="modal"
                                 data-target="#newDiscussion">Mulai diskusi baru</a></small>
                     </div>

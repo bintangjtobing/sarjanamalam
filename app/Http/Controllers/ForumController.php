@@ -53,13 +53,14 @@ class ForumController extends Controller
         $threadsnew->subject = $request->subject;
         $threadsnew->category_id = $request->category;
         $threadsnew->sub_category_id = '0';
+        $threadsnew->users_id = auth()->user()->id;
         $threadsnew->thread = $request->threads;
         $threadsnew->logIp = $request->getClientIp();
         $threadsnew->created_by = auth()->user()->name;
         $threadsnew->updated_by = auth()->user()->name;
         $threadsnew->save();
 
-        return back()->with('suksestambahdiskusi', 'Berhasil');
+        return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
     }
 
     /**
@@ -113,8 +114,17 @@ class ForumController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Thread $thread)
+    public function deletethreads($id)
     {
-        //
+        $data_thread = Thread::find($id);
+
+        if ($data_thread) {
+            if ($data_thread->delete()) {
+
+                DB::statement('ALTER TABLE threads AUTO_INCREMENT = ' . (count(Thread::all()) + 1) . ';');
+
+                return back()->with('suksestambahdiskusi', 'Topik pembahasan berhasil dihapus.');
+            }
+        }
     }
 }

@@ -337,6 +337,12 @@
         }); //ready
 
     </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+    </script>
 
     <!-- END REVOLUTION SLIDER -->
 </body>

@@ -146,6 +146,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         ),
         'E' => 
         array (
+            'Emojione\\' => 9,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -160,6 +161,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'C' => 
         array (
             'Cron\\' => 5,
+            'ChristofferOK\\LaravelEmojiOne\\' => 30,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -408,6 +410,10 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
+        'Emojione\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/emojione/emojione/lib/php/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -439,6 +445,10 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'ChristofferOK\\LaravelEmojiOne\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/christofferok/laravel-emojione/src',
         ),
         'Carbon\\' => 
         array (
@@ -485,6 +495,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\ThreadController' => __DIR__ . '/../..' . '/app/Http/Controllers/ThreadController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Http\\Controllers\\category_subController' => __DIR__ . '/../..' . '/app/Http/Controllers/category_subController.php',
         'App\\Http\\Controllers\\profileController' => __DIR__ . '/../..' . '/app/Http/Controllers/profileController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -502,6 +513,8 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\Thread' => __DIR__ . '/../..' . '/app/Thread.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\UserMod' => __DIR__ . '/../..' . '/app/UserMod.php',
+        'App\\categoryDB' => __DIR__ . '/../..' . '/app/categoryDB.php',
+        'App\\subcategoryDB' => __DIR__ . '/../..' . '/app/subcategoryDB.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
         'BeyondCode\\DumpServer\\Dumper' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/Dumper.php',
@@ -542,6 +555,9 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'ChatterTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ChatterTableSeeder.php',
+        'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOne' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOne.php',
+        'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOneFacade.php',
+        'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOneServiceProvider.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -683,6 +699,11 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
+        'Emojione\\Client' => __DIR__ . '/..' . '/emojione/emojione/lib/php/src/Client.php',
+        'Emojione\\ClientInterface' => __DIR__ . '/..' . '/emojione/emojione/lib/php/src/ClientInterface.php',
+        'Emojione\\Emojione' => __DIR__ . '/..' . '/emojione/emojione/lib/php/src/Emojione.php',
+        'Emojione\\Ruleset' => __DIR__ . '/..' . '/emojione/emojione/lib/php/src/Ruleset.php',
+        'Emojione\\RulesetInterface' => __DIR__ . '/..' . '/emojione/emojione/lib/php/src/RulesetInterface.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',

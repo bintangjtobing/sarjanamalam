@@ -40,7 +40,7 @@
                     <div class="posttext pull-left">
                         <h2><a><span style="font-size:2.25rem;"><i class="far fa-check-circle"></i></span>
                                 Congratulations!</a></h2>
-                        <small class="text-muted">Yes! Topik diskusi kamu sudah berhasil diterbitkan.</small>
+                        <small class="text-muted">{{session('suksestambahdiskusi')}}</small>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -51,6 +51,7 @@
             </div>
             @endif
             <!-- POST -->
+            @if(count($threadsdata)>0)
             @foreach ($threadsdata as $thread)
             <div class="post">
                 <div class="wrap-ut pull-left">
@@ -66,8 +67,13 @@
                         </div>
 
                         <div class="icons">
+                            <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
                             <img src="{{asset('storage/icon/icon1.png')}}" alt="" /><img
                                 src="{{asset('storage/icon/icon4.png')}}" alt="" />
+                            <a href="/delete-threads/{{$thread->id}}/verify/{{$tokens}}"><span
+                                    style="font-size: 18px; color: #df5b5b;"><i class="fas fa-times-circle"
+                                        data-toggle="tooltip" data-placement="bottom"
+                                        title="Hapus topik"></i></span></a>
                         </div>
                     </div>
                     <div class="posttext pull-left">
@@ -91,5 +97,26 @@
                 <div class="clearfix"></div>
             </div>
             @endforeach
+            @else
+            <div class="post greenpost">
+                <div class="wrap-ut pull-left">
+                    <div class="userinfo pull-left">
+                        <div class="avatar">
+                        </div>
+                    </div>
+                    <div class="posttext pull-left">
+                        <h2><a>
+                                Yahh... Belum ada postingan topik pembahasan nih! @emoji(':smile:');</a></h2>
+                        <small>Yuk buat topik pembahasan seputar apapun.<a data-toggle="modal"
+                                data-target="#newDiscussion">Mulai diskusi baru</a></small>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="postinfo pull-left">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            @endif
         </div>
         @endsection

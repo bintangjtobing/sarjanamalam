@@ -1,0 +1,58 @@
+{
+    "name": "christofferok/laravel-emojione",
+    "type": "library",
+    "description": "Laravel helper for EmojiOne",
+    "keywords": [
+        "ChristofferOK",
+        "LaravelEmojiOne",
+        "laravel",
+        "emoji",
+        "emojione"
+    ],
+    "homepage": "https://github.com/christofferok/LaravelEmojiOne",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":Christoffer Korvald",
+            "email": "korvald@gmail.com",
+            "homepage": "https://christofferok.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "emojione/emojione": "^4.0.0",
+        "illuminate/support": "~5.1|~6.0"
+    },
+    "suggest": {
+        "emojione/assets": "If you want to serve the emojione assets yourself"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChristofferOK\\LaravelEmojiOne\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChristofferOK\\LaravelEmojiOne\\": "tests"
+        }
+    },
+    "scripts": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider"
+            ],
+            "aliases": {
+                "LaravelEmojiOne": "ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

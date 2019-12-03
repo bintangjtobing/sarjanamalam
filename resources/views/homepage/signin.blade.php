@@ -45,8 +45,7 @@
                     </div>
                 </div>
                 @endif
-                <input type="text" name="username" id="username" class="form-control" placeholder="Username / Email"
-                    required>
+                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password"
                     required>
                 <small class="form-text mb-3"><a href="/forgotpassword">Lupa password/email?</a></small>

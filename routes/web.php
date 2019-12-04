@@ -23,6 +23,9 @@ Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}{tokens}', 'AuthController@logout');
 
+// LINK DASHBOARD
+Route::get('/restricted', 'DashboardController@index');
+
 // LINK KHUSUS
 Route::get('/about', 'HomeController@about');
 Route::get('/private', 'HomeController@private');

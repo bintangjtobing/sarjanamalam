@@ -14,6 +14,7 @@ class DashboardController extends Controller
             ->get();
         return view('dashboard.home', ['usermg' => $usermg]);
     }
+    // USER
     public function usermgmt()
     {
         $usermg = DB::table('users')

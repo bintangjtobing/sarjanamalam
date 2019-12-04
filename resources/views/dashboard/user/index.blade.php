@@ -11,7 +11,7 @@
         <div class="main-card mb-3 card">
             <div class="card-body">
                 <h5 class="card-title">User Verified</h5>
-                <table id="userverified" class="mb-0 table table-hover display">
+                <table id="userverified" class="mb-0 table table-hover display table-responsive">
                     <thead>
                         <tr>
                             <th>#</th>

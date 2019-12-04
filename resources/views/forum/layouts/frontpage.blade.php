@@ -159,7 +159,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 breadcrumbf">
-                        <a href="#">Sarjanamalam</a> <span class="diviver">&gt;</span> <a href="#">@yield('title')</a>
+                        <a href="/home">Sarjanamalam</a> <span class="diviver">&gt;</span> <a
+                            href="#">@yield('title')</a>
                     </div>
                 </div>
 

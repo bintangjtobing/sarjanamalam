@@ -15,6 +15,10 @@
     <meta name="msapplication-tap-highlight" content="no">
     <link href="{{asset('/css/dashboard.css')}}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css" />
+
+
+
 </head>
 <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 
@@ -138,7 +142,7 @@
                         <ul class="vertical-nav-menu">
                             <li class="app-sidebar__heading">Dashboards</li>
                             <li>
-                                <a href="index.html" class="mm-active">
+                                <a href="/restricted/{{$tokens}}" class="mm-active">
                                     <i class="fas fa-rocket metismenu-icon"></i>
                                     Home
                                 </a>
@@ -181,6 +185,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="page-title-actions">
+                                <a href="@yield('modaldata')">
+                                    <button type="button" data-toggle="tooltip" title="@yield('faicon-desc')"
+                                        data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
+                                        <i class="fa @yield('faicon')"></i>
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     @yield('content')
@@ -191,6 +203,8 @@
         </div>
     </div>
     <script type="text/javascript" src="{{asset('/js/dashboard.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
 </body>
 
 </html>

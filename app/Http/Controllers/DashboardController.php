@@ -3,15 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.home');
+        $usermg = DB::table('users')
+            ->select('users.*')
+            ->get();
+        return view('dashboard.home', ['usermg' => $usermg]);
     }
     public function usermgmt()
     {
-        return view('dashboard.user.index');
+        $usermg = DB::table('users')
+            ->select('users.*')
+            ->get();
+        return view('dashboard.user.index', ['usermg' => $usermg]);
     }
 }

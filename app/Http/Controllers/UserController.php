@@ -15,7 +15,8 @@ class UserController extends Controller
         $data_member->name = $request->nama_lengkap;
         $data_member->username = $request->username;
         $data_member->email = $request->email;
-        $data_member->role = 'member';
+        $data_member->role = 'user';
+        $data_member->jabatan = 'user';
         $data_member->status = 'active';
         $data_member->password = Hash::make($request->password);
         $data_member->verified_password = $request->confirmation_password;

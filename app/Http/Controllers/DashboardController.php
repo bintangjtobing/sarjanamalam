@@ -8,6 +8,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.master');
+        return view('dashboard.home');
+    }
+    public function usermgmt()
+    {
+        return view('dashboard.user.index');
     }
 }

@@ -7,6 +7,9 @@
             <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64));?>
             <nav class="nav nav-masthead justify-content-end">
                 <a href="/forum/{{$tokens}}" class="nav-link">Forum</a>
+                @if (auth()->user()->role=='executive')
+                <a href="/restricted/{{$tokens}}" class="nav-link">Managements</a>
+                @endif
                 <a class="nav-link" disabled><span style="font-size: 14px;"><i class="fas fa-ellipsis-v"></i></span></a>
                 <div class="avatar pull-left dropdown">
                     <a data-toggle="dropdown" href="#"><img src="{{$userMod->getAvatar()}}" alt="avatar"></a>

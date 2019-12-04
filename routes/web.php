@@ -12,19 +12,16 @@ Route::get('/', function () {
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.signin');
-})->name('login');
+});
 Route::get('/signin', function () {
     return view('homepage.signin');
-});
+})->name('signin');
 Route::get('/daftar/{csrf_token}', function () {
     return view('homepage.daftar');
 });
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}{tokens}', 'AuthController@logout');
-
-// LINK DASHBOARD
-Route::get('/restricted', 'DashboardController@index');
 
 // LINK KHUSUS
 Route::get('/about', 'HomeController@about');
@@ -44,6 +41,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     // PROFILE CONTROLLER
     Route::get('/{username}', 'profileController@index');
+});
+// DASHBOARD CONTROLLER MENU
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/restricted/{tokens}', 'DashboardController@index');
+    Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
 });
 
 Auth::routes();

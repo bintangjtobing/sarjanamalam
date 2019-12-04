@@ -16702,7 +16702,7 @@
             return c.staticMapURL(t)
         }, c.staticMapURL = function(e) {
             var t, n = [],
-                i = ("file:" === location.protocol ? "http:" : location.protocol) + "//maps.googleapis.com/maps/api/staticmap";
+                i = ("file:" === location.protocol ? "https:" : location.protocol) + "//maps.googleapis.com/maps/api/staticmap";
             e.url && (i = e.url, delete e.url), i += "?";
             var r = e.markers;
             delete e.markers, !r && e.marker && (r = [e.marker], delete e.marker);

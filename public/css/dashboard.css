@@ -11056,7 +11056,7 @@ button,
 .app-header__logo .logo-src {
     height: 23px;
     width: 97px;
-    background: url(storage/img/logo-inverse.png)
+    background: url('/../storage/img/logo-inverse.png');
 }
 
 .app-header__menu,
@@ -11182,7 +11182,7 @@ button,
 }
 
 .app-header.header-text-light .app-header__logo .logo-src {
-    background: url(storage/img/logo.png)
+    background: url('../storage/img/logo.png')
 }
 
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner,
@@ -11559,7 +11559,7 @@ button,
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .logo-src {
-    background: url(storage/img/logo.png)
+    background: url('/../storage/img/logo.png')
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .hamburger-inner,
@@ -16920,8 +16920,8 @@ legend {
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
     font-weight: 900;
-    src: url(storage/fonts/fa-solid-900.eot);
-    src: url(storage/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(storage/fonts/fa-solid-900.woff2) format("woff2"), url(storage/fonts/fa-solid-900.woff) format("woff"), url(storage/fonts/fa-solid-900.ttf) format("truetype"), url(storage/fonts/fa-solid-900.svg#fontawesome) format("svg")
+    src: url('/public/storage/fonts/fa-solid-900.eot');
+    src: url('/public/storage/fonts/fa-solid-900.eot?#iefix') format("embedded-opentype"), url('../public/storage/fonts/fa-solid-900.woff2') format("woff2"), url('../public/storage/fonts/fa-solid-900.woff') format("woff"), url('/../storage/fonts/Pe-icon-7-stroke.ttf') format("truetype"), url('/public/storage/fonts/fa-solid-900.svg#fontawesome') format("svg")
 }
 
 .fa,

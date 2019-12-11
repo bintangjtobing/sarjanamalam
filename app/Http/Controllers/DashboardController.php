@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\UserMod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
@@ -40,5 +41,32 @@ class DashboardController extends Controller
     {
         $user  = \App\UserMod::find($id);
         return view('dashboard.user.edit', ['user' => $user]);
+    }
+    public function updateuser(Request $request, $id)
+    {
+        $user =  \App\UserMod::find($id);
+        // $user->update($request->all());
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->username = $request->username;
+        $user->password = Hash::make($request->password);
+        $user->verified_password = $request->confirmation_password;
+        $user->alamat = $request->address;
+        $user->kota = $request->city;
+        $user->provinsi = $request->state;
+        $user->kodepos = $request->zip;
+        $user->tanggallahir = $request->tanggallahir;
+        $user->bulanlahir  = $request->bulanlahir;
+        $user->tahunlahir = $request->tahunlahir;
+        $user->role = $request->role;
+        $user->jabatan = $request->jabatan;
+        if ($request->hasFile('displaypicture')) {
+            $request->file('displaypicture')->move('file/img/', $request->file('displaypicture')->getClientOriginalName());
+            $user->displaypic = $request->file('displaypicture')->getClientOriginalName();
+        }
+        $user->updated_by = auth()->user()->name;
+        dd($user);
+        // $user->save();
+        // return back()->with('sukses', 'Save successfully!');
     }
 }

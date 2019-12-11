@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
     Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
     Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
+    Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
 });
 
 Auth::routes();

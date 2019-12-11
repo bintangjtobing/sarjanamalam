@@ -82,7 +82,7 @@
             if (Pass.value != Confirm_pass.value) {
                 Confirm_pass.setCustomValidity("Password tidak sama. Ulangi kembali password kamu.");
             } else {
-                Confirm_pass.setCustomValidity("Password match!");
+                Confirm_pass.setCustomValidity("");
             }
         }
         Pass.onchange = validatePassword;

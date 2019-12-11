@@ -39,7 +39,7 @@
                         <div class="col-md-12">
                             <div class="position-relative form-group"><label for="exampleFile" class="">Your Display
                                     Picture</label><br>
-                                <input name="displaypicture" id="exampleFile" type="file" class="form-control-file">
+                                <input name="displaypic" type="file" class="form-control-file">
                                 <small class="form-text text-muted">Update gambar profil kamu disini.</small>
                             </div>
                         </div>

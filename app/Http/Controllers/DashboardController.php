@@ -60,13 +60,13 @@ class DashboardController extends Controller
         $user->tahunlahir = $request->tahunlahir;
         $user->role = $request->role;
         $user->jabatan = $request->jabatan;
-        if ($request->hasFile('displaypicture')) {
-            $request->file('displaypicture')->move('file/img/', $request->file('displaypicture')->getClientOriginalName());
-            $user->displaypic = $request->file('displaypicture')->getClientOriginalName();
+        if ($request->hasFile('displaypic')) {
+            $request->file('displaypic')->move(public_path('file/img/'), $request->file('displaypic')->getClientOriginalName());
+            $user->displaypic = $request->file('displaypic')->getClientOriginalName();
         }
         $user->updated_by = auth()->user()->name;
-        dd($user);
-        // $user->save();
-        // return back()->with('sukses', 'Save successfully!');
+
+        $user->save();
+        return back()->with('sukses', 'Save successfully!');
     }
 }

@@ -39,6 +39,6 @@ class DashboardController extends Controller
     public function edituser($id)
     {
         $user  = \App\UserMod::find($id);
-        return view('dashboard.user.add', ['user' => $user]);
+        return view('dashboard.user.edit', ['user' => $user]);
     }
 }

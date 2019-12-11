@@ -147,7 +147,19 @@
                         Security & Permissions Settings
                     </h3>
                     <div class="form-row">
-                        
+                        <div class="col-md-2">
+                            <div class="positive-relative form-group">
+                                <label for="">Role permissions</label>
+                                <select name="role" id="" class="custom-select">
+                                    <option value="@if($user->role=='user')User @endif">User</option>
+                                    <option value="@if($user->role=='member')Member @endif">Member</option>
+                                    <option value="@if($user->role=='executive')Executive @endif">Executive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+
+                        </div>
                     </div>
                     <div class=" position-relative form-check"><input name="check" id="exampleCheck" type="checkbox"
                             class="form-check-input"><label for="exampleCheck" class="form-check-label">Check me

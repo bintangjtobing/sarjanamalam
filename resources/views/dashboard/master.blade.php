@@ -170,6 +170,12 @@
                                             Content Threads
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="metismenu-icon"></i>
+                                            Otorisasi
+                                        </a>
+                                    </li>
                                 </ul>
                     </div>
                 </div>

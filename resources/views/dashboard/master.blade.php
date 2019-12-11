@@ -16,9 +16,10 @@
     <link href="{{asset('/css/dashboard.css')}}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 
-
-
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js">
+    </script>
 </head>
 <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 
@@ -187,14 +188,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="page-title-actions">
-                                <a href="@yield('modaldata')">
-                                    <button type="button" data-toggle="tooltip" title="@yield('faicon-desc')"
-                                        data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
-                                        <i class="fa @yield('faicon')"></i>
-                                    </button>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     @yield('content')

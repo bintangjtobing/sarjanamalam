@@ -74,4 +74,19 @@
             </form>
         </div>
     </div>
+    <script>
+        var Pass = document.getElementById('password');
+        var Confirm_pass = document.getElementById('confirmation_password')
+
+        function validatePassword() {
+            if (Pass.value != Confirm_pass.value) {
+                Confirm_pass.setCustomValidity("Password tidak sama. Ulangi kembali password kamu.");
+            } else {
+                Confirm_pass.setCustomValidity("Password match!");
+            }
+        }
+        Pass.onchange = validatePassword;
+        Confirm_pass.onkeyup = validatePassword;
+
+    </script>
     @endsection

@@ -46,6 +46,8 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/restricted/{tokens}', 'DashboardController@index');
     Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
+    Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
+    Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
 });
 
 Auth::routes();

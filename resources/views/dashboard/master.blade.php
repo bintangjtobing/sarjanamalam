@@ -83,7 +83,8 @@
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="dropdown-menu dropdown-menu-right">
                                             <a href="#" class="dropdown-item">User Account</a>
-                                            <a href="#" class="dropdown-item">Settings</a>
+                                            <a href="/edit/{{auth()->user()->id}}/{{$tokens}}"
+                                                class="dropdown-item">Settings</a>
                                             <a href="/logout/{{auth()->user()->id}}{{$tokens}}"
                                                 class="dropdown-item">Log Out</a>
                                         </div>

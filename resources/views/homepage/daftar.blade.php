@@ -56,12 +56,16 @@
                             <div class="form-group">
                                 <small class="form-text">Password</small>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="Password" required pattern=".{6,}">
+                                    placeholder="Password" required pattern=".{8,}">
+                                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show
+                                    Password</small>
                             </div>
                             <div class="form-group">
                                 <small class="form-text">Ulangi password</small>
                                 <input type="password" name="confirmation_password" placeholder="Ulangi password"
-                                    id="confirmation_password" class="form-control" required pattern=".{6,}">
+                                    id="confirmation_password" class="form-control" required pattern=".{8,}">
+                                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show
+                                    Password</small>
                             </div>
                             <small class="smallwarn">
                                 Gunakan minimal 8 password dengan campuran huruf, angka dan simbol.

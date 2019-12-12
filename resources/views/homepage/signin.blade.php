@@ -48,10 +48,22 @@
                 <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
                 <input type="password" name="password" id="password" class="form-control" placeholder="Password"
                     required>
+                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show Password</small>
                 <small class="form-text mb-3"><a href="/forgotpassword">Lupa password/email?</a></small>
                 <button type="submit" class="btn btn-sarjana">Masuk</button>
                 <small class="form-text mt-4">Belum punya akun? <a href="/daftar/{{$tokens}}">Buat akun!</a></small>
             </div>
         </form>
     </div>
+    <script>
+        function showPass() {
+            var Pass = document.getElementById('password');
+            if (Pass.type === "password") {
+                Pass.type = "text";
+            } else {
+                Pass.type = "password";
+            }
+        }
+
+    </script>
     @endsection

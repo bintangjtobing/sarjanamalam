@@ -16,6 +16,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
     <link rel="stylesheet" href="{!!asset('css/homepage/mainlib.css')!!}">
+    <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
 
 </head>
 @yield('content')

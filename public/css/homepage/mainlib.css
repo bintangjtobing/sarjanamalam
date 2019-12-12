@@ -436,6 +436,10 @@ a {
     position: relative;
 }
 
+.field-icon {
+    margin-left: 28px;
+}
+
 .avatar img {
     border-radius: 50%;
     margin-right: 5rem;

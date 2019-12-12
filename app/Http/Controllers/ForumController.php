@@ -62,7 +62,9 @@ class ForumController extends Controller
 
         return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
     }
-
+    public function detailsthreads(){
+        
+    }
     /**
      * Store a newly created resource in storage.
      *

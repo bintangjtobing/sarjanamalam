@@ -70,14 +70,16 @@
                             <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
                             <img src="{{asset('storage/icon/icon1.png')}}" alt="" /><img
                                 src="{{asset('storage/icon/icon4.png')}}" alt="" />
+                            @if($thread->created_by==auth()->user()->name )
                             <a href="/delete-threads/{{$thread->id}}/verify/{{$tokens}}"><span
                                     style="font-size: 18px; color: #df5b5b;"><i class="fas fa-times-circle"
                                         data-toggle="tooltip" data-placement="bottom"
                                         title="Hapus topik"></i></span></a>
+                            @endif
                         </div>
                     </div>
                     <div class="posttext pull-left">
-                        <h2><a href="#">{{$thread->subject}}</a></h2>
+                    <h2><a href="/details/{{$thread->id}}/">{{$thread->subject}}</a></h2>
                         <p>{{$thread->thread}}</p>
                         <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
                     </div>

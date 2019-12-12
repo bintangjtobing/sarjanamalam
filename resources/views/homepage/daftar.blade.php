@@ -64,7 +64,7 @@
                                 <small class="form-text">Ulangi password</small>
                                 <input type="password" name="confirmation_password" placeholder="Ulangi password"
                                     id="confirmation_password" class="form-control" required pattern=".{8,}">
-                                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show
+                                <span class="fas fa-eye field-icon" onclick="showVerifiedPass()"></span> <small>Show
                                     Password</small>
                             </div>
                             <small class="smallwarn">
@@ -78,6 +78,28 @@
             </form>
         </div>
     </div>
+    <script>
+        function showPass() {
+            var Pass = document.getElementById('password');
+            if (Pass.type === "password") {
+                Pass.type = "text";
+            } else {
+                Pass.type = "password";
+            }
+        }
+
+    </script>
+    <script>
+        function showVerifiedPass() {
+            var Pass = document.getElementById('confirmation_password');
+            if (Pass.type === "password") {
+                Pass.type = "text";
+            } else {
+                Pass.type = "password";
+            }
+        }
+
+    </script>
     <script>
         var Pass = document.getElementById('password');
         var Confirm_pass = document.getElementById('confirmation_password')

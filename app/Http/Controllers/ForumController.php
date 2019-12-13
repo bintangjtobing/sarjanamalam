@@ -62,8 +62,20 @@ class ForumController extends Controller
 
         return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
     }
-    public function detailsthreads(){
-        
+    public function detailsthreads($id)
+    {
+        $data_thread = DB::table('threads')
+            ->where('threads.id', '=', $id)
+            ->select('threads.*')
+            ->get();
+        $threadsdata = DB::table('threads')
+            ->select('threads.*')
+            ->orderBy('threads.created_at', 'DESC')
+            ->get();
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata]);
     }
     /**
      * Store a newly created resource in storage.

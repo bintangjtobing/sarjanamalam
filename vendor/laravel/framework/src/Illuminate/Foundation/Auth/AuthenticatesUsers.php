@@ -17,7 +17,7 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        return view('homepage.signin');
+        return view('auth.login');
     }
 
     /**
@@ -78,7 +78,6 @@ trait AuthenticatesUsers
      */
     protected function attemptLogin(Request $request)
     {
-        $request->merge(['status'=>'active']);
         return $this->guard()->attempt(
             $this->credentials($request), $request->filled('remember')
         );
@@ -92,7 +91,7 @@ trait AuthenticatesUsers
      */
     protected function credentials(Request $request)
     {
-        return $request->only($this->username(), 'password','status');
+        return $request->only($this->username(), 'password');
     }
 
     /**

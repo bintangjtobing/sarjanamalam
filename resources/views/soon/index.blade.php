@@ -26,7 +26,6 @@
 
     <script type="text/javascript" src="{!!asset('css/new/plugins/js/jquery.themepunch.tools.min.js')!!}"></script>
     <script type="text/javascript" src="{!!asset('css/new/plugins/js/jquery.themepunch.revolution.min.js')!!}"></script>
-
     <script type="text/javascript" src="{!!asset('css/new/plugins/js/revolution.extension.actions.min.js')!!}">
     </script>
     <script type="text/javascript" src="{!!asset('css/new/plugins/js/revolution.extension.carousel.min.js')!!}">
@@ -225,7 +224,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[0,0,0,0]"
                                 style="z-index: 16; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px 2px 2px 2px;border-radius:50% 50% 50% 50%;cursor:pointer;"><i
-                                    class="fab fa-facebook-f"></i> </a>
+                                    class="fab fa-facebook-f fa-2x"></i> </a>
 
                             <a class="tp-caption   tp-resizeme" target="_blank"
                                 href="https://twitter.com/sarjanamalamcom" id="slide-414-layer-17"
@@ -238,7 +237,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[0,0,0,0]"
                                 style="z-index: 17; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px 2px 2px 2px;border-radius:50% 50% 50% 50%;cursor:pointer;"><i
-                                    class="fab fa-twitter"></i> </a>
+                                    class="fab fa-twitter fa-2x"></i> </a>
 
                             <a class="tp-caption   tp-resizeme" target="_blank"
                                 href="https://instagram.com/sarjanamalamdotcom" id="slide-414-layer-18"
@@ -251,7 +250,7 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[0,0,0,0]"
                                 style="z-index: 18; min-width: 60px; max-width: 60px; max-width: 60px; max-width: 60px; white-space: nowrap; font-size: 20px; line-height: 60px; font-weight: 400; color: rgba(255, 255, 255, 1.00);font-family:Open Sans;border-color:rgba(255, 255, 255, 1.00);border-style:solid;border-width:2px 2px 2px 2px;border-radius:50% 50% 50% 50%;cursor:pointer;"><i
-                                    class="fab fa-instagram"></i> </a>
+                                    class="fab fa-instagram fa-2x"></i> </a>
                         </li>
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>

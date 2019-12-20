@@ -7,8 +7,11 @@ Route::get('/clear-cache', function () {
     return 'Sarjanamalam have already done optimized'; //Return anything
 });
 // HOMEPAGE WEB ROUTE
+// Route::get('/', function () {
+//     return view('homepage.home');
+// });
 Route::get('/', function () {
-    return view('homepage.home');
+    return view('soon.index');
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.signin');

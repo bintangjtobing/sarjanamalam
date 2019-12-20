@@ -12,49 +12,49 @@ Route::get('/clear-cache', function () {
 // });
 Route::get('/', function () {
     return view('soon.index');
-});
-Route::get('/signin/{tokens}', function () {
-    return view('homepage.signin');
-});
-Route::get('/signin', function () {
-    return view('homepage.signin');
-})->name('signin');
-Route::get('/daftar/{csrf_token}', function () {
-    return view('homepage.daftar');
-});
-Route::post('/create-account/{tokens}', 'UserController@create_account');
-Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
-Route::get('/logout/{id}{tokens}', 'AuthController@logout');
+// });
+// Route::get('/signin/{tokens}', function () {
+//     return view('homepage.signin');
+// });
+// Route::get('/signin', function () {
+//     return view('homepage.signin');
+// })->name('signin');
+// Route::get('/daftar/{csrf_token}', function () {
+//     return view('homepage.daftar');
+// });
+// Route::post('/create-account/{tokens}', 'UserController@create_account');
+// Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
+// Route::get('/logout/{id}{tokens}', 'AuthController@logout');
 
-// LINK KHUSUS
-Route::get('/about', 'HomeController@about');
-Route::get('/private', 'HomeController@private');
-Route::get('/help', 'HomeController@help');
-Route::get('/feedback', 'HomeController@feedback');
-Route::get('/how-search-works', 'HomeController@howsearch');
+// // LINK KHUSUS
+// Route::get('/about', 'HomeController@about');
+// Route::get('/private', 'HomeController@private');
+// Route::get('/help', 'HomeController@help');
+// Route::get('/feedback', 'HomeController@feedback');
+// Route::get('/how-search-works', 'HomeController@howsearch');
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index');
-    // FORUM
-    Route::get('/forum/{csrf_token}', 'ForumController@index');
-    Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
-    Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
-    Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
-    Route::get('/details/{id}', 'ForumController@detailsthreads');
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/home', 'HomeController@index');
+//     // FORUM
+//     Route::get('/forum/{csrf_token}', 'ForumController@index');
+//     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
+//     Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
+//     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
+//     Route::get('/details/{id}', 'ForumController@detailsthreads');
 
 
-    // PROFILE CONTROLLER
-    Route::get('/{username}', 'profileController@index');
-});
-// DASHBOARD CONTROLLER MENU
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/restricted/{tokens}', 'DashboardController@index');
-    Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
-    Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
-    Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
-    Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
-});
+//     // PROFILE CONTROLLER
+//     Route::get('/{username}', 'profileController@index');
+// });
+// // DASHBOARD CONTROLLER MENU
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/restricted/{tokens}', 'DashboardController@index');
+//     Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
+//     Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
+//     Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
+//     Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
+// });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

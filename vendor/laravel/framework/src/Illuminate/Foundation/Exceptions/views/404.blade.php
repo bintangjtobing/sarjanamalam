@@ -11,7 +11,6 @@
     <meta name="language" content="English">
 
     <title>404 Not Found | Sarjanamalam</title>
-
     <link href="{!!asset('css/new/css/plugins.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/style.css')!!}" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>

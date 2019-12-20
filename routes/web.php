@@ -12,7 +12,7 @@ Route::get('/clear-cache', function () {
 // });
 Route::get('/', function () {
     return view('soon.index');
-// });
+});
 // Route::get('/signin/{tokens}', function () {
 //     return view('homepage.signin');
 // });

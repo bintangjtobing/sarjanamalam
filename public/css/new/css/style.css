@@ -1,8 +1,72 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Poppins:100,200,400,500,600,700,800|Nunito:300,400,600,700,800";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap');
+
+:root {
+    --blue:
+        #217ABB !important;
+    --indigo:
+        #6610f2 !important;
+    --purple:
+        #6f42c1 !important;
+    --pink:
+        #e83e8c !important;
+    --red:
+        #ff1520 !important;
+    --orange:
+        #e9c14c !important;
+    --yellow:
+        #f9f10b !important;
+    --green:
+        #28a745 !important;
+    --teal:
+        #20c997 !important;
+    --cyan:
+        #17a2b8 !important;
+    --white:
+        #fff !important;
+    --gray:
+        #6c757d !important;
+    --gray-dark:
+        #343a40 !important;
+    --primary:
+        #007bff !important;
+    --secondary:
+        #6c757d !important;
+    --success:
+        #28a745 !important;
+    --info:
+        #17a2b8 !important;
+    --warning:
+        #ffc107 !important;
+    --danger:
+        #dc3545 !important;
+    --light:
+        #f8f9fa !important;
+    --dark:
+        #343a40 !important;
+
+    /* SARJANAMALAM THEME */
+    --candy-brown: #E9C14C !important;
+    --light-sea-green: #217ABB !important;
+    --steel-blue: #3363AC !important;
+    --saddle-brown: #6C3C1C !important;
+    --steel-blue-s: #2C64B4 !important;
+    --white-sarjana: #e9f8ff !important;
+    --black-sarjana: #0e1624 !important;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Montserrat" !important;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
 
 html {
-    overflow-x: hidden
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body .body-inner,
@@ -4826,11 +4890,12 @@ h6.font-parisienne {
 }
 
 .inspiro-slider .slide .slide-captions h1 {
-    font-size: 80px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 80px;
-    margin-bottom: 30px;
-    color: #fff
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .inspiro-slider .slide .slide-captions h2 {
@@ -19694,7 +19759,15 @@ video {
     height: 100%;
     content: ' ';
     z-index: 0;
-    background: rgba(0, 0, 0, .59);
+    background-color: #0e1624;
+    /* MOUNTAIN IMG */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%232b58a2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%232949b1' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23515dae' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%237151b9' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2332286d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239b4996' points='1203 546 1552 900 1162 900'/%3E%3Cppolygon fill='%23562550' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23723d67' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%233d4d82' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23965f52' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%232f2541' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23628a96' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-image: url('/storage/img/owl.svg'); */
+    height: 100% !important;
+    clear: both;
     opacity: .5
 }
 
@@ -20307,4 +20380,22 @@ body[data-bg-image] {
         right: 1px;
         top: 11px
     }
+}
+
+.footersarjana {
+    margin-right: 1rem;
+}
+
+.cariform {
+    padding: 1rem !important;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+}
+
+.sarjanasearchbtn {
+    border: none !important;
+    padding: 10px;
+    margin-left: -60px;
+    background-color: transparent;
 }

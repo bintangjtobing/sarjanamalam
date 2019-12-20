@@ -2,6 +2,7 @@
 @section('content')
 <div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
     <header class="masthead mb-auto">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <div class="inner">
             <nav class="nav nav-masthead justify-content-end">
                 <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>

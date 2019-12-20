@@ -8,7 +8,7 @@ Route::get('/clear-cache', function () {
 });
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    return view('homepage.home');
+    return view('homepage.home2');
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.signin');

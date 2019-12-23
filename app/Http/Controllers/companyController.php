@@ -8,6 +8,10 @@ class companyController extends Controller
 {
     public function about()
     {
-        return view('homepage.company.about');
+        return view('homepage.company.tentang');
+    }
+    public function blog()
+    {
+        return view('homepage.company.blog');
     }
 }

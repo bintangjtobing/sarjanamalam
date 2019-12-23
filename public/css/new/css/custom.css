@@ -42,3 +42,30 @@
     clear: both;
     opacity: .5
 }
+
+.grid-item h4 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 1rem !important;
+}
+
+.grid-item p {
+    color: rgb(51, 99, 172);
+    color: linear-gradient(4deg, rgba(51, 99, 172, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.grid-item .image-hover-zoom {
+    border-radius: 30px !important;
+}
+
+.grid-item>img,
+.grid-item>a>img {
+    border-radius: 10px !important;
+}
+
+#header .header-inner #logo a,
+#header .header-inner #logo a span,
+#header #header-wrap #logo a,
+#header #header-wrap #logo a span {
+    font-size: 30px !important;
+}

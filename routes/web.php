@@ -25,10 +25,11 @@ Route::get('/logout/{id}{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
 Route::get('/tentang-sarjana-malam', 'companyController@about');
-Route::get('/private', 'companyController@private');
+Route::get('/privacy', 'companyController@private');
 Route::get('/help', 'companyController@help');
 Route::get('/feedback', 'companyController@feedback');
 Route::get('/how-search-works', 'companyController@howsearch');
+Route::get('/blog', 'companycontroller@blog');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

@@ -66,7 +66,6 @@
 
 html {
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 body .body-inner,
@@ -1495,7 +1494,8 @@ section {
 #header #header-wrap #logo a span {
     font-family: poppins, sans-serif;
     font-size: 40px;
-    color: #1f1f1f;
+    color: rgb(51, 99, 172);
+    color: linear-gradient(4deg, rgba(51, 99, 172, 1) 0%, rgba(0, 212, 255, 1) 100%);
     font-weight: 800;
     letter-spacing: 1.5px
 }
@@ -1714,7 +1714,8 @@ section {
 #header.dark .header-inner #logo a span,
 #header.dark #header-wrap #logo a,
 #header.dark #header-wrap #logo a span {
-    color: #fff
+    color: rgb(51, 99, 172);
+    color: linear-gradient(4deg, rgba(51, 99, 172, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .dark #header .header-inner .lines,
@@ -2559,7 +2560,8 @@ section {
 
 .dark #mainMenu nav>ul>li>a,
 #mainMenu.dark nav>ul>li>a {
-    color: #fff
+    color: rgb(51, 99, 172);
+    color: linear-gradient(4deg, rgba(51, 99, 172, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .dark #mainMenu nav>ul>li.hover-active>a,
@@ -2578,7 +2580,12 @@ section {
 #mainMenu.dark nav>ul>li:hover>span,
 #mainMenu.dark nav>ul>li:focus>a,
 #mainMenu.dark nav>ul>li:focus>span {
-    color: #e2e2e2
+    color: #3394d0 !important;
+
+}
+
+.active {
+    color: #3394d0 !important;
 }
 
 .dark #mainMenu nav>ul>li.dropdown:before,
@@ -20351,7 +20358,7 @@ body[data-bg-image] {
     a>span.logo-dark::after {
         position: absolute;
         content: "";
-        background: #2250fc;
+        background: transparent;
         width: 13px;
         height: 13px;
         border-radius: 50%;
@@ -20362,7 +20369,7 @@ body[data-bg-image] {
     a>span.logo-default::before,
     a>span.logo-dark::before {
         position: absolute;
-        content: "5";
+        content: "";
         font-weight: 600;
         font-size: 10px;
         right: 2px;

@@ -24,11 +24,11 @@ Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
-Route::get('/tentang-sarjana-malam', 'HomeController@about');
-Route::get('/private', 'HomeController@private');
-Route::get('/help', 'HomeController@help');
-Route::get('/feedback', 'HomeController@feedback');
-Route::get('/how-search-works', 'HomeController@howsearch');
+Route::get('/tentang-sarjana-malam', 'companyController@about');
+Route::get('/private', 'companyController@private');
+Route::get('/help', 'companyController@help');
+Route::get('/feedback', 'companyController@feedback');
+Route::get('/how-search-works', 'companyController@howsearch');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

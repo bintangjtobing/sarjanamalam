@@ -127,52 +127,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 center text-center">
-                    <h4 class="m-b-10">Know More</h4>
-                    <h2>About Our Company</h2>
-                    <p class="lead m-b-60">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
-                        nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin,
-                        adipisicing elit sed lorem quis bibendum auctor.
+                    <h4 class="m-b-10">Lebih lanjut</h4>
+                    <h2 class="bluesarjana">Tentang sarjanamalam.</h2>
+                    <p class="lead m-b-60 p-para">Suatu usaha yang bergerak dibidang bisnis teknologi dan informasi yang
+                        berfokus pada ranah <b>forum</b> dan <b>mesin pencari yang kompleks</b>.
                     </p>
                 </div>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <h4 class="m-b-20">We are making progress</h4>
-                    <div class="p-progress-bar-container title-up small color">
-                        <div class="p-progress-bar" data-percent="100" data-delay="0" data-type="%">
-                            <div class="progress-title">HTML5</div>
-                        </div>
-                    </div>
-                    <div class="p-progress-bar-container title-up small color">
-                        <div class="p-progress-bar" data-percent="94" data-delay="100" data-type="%">
-                            <div class="progress-title">CSS3</div>
-                        </div>
-                    </div>
-                    <div class="p-progress-bar-container title-up small color">
-                        <div class="p-progress-bar" data-percent="89" data-delay="200" data-type="%">
-                            <div class="progress-title">JQUERY</div>
-                        </div>
-                    </div>
-                    <div class="p-progress-bar-container title-up small color">
-                        <div class="p-progress-bar" data-percent="78" data-delay="300" data-type="%">
-                            <div class="progress-title">MYSQL</div>
-                        </div>
-                    </div>
-                    <div class="p-progress-bar-container title-up small color">
-                        <div class="p-progress-bar" data-percent="75" data-delay="400" data-type="%">
-                            <div class="progress-title">PHP</div>
-                        </div>
-                    </div>
-                    <p class="lead">Nulla varius consequat magna, id molestie ipsum volutpat quis. A true story, that
-                        never been told!.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h4 class="m-b-20">Best services around</h4>
+                <div class="col-lg-6">
+                    <h4 class="m-b-20">Produk kami</h4>
                     <div class="accordion fancy radius clean">
                         <div class="ac-item ac-active">
-                            <h5 class="ac-title"><i class="fa fa-rocket"></i>Suscipit laboriosam</h5>
+                            <h5 class="ac-title">Forum komunitas</h5>
                             <div class="ac-content ac-active">We’re POLO, a creative agency located in the heart of New
                                 York city. A true story, that never been told!.
                                 <br />
@@ -180,57 +149,48 @@
                                 amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
                         </div>
                         <div class="ac-item">
-                            <h5 class="ac-title"><i class="fa fa-heart"></i>Aliquam voluptatem</h5>
+                            <h5 class="ac-title">Mesin pencari</h5>
                             <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
                                 consectetur, adipisci velit, sed quia non numquam
                                 <br />
                                 <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                                 amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
                         </div>
-                        <div class="ac-item">
-                            <h5 class="ac-title"><i class="fa fa-shopping-cart"></i>Labore et dolore</h5>
-                            <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                                consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore
-                                et dolore magnam aliquam quaerat voluptatem.
-                                <br />
-                                <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <h4 class="m-b-20">Latest from Blog</h4>
+                <div class="col-lg-6">
+                    <h4 class="m-b-20">Berita terbaru sarjanamalam.</h4>
                     <div class="post-thumbnail-list">
                         <div class="post-thumbnail-entry">
-                            <img src="{!!asset('storage/blog/5.jpg')!!}" alt="">
+                            <img src="{!!asset('storage/blog/11.jpg')!!}" alt="">
                             <div class="post-thumbnail-content">
                                 <a href="#">Suspendisse consectetur fringilla</a>
                                 <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i> Technology</span>
+                                <span class="post-category"><i class="fas fa-tag"></i> Technology</span>
                             </div>
                         </div>
                         <div class="post-thumbnail-entry">
-                            <img src="{!!asset('storage/blog/6.jpg')!!}" alt="">
+                            <img src="{!!asset('storage/blog/16.jpg')!!}" alt="">
                             <div class="post-thumbnail-content">
                                 <a href="#">Beautiful nature, and rare feathers!</a>
                                 <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                <span class="post-category"><i class="fas fa-tag"></i> Lifestyle</span>
                             </div>
                         </div>
                         <div class="post-thumbnail-entry">
-                            <img src="{!!asset('storage/blog/7.jpg')!!}" alt="">
+                            <img src="{!!asset('storage/blog/17.jpg')!!}" alt="">
                             <div class="post-thumbnail-content">
                                 <a href="#">The most happiest time of the day!</a>
                                 <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                <span class="post-category"><i class="fas fa-tag"></i> Lifestyle</span>
                             </div>
                         </div>
                         <div class="post-thumbnail-entry">
-                            <img src="{!!asset('storage/blog/8.jpg')!!}" alt="">
+                            <img src="{!!asset('storage/blog/18.jpg')!!}" alt="">
                             <div class="post-thumbnail-content">
                                 <a href="#">Fringilla Lorem ipsum dolor sit amet</a>
                                 <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                                <span class="post-category"><i class="fa fa-tag"></i> Lifestyle</span>
+                                <span class="post-category"><i class="icon-activity"></i> Lifestyle</span>
                             </div>
                         </div>
                     </div>

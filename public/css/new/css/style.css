@@ -10253,7 +10253,7 @@ body.breakpoint-sm .col-3 .flickr-widget img .widget-instagram img {
 
 .news-ticker-content .polo-carousel-item:before {
     color: #d82731;
-    content: "\e9be";
+    content: "";
     font-family: inspiro-icons !important;
     font-size: 10px;
     margin-left: -32px;
@@ -12199,7 +12199,7 @@ input.dates:after {
 
 .accordion .ac-item .ac-title:before {
     font-size: 18px;
-    content: "\e9be";
+    content: "";
     font-family: inspiro-icons;
     right: 0;
     position: absolute
@@ -12218,7 +12218,7 @@ input.dates:after {
 }
 
 .accordion .ac-item.ac-active .ac-title:before {
-    content: "\e9a1"
+    content: ""
 }
 
 .accordion.accordion-shadow .ac-item {
@@ -14791,7 +14791,7 @@ i:not(.fa):not(.fab):not(.far):not(.fas) {
 }
 
 .icon-minus:before {
-    content: "\e9a1"
+    content: ""
 }
 
 .icon-monitor:before {
@@ -14907,7 +14907,7 @@ i:not(.fa):not(.fab):not(.far):not(.fas) {
 }
 
 .icon-plus:before {
-    content: "\e9be"
+    content: ""
 }
 
 .icon-pocket:before {
@@ -14915,7 +14915,7 @@ i:not(.fa):not(.fab):not(.far):not(.fas) {
 }
 
 .icon-power:before {
-    content: "\e9a1"
+    content: ""
 }
 
 .icon-printer:before {

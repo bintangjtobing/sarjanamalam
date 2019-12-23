@@ -15,6 +15,12 @@
     font-weight: 500;
 }
 
+.p-para b {
+    color: rgb(51, 99, 172);
+    color: linear-gradient(4deg, rgba(51, 99, 172, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    font-weight: 500;
+}
+
 .bg-ourstories {
     position: absolute;
     top: 0;

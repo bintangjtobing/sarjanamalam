@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>@yield('titlefront') Sarjanamalam @yield('title')</title>
+    <title>@yield('titlefront') Sarjanamalam. @yield('title')</title>
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/jam-icons/js/jam.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Sarjanamalam">
-
+    <meta name="title" content="Sarjanamalam. @yield('title')">
+    <meta name="author" content="bintang j tobing">
+    <meta name="description" content="Sarjanamalam is coming soon on 20 February 2020.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

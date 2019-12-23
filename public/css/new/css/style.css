@@ -3652,7 +3652,6 @@ body.search-open #search .search-suggestion:nth-child(3) {
     background-color: rgba(255, 255, 255, .1)
 }
 
-.side-panel {}
 
 .side-panel .body-inner,
 .side-panel #wrapper {
@@ -6649,7 +6648,6 @@ h6.font-parisienne {
     opacity: .7
 }
 
-.single-post .post-item {}
 
 .single-post .post-item img {
     width: 100%;

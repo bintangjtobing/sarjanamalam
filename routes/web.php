@@ -8,7 +8,7 @@ Route::get('/clear-cache', function () {
 });
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    return view('homepage.home2');
+    return view('homepage.home');
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.signin');
@@ -24,7 +24,7 @@ Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
-Route::get('/about', 'HomeController@about');
+Route::get('/tentang-sarjana-malam', 'HomeController@about');
 Route::get('/private', 'HomeController@private');
 Route::get('/help', 'HomeController@help');
 Route::get('/feedback', 'HomeController@feedback');

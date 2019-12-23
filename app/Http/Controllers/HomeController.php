@@ -25,4 +25,8 @@ class HomeController extends Controller
     {
         return view('homepage.landingpage');
     }
+    public function about()
+    {
+        return view('homepage.company.about');
+    }
 }

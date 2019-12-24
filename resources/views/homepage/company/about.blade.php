@@ -57,6 +57,7 @@
                                     <ul class="list">
                                         <li><a href="#">Hubungi kami</a></li>
                                         <li><a href="#">Relasi sponsor</a></li>
+                                        <li><a href="/event">Event</a></li>
                                         <li><a href="#">Karir</a></li>
                                         <li><a href="/blog">Blog</a></li>
                                         <li><a href="#">Meet with Sarjanamalam.</a></li>

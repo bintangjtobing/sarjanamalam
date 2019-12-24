@@ -21,6 +21,7 @@ return array(
     'App\\Http\\Controllers\\ThreadController' => $baseDir . '/app/Http/Controllers/ThreadController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\category_subController' => $baseDir . '/app/Http/Controllers/category_subController.php',
+    'App\\Http\\Controllers\\companyController' => $baseDir . '/app/Http/Controllers/companyController.php',
     'App\\Http\\Controllers\\profileController' => $baseDir . '/app/Http/Controllers/profileController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',

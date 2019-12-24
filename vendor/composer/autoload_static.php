@@ -497,6 +497,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\Http\\Controllers\\ThreadController' => __DIR__ . '/../..' . '/app/Http/Controllers/ThreadController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\category_subController' => __DIR__ . '/../..' . '/app/Http/Controllers/category_subController.php',
+        'App\\Http\\Controllers\\companyController' => __DIR__ . '/../..' . '/app/Http/Controllers/companyController.php',
         'App\\Http\\Controllers\\profileController' => __DIR__ . '/../..' . '/app/Http/Controllers/profileController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

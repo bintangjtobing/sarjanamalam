@@ -156,7 +156,6 @@
                                 <a href="#">
                                     <i class="far fa-gem metismenu-icon"></i>
                                     System
-                                    {{-- <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i> --}}
                                 </a>
                                 <ul>
                                     <li>
@@ -178,6 +177,11 @@
                                         </a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li><a href="/event-managements">
+                                    <i class="far fa-calendar-check metismenu-icon"></i>Event
+                                </a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

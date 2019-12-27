@@ -29,7 +29,8 @@ Route::get('/privacy', 'companyController@private');
 Route::get('/help', 'companyController@help');
 Route::get('/feedback', 'companyController@feedback');
 Route::get('/how-search-works', 'companyController@howsearch');
-Route::get('/blog', 'companycontroller@blog');
+Route::get('/blog', 'companyController@blog');
+Route::get('/event', 'companyController@event');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

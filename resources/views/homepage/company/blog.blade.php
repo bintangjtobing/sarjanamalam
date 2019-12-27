@@ -1,4 +1,4 @@
-@extends('company.about')
+@extends('homepage.company.about')
 @section('title','Blog sarjanamalam.')
 @section('metadesc','Temukan semua yang terbaru tentang produk, teknolog, budaya, update-an tentang aplikasi situs
 sarjanamalam. kami di blog resmi kami.')

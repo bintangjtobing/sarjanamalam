@@ -38,7 +38,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="/" class="@yield('aktiftentang')">Tentang</a></li>
+                                    <li><a href="/tentang-sarjana-malam" class="@yield('aktiftentang')">Tentang</a></li>
                                     {{-- <li><a href="/yang-kami-buat" class="@yield('aktifproduk')">Produk Kami</a></li>
                                     <li><a href="/yang-kami-buat" class="@yield('aktifcerita')">Cerita Kami</a></li> --}}
                                 </ul>

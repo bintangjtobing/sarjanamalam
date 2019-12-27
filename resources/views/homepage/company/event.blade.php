@@ -1,4 +1,4 @@
-@extends('company.about')
+@extends('homepage.company.about')
 @section('title','Event sarjanamalam.')
 @section('aktiftentang','active')
 @section('metadesc','Event sarjanamalam. adalah suatu halaman yang berisi event event menarik dan bermanfaat yang akan
@@ -258,8 +258,8 @@ membekali calon sarjana. Seminar')
                     <span class="text-light">Create amam ipsum dolor sit amet, Beautiful nature, and rare feathers!.
                     </span>
                 </div>
-                <form class="widget-contact-form text-center" action="include/event-register-form.php" role="form"
-                    method="post">
+                <form class="widget-contact-form text-center" action="" method="post">
+                    {{ csrf_field() }}
                     <div class="form-group m-b-5">
                         <input type="text" aria-required="true" name="widget-contact-form-name"
                             class="form-control form-control-sm required name" placeholder="Your Name*">

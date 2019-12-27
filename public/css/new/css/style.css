@@ -8002,7 +8002,7 @@ h6.font-parisienne {
 .text-light label,
 .text-light div:not(.alert),
 .text-light span:not(.btn-label) {
-    color: #fff !important
+    color: #fff;
 }
 
 .text-dark,

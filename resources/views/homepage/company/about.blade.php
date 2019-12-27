@@ -6,15 +6,18 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="bintang j tobing">
     <meta name="description" content="@yield('metadesc')">
+    <meta name="keywords" content="@yield('metakey')">
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
+    <meta name="language" content="English">
 
     <title>@yield('title')</title>
 
     <link href="{!!asset('css/new/css/plugins.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/style.css')!!}" rel="stylesheet">
+    <link href="{!!asset('css/new/css/red.css')!!}" rel="stylesheet">
+    <link href="{!!asset('css/new/css/event-style.css')!!}" rel="stylesheet">
     <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
 </head>
 
@@ -26,15 +29,18 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="/"><span class="logo-default">sarjanamalam.</span><span
+                    <div id="logo"> <a href="https://sarjanamalam.com"><span
+                                class="logo-default">sarjanamalam.</span><span
                                 class="logo-dark">sarjanamalam.</span></a> </div>
+                    <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a>
+                    </div>
                     <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="/tentang-sarjana-malam" class="@yield('aktiftentang')">Tentang</a></li>
-                                    <li><a href="/yang-kami-buat" class="@yield('aktifproduk')">Produk Kami</a></li>
-                                    <li><a href="/yang-kami-buat" class="@yield('aktifcerita')">Cerita Kami</a></li>
+                                    <li><a href="/" class="@yield('aktiftentang')">Tentang</a></li>
+                                    {{-- <li><a href="/yang-kami-buat" class="@yield('aktifproduk')">Produk Kami</a></li>
+                                    <li><a href="/yang-kami-buat" class="@yield('aktifcerita')">Cerita Kami</a></li> --}}
                                 </ul>
                             </nav>
                         </div>

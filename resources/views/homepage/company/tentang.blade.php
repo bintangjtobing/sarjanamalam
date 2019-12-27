@@ -1,8 +1,9 @@
-@extends('homepage.company.about')
+@extends('company.about')
 @section('title','Tentang sarjanamalam.')
 @section('aktiftentang','active')
 @section('metadesc','Halaman tentang sarjanamalam. dibuat untuk memperkenalkan sarjanamalam. kepada kamu secara ringkas
 dan mudah dipahami.')
+@section('metakey','tentang sarjanamalam, about sarjanamalam, tentang kami, lebih banyak tentang kami')
 @section('content')
 <section>
     <div class="container">
@@ -30,7 +31,7 @@ dan mudah dipahami.')
     </div>
 </section>
 
-<section class="p-t-100 p-b-100" data-bg-parallax="images/parallax/4.jpg">
+<section class="p-t-100 p-b-100">
     <div class="bg-ourstories"></div>
     <div class="container xs-text-center sm-text-center text-light">
         <div class="row">
@@ -61,12 +62,13 @@ dan mudah dipahami.')
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h4 class="m-b-20">Produk kami</h4>
+                <h4 class="m-b-20">Apa yang ada pada kami?</h4>
                 <div class="accordion fancy radius clean">
                     <div class="ac-item ac-active">
                         <h5 class="ac-title">Forum komunitas</h5>
-                        <div class="ac-content ac-active">We’re POLO, a creative agency located in the heart of New
-                            York city. A true story, that never been told!.
+                        <div class="ac-content ac-active">Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                            amet,
+                            consectetur, adipisci velit, sed quia non numquam
                             <br />
                             <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                             amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>

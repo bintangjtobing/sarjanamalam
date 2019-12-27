@@ -31,16 +31,15 @@
     height: 100%;
     content: ' ';
     z-index: 0;
-    background-color: #0e1624;
+    /* background-color: #0e1624 !important; */
     /* MOUNTAIN IMG */
-    background-image: url("https://c.pxhere.com/images/5d/36/af022607530f20ce1c9781e6d648-1428687.jpg!d");
+    background-image: url("/storage/cerita.jpg");
 
     background-attachment: fixed;
     background-size: cover;
     /* background-image: url('/storage/img/owl.svg'); */
     height: 100% !important;
     clear: both;
-    opacity: .5
 }
 
 .grid-item h4 {
@@ -68,4 +67,36 @@
 #header #header-wrap #logo a,
 #header #header-wrap #logo a span {
     font-size: 30px !important;
+}
+
+.lead {
+    color: #000;
+}
+
+.imgevent {
+    height: 100%;
+    width: 200px;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-body .alert {
+    border-radius: 30px;
+    width: 100%;
+    border: 0;
+    background-color: #39861d;
+    color: #fff;
+}
+
+.card-body .alert a {
+    color: #fff;
+    font-weight: 800;
 }

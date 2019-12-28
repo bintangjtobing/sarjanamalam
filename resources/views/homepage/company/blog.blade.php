@@ -47,7 +47,7 @@ sarjanamalam. kami di blog resmi kami.')
             <div class="post-item border">
                 <div class="post-item-wrap">
                     <div class="post-video">
-                        <iframe width="560" height="320" src="https://www.youtube.com/embed/dA8Smj5tZOQ" frameborder="0"
+                        <iframe width="560" height="320" src="https://www.youtube.com/embed/Z0zNRfZZMow" frameborder="0"
                             allowfullscreen></iframe>
                         <span class="post-meta-category"><a href="">Video</a></span>
                     </div>

@@ -33,6 +33,7 @@ Route::get('/blog', 'companyController@blog');
 Route::get('/event', 'companyController@event');
 Route::post('/post-event', 'companyController@postevent');
 Route::get('/karir-sarjanamalam', 'companyController@karir');
+Route::get('/hubungi-sarjanamalam', 'companyController@hubungi');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

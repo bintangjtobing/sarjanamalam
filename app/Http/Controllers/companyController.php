@@ -46,4 +46,8 @@ class companyController extends Controller
     {
         return view('homepage.company.karir');
     }
+    public function hubungi()
+    {
+        return view('homepage.company.hubungi');
+    }
 }

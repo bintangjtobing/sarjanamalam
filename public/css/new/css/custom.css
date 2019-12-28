@@ -115,5 +115,9 @@
 }
 
 .card-body a {
-    color: #248 !important;
+    color: #2485c1 !important;
+}
+
+.card-body a:hover {
+    color: #3698d4 !important;
 }

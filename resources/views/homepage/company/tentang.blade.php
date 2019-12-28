@@ -26,7 +26,8 @@ dan mudah dipahami.')
             <div class="col-lg-9">
                 <h3 style="font-weight: 400;">Banyak ide kreatif? Ayo mulai bersama</h3>
             </div>
-            <div class="col-lg-3"><a href="#" class="btn btn-rounded">Menjadi bagian dari kami</a> </div>
+            <div class="col-lg-3"><a href="/karir-sarjanamalam" class="btn btn-rounded">Menjadi bagian dari kami</a>
+            </div>
         </div>
     </div>
 </section>
@@ -142,39 +143,14 @@ dan mudah dipahami.')
                 </a>
             </div>
             <div class="grid-item">
-                <a href="/lokasi-sarjanamalam"><img src="{!!asset('storage/blog/2.jpg')!!}">
-                    <h4>Lokasi sarjanamalam.</h4>
-                    <p>Temukan kami</p>
+                <a href="/hubungi-sarjanamalam"><img src="{!!asset('storage/blog/2.jpg')!!}">
+                    <h4>Hubungi kami</h4>
+                    <p>Katakan halo</p>
                 </a>
             </div>
         </div>
 
     </div>
 </section>
-<section class="p-t-18 p-b-0">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-12 m-b-30">
-                        <h4>Ikuti kami di sosial media</h4>
-                        <div class="social-icons social-icons-light social-icons-colored-hover">
-                            <ul>
-                                <li class="social-facebook"><a href="https://facebook.com/sarjanamalamdotcom"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li class="social-twitter"><a href="https://twitter.com/sarjanamalamcom"><i
-                                            class="fab fa-twitter"></i></a>
-                                </li>
-                                <li class="social-instagram"><a href="https://instagram.com/sarjanamalamdotcom"><i
-                                            class="fab fa-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 @endsection

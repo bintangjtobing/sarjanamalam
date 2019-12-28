@@ -40,6 +40,7 @@ return array(
     'App\\User' => $baseDir . '/app/User.php',
     'App\\UserMod' => $baseDir . '/app/UserMod.php',
     'App\\categoryDB' => $baseDir . '/app/categoryDB.php',
+    'App\\eventDB' => $baseDir . '/app/eventDB.php',
     'App\\subcategoryDB' => $baseDir . '/app/subcategoryDB.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
     'BeyondCode\\DumpServer\\DumpServerServiceProvider' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',

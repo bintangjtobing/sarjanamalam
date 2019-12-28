@@ -19,8 +19,7 @@
                 <p>Jika anda mengetahui adanya masalah keamanan atau penyalahgunaan dengan layanan sarjanamalam apapun,
                     beri tahu kami secepatnya.</p>
                 <div class="m-t-30">
-                    <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
-                        method="post">
+                    <form action="/kirim-hubungi" method="post">
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="option">Pilih opsi kontak</label>

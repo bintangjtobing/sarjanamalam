@@ -19,40 +19,54 @@
                 <p>Jika anda mengetahui adanya masalah keamanan atau penyalahgunaan dengan layanan sarjanamalam apapun,
                     beri tahu kami secepatnya.</p>
                 <div class="m-t-30">
-                    <form action="/kirim-hubungi" method="post">
+                    <form action="/kirim-pesan" method="post">
+                        @csrf
                         <div class="row">
+                            @if(session('sukses'))
+                            <div class="form-group col-md-12">
+                                <div class="alert alert-primary" role="alert">
+                                    <strong>Pesan kamu berhasil dikirimkan!</strong><br>
+                                    Kami akan segera membalas pesan kamu dalam 3x24 jam.<br>Jika kami terlalu lama
+                                    membalas
+                                    silahkan kirim pesan ke email <a
+                                        href="mailto:help@sarjanamalam.com">help@sarjanamalam.com</a>
+                                </div>
+                            </div>
+                            @endif
                             <div class="form-group col-md-12">
                                 <label for="option">Pilih opsi kontak</label>
                                 <select name="options" id="" class="form-control" required>
                                     <option value="" selected>Pilih opsi</option>
-                                    <option value="">Pertanyaan umum</option>
-                                    <option value="">Bantuan layanan atau produk</option>
-                                    <option value="">Bug atau kesalahan pada sistem sarjanamalam</option>
-                                    <option value="">Celah keamanan atau penyalahgunaan pada sarjanamalam</option>
+                                    <option value="Pertanyaan umum">Pertanyaan umum</option>
+                                    <option value="Bantuan layanan atau produk">Bantuan layanan atau produk</option>
+                                    <option value="Bug atau kesalahan pada sistem sarjanamalam">Bug atau kesalahan pada
+                                        sistem sarjanamalam</option>
+                                    <option value="Celah keamanan atau penyalahgunaan pada sarjanamalam">Celah keamanan
+                                        atau penyalahgunaan pada sarjanamalam</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="name">Name</label>
-                                <input type="text" aria-required="true" name="widget-contact-form-name" required
+                                <input type="text" aria-required="true" name="nama_lengkap" required
                                     class="form-control required name" placeholder="Enter your Name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">Email</label>
-                                <input type="email" aria-required="true" name="widget-contact-form-email" required
+                                <input type="email" aria-required="true" name="email" required
                                     class="form-control required email" placeholder="Enter your Email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="subject">Your Subject</label>
-                                <input type="text" name="widget-contact-form-subject" required
-                                    class="form-control required" placeholder="Subject...">
+                                <input type="text" name="subject" required class="form-control required"
+                                    placeholder="Subject...">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea type="text" name="widget-contact-form-message" required rows="5"
-                                class="form-control required" placeholder="Enter your Message"></textarea>
+                            <textarea type="text" name="messages" required rows="5" class="form-control required"
+                                placeholder="Enter your Message"></textarea>
                         </div>
 
                         <button class="btn" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send

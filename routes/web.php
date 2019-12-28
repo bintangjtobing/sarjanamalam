@@ -35,6 +35,7 @@ Route::post('/post-event', 'companyController@postevent');
 Route::get('/karir-sarjanamalam', 'companyController@karir');
 Route::get('/hubungi-sarjanamalam', 'companyController@hubungi');
 Route::get('/cerita-sarjanamalam', 'companyController@cerita');
+Route::post('/kirim-pesan', 'companyController@kirimpesan');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

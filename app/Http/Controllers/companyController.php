@@ -54,4 +54,18 @@ class companyController extends Controller
     {
         return view('homepage.company.cerita');
     }
+    public function kirimpesan(Request $request)
+    {
+        $post = new \App\messagesDB;
+        $post->judul_messages = $request->options;
+        $post->nama_lengkap = $request->nama_lengkap;
+        $post->email = $request->email;
+        $post->subject = $request->subject;
+        $post->messages = $request->messages;
+
+        $post->save();
+
+        return back()->with('sukses', 'Dan akan segera dihubungi untuk melakukan
+                        konfirmasi kembali terhadap event tersebut.');
+    }
 }

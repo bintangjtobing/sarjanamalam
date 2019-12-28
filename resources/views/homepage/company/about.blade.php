@@ -94,7 +94,7 @@
                                         <li><a href="/event">Event</a></li>
                                         <li><a href="/karir-sarjanamalam">Karir</a></li>
                                         <li><a href="/blog">Blog</a></li>
-                                        <li><a href="#">Meet with Sarjanamalam.</a></li>
+                                        <li><a href="/meet-sarjanamalam">Meet with Sarjanamalam.</a></li>
                                     </ul>
                                 </div>
                             </div>

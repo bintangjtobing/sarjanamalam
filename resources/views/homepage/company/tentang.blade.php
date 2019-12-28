@@ -40,7 +40,7 @@ dan mudah dipahami.')
                 <h2>Cerita kami</h2>
                 <p class="lead">Bagian yang terbaik dari terbentuknya kami sekarang adalah menikmati apa yang kami
                     lakukan dari awal hingga saat ini.</p>
-                <a href="/cerita-sarjana-malam" class="btn btn-light btn-outline btn-rounded">Telusuri cerita
+                <a href="/cerita-sarjanamalam" class="btn btn-light btn-outline btn-rounded">Telusuri cerita
                     kami</a>
             </div>
 

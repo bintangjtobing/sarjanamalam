@@ -121,3 +121,13 @@
 .card-body a:hover {
     color: #3698d4 !important;
 }
+
+.storiesimg {
+    background-image: url("/storage/blog/stories.jpg");
+    background-size: cover;
+    height: 35rem;
+}
+
+.storiesimg .container {
+    visibility: hidden;
+}

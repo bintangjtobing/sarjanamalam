@@ -100,3 +100,20 @@
     color: #fff;
     font-weight: 800;
 }
+
+.card-text-black {
+    color: #121212;
+}
+
+.card-title-strong {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card-link-karir {
+    font-weight: 600;
+}
+
+.card-body a {
+    color: #248 !important;
+}

@@ -81,6 +81,14 @@ dan mudah dipahami.')
                             <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                             amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
                     </div>
+                    <div class="ac-item">
+                        <h5 class="ac-title">Event media partner</h5>
+                        <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam
+                            <br />
+                            <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                            amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">

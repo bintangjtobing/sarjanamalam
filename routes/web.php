@@ -32,6 +32,7 @@ Route::get('/how-search-works', 'companyController@howsearch');
 Route::get('/blog', 'companyController@blog');
 Route::get('/event', 'companyController@event');
 Route::post('/post-event', 'companyController@postevent');
+Route::get('/karir-sarjanamalam', 'companyController@karir');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index');

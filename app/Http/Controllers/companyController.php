@@ -42,4 +42,8 @@ class companyController extends Controller
         return back()->with('sukses', 'Dan akan segera dihubungi untuk melakukan
                         konfirmasi kembali terhadap event tersebut.');
     }
+    public function karir()
+    {
+        return view('homepage.company.karir');
+    }
 }

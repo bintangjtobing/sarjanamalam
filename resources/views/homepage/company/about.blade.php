@@ -18,6 +18,8 @@
     <link href="{!!asset('css/new/css/style.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/red.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/event-style.css')!!}" rel="stylesheet">
+    <link href="{!!asset('css/new/css/font-awesome.css')!!}" rel="stylesheet">
+    <link rel="stylesheet" href="{!!asset('css/themify-icons.css')!!}">
     <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
 </head>
 
@@ -64,7 +66,7 @@
                                         <li><a href="#">Hubungi kami</a></li>
                                         <li><a href="#">Relasi sponsor</a></li>
                                         <li><a href="/event">Event</a></li>
-                                        <li><a href="#">Karir</a></li>
+                                        <li><a href="/karir-sarjanamalam">Karir</a></li>
                                         <li><a href="/blog">Blog</a></li>
                                         <li><a href="#">Meet with Sarjanamalam.</a></li>
                                     </ul>

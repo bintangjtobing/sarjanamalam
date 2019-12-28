@@ -38,9 +38,8 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
                     </div>
                 </div>
             </div>
@@ -53,9 +52,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -68,9 +67,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -83,9 +82,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -105,9 +104,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -120,9 +119,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -135,9 +134,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -150,9 +149,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -165,9 +164,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -180,9 +179,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -195,9 +194,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>
@@ -210,9 +209,9 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">Rp. 120.000</p>
                     </div>
                     <div class="card-body">
-                        <div class="alert alert-success" role="alert">
-                            Masih tersedia! <a href="#">Daftar?</a>
-                        </div>
+
+                        Masih tersedia! <a href="#">Daftar?</a>
+
                     </div>
                 </div>
             </div>

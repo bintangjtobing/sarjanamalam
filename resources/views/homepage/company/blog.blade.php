@@ -38,7 +38,7 @@ sarjanamalam. kami di blog resmi kami.')
                             </a></h2>
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet. Pulvinar euismod antesagittis ante
                             posuere ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@ sarjanamalam. kami di blog resmi kami.')
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.
                             Cagittis ante posuere ac. Vivamus luctus commodo dolor porta feugiat. Fusce at velit id
                             ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <h2><a href="#">Self Hosted HTML5 Audio (mp3) with image cover</a></h2>
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.
                         </p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@ sarjanamalam. kami di blog resmi kami.')
                             </a></h2>
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <h2><a href="#">Simplicity, a post with slider gallery</a></h2>
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat. Fusce at velit id ligula pharetra laoreet.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@ sarjanamalam. kami di blog resmi kami.')
                             </a></h2>
                         <p>Curabitur pulvinar euismod ante, ac sagittis ante posuere ac. Vivamus luctus commodo dolor
                             porta feugiat.</p>
-                        <a href="#" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+                        <a href="#" class="item-link">Read More <span class="ti-angle-right"></span></a>
                     </div>
                 </div>
             </div>

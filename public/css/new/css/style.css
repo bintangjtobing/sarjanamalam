@@ -14127,6 +14127,32 @@ ul.nav li.dropdown:hover>ul.dropdown-menu {
 }
 
 @font-face {
+    font-family: 'themify';
+    src: url('fonts/themify.eot?-fvbane');
+    src: url('fonts/themify.eot?#iefix-fvbane') format('embedded-opentype'),
+        url('fonts/themify.woff?-fvbane') format('woff'),
+        url('fonts/themify.ttf?-fvbane') format('truetype'),
+        url('fonts/themify.svg?-fvbane#themify') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ti-"],
+[class*=" ti-"] {
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
     font-family: inspiro-icons;
     src: url(../webfonts/inspiro-icons.ttf?ijzgpf) format("truetype"), url(../webfonts/inspiro-icons.woff?ijzgpf) format("woff");
     font-weight: 400;
@@ -18756,8 +18782,8 @@ a.list-group-item.active.active {
 .breadcrumb ul li+li:before,
 .breadcrumb ol .breadcrumb-item+li:before,
 .breadcrumb ol li+li:before {
-    content: "\e930";
-    font-family: inspiro-icons;
+    content: "\e649";
+    font-family: themify;
     margin: 0 5px;
     background-color: transparent
 }

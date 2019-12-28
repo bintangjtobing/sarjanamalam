@@ -99,32 +99,32 @@ dan mudah dipahami.')
                         <img src="{!!asset('storage/blog/11.jpg')!!}" alt="">
                         <div class="post-thumbnail-content">
                             <a href="#">Suspendisse consectetur fringilla</a>
-                            <span class="post-date"><i class="far fa-clock"></i> 6m ago</span>
-                            <span class="post-category"><i class="fas fa-tag"></i> Technology</span>
+                            <span class="post-date"><span class="ti-alarm-clock"></span> 6m ago</span>
+                            <span class="post-category"><span class="ti-tag"></span> Technology</span>
                         </div>
                     </div>
                     <div class="post-thumbnail-entry">
                         <img src="{!!asset('storage/blog/16.jpg')!!}" alt="">
                         <div class="post-thumbnail-content">
                             <a href="#">Beautiful nature, and rare feathers!</a>
-                            <span class="post-date"><i class="far fa-clock"></i> 24h ago</span>
-                            <span class="post-category"><i class="fas fa-tag"></i> Lifestyle</span>
+                            <span class="post-date"><span class="ti-alarm-clock"></span> 24h ago</span>
+                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
                         </div>
                     </div>
                     <div class="post-thumbnail-entry">
                         <img src="{!!asset('storage/blog/17.jpg')!!}" alt="">
                         <div class="post-thumbnail-content">
                             <a href="#">The most happiest time of the day!</a>
-                            <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                            <span class="post-category"><i class="fas fa-tag"></i> Lifestyle</span>
+                            <span class="post-date"><span class="ti-alarm-clock"></span> 11h ago</span>
+                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
                         </div>
                     </div>
                     <div class="post-thumbnail-entry">
                         <img src="{!!asset('storage/blog/18.jpg')!!}" alt="">
                         <div class="post-thumbnail-content">
                             <a href="#">Fringilla Lorem ipsum dolor sit amet</a>
-                            <span class="post-date"><i class="far fa-clock"></i> 11h ago</span>
-                            <span class="post-category"><i class="icon-activity"></i> Lifestyle</span>
+                            <span class="post-date"><span class="ti-alarm-clock"></span> 11h ago</span>
+                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
                         </div>
                     </div>
                 </div>

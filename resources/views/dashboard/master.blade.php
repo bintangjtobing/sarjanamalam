@@ -202,7 +202,10 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="page-title-actions">
+                                <a class="btn-shadow d-inline-flex align-items-center btn
+                                    btn-success" href="@yield('linkbtncreate')" role="button"><i class="fa fa-plus mr-2"></i> Create new @yield('btncreate')</a>
+                            </div>
                         </div>
                     </div>
                     @yield('content')

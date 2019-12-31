@@ -69,4 +69,16 @@ class DashboardController extends Controller
         $user->save();
         return back()->with('sukses', 'Save successfully!');
     }
+    public function event()
+    {
+        $eventList = DB::table('events')
+            ->select('events.*')
+            ->orderBy('events.created_at', '=', 'DESC')
+            ->get();
+        return view('dashboard.event', ['eventList' => $eventList]);
+    }
+    public function blog()
+    {
+        return view('dashboard.blog');
+    }
 }

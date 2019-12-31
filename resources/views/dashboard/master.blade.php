@@ -181,6 +181,9 @@
                             <li><a href="/event-managements">
                                     <i class="far fa-calendar-check metismenu-icon"></i>Event
                                 </a></li>
+                            <li><a href="/blog-queue">
+                                    <i class="fas fa-bookmark metismenu-icon"></i>Blog
+                                </a></li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +194,7 @@
                         <div class="page-title-wrapper">
                             <div class="page-title-heading">
                                 <div class="page-title-icon">
-                                    <i class="fas fa-car icon-gradient bg-mean-fruit"></i>
+                                    <i class="fab fa-centos icon-gradient bg-mean-fruit"></i>
                                     </i>
                                 </div>
                                 <div>@yield('title')

@@ -45,8 +45,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
     Route::get('/details/{id}', 'ForumController@detailsthreads');
-
-
     // PROFILE CONTROLLER
     Route::get('/{username}', 'profileController@index');
 });
@@ -57,6 +55,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
     Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
     Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
+    Route::get('/blog-queue', 'DashboardController@blog');
+    Route::get('/event-managements', 'DashboardController@event');
 });
 
 Auth::routes();

@@ -1,8 +1,8 @@
 @extends('dashboard.master')
-@section('title','Dashboard Sarjanamalam - Event Management')
-@section('desc_subpage','Halaman tempat untuk mengatur event event.')
+@section('title','Dashboard Sarjanamalam - Blog')
+@section('desc_subpage','Halaman untuk posting berita terbaru dari sarjanamalam.')
 @section('faicon','fa-plus')
-@section('modals','addevent')
+@section('modals','addblog')
 @section('content')
 @if(session('sukses'))
 <div class="row">
@@ -23,35 +23,36 @@
     <div class="col-md-12 col-lg 6">
         <div class="main-card mb-3 card">
             <div class="card-body">
-                <h5 class="card-title">Event Request List</h5>
+                <h5 class="card-title">Blog Queue</h5>
                 <table id="userverified" class="mb-0 table table-hover table-responsive">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nama event</th>
-                            <th>Tanggal acara</th>
-                            <th>Deskripsi</th>
+                            <th>Judul blog</th>
+                            <th>Isi blog</th>
+                            <th>Penulis</th>
                             <th>Kategori</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($eventList as $event)
+                        @if($blogList->isNotEmpty())
+                        @foreach ($blogList as $blog)
                         <tr>
                             <td scope="row">{{$i++}}</td>
-                            <td>{{$event->nama_event}}</td>
-                            <td>{{$event->tglevent}}</td>
-                            <td>{{$event->deskripsi_event}}</td>
-                            <td>{{$event->kategori_event}}</td>
+                            <td>{{$blog->blog_title}}</td>
+                            <td>{{$blog->isiblog}}</td>
+                            <td>{{$blog->created_by}}</td>
+                            <td>{{$blog->kategori_blog}}</td>
                             <td>
-                                <a href="/edit/{{$event->event_id}}/{{$tokens}}">
+                                <a href="/view/{{$blog->blog_id}}/{{$tokens}}">
                                     <span>
                                         <button class="mr-2 btn-icon btn-icon-only btn btn-outline-success">
                                             <i class="fas fa-eye btn-icon-wrapper"></i>
                                         </button>
                                     </span>
                                 </a>
-                                <a href="/delete/{{$event->event_id}}/{{$tokens}}">
+                                <a href="/delete/{{$blog->blog_id}}/{{$tokens}}">
                                     <span>
                                         <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
                                             <i class="far fa-trash-alt btn-icon-wrapper"></i>
@@ -60,6 +61,9 @@
                                 </a>
                             </td>
                             @endforeach
+                            @else
+                            <td colspan="6" class="text-center">No data found!</td>
+                            @endif
                         </tr>
                     </tbody>
                 </table>
@@ -76,7 +80,7 @@
 
 </script>
 <!-- Large modal -->
-<div class="modal fade" id="addevent" tabindex="-1" role="dialog" aria-labelledby="addevent" aria-hidden="true">
+<div class="modal fade" id="addblog" tabindex="-1" role="dialog" aria-labelledby="addblog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

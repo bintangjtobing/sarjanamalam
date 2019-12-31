@@ -21,6 +21,7 @@ class DashboardController extends Controller
     {
         $usermg = DB::table('users')
             ->select('users.*')
+            ->orderBy('users.created_at', 'desc')
             ->get();
         return view('dashboard.user.index', ['usermg' => $usermg]);
     }
@@ -69,16 +70,20 @@ class DashboardController extends Controller
         $user->save();
         return back()->with('sukses', 'Save successfully!');
     }
-    public function event()
+    public function eventmgmt()
     {
-        $eventList = DB::table('events')
+        $eventL = DB::table('events')
             ->select('events.*')
-            ->orderBy('events.created_at', '=', 'DESC')
+            ->orderBy('events.created_at', 'desc')
             ->get();
-        return view('dashboard.event', ['eventList' => $eventList]);
+        return view('dashboard.event.index', ['eventL' => $eventL]);
     }
     public function blog()
     {
-        return view('dashboard.blog');
+        $blogList = DB::table('blog')
+            ->select('blog.*')
+            ->orderBy('blog.created_at', 'desc')
+            ->get();
+        return view('dashboard.blog.index', ['blogList' => $blogList]);
     }
 }

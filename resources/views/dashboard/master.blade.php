@@ -178,10 +178,10 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="/event-managements">
+                            <li><a href="/event-managements/{{$tokens}}">
                                     <i class="far fa-calendar-check metismenu-icon"></i>Event
                                 </a></li>
-                            <li><a href="/blog-queue">
+                            <li><a href="/blog-queue/{{$tokens}}">
                                     <i class="fas fa-bookmark metismenu-icon"></i>Blog
                                 </a></li>
                         </ul>

@@ -56,7 +56,7 @@
                                 </a>
                                 <a href="/delete/{{$blog->blog_id}}/{{$tokens}}">
                                     <span>
-                                        <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+                                          <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
                                             <i class="far fa-trash-alt btn-icon-wrapper"></i>
                                         </button>
                                     </span>

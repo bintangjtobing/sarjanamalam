@@ -1,6 +1,5 @@
 @extends('dashboard.master')
 @section('title','Dashboard Sarjanamalam - Home')
-@section('titlesub_page','Dashboard Sarjanamalam - Home')
 @section('desc_subpage','Halaman utama utama dashboard manajemen sarjanamalam.')
 @section('faicon','fa-star')
 @section('content')

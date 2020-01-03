@@ -515,6 +515,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\Thread' => __DIR__ . '/../..' . '/app/Thread.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\UserMod' => __DIR__ . '/../..' . '/app/UserMod.php',
+        'App\\blogDB' => __DIR__ . '/../..' . '/app/blogDB.php',
         'App\\categoryDB' => __DIR__ . '/../..' . '/app/categoryDB.php',
         'App\\eventDB' => __DIR__ . '/../..' . '/app/eventDB.php',
         'App\\messagesDB' => __DIR__ . '/../..' . '/app/messagesDB.php',

@@ -39,6 +39,7 @@ return array(
     'App\\Thread' => $baseDir . '/app/Thread.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\UserMod' => $baseDir . '/app/UserMod.php',
+    'App\\blogDB' => $baseDir . '/app/blogDB.php',
     'App\\categoryDB' => $baseDir . '/app/categoryDB.php',
     'App\\eventDB' => $baseDir . '/app/eventDB.php',
     'App\\messagesDB' => $baseDir . '/app/messagesDB.php',

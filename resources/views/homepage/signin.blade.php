@@ -1,5 +1,7 @@
 @extends('homepage.welcome')
-@section('title','- Login')
+@section('title','Sarjanamalam. | Signin')
+@section('metadesc','Masuk ke akun sarjanamalam kamu. Gabung bersama forum dan bahas tentang apa yang kamu alami dan
+kamu ingin cari tau.')
 @section('content')
 <div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
     <header class="masthead mb-auto">

@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <title>@yield('titlefront') Sarjanamalam. @yield('title')</title>
+    <title>@yield('title')</title>
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/jam-icons/js/jam.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="title" content="Sarjanamalam. @yield('title')">
+    <meta name="title" content="@yield('title')">
     <meta name="author" content="bintang j tobing">
-    <meta name="description" content="Sarjanamalam is coming soon on 20 February 2020.">
+    <meta name="description" content="@yield('metadesc')">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
@@ -20,6 +20,21 @@
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
     <link rel="stylesheet" href="{!!asset('css/homepage/mainlib.css')!!}">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
+
+    {{-- SOCIAL MEDIA TAGS --}}
+    {{-- FACEBOOK SOCMED --}}
+    <meta property="fb:admins" content="110102153747274">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{URL::current()}}">
+    <meta property="og:image"
+        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
+    <meta property="og:description" content="@yield('metadesc')">
+    <meta property="og:site_name" content="Sarjanamalam.">
+    {{-- TWITTER SOCMED --}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sarjanamalamcom">
+    <meta name="twitter:creator" content="@sarjanamalamcom">
 
 </head>
 @yield('content')

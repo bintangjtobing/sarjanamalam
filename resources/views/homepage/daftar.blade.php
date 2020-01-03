@@ -1,5 +1,7 @@
 @extends('homepage.welcome')
-@section('title','- Buat akun!')
+@section('title','Sarjanamalam. | Daftar keanggotaan')
+@section('metadesc','Tunggu apalagi, ayo daftarkan diri kamu di keanggotaan forum sarjanamalam. Dan berbagilah dengan
+luas dan fokus pada arah tujuanmu.')
 @section('content')
 <div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
     <div class="daftar">

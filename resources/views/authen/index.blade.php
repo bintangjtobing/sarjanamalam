@@ -63,7 +63,7 @@
             </form>
 
             <!-- Right navbar links -->
-            {{-- <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
                 <!-- Messages Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
@@ -157,7 +157,7 @@
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
                             class="fas fa-th-large"></i></a>
                 </li>
-            </ul> --}}
+            </ul>
         </nav>
         <!-- /.navbar -->
 
@@ -190,7 +190,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link">
+                            <a href="/dashboard" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -198,7 +198,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/user-config/{{$tokens}}" class="nav-link active">
+                            <a href="/user-config/{{$tokens}}" class="nav-link">
                                 <i class="nav-icon fas fa-users-cog"></i>
                                 <p>
                                     User configurations
@@ -236,6 +236,14 @@
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>
                                     Forum Threads
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                                <p>
+                                    Sign out
                                 </p>
                             </a>
                         </li>

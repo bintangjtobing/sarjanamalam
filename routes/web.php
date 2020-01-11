@@ -21,7 +21,7 @@ Route::get('/daftar/{csrf_token}', function () {
 });
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
-Route::get('/logout/{id}{tokens}', 'AuthController@logout');
+Route::get('/logout/{id}/{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
 Route::get('/tentang-sarjana-malam', 'companyController@about');

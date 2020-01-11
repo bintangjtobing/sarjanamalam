@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
     // PROFILE CONTROLLER
     Route::get('/{username}', 'profileController@index');
 });
+
 // DASHBOARD CONTROLLER MENU
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/restricted/{tokens}', 'DashboardController@index');

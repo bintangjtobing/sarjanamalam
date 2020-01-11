@@ -297,9 +297,11 @@
     <footer>
         <div class="container">
             <div class="row">
+                <?php $year = date('Y') ?>
                 <div class="col-lg-1 col-xs-3 col-sm-2 logo "><a href="#"><img
                             src="{{asset('storage/icon/logoforum.png')}}" alt="" /></a></div>
-                <div class="col-lg-8 col-xs-9 col-sm-5 ">&copy; Copyrights 2019 <a href="/">Sarjanamalam</a></div>
+                <div class="col-lg-8 col-xs-9 col-sm-5 ">&copy; Copyrights {{$year}} <a href="/home">Sarjanamalam</a>
+                </div>
                 <div class="col-lg-3 col-xs-12 col-sm-5 sociconcent">
                     <ul class="socialicons">
                         <li><a href="https://facebook.com/sarjanamalamdotcom" target="_blank"><i

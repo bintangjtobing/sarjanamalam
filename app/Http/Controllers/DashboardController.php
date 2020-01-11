@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $usermg = DB::table('users')
             ->select('users.*')
             ->get();
-        return view('dashboard.home', ['usermg' => $usermg]);
+        return view('authen.dash', ['usermg' => $usermg]);
     }
     // USER
     public function usermgmt()

@@ -1,4 +1,4 @@
-@extends('dashboard.index')
+@extends('authen.index')
 @section('title','Dashboard')
 @section('content')
 <div class="container-fluid">

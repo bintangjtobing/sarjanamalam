@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Sumber Diesel | @yield('title')</title>
-
+    <title>Sarjanamalam | @yield('title')</title>
+    <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{!!asset('dashboard_admin/plugins/fontawesome-free/css/all.min.css')!!}">
     <!-- overlayScrollbars -->
@@ -17,7 +17,23 @@
     <link rel="stylesheet" href="{!!asset('dashboard_admin/dist/css/adminlte.min.css')!!}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    {{-- Meta info --}}
+    <meta name="description" content="Complex search engine Dashboard, to configuring all web.">
+
+    {{-- SOCIAL MEDIA TAGS --}}
+    {{-- FACEBOOK SOCMED --}}
+    <meta property="fb:admins" content="110102153747274">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sarjanamalam.com">
+    <meta property="og:image"
+        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
+    <meta property="og:description" content="@yield('metadesc')">
+    <meta property="og:site_name" content="Sarjanamalam.">
+
 </head>
+<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
@@ -29,10 +45,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="/" class="nav-link">Home</a>
                 </li>
             </ul>
 
@@ -151,10 +164,10 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="{!!asset('dashboard_admin/dist/img/infinity_logo.png')!!}" alt="AdminLTE Logo"
+            <a href="/" class="brand-link">
+                <img src="{!!asset('dashboard_admin/dist/img/sarjana_logo.jpg')!!}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">INFINITY SOLUTIONS</span>
+                <span class="brand-text font-weight-light">SARJANAMALAM.</span>
             </a>
 
             <!-- Sidebar -->
@@ -166,7 +179,7 @@
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">{{auth()->user()->name}}</a>
                     </div>
                 </div>
 
@@ -177,20 +190,52 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link active">
+                            <a href="/dashboard" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/user-config/{{$tokens}}" class="nav-link active">
+                                <i class="nav-icon fas fa-users-cog"></i>
+                                <p>
+                                    User configurations
+                                </p>
+                            </a>
+                        </li>
 
                         <li class="nav-header">SYSTEM</li>
                         <li class="nav-item">
-                            <a href="/utility-item" class="nav-link">
-                                <i class="nav-icon fas fa-th"></i>
+                            <a href="/messages/{{$tokens}}" class="nav-link">
+                                <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    Utility Item
+                                    Inbox
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/event/{{$tokens}}" class="nav-link">
+                                <i class="nav-icon fas fa-calendar-check"></i>
+                                <p>
+                                    Events
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/karir/{{$tokens}}" class="nav-link">
+                                <i class="nav-icon fab fa-ethereum"></i>
+                                <p>
+                                    Career
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/threads/{{$tokens}}" class="nav-link">
+                                <i class="nav-icon fas fa-store"></i>
+                                <p>
+                                    Forum Threads
                                 </p>
                             </a>
                         </li>

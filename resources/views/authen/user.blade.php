@@ -3,6 +3,7 @@
 @section('aktifuser','active')
 @section('content')
 <!-- Default box -->
+<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 <div class="card card-primary">
     <div class="card-header">
         <h3 class="card-title">User configuration</h3>
@@ -124,8 +125,10 @@
                 <td>{{$user->username}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->role}}</td>
-                <td><a href="/delete-user/{{$user->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
-                    <a href="/update-user/{{$user->id}}" class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
+                <td><a href="/delete/{{$user->id}}/{{$tokens}}" class="btn btn-danger btn-sm"><i
+                            class="fas fa-trash"></i></a>
+                    <a href="/edit/{{$user->id}}/{{$tokens}}" class="btn btn-warning btn-sm"><i
+                            class="far fa-edit"></i></a>
                 </td>
             </tr>
             @endforeach

@@ -190,7 +190,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link active">
+                            <a href="/dashboard" class="nav-link @yield('aktifdash')">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -198,7 +198,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/user-config/{{$tokens}}" class="nav-link">
+                            <a href="/user-config/{{$tokens}}" class="nav-link @yield('aktifuser')">
                                 <i class="nav-icon fas fa-users-cog"></i>
                                 <p>
                                     User configurations
@@ -208,7 +208,7 @@
 
                         <li class="nav-header">SYSTEM</li>
                         <li class="nav-item">
-                            <a href="/messages/{{$tokens}}" class="nav-link">
+                            <a href="/messages/{{$tokens}}" class="nav-link @yield('aktifinbox')">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
                                     Inbox
@@ -216,7 +216,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/event/{{$tokens}}" class="nav-link">
+                            <a href="/event/{{$tokens}}" class="nav-link @yield('aktifevent')">
                                 <i class="nav-icon fas fa-calendar-check"></i>
                                 <p>
                                     Events
@@ -224,7 +224,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/karir/{{$tokens}}" class="nav-link">
+                            <a href="/karir/{{$tokens}}" class="nav-link @yield('aktifkarir')">
                                 <i class="nav-icon fab fa-ethereum"></i>
                                 <p>
                                     Career
@@ -232,7 +232,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/threads/{{$tokens}}" class="nav-link">
+                            <a href="/threads/{{$tokens}}" class="nav-link @yield('aktifthreads')">
                                 <i class="nav-icon fas fa-store"></i>
                                 <p>
                                     Forum Threads
@@ -240,8 +240,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="nav-link">
-                                <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
+                                <i class=" nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Sign out
                                 </p>
@@ -292,9 +292,7 @@
         <!-- Main Footer -->
         <footer class="main-footer">
             <?php $YearNow = date('Y') ?>
-            <strong>Copyright &copy; {{$YearNow}} <a href="https://infinitysolutions.co.id">CV. Sumber
-                    Diesel</a>.</strong>
-            All rights reserved by Infinity Solutions
+            <strong>Copyright &copy; {{$YearNow}} <a href="/">Sarjanamalam</a>.</strong>
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.0.1
             </div>
@@ -307,6 +305,9 @@
     <script src="{!!asset('dashboard_admin/plugins/jquery/jquery.min.js')!!}"></script>
     <!-- Bootstrap -->
     <script src="{!!asset('dashboard_admin/plugins/bootstrap/js/bootstrap.bundle.min.js')!!}"></script>
+    <!-- DataTables -->
+    <script src="{!!asset('dashboard_admin/plugins/datatables/jquery.dataTables.js')!!}"></script>
+    <script src="{!!asset('dashboard_admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js')!!}"></script>
     <!-- overlayScrollbars -->
     <script src="{!!asset('dashboard_admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')!!}"></script>
     <!-- AdminLTE App -->
@@ -326,6 +327,29 @@
 
     <!-- PAGE SCRIPTS -->
     <script src="{!!asset('dashboard_admin/dist/js/pages/dashboard2.js')!!}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tableJs').DataTable({
+                "paging": true,
+                "scrollY": "200px",
+                "scrollCollapse": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+            });
+            $('#tableItem').DataTable({
+                "paging": true,
+                "scrollY": "300px",
+                "scrollCollapse": true,
+                "lengthChange": true,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+            });
+        });
+
+    </script>
 </body>
 
 </html>

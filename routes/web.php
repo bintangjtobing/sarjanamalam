@@ -52,7 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
 // DASHBOARD CONTROLLER MENU
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/restricted/{tokens}', 'DashboardController@index');
-    Route::get('/user-management/{tokens}', 'DashboardController@usermgmt');
+    Route::get('/user-config/{tokens}', 'DashboardController@usermgmt');
     Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
     Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
     Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');

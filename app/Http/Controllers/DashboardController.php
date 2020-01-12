@@ -23,7 +23,7 @@ class DashboardController extends Controller
             ->select('users.*')
             ->orderBy('users.created_at', 'desc')
             ->get();
-        return view('dashboard.user.index', ['usermg' => $usermg]);
+        return view('authen.user', ['usermg' => $usermg]);
     }
     public function deleteuser($id)
     {

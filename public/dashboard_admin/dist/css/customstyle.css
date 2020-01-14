@@ -1,0 +1,30 @@
+.img-edit {
+    max-width: 70px !important;
+    max-height: auto;
+    border: 2px solid #2485c1;
+    border-radius: 50%;
+}
+
+.img-edit:hover {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.imageoverlay {
+    position: relative;
+}
+
+.textoverlay {
+    position: absolute;
+    background-color: rgba(200, 200, 200, 0.5);
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+}
+
+.imageoverlay .textoverlay:hover {
+    opacity: 1;
+}

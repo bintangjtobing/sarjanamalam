@@ -41,18 +41,25 @@ class DashboardController extends Controller
     public function edituser($id)
     {
         $user  = \App\UserMod::find($id);
-        return view('dashboard.user.edit', ['user' => $user]);
+        $userget = DB::table('users')
+            ->where('users.id', '=', $id)
+            ->join('provinces', 'users.provinsi', '=', 'provinces.province_id')
+            ->select('provinces.*', 'users.*')
+            ->get();
+        $province = DB::table('provinces')
+            ->select('provinces.*')
+            ->get();
+        return view('dashboard.user.edit', ['userget' => $userget, 'user' => $user, 'province' => $province]);
+        // dd($userget);
     }
     public function updateuser(Request $request, $id)
     {
         $user =  \App\UserMod::find($id);
-        // $user->update($request->all());
         $user->name = $request->name;
         $user->email = $request->email;
         $user->username = $request->username;
         $user->password = Hash::make($request->password);
-        $user->verified_password = $request->confirmation_password;
-        $user->alamat = $request->address;
+        $user->verified_password = $request->password;
         $user->kota = $request->city;
         $user->provinsi = $request->state;
         $user->kodepos = $request->zip;
@@ -62,13 +69,14 @@ class DashboardController extends Controller
         $user->role = $request->role;
         $user->jabatan = $request->jabatan;
         if ($request->hasFile('displaypic')) {
-            $request->file('displaypic')->move(public_path('file/img/'), $request->file('displaypic')->getClientOriginalName());
+            $request->file('displaypic')->move(public_path('file/img/profilepic/'), $request->file('displaypic')->getClientOriginalName());
             $user->displaypic = $request->file('displaypic')->getClientOriginalName();
         }
         $user->updated_by = auth()->user()->name;
 
-        $user->save();
-        return back()->with('sukses', 'Save successfully!');
+        // $user->save();
+        // return back()->with('sukses', 'Save successfully!');
+        dd($request->all());
     }
     public function eventmgmt()
     {

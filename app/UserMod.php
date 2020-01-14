@@ -14,6 +14,6 @@ class UserMod extends Model
         if (!$this->displaypic) {
             return asset('storage/img/default.png');
         }
-        return asset('file/img/' . $this->displaypic);
+        return asset('file/img/profilepic/' . $this->displaypic);
     }
 }

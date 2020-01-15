@@ -209,7 +209,7 @@
 
                         <li class="nav-header">SYSTEM</li>
                         <li class="nav-item">
-                            <a href="/messages/{{$tokens}}" class="nav-link @yield('aktifinbox')">
+                            <a href="/pesan/{{$tokens}}" class="nav-link @yield('aktifinbox')">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
                                     Inbox

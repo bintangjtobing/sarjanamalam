@@ -3953,6 +3953,7 @@ return array(
     'Zend\\Diactoros\\UploadedFileFactory' => $vendorDir . '/zendframework/zend-diactoros/src/UploadedFileFactory.php',
     'Zend\\Diactoros\\Uri' => $vendorDir . '/zendframework/zend-diactoros/src/Uri.php',
     'Zend\\Diactoros\\UriFactory' => $vendorDir . '/zendframework/zend-diactoros/src/UriFactory.php',
+    'pesanSeeder' => $baseDir . '/database/seeds/pesanSeeder.php',
     'phpDocumentor\\Reflection\\DocBlock' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
     'phpDocumentor\\Reflection\\DocBlockFactory' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
     'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => $vendorDir . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

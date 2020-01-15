@@ -61,9 +61,16 @@ Route::group(['middleware' => 'auth'], function () {
 
     // VIEW TABLE FOREACH VIEW
     Route::get('/pesan/{tokens}', 'DashboardController@pesan');
+    Route::get('/trash/{tokens}', 'DashboardController@trash');
     Route::get('/event/{tokens}', 'DashboardController@event');
     Route::get('/karir/{tokens}', 'DashboardController@karir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
+
+    // GET THE DETAILS
+    Route::get('/read/{messages_id}', 'DashboardController@bacapesan');
+
+    // DELETE VALUE
+    Route::get('/trash-messages/{messages_id}', 'DashboardController@pesansampah');
 });
 
 Auth::routes();

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\messagesDB;
 use App\UserMod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -93,5 +94,60 @@ class DashboardController extends Controller
             ->orderBy('blog.created_at', 'desc')
             ->get();
         return view('dashboard.blog.index', ['blogList' => $blogList]);
+    }
+
+    ////////////////// PESAN, EVENT, KARIR ///////////////////////////
+    // VIEW DASHBOARD PESAN
+    public function pesan()
+    {
+        $pesan = DB::table('messages')
+            ->where('messages.status', '!=', 'trashed')
+            ->orderBy('messages.created_at', 'DESC')
+            ->select('messages.*')
+            ->paginate(25);
+        $pesanall = \App\messagesDB::all();
+        return view('authen.pesan', ['pesan' => $pesan, 'pesanall' => $pesanall]);
+    }
+    public function trash()
+    {
+        $pesan = DB::table('messages')
+            ->where('messages.status', '=', 'trashed')
+            ->orderBy('messages.created_at', 'DESC')
+            ->select('messages.*')
+            ->paginate(25);
+        $pesanall = \App\messagesDB::all();
+        return view('authen.pesan', ['pesan' => $pesan, 'pesanall' => $pesanall]);
+    }
+
+    // EDIT/GET VIEW
+    public function bacapesan($messages_id)
+    {
+        $pesanget = \App\messagesDB::find($messages_id);
+        $pesanget->status = 'read';
+        $pesanget->save();
+        return view('authen.bacapesan', ['pesanget' => $pesanget]);
+    }
+
+    // DELETE FUNCTION
+    public function pesansampah($messages_id)
+    {
+        $pesanget = \App\messagesDB::find($messages_id);
+        $pesanget->status = 'trashed';
+        $pesanget->save();
+        return redirect('/pesan/{tokens}')->with('suksessampah', 'Pesan berhasil dimasukkan ke keranjang sampah.');
+    }
+
+    public function pesansampah_permanen($messages_id)
+    {
+        $pesan = messagesDB::find($messages_id);
+
+        if ($pesan) {
+            if ($pesan->delete()) {
+
+                DB::statement('ALTER TABLE messages AUTO_INCREMENT = ' . (count(messagesDB::all()) + 1) . ';');
+
+                return back()->with('sukses', 'Users has been successfully deleted!');
+            }
+        }
     }
 }

@@ -62,6 +62,7 @@ class companyController extends Controller
         $post->email = $request->email;
         $post->subject = $request->subject;
         $post->messages = $request->messages;
+        $post->status = 'unread';
 
         $post->save();
 

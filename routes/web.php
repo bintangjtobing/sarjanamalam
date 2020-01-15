@@ -62,6 +62,7 @@ Route::group(['middleware' => 'auth'], function () {
     // VIEW TABLE FOREACH VIEW
     Route::get('/pesan/{tokens}', 'DashboardController@pesan');
     Route::get('/trash/{tokens}', 'DashboardController@trash');
+
     Route::get('/event/{tokens}', 'DashboardController@event');
     Route::get('/karir/{tokens}', 'DashboardController@karir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');

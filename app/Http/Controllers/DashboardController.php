@@ -108,6 +108,32 @@ class DashboardController extends Controller
         $pesanall = \App\messagesDB::all();
         return view('authen.pesan', ['pesan' => $pesan, 'pesanall' => $pesanall]);
     }
+    public function event()
+    {
+        $event = DB::table('events')
+            ->orderBy('events.created_at', 'DESC')
+            ->select('events.*')
+            ->get();
+        return view('authen.events', ['event' => $event]);
+    }
+    public function karir()
+    {
+        $karir = DB::table('career')
+            ->orderBy('career.created_at', 'DESC')
+            ->select('career.*')
+            ->get();
+        return view('authen.karir', ['karir' => $karir]);
+    }
+    public function threads()
+    {
+        $threads = DB::table('threads')
+            ->orderBy('threads.created_at', 'DESC')
+            ->select('threads.*')
+            ->get();
+        return view('authen.threads', ['threads' => $threads]);
+    }
+
+    // MASUKKAN KE KERANJANG SAMPAH
     public function trash()
     {
         $pesan = DB::table('messages')

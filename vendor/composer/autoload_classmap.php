@@ -43,6 +43,7 @@ return array(
     'App\\categoryDB' => $baseDir . '/app/categoryDB.php',
     'App\\eventDB' => $baseDir . '/app/eventDB.php',
     'App\\messagesDB' => $baseDir . '/app/messagesDB.php',
+    'App\\provinsiDB' => $baseDir . '/app/provinsiDB.php',
     'App\\subcategoryDB' => $baseDir . '/app/subcategoryDB.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
     'BeyondCode\\DumpServer\\DumpServerServiceProvider' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',

@@ -58,6 +58,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
     Route::get('/blog-queue/{tokens}', 'DashboardController@blog');
     Route::get('/event-managements/{tokens}', 'DashboardController@eventmgmt');
+
+    // VIEW TABLE FOREACH VIEW
+    
 });
 
 Auth::routes();

@@ -50,7 +50,20 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="">Ganti password?</label>
-                    <input type="password" name="password" class="form-control">
+                    <input type="password" name="password" id="passwordG" class="form-control"
+                        value="{{$user->verified_password}}">
+                    <a onclick="showHide()" class="showhideClass"> Show password</a>
+                    <script>
+                        function showHide() {
+                            var getPass = document.getElementById("passwordG");
+                            if (getPass.type === "password") {
+                                getPass.type = "text";
+                            } else {
+                                getPass.type = "password";
+                            }
+                        }
+
+                    </script>
                 </div>
             </div>
             <div class="form-row">

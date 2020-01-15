@@ -28,3 +28,12 @@
 .imageoverlay .textoverlay:hover {
     opacity: 1;
 }
+
+.showhideClass {
+    cursor: pointer;
+    color: #7a7a7a !important;
+}
+
+.showhideClass:hover {
+    color: #000 !important;
+}

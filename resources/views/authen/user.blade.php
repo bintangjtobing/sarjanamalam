@@ -9,9 +9,9 @@
         <h3 class="card-title">User configuration</h3>
 
         <div class="card-tools">
-            <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahkategori">
+            {{-- <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahkategori">
                 <i class=" fas fa-plus-circle"></i> Tambah data pengguna
-            </a>
+            </a> --}}
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
                 <i class="fas fa-minus"></i></button>

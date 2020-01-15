@@ -74,9 +74,9 @@ class DashboardController extends Controller
         }
         $user->updated_by = auth()->user()->name;
 
-        // $user->save();
-        // return back()->with('sukses', 'Save successfully!');
-        dd($request->all());
+        $user->save();
+        return back()->with('sukses', 'Save successfully!');
+        // dd($request->all());
     }
     public function eventmgmt()
     {

@@ -60,7 +60,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/event-managements/{tokens}', 'DashboardController@eventmgmt');
 
     // VIEW TABLE FOREACH VIEW
-    
+    Route::get('/pesan/{tokens}', 'DashboardController@pesan');
+    Route::get('/event/{tokens}', 'DashboardController@event');
+    Route::get('/karir/{tokens}', 'DashboardController@karir');
+    Route::get('/threads/{tokens}', 'DashboardController@threads');
 });
 
 Auth::routes();

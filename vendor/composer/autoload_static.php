@@ -518,6 +518,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\blogDB' => __DIR__ . '/../..' . '/app/blogDB.php',
         'App\\categoryDB' => __DIR__ . '/../..' . '/app/categoryDB.php',
         'App\\eventDB' => __DIR__ . '/../..' . '/app/eventDB.php',
+        'App\\karirDB' => __DIR__ . '/../..' . '/app/karirDB.php',
         'App\\messagesDB' => __DIR__ . '/../..' . '/app/messagesDB.php',
         'App\\provinsiDB' => __DIR__ . '/../..' . '/app/provinsiDB.php',
         'App\\subcategoryDB' => __DIR__ . '/../..' . '/app/subcategoryDB.php',

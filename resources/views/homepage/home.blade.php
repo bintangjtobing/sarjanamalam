@@ -1,32 +1,66 @@
-@extends('homepage.welcome')
+@extends('homepage.welcomenew')
 @section('title','Sarjanamalam. | Hi there!')
 @section('metadesc','Hi semua. Yuk ikutan gabung di forum komunitas sarjanamalam. Masuk dulu dan lihat kelebihan
 kelebihannya.')
 @section('content')
-<div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
-    <header class="masthead mb-auto">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <div class="inner">
-            <nav class="nav nav-masthead justify-content-end">
-                <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
-                <a class="nav-link" href="/signin/{{$tokens}}">Masuk</a>
-            </nav>
-        </div>
-    </header>
+<nav class="navbar navbar-expand-sm navbar-light mt-2">
+    <div class="container">
+        <div class="d-flex justify-content-end w-100" id="collapsibleNavId">
+            <ul class="navbar-nav navbar-mobile ml-auto mt-2 mt-lg-0">
+                @if(Auth::check())
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Managements</a>
+                </li>
+                @else
+                <li class="nav-item">
+                    <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
+                    <a class="nav-link" href="/signin/{{$tokens}}">Masuk</a>
+                </li>
+                @endif
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="fas fa-ellipsis-v"></span>
+                    </a>
+                </li>
 
-    <main role="main" class="inner cover text-center">
-        <h1 class="pb-2">sarjanamalam.</h1>
-        <form action="/search">
-            <div class="input-field text-center">
-                <input class="form-control" id="choices-text-preset-values" type="text" autofocus>
-                <button class="btn-search" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path
-                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
-                </button>
+                @if(Auth::check())
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <div class="nav-item-user">
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="dropdownId">
+                        <a class="dropdown-item nav-user-name" href="#"><span class="font-weight-bold ">Bintang
+                                Jr Tobing</span></a>
+                        <a class="dropdown-item" href="#">Profile Saya</a>
+                        <a href="#" class="dropdown-item">Keluar</a>
+                    </div>
+                </li>
+                @endif
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <form action="">
+                    <h2 class="search-title text-center">Sarjanamalam.</h2>
+                    <div class="main-search">
+
+                        <span class="search-icon icon-left fas fa-search"></span>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
             </div>
-        </form>
-    </main>
-    @endsection
+        </div>
+    </div>
+</div>
+@endsection

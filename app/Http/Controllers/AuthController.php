@@ -11,7 +11,7 @@ class AuthController extends Controller
     {
         $tokens = str_random(50);
         if (Auth::attempt($request->only('username', 'password'))) {
-            return redirect('/home');
+            return redirect('/');
         }
         return back()->with('gagal', 'Otorisasi member gagal. Silahkan cek kembali username atau password anda.');
     }

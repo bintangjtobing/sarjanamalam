@@ -1,4 +1,5 @@
 @extends('homepage.welcomenew')
+@inject('userMod', 'App\UserMod')
 @section('title','Sarjanamalam. | Hi there!')
 @section('metadesc','Hi semua. Yuk ikutan gabung di forum komunitas sarjanamalam. Masuk dulu dan lihat kelebihan
 kelebihannya.')
@@ -7,16 +8,16 @@ kelebihannya.')
     <div class="container">
         <div class="d-flex justify-content-end w-100" id="collapsibleNavId">
             <ul class="navbar-nav navbar-mobile ml-auto mt-2 mt-lg-0">
+                <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
                 @if(Auth::check())
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Forum</a>
+                    <a class="nav-link" href="/forum/{{$tokens}}">Forum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Managements</a>
+                    <a class="nav-link" href="/restricted/{{$tokens}}">Managements</a>
                 </li>
                 @else
                 <li class="nav-item">
-                    <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
                     <a class="nav-link" href="/signin/{{$tokens}}">Masuk</a>
                 </li>
                 @endif
@@ -31,14 +32,16 @@ kelebihannya.')
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         <div class="nav-item-user">
-                            <span class="fas fa-user"></span>
+                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                    class="img-profile-user" alt="User Image"></span>
                         </div>
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="dropdownId">
-                        <a class="dropdown-item nav-user-name" href="#"><span class="font-weight-bold ">Bintang
-                                Jr Tobing</span></a>
+                        <a class="dropdown-item nav-user-name" href="#"><span
+                                class="font-weight-bold ">{{auth()->user()->name}}</span></a>
                         <a class="dropdown-item" href="#">Profile Saya</a>
-                        <a href="#" class="dropdown-item">Keluar</a>
+                        <a href="/logout/{{auth()->user()->id}}" class="dropdown-item">Keluar</a>
                     </div>
                 </li>
                 @endif

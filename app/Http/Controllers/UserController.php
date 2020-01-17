@@ -19,11 +19,11 @@ class UserController extends Controller
         $data_member->jabatan = 'user';
         $data_member->status = 'active';
         $data_member->password = Hash::make($request->password);
-        $data_member->verified_password = $request->confirmation_password;
+        $data_member->verified_password = $request->ver_password;
         $data_member->remember_token = str_random(50);
         $data_member->created_by = 'guest';
         $data_member->updated_by = 'guest';
         $data_member->save();
-        return redirect('/signin')->with('sukses', 'Tinggal selangkah lagi, kamu hanya upload 1 berita pertama kamu. Jika menarik, berita kamu bisa langsung diangkat di Instagram milik');
+        return back()->with('sukses', 'Tinggal selangkah lagi, kamu upload 1 berita pertama kamu. Jika menarik, berita kamu bisa langsung diangkat di Instagram milik sarjanamalam loh.');
     }
 }

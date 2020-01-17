@@ -68,7 +68,7 @@
                                 <a href="/how-search-works" class="nav-link" href="#">Cara kerja penelusuran</a>
                             </li>
                             <li class="nav-item with-divider">
-                                <a href="#" class="nav-link">&copy; 2019 Sarajanamalam</a>
+                                <a class="nav-link">&copy; 2019 Sarajanamalam</a>
                             </li>
 
                         </ul>

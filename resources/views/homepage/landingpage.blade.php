@@ -25,7 +25,7 @@ kelebihannya.')
                                 tabindex="-1"><strong>{{Auth()->user()->name}}</strong></a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-2" href="/my-profile">Profil saya</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-4"
-                                href="/logout/{{auth()->user()->id}}{{$tokens}}">Keluar</a></li>
+                                href="/logout/{{auth()->user()->id}}">Keluar</a></li>
                     </ul>
                 </div>
             </nav>

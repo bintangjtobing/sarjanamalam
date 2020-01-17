@@ -77,7 +77,8 @@
                     <select name="state" id="" class="custom-select" required>
                         @foreach ($userget as $userprovinsi)
                         @if($userprovinsi->provinsi!='{{$userprovinsi->province_id}}')
-                        <option value="" selected>{{$userprovinsi->nama_provinsi}}</option>
+                        <option value="{{$userprovinsi->nama_provinsi}}" selected>{{$userprovinsi->nama_provinsi}}
+                        </option>
                         @endif
                         @endforeach
                         @foreach ($province as $prov)

@@ -46,7 +46,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/home" class="nav-link">Home</a>
+                    <a href="/" class="nav-link">Home</a>
                 </li>
             </ul>
 
@@ -176,7 +176,8 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}"
+                        <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}@endif"
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
@@ -241,7 +242,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="nav-link">
+                            <a href="/logout/{{auth()->user()->id}}" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Sign out

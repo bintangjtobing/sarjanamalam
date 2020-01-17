@@ -1,120 +1,78 @@
-@extends('homepage.welcome')
-@section('title','Sarjanamalam. | Daftar keanggotaan')
-@section('metadesc','Tunggu apalagi, ayo daftarkan diri kamu di keanggotaan forum sarjanamalam. Dan berbagilah dengan
-luas dan fokus pada arah tujuanmu.')
-@section('content')
-<div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
-    <div class="daftar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h3><strong>Buat akun!</strong></h3>
-                    <p>Bergabung bersama teman-teman <strong>sarjanamalam</strong>.<br>Dan berbagilah.</p>
-                </div>
-            </div>
-            <hr>
-            <br>
-            @if(session('sukses'))
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <h4 class="alert-heading">Congratulations!</h4>
-                        <p>Yeay! Kamu berhasil mendaftar keanggotaan di <strong>Sarjanamalam</strong>!</p>
-                        <p class="mb-0">Tinggal selangkah lagi, kamu hanya upload 1 berita pertama kamu. Jika menarik,
-                            berita kamu bisa langsung diangkat di Instagram milik <strong><a
-                                    href="https://instagram.com/sarjanamalamdotcom" target="_blank"
-                                    data-toggle="tooltip" data-placement="bottom"
-                                    title="Follow us on Instagram!">sarjanamalam</a></strong> loh.</p>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            @endif
-            <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
-            <form action="/create-account/{{$tokens}}" method="post">
-                {{ csrf_field() }}
-                <div class="register row">
-                    <div class="col-md-6">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <small class="form-text">Nama lengkap</small>
-                                <input type="text" name="nama_lengkap" id="nama_lengkap" class="form-control"
-                                    placeholder="Nama Lengkap" required>
-                            </div>
-                            <div class="form-group">
-                                <small class="form-text">Username</small>
-                                <input type="text" name="username" placeholder="Username" id="username"
-                                    class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <small class="form-text">Email</small>
-                            <input type="email" name="email" placeholder="Email" id="email" class="form-control emailcl"
-                                required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <small class="form-text">Password</small>
-                                <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="Password" required pattern=".{8,}">
-                                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show
-                                    Password</small>
-                            </div>
-                            <div class="form-group">
-                                <small class="form-text">Ulangi password</small>
-                                <input type="password" name="confirmation_password" placeholder="Ulangi password"
-                                    id="confirmation_password" class="form-control" required pattern=".{8,}">
-                                <span class="fas fa-eye field-icon" onclick="showVerifiedPass()"></span> <small>Show
-                                    Password</small>
-                            </div>
-                            <small class="smallwarn">
-                                Gunakan minimal 8 password dengan campuran huruf, angka dan simbol.
-                            </small>
-                        </div>
-                        <button type="submit" class="btn btn-sarjana">Create an account!</button><br>
-                        <small>Sudah punya akun? <a href="/signin/{{$tokens}}">Login sekarang</a></small>
-                    </div>
-                </div>
-            </form>
+@extends('homepage.signin')
+@section('activereg','active')
+@section('titleweb','Sarjanamalam. | Buat akunmu.')
+@section('desctitle','Buat akun baru sarjanamalam kamu. Gabung bersama forum dan bahas tentang apa yang kamu alami dan
+kamu ingin cari tau.')
+@section('contentauth')
+<?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
+@if(session('sukses'))
+<div class="form-row">
+    <div class="col-md-12">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Yeay! Berhasil!</strong> {{session('sukses')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     </div>
-    <script>
-        function showPass() {
-            var Pass = document.getElementById('password');
-            if (Pass.type === "password") {
-                Pass.type = "text";
-            } else {
-                Pass.type = "password";
-            }
-        }
-
-    </script>
-    <script>
-        function showVerifiedPass() {
-            var Pass = document.getElementById('confirmation_password');
-            if (Pass.type === "password") {
-                Pass.type = "text";
-            } else {
-                Pass.type = "password";
-            }
-        }
-
-    </script>
-    <script>
+</div>
+@endif
+<form action="/create-account/{{$tokens}}" method="post">
+    @csrf
+    <div class="form-row">
+        <div class="col-md-12">
+            <input class="form-control" type="text" name="nama_lengkap" placeholder="Nama lengkap" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <input class="form-control" type="text" name="username" placeholder="Username" required>
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" type="email" name="email" placeholder="Email" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required pattern=".{8,}">
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" type="password" name="ver_password" id="ver_password" placeholder="Ulangi password" required
+                pattern=".{8,}">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
+            <div class="form-button">
+                <button id="submit" type="submit" class="ibtn">Register</button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    function showPass() {
         var Pass = document.getElementById('password');
-        var Confirm_pass = document.getElementById('confirmation_password')
-
-        function validatePassword() {
-            if (Pass.value != Confirm_pass.value) {
-                Confirm_pass.setCustomValidity("Password tidak sama. Ulangi kembali password kamu.");
-            } else {
-                Confirm_pass.setCustomValidity("");
-            }
+        if (Pass.type === "password") {
+            Pass.type = "text";
+        } else {
+            Pass.type = "password";
         }
-        Pass.onchange = validatePassword;
-        Confirm_pass.onkeyup = validatePassword;
+    }
 
-    </script>
-    @endsection
+</script>
+<script>
+    var Pass = document.getElementById('password');
+    var Confirm_pass = document.getElementById('ver_password')
+
+    function validatePassword() {
+        if (Pass.value != Confirm_pass.value) {
+            Confirm_pass.setCustomValidity("Password tidak sama. Ulangi kembali password kamu.");
+        } else {
+            Confirm_pass.setCustomValidity("");
+        }
+    }
+    Pass.onchange = validatePassword;
+    Confirm_pass.onkeyup = validatePassword;
+
+</script>
+@endsection

@@ -145,7 +145,7 @@
                                         href="/{{Auth()->user()->username}}">My
                                         Profile</a></li>
                                 <li role="presentation"><a role="menuitem" tabindex="-3"
-                                        href="/logout/{{auth()->user()->id}}{{$tokens}}">Log Out</a></li>
+                                        href="/logout/{{auth()->user()->id}}">Log Out</a></li>
                             </ul>
                         </div>
 

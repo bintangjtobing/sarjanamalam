@@ -130,7 +130,7 @@ h6 {
 }
 
 .inner-bg-image {
-    background-color: #0e1624;
+    background-color: #152733;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%232b58a2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%232949b1' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23515dae' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%237151b9' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2332286d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239b4996' points='1203 546 1552 900 1162 900'/%3E%3Cppolygon fill='%23562550' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23723d67' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%233d4d82' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23965f52' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%232f2541' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23628a96' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
     background-position: center;
     background-repeat: no-repeat;
@@ -139,6 +139,11 @@ h6 {
 
 .homestyle a {
     color: #ccc !important;
+}
+
+.homestyle a:hover {
+    color: #47a9e6 !important;
+    transition: .32s ease-in-out;
 }
 
 .homestyle .search-title {
@@ -154,9 +159,6 @@ h6 {
 .homestyle .footer .navbar-nav li {
     margin-right: 0.8em;
 }
-
-
-
 
 .nav-item-user {
     background-color: #ccc;
@@ -180,7 +182,20 @@ h6 {
 .dropdown-menu {
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #333;
+    background-color: #152733;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(36, 133, 193, .4);
+    color: #47a9e6 !important;
+    border-bottom: 2px solid #47a9e6;
+    transition: .32s ease-in-out;
 }
 
 .dropdown-toggle::after {
@@ -207,4 +222,10 @@ h6 {
     .homestyle .footer .navbar-nav li>a {
         font-size: 14px;
     }
+}
+
+.img-profile-user {
+    border-radius: 50%;
+    width: 40px;
+    height: auto;
 }

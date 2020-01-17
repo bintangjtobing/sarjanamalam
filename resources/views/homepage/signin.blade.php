@@ -1,71 +1,69 @@
-@extends('homepage.welcome')
-@section('title','Sarjanamalam. | Signin')
-@section('metadesc','Masuk ke akun sarjanamalam kamu. Gabung bersama forum dan bahas tentang apa yang kamu alami dan
-kamu ingin cari tau.')
-@section('content')
-<div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
-    <header class="masthead mb-auto">
-        <div class="inner">
-            <nav class="nav nav-masthead justify-content-end">
-                <a class="nav-link" href="/register" hidden>Masuk</a>
-            </nav>
-        </div>
-    </header>
-    <div class="container text-center">
-        <?php $tokens= bin2hex(openssl_random_pseudo_bytes(64)); ?>
-        <form action="/get-verification/{{$tokens}}" method="post">
-            {{ csrf_field() }}
-            <div class="login text-left">
-                <h3><strong>Masuk</strong></h3>
-                <p>Masuk untuk melanjutkan ke <strong>Sarjanamalam</strong>.</p>
-                @if(session('sukses'))
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <h4 class="alert-heading">Congratulations!</h4>
-                            <p>Yeay! Kamu berhasil mendaftar keanggotaan di <strong>Sarjanamalam</strong>!</p>
-                            <p class="mb-0">{{session('sukses')}} <strong><a
-                                        href="https://instagram.com/sarjanamalamdotcom" target="_blank"
-                                        data-toggle="tooltip" data-placement="bottom"
-                                        title="Follow us on Instagram!">sarjanamalam</a></strong> loh.</p>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                @elseif(session('gagal'))
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <h4 class="alert-heading">Sign in failed!</h4>
-                            <p class="mb-0">{{session('gagal')}}</p>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                @endif
-                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Password"
-                    required>
-                <span class="fas fa-eye field-icon" onclick="showPass()"></span> <small>Show Password</small>
-                <small class="form-text mb-3"><a href="/forgotpassword">Lupa password/email?</a></small>
-                <button type="submit" class="btn btn-sarjana">Masuk</button>
-                <small class="form-text mt-4">Belum punya akun? <a href="/daftar/{{$tokens}}">Buat akun!</a></small>
-            </div>
-        </form>
-    </div>
-    <script>
-        function showPass() {
-            var Pass = document.getElementById('password');
-            if (Pass.type === "password") {
-                Pass.type = "text";
-            } else {
-                Pass.type = "password";
-            }
-        }
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('titleweb')</title>
+    <meta name="description" content="@yield('desctitle')">
+    <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-style.css')!!}">
+    <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-theme2.css')!!}">
+</head>
+
+<body>
+    <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
+    <div class="form-body">
+        <div class="website-logo">
+            <a href="/">
+                <div class="logo">
+                    <img class="logo-size" src="{!!asset('storage/img/logopname.png')!!}" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Jangan pernah lepaskan ide idemu dengan masuk ke platform <span
+                                class="text-gradient-blue-sarjana">sarjanamalam.</span></h3>
+                        <p>Never lose your brilliant ideas with loggin platform.</p>
+                        <div class="page-links">
+                            <a href="/signin/{{$tokens}}" class="@yield('activelog')">Login</a><a
+                                href="/daftar/{{$tokens}}" class="@yield('activereg')">Register</a>
+                        </div>
+                        @yield('contentauth')
+                        <div class="other-links">
+                            <span>Pantau terus sosial medianya <span
+                                    class="text-gradient-blue-sarjana">#sarjanamalam</span><a
+                                    href="http://facebook.com/sarjanamalamdotcom" target="_blank">Facebook</a><a
+                                    href="http://instagram.com/sarjanamalamdotcom" target="_blank">Instagram</a><a
+                                    href="https://twitter.com/sarjanamalamcom" target="_blank">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    @endsection
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

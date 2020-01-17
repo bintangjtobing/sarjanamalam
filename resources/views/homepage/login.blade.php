@@ -5,6 +5,18 @@
 kamu ingin cari tau.')
 @section('contentauth')
 <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
+@if(session('gagal'))
+<div class="form-row">
+    <div class="col-md-12">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Failed!</strong><br>{{session('gagal')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+</div>
+@endif
 <form action="/get-verification/{{$tokens}}" method="post">
     @csrf
     <input class="form-control" type="text" name="username" placeholder="Username" required>

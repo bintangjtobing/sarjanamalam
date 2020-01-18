@@ -19,6 +19,9 @@ Route::get('/signin', function () {
 Route::get('/daftar/{csrf_token}', function () {
     return view('homepage.daftar');
 });
+Route::get('search', function () {
+    return view('homepage.results_search');
+});
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}', 'AuthController@logout');

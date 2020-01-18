@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-    <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
 
     {{-- SOCIAL MEDIA TAGS --}}
     {{-- FACEBOOK SOCMED --}}
@@ -67,8 +66,9 @@
                             <li class="nav-item">
                                 <a href="/how-search-works" class="nav-link" href="#">Cara kerja penelusuran</a>
                             </li>
+                            <?php $currentYear = date('Y'); ?>
                             <li class="nav-item with-divider">
-                                <a class="nav-link">&copy; 2019 Sarajanamalam</a>
+                                <a class="nav-link">&copy; {{$currentYear}} Sarajanamalam</a>
                             </li>
 
                         </ul>

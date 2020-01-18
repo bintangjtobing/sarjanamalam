@@ -59,11 +59,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/blog-queue/{tokens}', 'DashboardController@blog');
     Route::get('/event-managements/{tokens}', 'DashboardController@eventmgmt');
 
-    // VIEW TABLE FOREACH VIEW
+    ///////////////////// VIEW TABLE FOREACH VIEW ///////////////////
+    // PESAN CONTROLLER
     Route::get('/pesan/{tokens}', 'DashboardController@pesan');
     Route::get('/trash/{tokens}', 'DashboardController@trash');
 
+    // EVENT CONTROL
     Route::get('/event/{tokens}', 'DashboardController@event');
+    Route::get('/detail-event/{event_id}', 'DashboardController@detailevent');
+    // UPDATE EVENT STATUS //
+    Route::get('/update/status-event/approved/{event_id}', 'DashboardController@approvestatus');
+    Route::get('/update/status-event/ unapproved/{event_id}', 'DashboardController@unapprovedstatus');
+    Route::get('/update/status-event/running/{event_id}', 'DashboardController@runningstatus');
+    Route::get('/update/status-event/declined/{event_id}', 'DashboardController@declinedstatus');
+
     Route::get('/karir/{tokens}', 'DashboardController@karir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 

@@ -153,6 +153,39 @@ class DashboardController extends Controller
         $pesanget->save();
         return view('authen.bacapesan', ['pesanget' => $pesanget]);
     }
+    public function detailevent($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        return view('authen.detailevent', ['eventget' => $eventget]);
+    }
+    public function approvestatus($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        $eventget->status = 'approved';
+        $eventget->save();
+        return back()->with('sukses', 'Status event telah berhasil diubah ke posisi sudah disetujui.');
+    }
+    public function unapprovedstatus($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        $eventget->status = 'unapproved';
+        $eventget->save();
+        return back()->with('sukses', 'Status event telah berhasil diubah ke posisi tidak disetujui.');
+    }
+    public function runningstatus($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        $eventget->status = 'running';
+        $eventget->save();
+        return back()->with('sukses', 'Status event telah berhasil diubah ke posisi event sedang berjalan.');
+    }
+    public function declinedstatus($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        $eventget->status = 'declined';
+        $eventget->save();
+        return back()->with('sukses', 'Status event telah berhasil diubah ke posisi tidak disetujui.');
+    }
 
     // DELETE FUNCTION
     public function pesansampah($messages_id)

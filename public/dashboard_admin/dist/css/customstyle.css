@@ -37,3 +37,9 @@
 .showhideClass:hover {
     color: #000 !important;
 }
+
+.imgevent-det {
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 1rem;
+}

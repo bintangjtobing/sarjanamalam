@@ -494,6 +494,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\ForumController' => __DIR__ . '/../..' . '/app/Http/Controllers/ForumController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchController.php',
         'App\\Http\\Controllers\\ThreadController' => __DIR__ . '/../..' . '/app/Http/Controllers/ThreadController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\category_subController' => __DIR__ . '/../..' . '/app/Http/Controllers/category_subController.php',

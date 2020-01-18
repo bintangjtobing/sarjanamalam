@@ -1,5 +1,5 @@
 @extends('authen.index')
-@section('title','Team Management')
+@section('title','Karir management')
 @section('aktiftim','active')
 @section('content')
 <div class="content">
@@ -80,28 +80,26 @@
                         </div>
                     </div>
                     <div class="inner">
-                        <h3>Add team?</h3>
-
-                        <p>Lets start make a new team</p>
+                        <h3>Tambah bagian karir?</h3>
                     </div>
                     <div class="icon">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <a href="#" class="small-box-footer">
-                        Add new team <i class="fas fa-arrow-circle-right"></i>
+                        Tambah bagian karir <i class="fas fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
-            @foreach ($karir as $karirlist)
+            @foreach ($subkarir as $subkarirlst)
             <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h4><b>{{$karirlist->nama_team}}</b></h4>
+                        <h4><b>{{$subkarirlst->nama_subcareer}}</b></h4>
 
-                        <p>{{$karirlist->description}}</p>
+                        <p>{{$subkarirlst->deskripsi}}</p>
                     </div>
-                    <a href="/karir-info/{{$karirlist->career_id}}" class="small-box-footer">More info <i
+                    <a href="/subkarir-info/{{$subkarirlst->subcareer_id}}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>

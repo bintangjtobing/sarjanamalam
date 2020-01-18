@@ -125,6 +125,14 @@ class DashboardController extends Controller
             ->get();
         return view('authen.karir', ['karir' => $karir]);
     }
+    public function subkarir()
+    {
+        $subkarir = DB::table('subcareer')
+            ->orderBy('subcareer.created_at', 'DESC')
+            ->select('subcareer.*')
+            ->get();
+        return view('authen.subkarir', ['subkarir' => $subkarir]);
+    }
     public function threads()
     {
         $threads = DB::table('threads')
@@ -226,7 +234,6 @@ class DashboardController extends Controller
             $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
         }
         $karirget->save();
-        return back()->with('sukseskarir', 'Selamat kamu menambah team baru di kantor kamu.');
         // dd($karirget);
     }
 }

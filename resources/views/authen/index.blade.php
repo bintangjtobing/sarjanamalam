@@ -225,13 +225,30 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/karir/{{$tokens}}" class="nav-link @yield('aktifkarir')">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fab fa-ethereum"></i>
                                 <p>
-                                    Career
+                                    Karir & Team
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/karir/{{$tokens}}" class="nav-link @yield('aktiftim')">
+                                        <i class="fas fa-chess nav-icon"></i>
+                                        <p>Tim pekerjaan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/sub-karir/{{$tokens}}" class="nav-link @yield('aktifkarir')">
+                                        <i class="fas fa-chess nav-icon"></i>
+                                        <p>Karir</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="/threads/{{$tokens}}" class="nav-link @yield('aktifthreads')">

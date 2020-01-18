@@ -6,6 +6,9 @@ Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('optimize:clear');
     return 'Sarjanamalam have already done optimized'; //Return anything
 });
+// HASIL PENCARIAN
+// PROSES CARI
+Route::get('/search?=' . 'SearchController@processcari');
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
     return view('homepage.home');
@@ -19,9 +22,7 @@ Route::get('/signin', function () {
 Route::get('/daftar/{csrf_token}', function () {
     return view('homepage.daftar');
 });
-Route::get('search', function () {
-    return view('homepage.results_search');
-});
+Route::get('search', 'SearchController@index');
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/logout/{id}', 'AuthController@logout');

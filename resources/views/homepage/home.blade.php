@@ -54,11 +54,12 @@ kelebihannya.')
     <div class="row">
         <div class="col-12 text-center">
             <div>
-                <form action="/search?q=/" method="GET">
+                <form action="/search?=" method="GET">
+                    {{ csrf_field() }}
                     <h2 class="search-title text-gradient-blue-sarjana">Sarjanamalam.</h2>
                     <div class="main-search">
                         <span class="search-icon icon-left fas fa-search"></span>
-                        <input type="search" name="search-input" class="form-control" autofocus>
+                        <input type="search" name="searchinput" class="form-control" autofocus>
                     </div>
                 </form>
             </div>

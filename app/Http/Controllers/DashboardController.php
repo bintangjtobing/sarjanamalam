@@ -131,7 +131,10 @@ class DashboardController extends Controller
             ->orderBy('subcareer.created_at', 'DESC')
             ->select('subcareer.*')
             ->get();
-        return view('authen.subkarir', ['subkarir' => $subkarir]);
+        $karir = DB::table('career')
+            ->select('career.*')
+            ->get();
+        return view('authen.subkarir', ['subkarir' => $subkarir, 'karir' => $karir]);
     }
     public function threads()
     {
@@ -234,6 +237,23 @@ class DashboardController extends Controller
             $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
         }
         $karirget->save();
+        return back()->with('sukseskarir', 'Berhasil menambahkan tim baru di sistem.');
         // dd($karirget);
+    }
+    public function addsubkarir(Request $request)
+    {
+        $subkarirget = new \App\subkarirDB;
+        $subkarirget->career_id =  $request->career_id;
+        $subkarirget->nama_subcareer =  $request->nama_subcareer;
+        $subkarirget->deskripsi =  $request->deskripsi;
+        $subkarirget->minimal_kualifikasi =  $request->minimal_kualifikasi;
+        $subkarirget->kualifikasi_rekomendasi =  $request->kualifikasi_rekomendasi;
+        $subkarirget->tanggung_jawab =  $request->tanggung_jawab;
+        $subkarirget->lokasi =  $request->lokasi;
+        $subkarirget->status =  'Belum terbit';
+
+        // dd($subkarirget);
+        $subkarirget->save();
+        return back()->with('sukseskarir', 'Bagian bagian tim sudah ditambahkan.');
     }
 }

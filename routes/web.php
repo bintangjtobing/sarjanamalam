@@ -81,7 +81,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/tambah-karir-team', 'DashboardController@addkarir');
     Route::get('/karir-info/{career_id}', 'DashboardController@infokarir');
     Route::get('/sub-karir/{tokens}', 'DashboardController@subkarir');
-
+    Route::post('/tambah-subkarir', 'DashboardController@addsubkarir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
     // GET THE DETAILS

@@ -9,6 +9,7 @@ class subkarirDB extends Model
     protected $table = 'subcareer';
     protected $primaryKey = 'subcareer_id';
     protected $fillable = [
+        'career_id',
         'nama_subcareer',
         'deskripsi',
         'minimal_kualifikasi',

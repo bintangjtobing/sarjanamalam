@@ -1,6 +1,6 @@
 @extends('authen.index')
 @section('title','Karir management')
-@section('aktiftim','active')
+@section('aktifkarir','active')
 @section('content')
 <div class="content">
     <div class="container-fluid">
@@ -26,47 +26,73 @@
                     </div>
                     <!-- end loading -->
                     <!-- Modal -->
-                    <div class="modal fade" id="addnewteam" tabindex="-1" role="dialog" aria-labelledby="addnewteam"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal fade bd-example-modal-lg" id="addnewteam" tabindex="-1" role="dialog"
+                        aria-labelledby="addnewteam" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="addnewteam" style="color:#000;">Add a new team of career
+                                    <h5 class="modal-title" id="addnewteam" style="color:#000;">Tambah bagian pekerjaan
                                     </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="/tambah-karir-team" method="post" enctype="multipart/form-data">
+                                    <form action="/tambah-subkarir" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for="" style="color: #000;">Nama team</label>
-                                                <input type="text" name="nama_team" class="form-control" id=""
-                                                    placeholder="Masukkan nama team">
+                                            <div class="form-group col-md-6">
+                                                <label for="" style="color: #000;">Nama bagian pekerjaan</label>
+                                                <input type="text" name="nama_subcareer" class="form-control" id=""
+                                                    placeholder="Masukkan nama bagian pekerjaan" required>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="" style="color: #000;">Tim bagian:</label>
+                                                <select name="career_id" id="" class="custom-select" required>
+                                                    <option selected>Pilih bagian tim:</option>
+                                                    @foreach ($karir as $karirname)
+                                                    <option value="{{$karirname->career_id}}">{{$karirname->nama_team}}
+                                                    </option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-12">
+                                            <div class="form-group col-md-6">
                                                 <label for="" style="color: #000;">Penjelasan singkat:</label>
-                                                <textarea name="description" placeholder="Deskripsi team"
-                                                    class="form-control" id="" cols="30" rows="5"></textarea>
+                                                <textarea name="deskripsi" placeholder="Tentang pekerjaan"
+                                                    class="form-control" id="" cols="30" rows="5" required></textarea>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="" style="color: #000;">Minimal kualifikasi</label>
+                                                <textarea name="minimal_kualifikasi"
+                                                    placeholder="Sebutkan minimal kualifikasi" id="" cols="30" rows="5"
+                                                    class="form-control" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="" style="color: #000;">Kualifikasi yang
+                                                    direkomendasikan</label>
+                                                <textarea name="kualifikasi_rekomendasi"
+                                                    placeholder="Sebutkan kualifikasi yang direkomendasikan" cols="30"
+                                                    rows="4" class="form-control" required></textarea>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="" style="color: #000;">Tanggung jawab posisi ini</label>
+                                                <textarea name="tanggung_jawab"
+                                                    placeholder="Sebutkan kualifikasi yang direkomendasikan" cols="30"
+                                                    rows="4" class="form-control" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <label for="" style="color: #000;">Masukkan gambar tema tim</label>
-                                                <div class="input-group mb-3">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text">Upload</span>
-                                                    </div>
-                                                    <div class="custom-file">
-                                                        <input type="file" name="features_pic" id="inputGroupFile01">
-                                                        <label class="custom-file-label" for="inputGroupFile01">Choose
-                                                            file</label>
-                                                    </div>
-                                                </div>
+                                                <label for="" style="color: #000;">Lokasi</label>
+                                                <input type="text" name="lokasi"
+                                                    placeholder="Sebutkan lokasi bagian pekerjaan" id=""
+                                                    class="form-control" required>
+                                                <small style="color: #000;" class="mute-text">Lokasi bisa lebih dari
+                                                    2.</small>
                                             </div>
                                         </div>
                                         <div class="modal-footer">

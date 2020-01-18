@@ -78,6 +78,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/update/status-event/declined/{event_id}', 'DashboardController@declinedstatus');
 
     Route::get('/karir/{tokens}', 'DashboardController@karir');
+    Route::post('/tambah-karir-team', 'DashboardController@addkarir');
+    Route::get('/karir-info/{nama_team}/{career_id}', 'DashboardController@infokarir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
     // GET THE DETAILS

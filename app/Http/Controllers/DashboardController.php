@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\messagesDB;
 use App\UserMod;
+use App\karirDB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -186,7 +187,11 @@ class DashboardController extends Controller
         $eventget->save();
         return back()->with('sukses', 'Status event telah berhasil diubah ke posisi tidak disetujui.');
     }
-
+    public function infokarir($career_id)
+    {
+        $karirget = \App\karirDB::find($career_id);
+        return view('authen.infokarir', ['karirget' => $karirget]);
+    }
     // DELETE FUNCTION
     public function pesansampah($messages_id)
     {
@@ -208,5 +213,20 @@ class DashboardController extends Controller
                 return back()->with('sukses', 'Users has been successfully deleted!');
             }
         }
+    }
+
+    // TAMBAH ITEM BARU KE TABEL DATABASE
+    public function addkarir(Request $request)
+    {
+        $karirget = new \App\karirDB;
+        $karirget->nama_team = $request->nama_team;
+        $karirget->description = $request->description;
+        if ($request->hasFile('features_pic')) {
+            $request->file('features_pic')->move(public_path('file/img/karir/'), $request->file('features_pic')->getClientOriginalName());
+            $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
+        }
+        $karirget->save();
+        return back()->with('sukseskarir', 'Selamat kamu menambah team baru di kantor kamu.');
+        // dd($karirget);
     }
 }

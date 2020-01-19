@@ -21,6 +21,7 @@ class SearchController extends Controller
             ->where('thread', 'like', "%" . $get_search . "%")
             ->select('threads.*')
             ->paginate(15);
+        // return view('homepage.results_search', ['search' => $search]);
         dd($search);
     }
 }

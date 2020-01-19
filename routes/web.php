@@ -87,6 +87,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/tambah-subkarir', 'DashboardController@addsubkarir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
+    Route::get('/blog/{tokens}', 'DashboardController@indexblog');
     // GET THE DETAILS
     Route::get('/read/{messages_id}', 'DashboardController@bacapesan');
 

@@ -22,7 +22,8 @@ class companyController extends Controller
             ->orderBy('events.created_at', 'DESC')
             ->select('events.*')
             ->get();
-        return view('homepage.company.event', ['event' => $event]);
+        $eventcount = \App\eventDB::all();
+        return view('homepage.company.event', ['event' => $event, 'eventcount' => $eventcount]);
     }
     public function requestevent()
     {
@@ -74,6 +75,7 @@ class companyController extends Controller
     {
         return view('homepage.company.hubungi');
     }
+
     public function cerita()
     {
         return view('homepage.company.cerita');

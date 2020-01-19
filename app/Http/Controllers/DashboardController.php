@@ -109,6 +109,10 @@ class DashboardController extends Controller
         $pesanall = \App\messagesDB::all();
         return view('authen.pesan', ['pesan' => $pesan, 'pesanall' => $pesanall]);
     }
+    public function indexblog()
+    {
+        return view('authen.blog');
+    }
     public function event()
     {
         $event = DB::table('events')

@@ -198,7 +198,8 @@ membekali calon sarjana. Seminar')
                     <div class="col-lg-3">
                         <div class="text-center">
                             <div class="counter small"> <span data-speed="3000" data-refresh-interval="50"
-                                    data-to="12416" data-from="600" data-seperator="true"></span> </div>
+                                    data-to="{{$eventcount->count()}}" data-from="600" data-seperator="true"></span>
+                            </div>
                             <p>EVENT TERDAFTAR</p>
                         </div>
                     </div>

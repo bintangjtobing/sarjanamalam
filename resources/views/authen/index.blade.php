@@ -218,6 +218,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="/blog/{{$tokens}}" class="nav-link @yield('aktifblog')">
+                                <i class="nav-icon fas fa-newspaper"></i>
+                                <p>
+                                    Blog
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="/event/{{$tokens}}" class="nav-link @yield('aktifevent')">
                                 <i class="nav-icon fas fa-calendar-check"></i>
                                 <p>

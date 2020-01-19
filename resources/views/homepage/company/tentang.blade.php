@@ -67,28 +67,23 @@ dan mudah dipahami.')
                 <div class="accordion fancy radius clean">
                     <div class="ac-item ac-active">
                         <h5 class="ac-title">Forum komunitas</h5>
-                        <div class="ac-content ac-active">Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                            amet,
-                            consectetur, adipisci velit, sed quia non numquam
-                            <br />
-                            <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                            amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                        <div class="ac-content ac-active">Komunitas online merupakan sebuah komunitas yang terbentuk
+                            secara virtual. Sarjanamalam menyediakan wadah untuk membentuk komunitas virtual ini.<br>
+                            Pengguna sarjanamalam dapat saling berinteraksi dan membentuk komunitas yang dapat
+                            memudahkan setiap pengguna untuk saling bertukar informasi dan gagasan. </div>
                     </div>
                     <div class="ac-item">
                         <h5 class="ac-title">Mesin pencari</h5>
-                        <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam
-                            <br />
-                            <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                            amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                        <div class="ac-content">Layaknya mesin pencari terdahulu, sarjanamalam hadir sebagai program
+                            komputer yang dirancang sebagai mesin pencarian seluruh informasi yang terdapat dalam
+                            internet. Mesin pencari rakitan sarjanamalam akan memudahkan setiap penggunanya untuk
+                            mencari data, warta dan informasi yang mereka inginkan secara tepat dan akurat. </div>
                     </div>
                     <div class="ac-item">
                         <h5 class="ac-title">Event media partner</h5>
-                        <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam
-                            <br />
-                            <br /> Fusce id mi diam, Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                            amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora</div>
+                        <div class="ac-content">Sarjanamalam sebagai sebuah usaha yang bergerak dalam bidang teknologi
+                            dan informasi dapat membangun kerjasama dengan berbagai event. Kerja sama ini diharapkan
+                            dapat meningkatkan kredibilitas event.</div>
                     </div>
                 </div>
             </div>

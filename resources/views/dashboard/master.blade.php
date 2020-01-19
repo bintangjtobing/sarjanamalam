@@ -26,7 +26,7 @@
     <meta property="fb:admins" content="110102153747274">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://sarjanamalam.com">
+    <meta property="og:url" content="/">
     <meta property="og:image"
         content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
     <meta property="og:description" content="@yield('metadesc')">

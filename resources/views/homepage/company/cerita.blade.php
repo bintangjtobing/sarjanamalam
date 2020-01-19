@@ -25,34 +25,170 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                 <h1>From mind into the reality</h1>
                 <p class="sub-title-stories">Cerita sarjanamalam dimulai pada tahun 2019 di Universitas Prima Indonesia.
                     Bintang
-                    Tobing memulai
-                    tahun pertamanya untuk mengambil pasca sarjananya dan memulai kelas tentang usaha pada jam 17.44
-                    Waktu Indonesia Barat</p>
-                <p class="paragraph-stories">
-                    Berawal dari suatu kelas baru di salah satu Universitas di Medan, salah seorang mahasiswa
-                    membunyikan rencana usaha yang mungkin bisa menggarap beberapa ide untuk membantu teman teman
-                    dalam menjalani usaha kecil. Namun ide tersebut tidak sampai disitu, ide tersebut berkembang
-                    dari hari demi hari.
+                    Tobing memulai dan sudah mengambil perkuliahan untuk yang ketiga kalinya. Dan mempunyai ide untuk
+                    memulai hal yang baru bersama ketiga teman yang berbeda perkuliahan.</p>
+                <p class="paragraph-stories text-justify">
+                    Sarjanamalam lahir pada 17 Oktober 2019 sejak tercetusnya sebuah ide cemerlang dari seorang Bintang
+                    Tobing, mahasiswa Pascasarjana di sebuah Universitas ternama di Medan, Sumatera Utara. Tidak
+                    berhenti menjadi sebatas ide belaka, Bintang membawa beberapa rekan dari kampus yang berbeda untuk
+                    mengembangkan sarjanamalam
+                    menjadi sebuah Platform yang diminati mahasiswa sebagai mesin pencari berbagai informasi dari dalam
+                    dan luar negeri atau sekedar mencari relasi untuk saling berbagi ide-ide luar biasa.
                 </p>
-                <p class="paragraph-stories">
-                    Pada tanggal 27 Oktober 2019, salah seorang mahasiswa tersebut telah mencetuskan pokok utama apa
-                    yang akan menjadi tujuan akhir sarjanamalam. Nama Sarjanamalam sendiri berawal dari kemauan
-                    unntuk menggarap mahasiswa-mahasiswa terkhususnya yang sedang kuliah, yang memiliki keinginan
-                    untuk sharing, menemukan partner sharing, menemukan jatidiri mereka, mengembangkan bakat mereka
-                    terkhusus dibidang teknologi dan informasi.
+                <p class="paragraph-stories text-justify">
+                    Gagasan ini berawal dari kesulitan Bintang untuk menemukan teman dalam berbagi buah fikiran serta
+                    bakat-bakat yang selama ini mungkin belum bisa diaplikasikan. Kesulitan ini nyatanya telah
+                    melahirkan sarjanamalam sebagai wadah kepada penggunanya untuk mendapatkan teman berbagi inovasi dan
+                    terobosan terbaru untuk tetap menjadi muda-mudi yang memiliki intelektual tinggi namun tetap cermat
+                    dalam bersosialisasi.
                 </p>
-                <p class="paragraph-stories">
-                    Latar belakang mengapa terjadinya sarjanamalam mempunyai pokok utama seperti itu, adalah penemu
-                    sangat kesulitan mencari partner sharing dalam mengembangkan bakatnya, dia sangat ingin
-                    menemukan orang orang tersebut hingga akhirnya dia membuat pergerakan untuk menemukan hal
-                    tersebut.
+                <p class="paragraph-stories text-justify">
+                    Kiprah sarjanamalam dalam bidang teknologi dan informasi juga sudah tidak diragukan lagi. Berawal
+                    dari sebuah komunitas, kini sarjanamalam sedang beroperasi melalui social media dengan konten
+                    memikat. Konten dan utas dalam Platform ini tidak pernah mengecewakan dan selalu berhasil memuaskan
+                    rasa penasaran pembacanya. Informasi yang ditawarkan dalam sarjanamalam selalu eksklusif dan berbeda
+                    dengan yang lain. Sangat tepat untuk dijadikan sebagai mesin pencari muda-mudi Indonesia saat ini.
                 </p>
-                <p class="paragraph-stories">
-                    Pada 17 Oktober 2019, sarjanamalam dibentuk oleh beberapa orang dan mengesahkan tanggal lahir
-                    komunitas tersebut. Sarjanamalam lahir sebagai komunitas yang mengumpulkan berbagai calon calon
-                    sarjana ataupun non sarjana untuk menemukan jatidiri, berbagi pengalaman dan menemukan partner
-                    sharing dalam menyelesaikan permasalahan projek mereka.
+                <p class="paragraph-stories text-justify">
+                    Implementasi sarjanamalam sebagai forum penyedia wadah untuk pencetusan ide-ide baru juga sudah
+                    matang. Setiap pengguna dapat saling berkomunikasi dan bertukar gagasan dalam Platform sederhana
+                    namun istimewa ini. Sarjanamalam merupakan sebuah pilihan cermat untuk muda-mudi yang menginginkan
+                    sebuah Platform yang tidak hanya menawarkan kebahagiaan semu semata, namun tetap kosisten dalam
+                    pengembangan gagasan-gagasan baru dan pendistribusian informasi.
+                    Terbentuknya sarjanamalam ditandai dengan lahirnya jati diri muda-mudi akademis maupun non akademis
+                    yang kaya akan pengetahuan, cekatan dalam bersosialisasi dan mempunyai keinginan tinggi untuk saling
+                    berbagi.
                 </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="offset-3 col-lg-9">
+                <h1 class="text-center">Our team</h1>
+                <div class="row">
+                    <div class="row team-members m-b-40">
+                        <div class="col-lg-3">
+                            <div class="team-member">
+                                <div class="team-image">
+                                    <img src="{!!asset('storage/team/ceo.png')!!}" class="imgteamcerita">
+                                </div>
+                                <div class="team-desc">
+                                    <h3>Bintang Tobing</h3>
+                                    <span>Chief Executive Officer<br>Founder</span>
+                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    </p>
+                                    <div class="align-center">
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
+                                            data-width="100">
+                                            <i class="fab fa-twitter"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
+                                            data-width="118">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="team-member">
+                                <div class="team-image">
+                                    <img src="{!!asset('storage/team/cfo.png')!!}" class="imgteamcerita">
+                                </div>
+                                <div class="team-desc">
+                                    <h3>Rino Gazali</h3>
+                                    <span>Chief Finance Officer<br>Co Founder</span>
+                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    </p>
+                                    <div class="align-center">
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
+                                            data-width="100">
+                                            <i class="fab fa-twitter"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
+                                            data-width="118">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="team-member">
+                                <div class="team-image">
+                                    <img src="{!!asset('storage/team/coo.png')!!}" class="imgteamcerita">
+                                </div>
+                                <div class="team-desc">
+                                    <h3>Riki Ariandu</h3>
+                                    <span>Chief Operation Officer<br>Co Founder</span>
+                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    </p>
+                                    <div class="align-center">
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
+                                            data-width="100">
+                                            <i class="fab fa-twitter"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
+                                            data-width="118">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="team-member">
+                                <div class="team-image">
+                                    <img src="{!!asset('storage/team/cdo.png')!!}" class="imgteamcerita">
+                                </div>
+                                <div class="team-desc">
+                                    <h3>Boby Wijaya</h3>
+                                    <span>Chief Design Officer<br>Co Founder</span>
+                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    </p>
+                                    <div class="align-center">
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
+                                            data-width="100">
+                                            <i class="fab fa-twitter"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
+                                            data-width="118">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

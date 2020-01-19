@@ -31,8 +31,7 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="https://sarjanamalam.com"><span
-                                class="logo-default">sarjanamalam.</span><span
+                    <div id="logo"> <a href="/"><span class="logo-default">sarjanamalam.</span><span
                                 class="logo-dark">sarjanamalam.</span></a> </div>
                     <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a>
                     </div>
@@ -117,7 +116,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <div class="copyright-text text-left"><img src="{!!asset('storage/img/footer/footer.svg')!!}"
+                        <div class="copyright-text text-left"><img src="{!!asset('storage/img/footer.png')!!}"
                                 alt="Logo sarjanamalam." class="img-footer-belong"></div>
                     </div>
                     <div class="col-lg-8">
@@ -143,6 +142,9 @@
     <script src="{!!asset('js/gmap3.min.js')!!}"></script>
     <script src="{!!asset('js/map-styles.js')!!}"></script>
     <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
+    <link rel="stylesheet" href="{!!asset('css/dropzone.css')!!}">
+    <script src="{!!asset('js/dropzone.js')!!}"></script>
+
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class companyController extends Controller
@@ -16,35 +17,58 @@ class companyController extends Controller
     }
     public function event()
     {
-        return view('homepage.company.event');
+        $event = DB::table('events')
+            ->where('events.status', '=', 'approved')
+            ->orderBy('events.created_at', 'DESC')
+            ->select('events.*')
+            ->get();
+        return view('homepage.company.event', ['event' => $event]);
+    }
+    public function requestevent()
+    {
+        return view('homepage.company.request');
     }
     public function postevent(Request $request)
     {
         $post = new \App\eventDB;
-        $post->nama_event = $request->nama_event;
         $post->nama_pic = $request->nama_pic;
-        $post->nohp_pic = $request->nohp_pic;
         $post->email_pic = $request->email_pic;
-        $post->kategori_event = $request->kategori_event;
+        $post->nohp_pic = $request->nohp_pic;
+        $post->nama_event = $request->nama_event;
         $post->deskripsi_event = $request->deskripsi_event;
+        $post->kategori_event = $request->kategori_event;
+        $post->tglevent = $request->tglevent;
+        $post->waktu_event = $request->waktu_event;
+        $post->provinsi = $request->provinsi;
+        $post->kota = $request->kota;
+        $post->tempat_event = $request->tempat_event;
+        $post->speaker = $request->speaker;
+        $post->harga_event = $request->harga_event;
+        $post->optional_info = $request->optional_info;
         $post->logIP = $request->getClientIp();
-        $post->tglevent = '-';
-        $post->harga_event = '-';
-        $post->speaker = '-';
-        $post->tempat_event = '-';
         $post->tgl_berakhirevent = '-';
-        $post->waktu_event = '-';
         $post->link_daftar = '-';
+        $post->status = 'unapproved';
         $post->created_by = $request->getClientIp();
         $post->updated_by = $request->getClientIp();
-        $post->save();
 
-        return back()->with('sukses', 'Dan akan segera dihubungi untuk melakukan
+        if ($request->hasFile('picevent')) {
+            $request->file('picevent')->move('eventstorage/img/', $request->file('picevent')->getClientOriginalName());
+            $post->picevent = $request->file('picevent')->getClientOriginalName();
+            $post->save();
+            // dd($post);
+        }
+
+        return back()->with('sukses', 'Dan akan segera dihubungi kembali melalui email/telepon untuk melakukan
                         konfirmasi kembali terhadap event tersebut.');
     }
     public function karir()
     {
-        return view('homepage.company.karir');
+        $karir = DB::table('career')
+            ->orderBy('career.created_at', 'DESC')
+            ->select('career.*')
+            ->get();
+        return view('homepage.company.karir', ['karir' => $karir]);
     }
     public function hubungi()
     {

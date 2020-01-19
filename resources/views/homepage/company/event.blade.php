@@ -28,14 +28,18 @@ membekali calon sarjana. Seminar')
             </div>
         </div>
         <div class="row">
-
+            @foreach ($event as $eventitem)
             <div class="col-md-3">
                 <div class="card">
-                    <img class="card-img-top" src="{!!asset('storage/blog/12.jpg')!!}" alt="Card image cap">
+                    <img class="card-img-top" src="{!!asset('eventstorage/img/'.$eventitem->picevent)!!}"
+                        alt="Event image">
                     <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Sabtu, 21 Oktober 2020 13:00 WIB</h6>
-                        <h5 class="card-title">Workshop design - UX UI for website</h5>
-                        <p class="card-text">Rp. 120.000</p>
+                        <h6 class="card-subtitle mb-2 text-muted">{{$eventitem->tglevent}} | {{$eventitem->waktu_event}}
+                        </h6>
+                        <h5 class="card-title">{{$eventitem->nama_event}}</h5>
+                        <p class="card-text">{{$eventitem->harga_event}}</p>
+                        <p class="card-text">{{str_limit($eventitem->deskripsi_event, $limit=100)}}<br> <b>Mau tau
+                                kelanjutannya dan penasaran akan event tsb?</b></p>
                     </div>
                     <div class="card-body">
 
@@ -43,53 +47,9 @@ membekali calon sarjana. Seminar')
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="{!!asset('storage/blog/14.jpg')!!}" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Sabtu, 21 Oktober 2020 13:00 WIB</h6>
-                        <h5 class="card-title">Workshop design - UX UI for website</h5>
-                        <p class="card-text">Rp. 120.000</p>
-                    </div>
-                    <div class="card-body">
-
-                        Masih tersedia! <a href="#">Daftar?</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="{!!asset('storage/blog/17.jpg')!!}" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Sabtu, 21 Oktober 2020 13:00 WIB</h6>
-                        <h5 class="card-title">Workshop design - UX UI for website</h5>
-                        <p class="card-text">Rp. 120.000</p>
-                    </div>
-                    <div class="card-body">
-
-                        Masih tersedia! <a href="#">Daftar?</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="{!!asset('storage/blog/18.jpg')!!}" alt="Card image cap">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Sabtu, 21 Oktober 2020 13:00 WIB</h6>
-                        <h5 class="card-title">Workshop design - UX UI for website</h5>
-                        <p class="card-text">Rp. 120.000</p>
-                    </div>
-                    <div class="card-body">
-
-                        Masih tersedia! <a href="#">Daftar?</a>
-
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row m-t-60">
+        {{-- <div class="row m-t-60">
             <div class="col-md-12 m-b-20">
                 <h3>Event nasional</h3>
             </div>
@@ -215,7 +175,7 @@ membekali calon sarjana. Seminar')
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 </section>
@@ -251,59 +211,22 @@ membekali calon sarjana. Seminar')
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 text-light p-50 rounded" style="background-color:rgb(51, 99, 172);">
-                <div class="heading p-20 m-b-0">
-                    <h2 class="text-colored">DAFTARKAN EVENTMU</h2>
-                    <span class="text-light">Create amam ipsum dolor sit amet, Beautiful nature, and rare feathers!.
-                    </span>
+            <div class="col-lg-4">
+                <div style="background-image:url('{!!asset('storage/img/eventbanner_ex.jpg')!!}')"
+                    class="call-to-action background-image">
+                    <h3 class="text-light">
+                        Request event dan meriahkan acaramu dengan hadirnya banyak peserta.
+                    </h3>
+                    <p class="text-light">
+                        Cukup isi formulir dengan klik tombol "Request ad event" dibawah, dan tunggu kabar setuju untuk
+                        memulai iklan dari
+                        sarjanamalam untuk menjangkau banyak peserta.
+                    </p>
+                    <a class="btn btn-outline btn-light" href="/request-ad-event">Request ad event</a>
                 </div>
-                @if(session('sukses'))
-                <div class="form-group m-b-5">
-                    <div class="alert alert-success" role="alert">
-                        <strong>Permintaan sharing event kamu berhasil dikirim!</strong><br>{{session('sukses')}} Terima
-                        kasih.
-                    </div>
-                </div>
-                @endif
-                <form action="/post-event" method="post">
-                    {{ csrf_field() }}
-                    <div class="form-group m-b-5">
-                        <input type="text" name="nama_event" placeholder="Judul event*"
-                            class="form-control form-control-sm required name">
-                    </div>
-                    <div class="form-group m-b-5">
-                        <input type="text" aria-required="true" name="nama_pic"
-                            class="form-control form-control-sm required name" placeholder="Nama PIC*">
-                    </div>
-                    <div class="form-group m-b-5">
-                        <input type="text" aria-required="true" name="nohp_pic"
-                            class="form-control form-control-sm required" placeholder="Nomor Telepon PIC*">
-                    </div>
-                    <div class="form-group m-b-5">
-                        <input type="email" aria-required="true" name="email_pic"
-                            class="form-control form-control-sm required" placeholder="Email PIC*">
-                    </div>
-                    <div class="form-group m-b-5">
-                        <select aria-required="true" name="kategori_event"
-                            class="form-control form-control-sm required ticket-type">
-                            <option selected>Tipe Event</option>
-                            <option value="Seminar">Seminar</option>
-                            <option value="Workshop">Workshop</option>
-                            <option value="Festival">Festival</option>
-                            <option value="Olimpiade">Olimpiade</option>
-                            <option value="Kompetisi">Kompetisi</option>
-                        </select>
-                    </div>
-                    <div class="form-group m-b-5">
-                        <textarea name="deskripsi_event" class="form-control form-control-sm required" cols="30"
-                            rows="4" placeholder="Deskripsi kan event kamu disini..."></textarea>
-                    </div>
-                    <button class="btn btn-block btn-success" type="submit">Request Now</button>
-                </form>
-                {{-- <p class="p-20 m-b-0"><b>Note:</b> Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit.</p> --}}
             </div>
         </div>
+    </div>
     </div>
 </section>
 

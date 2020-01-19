@@ -14,47 +14,20 @@ sarjanamalam karir')
             </div>
         </div>
         <div class="row">
+            @foreach ($karir as $karirlist)
             <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top"
-                        src="{!!url('https://c.pxhere.com/images/7f/22/9ae20530cde6a2147aefa48db34e-1433059.jpg!d')!!}"
+                    <img class="card-img-top" src="{!!asset('file/img/karir/'.$karirlist->features_pic)!!}"
                         alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title-strong">Teknologi & Developer</h5>
-                        <p class="card-text-black">Kembangkan produk, fitur, dan alat masa depan untuk milyaran
-                            pengguna.</p>
+                        <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>
+                        <p class="card-text-black">{{$karirlist->description}}</p>
                         <a href="#" class="card-link-karir mr-5">Pelajari</a><a href="#" class="card-link-karir">Lihat
                             pekerjaan</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="{!!url('https://c.pxhere.com/photos/96/14/secretary_office_sales_telephony_call_screen_phone-770914.jpg!d')!!}"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title-strong">Sales, Services & Support</h5>
-                        <p class="card-text-black">Lengkapi bisnis dengan alat yang tepat untuk membantu mereka tumbuh.
-                        </p>
-                        <a href="#" class="card-link-karir mr-5">Pelajari</a><a href="#" class="card-link-karir">Lihat
-                            pekerjaan</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="{!!url('https://c.pxhere.com/photos/46/15/analysis_analytics_business_chart_charts_computer_concept_data-1366141.jpg!d')!!}"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title-strong">Marketing & Communications</h5>
-                        <p class="card-text-black">Pelajari dan berinteraksi lah dengan pengguna.</p>
-                        <a href="#" class="card-link-karir mr-5">Pelajari</a><a href="#" class="card-link-karir">Lihat
-                            pekerjaan</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="row">
             <div class="col-md-12 text-center my-5">

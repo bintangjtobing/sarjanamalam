@@ -27,7 +27,7 @@
     <meta property="fb:admins" content="110102153747274">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://sarjanamalam.com">
+    <meta property="og:url" content="/">
     <meta property="og:image"
         content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
     <meta property="og:description" content="@yield('metadesc')">
@@ -63,7 +63,7 @@
                 </div>
             </form>
 
-            <!-- Right navbar links -->
+            {{-- <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Messages Dropdown Menu -->
                 <li class="nav-item dropdown">
@@ -158,7 +158,7 @@
                     <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
                             class="fas fa-th-large"></i></a>
                 </li>
-            </ul>
+            </ul> --}}
         </nav>
         <!-- /.navbar -->
 

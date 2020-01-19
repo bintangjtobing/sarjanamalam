@@ -40,9 +40,12 @@ Route::get('/karir-sarjanamalam', 'companyController@karir');
 Route::get('/hubungi-sarjanamalam', 'companyController@hubungi');
 Route::get('/cerita-sarjanamalam', 'companyController@cerita');
 Route::post('/kirim-pesan', 'companyController@kirimpesan');
+Route::get('/request-ad-event', 'companyController@requestevent');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', function () {
+        return view('homepage.home');
+    });
     // FORUM
     Route::get('/forum/{csrf_token}', 'ForumController@index');
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
@@ -93,4 +96,6 @@ Route::group(['middleware' => 'auth'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return view('homepage.home');
+})->name('home');

@@ -55,7 +55,7 @@ kelebihannya.')
         <div class="col-12 text-center">
             <div>
                 <form action="/search?=" method="GET">
-                    {{ csrf_field() }}
+                    @csrf
                     <h2 class="search-title text-gradient-blue-sarjana">Sarjanamalam.</h2>
                     <div class="main-search">
                         <span class="search-icon icon-left fas fa-search"></span>

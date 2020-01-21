@@ -8,7 +8,7 @@ Route::get('/clear-cache', function () {
 });
 // HASIL PENCARIAN
 // PROSES CARI
-Route::get('/search?=' . 'SearchController@processcari');
+Route::get('/search?=', 'SearchController@processcari');
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
     return view('homepage.home');

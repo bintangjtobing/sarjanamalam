@@ -6,12 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Thread;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 class SearchController extends Controller
 {
     // Index page search
-    public function index(Request $request)
+    public function processcari(Request $request)
     {
         // Menangkap data cari
         $get_search = $request->searchinput;

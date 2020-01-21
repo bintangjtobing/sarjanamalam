@@ -20,7 +20,7 @@
         <div class="website-logo">
             <a href="/">
                 <div class="logo">
-                    <img class="logo-size" src="{!!asset('storage/img/logopname.png')!!}" alt="">
+                    <img class="logo-size" src="{!!asset('storage/logoofficial.png')!!}" alt="">
                 </div>
             </a>
         </div>

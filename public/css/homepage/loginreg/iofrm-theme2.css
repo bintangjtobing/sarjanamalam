@@ -15,7 +15,7 @@
 }
 
 .website-logo .logo {
-    background-image: url("../../../storage/img/logopname.png");
+    background-image: url("../../../storage/logoofficial.png");
 }
 
 .website-logo .logo img {
@@ -27,7 +27,7 @@
 }
 
 .website-logo-inside .logo {
-    background-image: url("../../../storage/img/logopname.png");
+    background-image: url("../../../storage/logoofficial.png");
 }
 
 .website-logo-inside .logo img {
@@ -64,7 +64,7 @@
 
 .img-holder .bg {
     opacity: 1;
-    background-image: url("../../../storage/img/loginimg.jpg");
+    background-image: url("../../../storage/logopname.jpg");
 }
 
 .form-holder {

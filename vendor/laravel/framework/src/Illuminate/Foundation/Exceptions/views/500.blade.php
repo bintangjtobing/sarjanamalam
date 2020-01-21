@@ -1,5 +1,71 @@
-@extends('errors::minimal')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('title', __('Server Error'))
-@section('code', '500')
-@section('message', __('Server Error'))
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="bintang j tobing">
+    <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
+    <meta name="robots" content="index, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>500 | Server Error</title>
+
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+        *,
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            margin-top: 8.05%;
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 15% !important;
+        }
+
+        h3 {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <img src="{!!asset('storage/exceptions/cherry-fatal-error.png')!!}" alt="">
+            <h3>500 | Server Error</h3>
+            <p class="text-center">Ohh Ohh, kemungkinan ada yang tidak beres.<br>Kami sudah mencatat penyebab ini
+                diwaktu
+                yang
+                bersamaan ketika
+                pengunjung mendapati error ini.<br>Secepatnya kami akan menyelesaikan masalah ini. Terima kasih.</p>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

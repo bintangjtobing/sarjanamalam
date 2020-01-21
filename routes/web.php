@@ -62,7 +62,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete/{id}/{tokens}', 'DashboardController@deleteuser');
     Route::get('/edit/{id}/{tokens}', 'DashboardController@edituser');
     Route::post('/update/{id}/{tokens}', 'DashboardController@updateuser');
-    Route::get('/blog-queue/{tokens}', 'DashboardController@blog');
     Route::get('/event-managements/{tokens}', 'DashboardController@eventmgmt');
 
     ///////////////////// VIEW TABLE FOREACH VIEW ///////////////////
@@ -87,6 +86,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
     Route::get('/blog/{tokens}', 'DashboardController@indexblog');
+    Route::post('/blog/tambah', 'DashboardController@addblog');
     // GET THE DETAILS
     Route::get('/read/{messages_id}', 'DashboardController@bacapesan');
 

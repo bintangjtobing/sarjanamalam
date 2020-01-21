@@ -6,8 +6,6 @@ sarjanamalam. kami di blog resmi kami.')
 @section('content')
 <section id="page-content">
     <div class="container">
-
-
         <div class="page-title">
             <div class="breadcrumb float-left">
                 <ul>
@@ -42,8 +40,6 @@ sarjanamalam. kami di blog resmi kami.')
                     </div>
                 </div>
             </div>
-
-
             <div class="post-item border">
                 <div class="post-item-wrap">
                     <div class="post-video">

@@ -16677,7 +16677,8 @@ span.highlight {
 
 .team-members .team-member .team-image>img {
     width: 100%;
-    border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0;
+    border-bottom: 3px solid #2485c1;
 }
 
 .team-members .team-member .team-desc {

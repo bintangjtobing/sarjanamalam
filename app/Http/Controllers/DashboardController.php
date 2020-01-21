@@ -88,14 +88,6 @@ class DashboardController extends Controller
             ->get();
         return view('dashboard.event.index', ['eventL' => $eventL]);
     }
-    public function blog()
-    {
-        $blogList = DB::table('blog')
-            ->select('blog.*')
-            ->orderBy('blog.created_at', 'desc')
-            ->get();
-        return view('dashboard.blog.index', ['blogList' => $blogList]);
-    }
 
     ////////////////// PESAN, EVENT, KARIR ///////////////////////////
     // VIEW DASHBOARD PESAN
@@ -111,7 +103,11 @@ class DashboardController extends Controller
     }
     public function indexblog()
     {
-        return view('authen.blog');
+        $blog = DB::table('blog')
+            ->orderBy('blog.created_at', 'DESC')
+            ->select('blog.*')
+            ->get();
+        return view('authen.blog', ['blog' => $blog]);
     }
     public function event()
     {
@@ -259,5 +255,22 @@ class DashboardController extends Controller
         // dd($subkarirget);
         $subkarirget->save();
         return back()->with('sukseskarir', 'Bagian bagian tim sudah ditambahkan.');
+    }
+    public function addblog(Request $request)
+    {
+        $blog = new \App\blogDB;
+        $blog->blog_title = $request->blog_title;
+        $blog->alternatif = $request->blog_title;
+        $blog->kategori_blog = $request->kategori_blog;
+        $blog->isiblog = $request->isiblog;
+        $blog->created_by  = auth()->user()->name;
+        $blog->updated_by = '-';
+        if ($request->hasFile('coverimg')) {
+            $request->file('coverimg')->move(public_path('file/img/blog/'), $request->file('coverimg')->getClientOriginalName());
+            $blog->coverimg = $request->file('coverimg')->getClientOriginalName();
+        }
+        // dd($blog);
+        $blog->save();
+        return back()->with('sukses', 'Berita berhasil ditambah/diupdate');
     }
 }

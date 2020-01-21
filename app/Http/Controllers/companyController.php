@@ -9,11 +9,19 @@ class companyController extends Controller
 {
     public function about()
     {
-        return view('homepage.company.tentang');
+        $blog = DB::table('blog')
+            ->orderBy('blog.created_at', 'DESC')
+            ->select('blog.*')
+            ->get();
+        return view('homepage.company.tentang', ['blog' => $blog]);
     }
     public function blog()
     {
-        return view('homepage.company.blog');
+        $blog = DB::table('blog')
+            ->orderBy('blog.created_at', 'DESC')
+            ->select('blog.*')
+            ->get();
+        return view('homepage.company.blog', ['blog' => $blog]);
     }
     public function event()
     {

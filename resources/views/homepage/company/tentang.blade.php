@@ -90,38 +90,17 @@ dan mudah dipahami.')
             <div class="col-lg-6">
                 <h4 class="m-b-20">Berita terbaru sarjanamalam.</h4>
                 <div class="post-thumbnail-list">
+                    @foreach ($blog as $blogList)
                     <div class="post-thumbnail-entry">
-                        <img src="{!!asset('storage/blog/11.jpg')!!}" alt="">
+                        <img src="{!!asset('file/img/blog/'.$blogList->coverimg)!!}" alt="">
                         <div class="post-thumbnail-content">
-                            <a href="#">Suspendisse consectetur fringilla</a>
-                            <span class="post-date"><span class="ti-alarm-clock"></span> 6m ago</span>
-                            <span class="post-category"><span class="ti-tag"></span> Technology</span>
+                            <a href="#">{{$blogList->blog_title}}</a>
+                            <span class="post-date"><span class="ti-alarm-clock"></span>
+                                {{date('M, Y',strtotime($blogList->created_at))}}</span>
                         </div>
                     </div>
-                    <div class="post-thumbnail-entry">
-                        <img src="{!!asset('storage/blog/16.jpg')!!}" alt="">
-                        <div class="post-thumbnail-content">
-                            <a href="#">Beautiful nature, and rare feathers!</a>
-                            <span class="post-date"><span class="ti-alarm-clock"></span> 24h ago</span>
-                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
-                        </div>
-                    </div>
-                    <div class="post-thumbnail-entry">
-                        <img src="{!!asset('storage/blog/17.jpg')!!}" alt="">
-                        <div class="post-thumbnail-content">
-                            <a href="#">The most happiest time of the day!</a>
-                            <span class="post-date"><span class="ti-alarm-clock"></span> 11h ago</span>
-                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
-                        </div>
-                    </div>
-                    <div class="post-thumbnail-entry">
-                        <img src="{!!asset('storage/blog/18.jpg')!!}" alt="">
-                        <div class="post-thumbnail-content">
-                            <a href="#">Fringilla Lorem ipsum dolor sit amet</a>
-                            <span class="post-date"><span class="ti-alarm-clock"></span> 11h ago</span>
-                            <span class="post-category"><span class="ti-tag"></span> Lifestyle</span>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

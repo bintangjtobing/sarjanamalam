@@ -128,6 +128,8 @@
                     </a>
                     <a href="/update/status-event/declined/{{$eventget->event_id}}"
                         class="btn btn-sm btn-danger">Declined</a>
+                    <a href="/delete/event/permanent/{{$eventget->event_id}}" class="btn btn-sm btn-danger"><i
+                            class="fas fa-trash-alt"></i></a>
                 </div>
             </div>
         </div>

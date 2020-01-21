@@ -70,8 +70,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/trash/{tokens}', 'DashboardController@trash');
 
     // EVENT CONTROL
-    Route::get('/event/{tokens}', 'DashboardController@event');
+    Route::get('/event/{tokens}', 'DashboardController@event')->name('event');
     Route::get('/detail-event/{event_id}', 'DashboardController@detailevent');
+    Route::get('/delete/event/permanent/{event_id}', 'DashboardController@deleteevent');
     // UPDATE EVENT STATUS //
     Route::get('/update/status-event/approved/{event_id}', 'DashboardController@approvestatus');
     Route::get('/update/status-event/ unapproved/{event_id}', 'DashboardController@unapprovedstatus');

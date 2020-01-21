@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\eventDB;
 use App\messagesDB;
 use App\UserMod;
 use App\karirDB;
@@ -198,6 +199,16 @@ class DashboardController extends Controller
         $eventget->save();
         return back()->with('sukses', 'Status event telah berhasil diubah ke posisi tidak disetujui.');
     }
+    public function deleteevent($event_id)
+    {
+        $event = eventDB::find($event_id);
+        if ($event) {
+            if ($event->delete()) {
+                DB::statement('ALTER TABLE events AUTO_INCREMENT = ' . (count(eventDB::all()) + 1) . ';');
+                return redirect('/event/{tokens}')->with('sukses', 'Event telah dihapus.');
+            }
+        }
+    }
     public function infokarir($career_id)
     {
         $karirget = \App\karirDB::find($career_id);
@@ -225,6 +236,7 @@ class DashboardController extends Controller
             }
         }
     }
+
 
     // TAMBAH ITEM BARU KE TABEL DATABASE
     public function addkarir(Request $request)

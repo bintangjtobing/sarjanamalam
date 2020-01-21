@@ -66,7 +66,7 @@ class DashboardController extends Controller
         $user->provinsi = $request->state;
         $user->kodepos = $request->zip;
         $user->tanggallahir = $request->tanggallahir;
-        $user->bulanlahir  = $request->bulanlahir;
+        $user->bulanlahir  = $request->bulan;
         $user->tahunlahir = $request->tahunlahir;
         $user->role = $request->role;
         $user->jabatan = $request->jabatan;

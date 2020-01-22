@@ -205,7 +205,7 @@ class DashboardController extends Controller
         if ($event) {
             if ($event->delete()) {
                 DB::statement('ALTER TABLE events AUTO_INCREMENT = ' . (count(eventDB::all()) + 1) . ';');
-                return redirect('/event/{tokens}')->with('sukses', 'Event telah dihapus.');
+                return redirect('/event/{tokens}')->with('suksesevent', 'Event telah dihapus.');
             }
         }
     }

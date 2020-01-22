@@ -19,6 +19,7 @@ sarjanamalam. kami di blog resmi kami.')
 
 
         <div id="blog" class="grid-layout post-3-columns m-b-30" data-item="post-item">
+            @if(!$blog->isEmpty())
             @foreach ($blog as $blist)
             <div class="post-item border">
                 <div class="post-item-wrap">
@@ -41,6 +42,11 @@ sarjanamalam. kami di blog resmi kami.')
                 </div>
             </div>
             @endforeach
+            @else
+            <div class="col-lg-11">
+                No data loaded.
+            </div>
+            @endif
         </div>
 
 

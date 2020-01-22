@@ -23,7 +23,20 @@
                 </div>
             </div>
         </div>
+        @if(session('suksesevent'))
+        <div class="row mb-2">
+            <div class="col-lg-12">
+                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                    <strong>Berhasil!</strong> {{session('suksesevent')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        @endif
         <div class="row">
+            @if(!$event->isEmpty())
             @foreach ($event as $evnt)
             <div class="col-lg-3 col-6">
                 <div class="small-box
@@ -42,6 +55,11 @@
                 </div>
             </div>
             @endforeach
+            @else
+            <div class="col-lg-12 text-center my-3">
+                <h3>No data loaded.</h3>
+            </div>
+            @endif
         </div>
     </div>
 </div>

@@ -128,7 +128,7 @@
 
                             <!-- First  Content -->
                             <div class="the-content">
-                                <div class="content">
+                                <div class="content mb-3">
 
                                     <a href="" class="content-title old-blue">
                                         <div clas="content-meta">
@@ -146,7 +146,7 @@
                                         Software.</div>
                                 </div>
 
-                                <div class="rich-results pl-3 mt-3">
+                                {{-- <div class="rich-results pl-3 mt-3">
                                     <div class="row">
                                         <div class="col-md-6 mb-2">
                                             <div class="content">
@@ -209,11 +209,11 @@
                                         </div>
 
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                             <!-- /First -->
 
-                            <!-- Common Content -->
+                            {{-- <!-- Common Content -->
                             <div class="content">
 
                                 <a href="" class="content-title old-blue">
@@ -415,7 +415,7 @@
                                 <div class="content-desc">Lihat profil orang bernama Bagas. Bergabunglah dengan Facebook
                                     untuk terhubung dengan Bagas dan teman lainnya yang mungkin Anda kenal. Facebook ...
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- /Common Content -->
 
 

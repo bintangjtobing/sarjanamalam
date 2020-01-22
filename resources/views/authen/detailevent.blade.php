@@ -102,7 +102,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-                <img class="imgevent-det" src="@if(!$eventget->picevent){!!asset('storage/img/noimg-event.jpg')!!}
+                <img class="imgevent-det" src="@if(!$eventget->picevent)
+                {!!asset('storage/img/noimg-event.jpg')!!}
                                 @else{!!asset('eventstorage/img/'.$eventget->picevent)!!}@endif">
                 <br>
                 <div class="text-muted">
@@ -112,6 +113,9 @@
                     <p class="text-sm">Nama penanggung jawab:
                         <b class="d-block">{{$eventget->nama_pic}}</b>
                     </p>
+                    <p class="text-sm">Link daftar:</p>
+                    <a href="/daftar-event/{{$eventget->nama_event}}/{{$eventget->event_id}}">Click this link<b
+                            class="d-block mute"></b></a>
                 </div>
                 <div class="text-center mt-5 mb-3">
                     <a href="/update/status-event/@if($eventget->status=='unapproved')approved/{{$eventget->event_id}}

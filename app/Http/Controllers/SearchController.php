@@ -19,7 +19,7 @@ class SearchController extends Controller
         $search = DB::table('threads')
             ->where('thread', 'like', "%" . $get_search . "%")
             ->select('threads.*')
-            ->paginate(15);
+            ->paginate(1);
         return view('homepage.results_search', ['search' => $search]);
         // dd($search);
     }

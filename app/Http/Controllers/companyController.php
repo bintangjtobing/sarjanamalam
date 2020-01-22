@@ -26,7 +26,7 @@ class companyController extends Controller
     public function event()
     {
         $event = DB::table('events')
-            ->where('events.status', '=', 'approved')
+            ->where('events.status', '!=', 'declined')
             ->orderBy('events.created_at', 'DESC')
             ->select('events.*')
             ->get();

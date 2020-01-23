@@ -9,6 +9,7 @@ Route::get('/clear-cache', function () {
 // HASIL PENCARIAN
 // PROSES CARI
 Route::get('/search', 'SearchController@processcari');
+Route::get('/daftar-event/{event_id}', 'DashboardController@daftarevent');
 // HOMEPAGE WEB ROUT
 Route::get('/', function () {
     return view('homepage.home');

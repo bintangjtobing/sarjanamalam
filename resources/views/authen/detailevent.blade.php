@@ -114,8 +114,7 @@
                         <b class="d-block">{{$eventget->nama_pic}}</b>
                     </p>
                     <p class="text-sm">Link daftar:</p>
-                    <a href="/daftar-event/{{$eventget->nama_event}}/{{$eventget->event_id}}">Click this link<b
-                            class="d-block mute"></b></a>
+                    <a href="/daftar-event/{{$eventget->event_id}}">Click this link<b class="d-block mute"></b></a>
                 </div>
                 <div class="text-center mt-5 mb-3">
                     <a href="/update/status-event/@if($eventget->status=='unapproved')approved/{{$eventget->event_id}}

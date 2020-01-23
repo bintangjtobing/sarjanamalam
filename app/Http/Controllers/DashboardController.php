@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
+    public function daftarevent($event_id)
+    {
+        $eventdaf = \App\eventDB::find($event_id);
+        return view('homepage.company.daftarevent', ['eventdaf' => $eventdaf]);
+    }
     public function index()
     {
         $usermg = DB::table('users')

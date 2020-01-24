@@ -152,7 +152,11 @@ class DashboardController extends Controller
     }
     public function peserta()
     {
-        
+        $peopleget = DB::table('peserta_event')
+            ->orderBy('peserta_event.created_at', 'DESC')
+            ->select('peserta_event.*')
+            ->get();
+        return view('authen.peserta', ['peopleget' => $peopleget]);
     }
     // MASUKKAN KE KERANJANG SAMPAH
     public function trash()

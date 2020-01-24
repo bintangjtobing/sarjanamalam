@@ -10,6 +10,7 @@ Route::get('/clear-cache', function () {
 // PROSES CARI
 Route::get('/search', 'SearchController@processcari');
 Route::get('/daftar-event/{event_id}', 'DashboardController@daftarevent');
+Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
 // HOMEPAGE WEB ROUT
 Route::get('/', function () {
     return view('homepage.home');
@@ -74,6 +75,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/event/{tokens}', 'DashboardController@event')->name('event');
     Route::get('/detail-event/{event_id}', 'DashboardController@detailevent');
     Route::get('/delete/event/permanent/{event_id}', 'DashboardController@deleteevent');
+    Route::get('/pesertaterdaftar/{tokens}', 'DashboardController@peserta');
     // UPDATE EVENT STATUS //
     Route::get('/update/status-event/approved/{event_id}', 'DashboardController@approvestatus');
     Route::get('/update/status-event/ unapproved/{event_id}', 'DashboardController@unapprovedstatus');

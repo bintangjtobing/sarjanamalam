@@ -71,6 +71,21 @@ class companyController extends Controller
         return back()->with('sukses', 'Dan akan segera dihubungi kembali melalui email/telepon untuk melakukan
                         konfirmasi kembali terhadap event tersebut.');
     }
+    public function registrasievent(Request $request, $event_id)
+    {
+        $find = \App\eventDB::find($event_id);
+
+        $reg = new \App\pesertaDB;
+        $reg->nama_lengkap = $request->nama_lengkap;
+        $reg->email = $request->email;
+        $reg->nohp = $request->nohp;
+        $reg->informasi = $request->informasi;
+        $reg->reserved = $request->reserved;
+        $reg->created_by = $request->getClientIp();
+        $reg->updated_by = $request->getClientIp();
+        $reg->save();
+        return view('homepage.company.donereg', ['find' => $find]);
+    }
     public function karir()
     {
         $karir = DB::table('career')

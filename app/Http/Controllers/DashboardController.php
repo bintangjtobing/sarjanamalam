@@ -150,7 +150,10 @@ class DashboardController extends Controller
             ->get();
         return view('authen.threads', ['threads' => $threads]);
     }
-
+    public function peserta()
+    {
+        
+    }
     // MASUKKAN KE KERANJANG SAMPAH
     public function trash()
     {

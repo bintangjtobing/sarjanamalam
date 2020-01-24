@@ -6,7 +6,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                <h3 class="card-title">Threads</h3>
             </div>
             <!-- /.card-header -->
             <?php $i = 1; ?>

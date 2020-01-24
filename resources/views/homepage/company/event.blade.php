@@ -43,7 +43,7 @@ membekali calon sarjana. Seminar')
                     </div>
                     <div class="card-body">
 
-                        Masih tersedia! <a href="#">Daftar?</a>
+                        Kursi masih tersedia! <a href="/daftar-event/{{$eventitem->event_id}}">Daftar?</a>
                     </div>
                 </div>
             </div>

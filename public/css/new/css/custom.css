@@ -150,3 +150,12 @@
     line-height: 1.5rem;
     letter-spacing: .01562rem;
 }
+
+.imgpreview-daftar {
+    max-width: 340px;
+    border-radius: 25px;
+}
+
+.imgserved-done {
+    max-width: 200px;
+}

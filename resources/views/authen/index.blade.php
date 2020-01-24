@@ -225,13 +225,31 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/event/{{$tokens}}" class="nav-link @yield('aktifevent')">
-                                <i class="nav-icon fas fa-calendar-check"></i>
-                                <p>
-                                    Events
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-graduation-cap"></i>
+                                <p>Event Ext.
+                                    <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/event/{{$tokens}}" class="nav-link @yield('aktifevent')">
+                                        <i class="nav-icon fas fa-calendar-check"></i>
+                                        <p>
+                                            Events
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/pesertaterdaftar/{{$tokens}}" class="nav-link @yield('aktifpeserta')">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Registered Audience
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">

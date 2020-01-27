@@ -297,4 +297,38 @@ class DashboardController extends Controller
         $blog->save();
         return back()->with('sukses', 'Berita berhasil ditambah/diupdate');
     }
+    public function addevent(Request $request)
+    {
+        $post = new \App\eventDB;
+        $post->nama_pic = $request->nama_pic;
+        $post->email_pic = auth()->user()->email;
+        $post->nohp_pic = auth()->user()->role;
+        $post->nama_event = $request->nama_event;
+        $post->deskripsi_event = $request->deskripsi_event;
+        $post->kategori_event = $request->kategori_event;
+        $post->tglevent = $request->tglevent;
+        $post->waktu_event = $request->waktu_event;
+        $post->provinsi = $request->provinsi;
+        $post->kota = $request->kota;
+        $post->tempat_event = $request->tempat_event;
+        $post->speaker = $request->speaker;
+        $post->harga_event = $request->harga_event;
+        $post->optional_info = '-';
+        $post->logIP = $request->getClientIp();
+        $post->tgl_berakhirevent = '-';
+        $post->link_daftar = '-';
+        $post->status = 'approved';
+        $post->created_by = $request->getClientIp();
+        $post->updated_by = $request->getClientIp();
+
+        if ($request->hasFile('picevent')) {
+            $request->file('picevent')->move('eventstorage/img/', $request->file('picevent')->getClientOriginalName());
+            $post->picevent = $request->file('picevent')->getClientOriginalName();
+            $post->save();
+            // dd($post);
+        }
+
+        return back()->with('sukses', 'Dan akan segera dihubungi kembali melalui email/telepon untuk melakukan
+                        konfirmasi kembali terhadap event tersebut.');
+    }
 }

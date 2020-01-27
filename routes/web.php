@@ -76,6 +76,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/detail-event/{event_id}', 'DashboardController@detailevent');
     Route::get('/delete/event/permanent/{event_id}', 'DashboardController@deleteevent');
     Route::get('/pesertaterdaftar/{tokens}', 'DashboardController@peserta');
+    Route::post('/tambah-event', 'DashboardController@addevent');
     // UPDATE EVENT STATUS //
     Route::get('/update/status-event/approved/{event_id}', 'DashboardController@approvestatus');
     Route::get('/update/status-event/ unapproved/{event_id}', 'DashboardController@unapprovedstatus');

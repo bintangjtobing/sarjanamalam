@@ -1,5 +1,6 @@
 @extends('authen.index')
 @section('title','Detail event '.$eventget->nama_event)
+<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 @section('content')
 <!-- Default box -->
 @if(session('sukses'))
@@ -85,12 +86,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="post">
-                            <h5>Deskripsi event</h5>
+                            <h5><b>Deskripsi event</b></h5>
                             <hr>
                             <p>
-                                {{$eventget->deskripsi_event}}
+                                {!!$eventget->deskripsi_event!!}
                             </p>
-                            <h5>Data penanggung jawab</h5>
+                            <h5><b>Data penanggung jawab</b></h5>
                             <hr>
                             <p>
                                 Nama penanggung jawab:<br><b>{{$eventget->nama_pic}}</b><br><br>
@@ -113,8 +114,13 @@
                     <p class="text-sm">Nama penanggung jawab:
                         <b class="d-block">{{$eventget->nama_pic}}</b>
                     </p>
-                    <p class="text-sm">Link daftar:</p>
-                    <a href="/daftar-event/{{$eventget->event_id}}">Click this link<b class="d-block mute"></b></a>
+                    <p class="text-sm">
+                        {{URL::to('daftar-event/'.$eventget->eventid)}}
+                        <div class="visible-print text-center">
+                            {!!
+                            QrCode::encoding('UTF-8')->format('svg')->size(300)->generate('/daftar-event/{{$getId}}');!!}
+                            <p>Scan me to visit URL</p>
+                        </div>
                 </div>
                 <div class="text-center mt-5 mb-3">
                     <a href="/update/status-event/@if($eventget->status=='unapproved')approved/{{$eventget->event_id}}

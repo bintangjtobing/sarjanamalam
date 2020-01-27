@@ -37,7 +37,7 @@ membekali calon sarjana. Seminar')
                         </div>
                         <div class="form-group col-md-8">
                             <h3>{{$eventdaf->nama_event}}</h3>
-                            <p>{{$eventdaf->deskripsi_event}}</p>
+                            <p>{!!$eventdaf->deskripsi_event!!}</p>
                             <div class="form-row">
                                 <div class="form-group col-7 text-left">
                                     <p><i class="far fa-clock"></i> {{$eventdaf->tglevent}} | {{$eventdaf->waktu_event}}

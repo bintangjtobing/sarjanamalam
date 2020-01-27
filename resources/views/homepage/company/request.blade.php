@@ -67,7 +67,7 @@ membekali calon sarjana. Seminar')
                         <div class="form-group col-md-12">
                             <label for="">Deskripsi event</label>
                             <textarea name="deskripsi_event" id="" class="form-control" cols="30" rows="10"
-                                placeholder="Masukkan deskripsi anda dengan detail" required></textarea>
+                                placeholder="Masukkan deskripsi event dengan detail" required></textarea>
                         </div>
                     </div>
                     <div class="form-row">

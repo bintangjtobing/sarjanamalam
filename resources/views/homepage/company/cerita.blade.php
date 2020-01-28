@@ -15,10 +15,10 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3" style="margin-top:.70rem;">
                 <p class="sidebar-stories">Ditemukan pada tahun <br>2019</p>
                 <p class="sidebar-stories">Penemu<br>Bintang Tobing</p>
-                <p class="sidebar-stories">Tim eksekutif pertama<br>Riki Ariandu<br>Boby Wijaya<br>Rino Gazali<br>Wanda
+                <p class="sidebar-stories">Tim eksekutif pertama<br>Riki Ariandu<br>Boby Wijaya<br>Rino Gazali
                 </p>
             </div>
             <div class="col-lg-9">
@@ -82,17 +82,12 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                     <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
                                     </p>
                                     <div class="align-center">
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
-                                            <i class="fab fa-facebook-f"></i>
-                                            <span>Facebook</span>
+                                        <a class="btn btn-xs btn-slide btn-light" href="https://bintangtobing.com">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Website</span>
                                         </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
-                                            data-width="100">
-                                            <i class="fab fa-twitter"></i>
-                                            <span>Twitter</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
-                                            data-width="118">
+                                        <a class="btn btn-xs btn-slide btn-light"
+                                            href="https://instagram.com/bintangj.exe" data-width="118">
                                             <i class="fab fa-instagram"></i>
                                             <span>Instagram</span>
                                         </a>
@@ -111,17 +106,17 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                     <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
                                     </p>
                                     <div class="align-center">
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                        {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
                                             <i class="fab fa-facebook-f"></i>
                                             <span>Facebook</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
+                                        </a> --}}
+                                        {{-- <a class="btn btn-xs btn-slide btn-light" href="https://twitter.com"
                                             data-width="100">
                                             <i class="fab fa-twitter"></i>
                                             <span>Twitter</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
-                                            data-width="118">
+                                        </a> --}}
+                                        <a class="btn btn-xs btn-slide btn-light"
+                                            href="https://instagram.com/gazalirino" data-width="118">
                                             <i class="fab fa-instagram"></i>
                                             <span>Instagram</span>
                                         </a>
@@ -140,7 +135,7 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                     <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
                                     </p>
                                     <div class="align-center">
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                        {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
                                             <i class="fab fa-facebook-f"></i>
                                             <span>Facebook</span>
                                         </a>
@@ -148,9 +143,9 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                             data-width="100">
                                             <i class="fab fa-twitter"></i>
                                             <span>Twitter</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
-                                            data-width="118">
+                                        </a> --}}
+                                        <a class="btn btn-xs btn-slide btn-light"
+                                            href="https://instagram.com/rikiariandu_" data-width="118">
                                             <i class="fab fa-instagram"></i>
                                             <span>Instagram</span>
                                         </a>
@@ -169,7 +164,7 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                     <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
                                     </p>
                                     <div class="align-center">
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
+                                        {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
                                             <i class="fab fa-facebook-f"></i>
                                             <span>Facebook</span>
                                         </a>
@@ -177,9 +172,9 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                             data-width="100">
                                             <i class="fab fa-twitter"></i>
                                             <span>Twitter</span>
-                                        </a>
-                                        <a class="btn btn-xs btn-slide btn-light" href="https://instagram.com"
-                                            data-width="118">
+                                        </a> --}}
+                                        <a class="btn btn-xs btn-slide btn-light"
+                                            href="https://instagram.com/coco_lapopo" data-width="118">
                                             <i class="fab fa-instagram"></i>
                                             <span>Instagram</span>
                                         </a>

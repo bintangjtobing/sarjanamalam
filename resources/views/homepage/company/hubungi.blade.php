@@ -77,12 +77,13 @@
             <div class="col-md-6">
                 <h3 class="text-uppercase">Alamat & Peta</h3>
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-md-12">
                         <address>
-                            <strong>Sarjanamalam HQ</strong><br>
-                            Forum Nine,<br>
-                            Jl. Imam Bonjol No.9, Petisah Tengah,<br>
-                            Medan<br>
+                            <strong>Sarjanamalam. Communities</strong><br>
+                            Aloina Residence,<br>
+                            Jl. Bunga Kenanga No. 19 - 14<sup>th</sup>,
+                            Medan Selayang<br>Sumatera Utara 20131
+                            Indonesia<br>
                             <abbr title="Phone">P:</h4> 0812 6284 5980
                         </address>
                     </div>
@@ -96,7 +97,7 @@
                     </div> --}}
                 </div>
 
-                <div class="map" data-latitude="3.5864868" data-longitude="98.6742558" data-style="light"></div>
+                <div class="map" data-latitude="3.5527065" data-longitude="98.6492231" data-style="light"></div>
 
             </div>
         </div>

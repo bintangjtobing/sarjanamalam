@@ -37,6 +37,10 @@ class companyController extends Controller
     {
         return view('homepage.company.request');
     }
+    public function private()
+    {
+        return view('homepage.company.privacy');
+    }
     public function postevent(Request $request)
     {
         $post = new \App\eventDB;

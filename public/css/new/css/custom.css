@@ -159,3 +159,11 @@
 .imgserved-done {
     max-width: 200px;
 }
+
+.sidebar-stories a {
+    color: #000 !important;
+}
+
+.sectioncrusial {
+    padding: 120px 0 !important;
+}

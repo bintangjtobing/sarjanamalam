@@ -110,7 +110,7 @@
                                     <div class="widget-title">Dukungan</div>
                                     <ul class="list">
                                         <li><a href="#">F.A.Q</a></li>
-                                        <li><a href="#">Privasi</a></li>
+                                        <li><a href="/privacy">Privasi</a></li>
                                         <li><a href="#">Umpan balik</a></li>
                                     </ul>
                                 </div>
@@ -131,7 +131,7 @@
                         <div class="copyright-text text-right">
                             <a href="/help" class="mr-2">Help</a>
                             <a href="/privacy" class="mr-2">Privacy</a>
-                            <a href="/terms" class="mr-2">Terms</a>
+                            <a href="/privacy#tos" class="mr-2">Terms</a>
                         </div>
                     </div>
                 </div>

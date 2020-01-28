@@ -1,8 +1,9 @@
+@inject('userMod', 'App\UserMod')
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>@yield('title')</title>
+    <title>{{old('searchinput')}}</title>
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/jam-icons/js/jam.min.js"></script>
@@ -49,10 +50,10 @@
                     <ul>
                         <li class="active"><a href="" title="All search"><span class="fas fa-search mr-1"></span> </a>
                         </li>
-                        <li><a href="" title="All search"><span class="fas fa-image mr-1"></span> </a></li>
+                        {{-- <li><a href="" title="All search"><span class="fas fa-image mr-1"></span> </a></li>
                         <li><a href="" title="All search"><span class="fas fa-map mr-1"></span> </a></li>
                         <li><a href="" title="All search"><span class="fas fa-video mr-1"></span> </a></li>
-                        <li><a href="" title="All search"><span class="fas fa-newspaper mr-1"></span> </a></li>
+                        <li><a href="" title="All search"><span class="fas fa-newspaper mr-1"></span> </a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -66,27 +67,31 @@
 
                         <div class="container-fluid">
                             <div class="navbar-collapse navbar-inline-mobile" id="collapsibleNavId">
-                                <form class="form-inline my-2 my-lg-0">
+                                <form class="form-inline my-2 my-lg-0" action="/search?" method="GET">
                                     <div class="result-search">
-                                        <input class="form-control mr-sm-2 result-search-input" type="text"
-                                            placeholder="Search">
+                                        <input class="form-control mr-sm-2 result-search-input" type="search"
+                                            placeholder="Search" name="get_value" value="{{old('get_value')}}">
                                         <span class="fas fa-search result-search-icon"></span>
                                     </div>
                                 </form>
-
+                                @if(Auth::check())
                                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-initial dropdown-toggle" href="#" id="dropdownId"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="">B</span>
+                                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                                    class="img-profile-user" alt="User Image"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                            <a class="dropdown-item" href="#">Action 1</a>
-                                            <a class="dropdown-item" href="#">Action 2</a>
+                                            <a class="dropdown-item nav-user-name" href="#"><span
+                                                    class="font-weight-bold ">{{auth()->user()->name}}</span></a>
+                                            <a class="dropdown-item" href="#">Profile Saya</a>
+                                            <a href="/logout/{{auth()->user()->id}}" class="dropdown-item">Keluar</a>
                                         </div>
                                     </li>
                                 </ul>
-
+                                @endif
                             </div>
                         </div>
                     </nav>

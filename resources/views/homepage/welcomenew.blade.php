@@ -35,6 +35,9 @@
     <meta name="twitter:site" content="@sarjanamalamcom">
     <meta name="twitter:creator" content="@sarjanamalamcom">
     <link rel="stylesheet" href="{!!asset('css/homepage/style.css')!!}">
+
+    {{-- VERIFICATION --}}
+    <meta name="yandex-verification" content="047b2f981a7891e7" />
 </head>
 
 <body>

@@ -74,7 +74,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                         <div class="col-lg-3">
                             <div class="team-member">
                                 <div class="team-image">
-                                    <img src="{!!asset('storage/team/ceo.png')!!}" class="imgteamcerita">
+                                    <img src="{!!asset('storage/team/ceo.png')!!}" alt="team sarjanamalam."
+                                        class="imgteamcerita">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Bintang Tobing</h3>
@@ -98,7 +99,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                         <div class="col-lg-3">
                             <div class="team-member">
                                 <div class="team-image">
-                                    <img src="{!!asset('storage/team/cfo.png')!!}" class="imgteamcerita">
+                                    <img src="{!!asset('storage/team/cfo.png')!!}" alt="team sarjanamalam."
+                                        class="imgteamcerita">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Rino Gazali</h3>
@@ -127,7 +129,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                         <div class="col-lg-3">
                             <div class="team-member">
                                 <div class="team-image">
-                                    <img src="{!!asset('storage/team/coo.png')!!}" class="imgteamcerita">
+                                    <img src="{!!asset('storage/team/coo.png')!!}" alt="team sarjanamalam."
+                                        class="imgteamcerita">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Riki Ariandu</h3>
@@ -156,7 +159,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                         <div class="col-lg-3">
                             <div class="team-member">
                                 <div class="team-image">
-                                    <img src="{!!asset('storage/team/cdo.png')!!}" class="imgteamcerita">
+                                    <img src="{!!asset('storage/team/cdo.png')!!}" alt="team sarjanamalam."
+                                        class="imgteamcerita">
                                 </div>
                                 <div class="team-desc">
                                     <h3>Boby Wijaya</h3>

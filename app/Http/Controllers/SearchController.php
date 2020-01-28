@@ -13,7 +13,7 @@ class SearchController extends Controller
     public function processcari(Request $request)
     {
         // Menangkap data cari
-        $get_search = $request->searchinput;
+        $get_search = $request->get_value;
 
         // Ambil data  dari table threads
         $search = DB::table('threads')

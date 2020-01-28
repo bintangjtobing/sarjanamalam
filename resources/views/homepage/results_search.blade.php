@@ -3,7 +3,8 @@
 <html lang="en">
 
 <head>
-    <title>{{old('searchinput')}}</title>
+    <?php $countget = $search->count() ?>
+    <title>{{$get_search}} - Sarjanamalam Search: {!!$countget!!} results found!</title>
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/jam-icons/js/jam.min.js"></script>
@@ -70,7 +71,7 @@
                                 <form class="form-inline my-2 my-lg-0" action="/search?" method="GET">
                                     <div class="result-search">
                                         <input class="form-control mr-sm-2 result-search-input" type="search"
-                                            placeholder="Search" name="get_value" value="{{old('get_value')}}">
+                                            placeholder="Search" name="get_value" value="{{$get_search}}">
                                         <span class="fas fa-search result-search-icon"></span>
                                     </div>
                                 </form>

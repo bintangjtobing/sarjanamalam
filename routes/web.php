@@ -11,7 +11,10 @@ Route::get('/clear-cache', function () {
 Route::get('/search', 'SearchController@processcari');
 Route::get('/daftar-event/{event_id}', 'DashboardController@daftarevent');
 Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
-// HOMEPAGE WEB ROUT
+
+// MAIL SETTING
+
+// HOMEPAGE WEB ROUTE
 Route::get('/', function () {
     return view('homepage.home');
 });
@@ -29,6 +32,7 @@ Route::get('/details/{id}', 'ForumController@detailsthreads');
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
+Route::post('/verification-user/{tokens}', 'UserController@verification');
 Route::get('/logout/{id}', 'AuthController@logout');
 
 // LINK KHUSUS

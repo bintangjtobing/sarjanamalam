@@ -34,11 +34,12 @@ kamu ingin cari tau.')
     </div>
     <div class="form-row">
         <div class="col-md-6">
-            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required pattern=".{8,}">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password" required
+                pattern=".{8,}">
         </div>
         <div class="col-md-6">
-            <input class="form-control" type="password" name="ver_password" id="ver_password" placeholder="Ulangi password" required
-                pattern=".{8,}">
+            <input class="form-control" type="password" name="ver_password" id="ver_password"
+                placeholder="Ulangi password" required pattern=".{8,}">
         </div>
     </div>
     <div class="form-row">

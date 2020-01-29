@@ -143,11 +143,11 @@
                                             {{-- <span class="content-favicon"><img
                                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg0lEQVQ4jaXTu2sUURSA8d+susm6ZI0oKlhEia9KtDKVpBARtNBKG7GysBCskt5/wMJOEDSIj05ILaKIYCkB0cIHgmKQNetOdo3BOBZzHHcGu70wxbn33O9+59y5SZZlhhnrS9GDJMFhnMMJ/MJN3HU2W/ofIBk0WL092sR9nBrI6eIa7uFrxDWM1C+spCWDlf7GXZisHNLBBtxCink0sLfOxRKgnzZPYqICWMAP7MAUppFgrVUF9Lpjh7CEj6jLe/QW+wMgbP6a/Wviy8tTDVrvMBqqP7GIz7gU84PjeQF4dv54jda0/AYOYgRteUPfRxm1UIffmCsAy51N63AGx0IdtuJowHp4hFWMx/rjApB2Wtuwe2AzfMOrsDqCL1jGFnyKEsPge+t0qA+OHj7E/Ob4sijjCdYKQK87dgBv8DTqm4x4Qvm/SAIyXzLop80b8utrR9I4tuMKdlbMXuPFTHs2KwAz7dmFSlL/auP6Ih5iH/bI30UXd+KwXGnY11gbajf+AMEnaxyZfD+GAAAAAElFTkSuQmCC"></span> --}}
                                             <span
-                                                class="content-url old-green mr-1">{{URL::to('details/'.$src->id)}}</span>
+                                                class="content-url old-green mr-1">{{URL::to('details/'.$src->subject)}}</span>
                                         </div>
                                         <h3 class="">{{$src->subject}}
-                                            <span class="content-info fas fa-link fs-14"
-                                                title="check description"></span>
+                                            {{-- <span class="content-info fas fa-link fs-14"
+                                                title="check description"></span> --}}
                                         </h3>
                                     </a>
                                     <div class="content-desc">{{$src->thread}}</div>

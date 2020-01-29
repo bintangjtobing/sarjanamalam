@@ -13,9 +13,11 @@ kelebihannya.')
                 <li class="nav-item active">
                     <a class="nav-link" href="/forum/{{$tokens}}">Forum</a>
                 </li>
+                @if(auth()->user()->role=='executive')
                 <li class="nav-item">
                     <a class="nav-link" href="/restricted/{{$tokens}}">Managements</a>
                 </li>
+                @endif
                 @else
                 <li class="nav-item">
                     <a class="nav-link" href="/signin/{{$tokens}}">Masuk</a>

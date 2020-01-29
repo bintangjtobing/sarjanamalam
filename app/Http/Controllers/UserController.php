@@ -27,7 +27,8 @@ class UserController extends Controller
         $data_member->save();
 
 
-        \Mail::to($data_member->email)->send(new successRegisteredUser);
+        \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
+
         return back()->with('sukses', 'Tinggal selangkah lagi, kamu upload 1 berita pertama kamu. Jika menarik, berita kamu bisa langsung diangkat di Instagram milik sarjanamalam loh.');
     }
     public function verification(Request $request, $id)
@@ -35,7 +36,7 @@ class UserController extends Controller
         $tokens = bin2hex(openssl_random_pseudo_bytes(64));
         $data_member = \App\UserMod::find($id);
         $data_member->status = 'active';
-
+        $data_member->save();
         return redirect('/signin')->with('sukses', 'Berhasil mem-verifikasi email. Cobalah masuk ke forum dan cobalah pengalaman baru.');
     }
 }

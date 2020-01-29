@@ -32,7 +32,7 @@ Route::get('/details/{id}', 'ForumController@detailsthreads');
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
-Route::post('/verification-user/{tokens}', 'UserController@verification');
+Route::post('/verification-user/{id}/{tokens}', 'UserController@verification');
 Route::get('/logout/{id}', 'AuthController@logout');
 
 // LINK KHUSUS

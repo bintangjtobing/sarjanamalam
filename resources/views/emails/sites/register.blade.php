@@ -2,11 +2,11 @@
 @component('mail::message')
 # Sarjanamalam signup
 
-Selamat {{$nama}}, kamu telah berhasil menjadi keanggotaan di Sarjanamalam.
+Selamat {{$data_member->name}}, kamu telah berhasil menjadi keanggotaan di Sarjanamalam.
 Klik url ini jika tombol dibawah tidak berfungsi
 <a
-    href="http://localhost:8000/verification-user/{{$iduser}}/{{$tokens}}">http://localhost:8000/get-verification/{{$iduser}}/{{$tokens}}</a>
-@component('mail::button', ['url' => 'http://localhost:8000/get-verification/{{$iduser}}/{{$tokens}}'])
+    href="http://localhost:8000/verification-user/{{$data_member->id}}/{{str_limit($tokens, $limit=10)}}">http://localhost:8000/get-verification/{{$data_member->id}}/{{str_limit($tokens, $limit=10)}}</a>
+@component('mail::button', ['url' => 'http://localhost:8000/get-verification/'.$data_member->id/$tokens'])
 Klik disini
 @endcomponent
 

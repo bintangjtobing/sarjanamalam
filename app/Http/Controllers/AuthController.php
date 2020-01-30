@@ -10,7 +10,11 @@ class AuthController extends Controller
     public function validateLogin(Request $request)
     {
         $tokens = str_random(50);
-        if (Auth::attempt($request->only('username', 'password'))) {
+        if (Auth::attempt([
+            'username' => $request->username,
+            'password' => $request->password,
+            'status' => 'active',
+        ])) {
             return redirect('/');
         }
         return back()->with('gagal', 'Otorisasi member gagal. Silahkan cek kembali username atau password anda.');

@@ -30,11 +30,12 @@ class successRegisteredUser extends Mailable
      */
     public function build()
     {
-        return $this->from('info@sarjanamalam.com')
+        return $this->from('info@sarjanamalam.com', 'Verification Sarjanamalam.')
             ->subject('Hai, ' . $this->data_member->name . ' Selamat! Kamu berhasil mendaftar di Sarjanamalam.')
             ->with([
                 'nama' => $this->data_member->name,
                 'email' => $this->data_member->email,
+                'status' => $this->data_member_status,
                 'iduser' => $this->data_member->id
             ])
             ->markdown('emails.sites.register');

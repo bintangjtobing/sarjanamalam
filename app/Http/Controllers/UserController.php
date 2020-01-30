@@ -33,7 +33,7 @@ class UserController extends Controller
     }
     public function verification(Request $request, $id)
     {
-        $tokens = bin2hex(openssl_random_pseudo_bytes(64));
+
         $data_member = \App\UserMod::find($id);
         $data_member->status = 'active';
         $data_member->save();

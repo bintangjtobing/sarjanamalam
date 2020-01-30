@@ -112,6 +112,7 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Role</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -125,6 +126,13 @@
                 <td>{{$user->username}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->role}}</td>
+                <td align="center">
+                    @if($user->status=='inactive')
+                    <span style="color:red;" title="User tidak aktif"><i class="fas fa-times-circle"></i></span>
+                    @else
+                    <span style="color:green" title="User aktif"><i class="fas fa-check-circle"></i></span>
+                    @endif
+                </td>
                 <td><a href="/delete/{{$user->id}}/{{$tokens}}" class="btn btn-danger btn-sm"><i
                             class="fas fa-trash"></i></a>
                     <a href="/edit/{{$user->id}}/{{$tokens}}" class="btn btn-warning btn-sm"><i

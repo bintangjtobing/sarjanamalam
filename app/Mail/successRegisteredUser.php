@@ -35,7 +35,6 @@ class successRegisteredUser extends Mailable
             ->with([
                 'nama' => $this->data_member->name,
                 'email' => $this->data_member->email,
-                'status' => $this->data_member_status,
                 'iduser' => $this->data_member->id
             ])
             ->markdown('emails.sites.register');

@@ -7,6 +7,7 @@ use App\UserMod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Mail\successRegisteredUser;
+use Carbon\Traits\Timestamp;
 
 class UserController extends Controller
 {
@@ -25,18 +26,18 @@ class UserController extends Controller
         $data_member->created_by = 'guest';
         $data_member->updated_by = 'guest';
         $data_member->save();
-
-
         \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
-
         return back()->with('sukses', 'Tinggal selangkah lagi, kamu upload 1 berita pertama kamu. Jika menarik, berita kamu bisa langsung diangkat di Instagram milik sarjanamalam loh.');
     }
     public function verification(Request $request, $id)
     {
 
         $data_member = \App\UserMod::find($id);
+        $datetime = date('d M Y h:m:s');
         $data_member->status = 'active';
+        $data_member->email_verified_at = $datetime;
+        $data_member->updated_by = $request->getClientIp();
         $data_member->save();
-        return redirect('/signin')->with('sukses', 'Berhasil mem-verifikasi email. Cobalah masuk ke forum dan cobalah pengalaman baru.');
+        return view('homepage.verificationsuccess');
     }
 }

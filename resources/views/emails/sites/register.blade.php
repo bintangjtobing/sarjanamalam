@@ -352,7 +352,7 @@ Sarjanamalam.
 								            </div>
 								            <!--[if mso]></td></tr></table><![endif]-->
 								            <form action="http://localhost:8000/verification-user/{{$data_member->id}}/{{$tokens}}"
-                                                method="post">
+                                                method="GET">
                                                 @csrf
 								                <div align="left" class="button-container"
 								                    style="padding-top:5px;padding-right:10px;padding-bottom:35px;padding-left:10px;">
@@ -404,17 +404,17 @@ Sarjanamalam.
 											<!--<![endif]-->
 											<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
 											<div
-												style="color:#ffffff;font-family:Lato, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
+												style="font-family:Lato, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 												<div
 													style="font-size: 12px; line-height: 1.2;  font-family: Lato, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
 													<p
-														style="font-size: 14px; font-weight:700; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
+														style="font-size: 14px; font-weight:700; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0; color:#fff !important; font-weight:700;">
 														<strong>Sarjanamalam.</strong></p>
 													<p
-														style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
+														style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0; color:#fff !important;">
 														<strong>PT. KITA SARJANA MALAM</strong></p>
 													<p
-														style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">
+														style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0; color:#fff !important;">
 														Aloina Residence, Medan-Selayang<br>Jl. Bunga Kenanga No.9 14<sup>th</sup></p>
 												</div>
 											</div>

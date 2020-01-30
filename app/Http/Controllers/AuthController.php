@@ -17,7 +17,7 @@ class AuthController extends Controller
         ])) {
             return redirect('/');
         }
-        return back()->with('gagal', 'Otorisasi member gagal. Silahkan cek kembali username atau password anda.');
+        return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }
     public function logout()
     {

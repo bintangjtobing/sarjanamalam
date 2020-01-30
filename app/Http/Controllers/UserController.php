@@ -27,7 +27,7 @@ class UserController extends Controller
         $data_member->updated_by = 'guest';
         $data_member->save();
         \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
-        return back()->with('sukses', 'Tinggal selangkah lagi, kamu upload 1 berita pertama kamu. Jika menarik, berita kamu bisa langsung diangkat di Instagram milik sarjanamalam loh.');
+        return back()->with('sukses', 'Berhasil! Kami sudah mengirimkan email verifikasi ke email kamu. Harap diverifikasikan agar akun kamu aktif. Terima kasih.');
     }
     public function verification(Request $request, $id)
     {

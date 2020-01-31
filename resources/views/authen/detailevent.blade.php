@@ -117,7 +117,7 @@
                     <p class="text-sm">
                         {{URL::to('daftar-event/'.$eventget->event_id)}}
                         <div class="visible-print text-center">
-                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('/daftar-event/'.$eventget->event_id))!!}"
+                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('http://localhost:8000/daftar-event/'.$eventget->event_id))!!}"
                                 alt="daftar event kamu hanya di sarjanamalam. QRCODE{{$eventget->event_id}}{{$tokens}}">
                             <p>Scan me to visit URL</p>
                         </div>

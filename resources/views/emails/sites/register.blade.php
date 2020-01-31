@@ -351,7 +351,7 @@ Sarjanamalam.
 								                </div>
 								            </div>
 								            <!--[if mso]></td></tr></table><![endif]-->
-								            <form action="http://localhost:8000/verification-user/{{$data_member->id}}/{{$tokens}}"
+								            <form action="http://sarjanamalam.com/verification-user/{{$data_member->id}}/{{$tokens}}"
                                                 method="GET">
                                                 @csrf
 								                <div align="left" class="button-container"

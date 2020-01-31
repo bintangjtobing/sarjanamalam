@@ -98,6 +98,10 @@ class companyController extends Controller
             ->get();
         return view('homepage.company.karir', ['karir' => $karir]);
     }
+    public function partnership()
+    {
+        return view('homepage.company.sponsorship');
+    }
     public function hubungi()
     {
         return view('homepage.company.hubungi');

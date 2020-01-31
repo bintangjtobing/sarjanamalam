@@ -97,7 +97,7 @@
                                     <div class="widget-title">Lebih dari kami</div>
                                     <ul class="list">
                                         <li><a href="/hubungi-sarjanamalam">Hubungi kami</a></li>
-                                        <li><a href="#">Relasi sponsor</a></li>
+                                        <li><a href="/partnership">Relasi sponsor</a></li>
                                         <li><a href="/event">Event</a></li>
                                         <li><a href="/karir-sarjanamalam">Karir</a></li>
                                         <li><a href="/blog">Blog</a></li>
@@ -109,9 +109,9 @@
                                 <div class="widget">
                                     <div class="widget-title">Dukungan</div>
                                     <ul class="list">
-                                        <li><a href="#">F.A.Q</a></li>
+                                        <li><a href="/frequently-asked-question">F.A.Q</a></li>
                                         <li><a href="/privacy">Privasi</a></li>
-                                        <li><a href="#">Umpan balik</a></li>
+                                        <li><a href="/feedback">Umpan balik</a></li>
                                     </ul>
                                 </div>
                             </div>

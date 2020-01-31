@@ -63,7 +63,7 @@ sarjanamalam')
                         layanan disediakan oleh Sarjanamalam. (PT KITA SARJANA MALAM), yang berlokasi di Aloina House
                         Residence Jalan Bunga Kenanga No.9 - 14<sup>th</sup>, Medan - Sumatera Utara 20131, Indonesia.
                     </p>
-                    <p class="paragraph-stories">Badan kami disahkan oleh negara dengan nomor ###-####-###</p>
+                    {{-- <p class="paragraph-stories">Badan kami disahkan oleh negara dengan nomor ###-####-###</p> --}}
                     <p class="paragraph-stories">Dengan menggunakan layanan dan produk kami, berarti anda menyetujui
                         persyaratan ini.</p>
                     <h5>1. Terms</h5>

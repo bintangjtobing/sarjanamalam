@@ -39,8 +39,9 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="/"><span class="logo-default">sarjanamalam.</span><span
-                                class="logo-dark">sarjanamalam.</span></a> </div>
+                    <div id="logo"> <a href="/"><span
+                                class="logo-default text-gradient-blue-sarjana">sarjanamalam.</span><span
+                                class="logo-dark text-gradient-blue-sarjana">sarjanamalam.</span></a> </div>
                     <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a>
                     </div>
                     <div id="mainMenu">
@@ -140,7 +141,6 @@
     </footer>
 
     </div>
-    <a id="scrollTop"><span class="ti-angle-up"></span></a>
     <script src="{!!asset('js/jquery.js')!!}"></script>
     <script src="{!!asset('js/plugins.js')!!}"></script>
     <script src="{!!asset('js/functions.js')!!}"></script>

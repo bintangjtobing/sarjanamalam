@@ -27,6 +27,11 @@ class companyController extends Controller
             ->get();
         return view('homepage.company.blog', ['blog' => $blog]);
     }
+    public function readblog($blog_id)
+    {
+        $blog = \App\blogDB::find($blog_id);
+        return view('homepage.company.readblog', ['blog' => $blog]);
+    }
     public function event()
     {
         $event = DB::table('events')

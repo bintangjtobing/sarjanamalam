@@ -150,7 +150,7 @@
                                                 title="check description"></span> --}}
                                         </h3>
                                     </a>
-                                    <div class="content-desc">{{$src->thread}}</div>
+                                    <div class="content-desc">{{str_limit($src->thread, $limit=160)}}</div>
                                 </div>
                                 @endforeach
                                 @else

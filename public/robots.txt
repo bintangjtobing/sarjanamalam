@@ -1,2 +1,25 @@
-User-agent: *
+User-Agent: *
 Disallow:
+Allow: /tentang-sarjana-malam
+Allow: /privacy
+Allow: /help
+Allow: /feedback
+Allow: /how-search-works
+Allow: /frequently-asked-question
+Allow: /blog
+Allow: /event
+Allow: /post-event
+Allow: /karir-sarjanamalam
+Allow: /pelajari-pekerjaaan/
+Allow: /partnership
+Allow: /hubungi-sarjanamalam
+Allow: /cerita-sarjanamalam
+Allow: /kirim-pesan
+Allow: /request-ad-event
+Disallow: /restricted/
+Disallow: /user-config/
+Disallow: /event-managements/
+Disallow: /pesan/
+Disallow: /trash/
+
+Sitemap: https://sarjanamalam.com/robots.txt

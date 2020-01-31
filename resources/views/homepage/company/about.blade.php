@@ -46,15 +46,16 @@
 <body>
     <script type="application/ld+json">
         {
-            "@context": "http://schema.org",
+            "@context": "https://schema.org/",
             "@type": "WebSite",
             "name": "Sarjanamalam",
-            "url": "https://sarjanamalam.com",
+            "url": "https://sarjanamalam.com/tentang-sarjana-malam",
             "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://sarjanamalam.com/search?={search_term_string}",
+                "target": "https://sarjanamalam.com/{search_term_string}",
                 "query-input": "required name=search_term_string"
             }
+        }
 
     </script>
     <div class="body-inner">

@@ -21,27 +21,40 @@
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
 
     {{-- SOCIAL MEDIA TAGS --}}
-    {{-- FACEBOOK SOCMED --}}
-    <meta property="fb:admins" content="110102153747274">
-    <meta property="og:title" content="@yield('title')">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{URL::current()}}">
-    <meta property="og:image"
-        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
-    <meta property="og:description" content="@yield('metadesc')">
-    <meta property="og:site_name" content="Sarjanamalam.">
     {{-- TWITTER SOCMED --}}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@sarjanamalamcom">
     <meta name="twitter:creator" content="@sarjanamalamcom">
     <link rel="stylesheet" href="{!!asset('css/homepage/style.css')!!}">
 
+    {{-- METAGRAPH FACEBOOK --}}
+    <meta property="fb:admins" content="114499413304839">
+    <meta property="og:site_name" content="@yield('title')" />
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="@yield('ogtype')" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('metadesc')" />
+    <meta property="og:image"
+        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
+
     {{-- VERIFICATION --}}
     <meta name="yandex-verification" content="047b2f981a7891e7" />
 </head>
 
 <body>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Sarjanamalam",
+            "url": "https://sarjanamalam.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sarjanamalam.com/search?={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
 
+    </script>
     <div class="homestyle inner inner-bg-image">
 
         @yield('content')

@@ -46,6 +46,7 @@ Route::get('/event', 'companyController@event');
 Route::post('/post-event', 'companyController@postevent');
 Route::get('/karir-sarjanamalam', 'companyController@karir');
 Route::get('/partnership', 'companyController@partnership');
+Route::post('/partnership/ajukan-permohonan/{tokens}', 'companyController@ajukanpartnership');
 Route::get('/hubungi-sarjanamalam', 'companyController@hubungi');
 Route::get('/cerita-sarjanamalam', 'companyController@cerita');
 Route::post('/kirim-pesan', 'companyController@kirimpesan');

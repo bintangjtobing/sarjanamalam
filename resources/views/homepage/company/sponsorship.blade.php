@@ -84,8 +84,21 @@
                 </div>
             </div>
             <div class="col-lg-5 offset-1">
-                <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
-                    method="post">
+                <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
+                <form action="/partnership/ajukan-permohonan/{{$tokens}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @if(session('suksesajukan'))
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Akhirnya selesai.. </strong> {{session('suksesajukan')}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label for="name">Nama lengkap</label>
@@ -111,7 +124,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Lampiran Proposal</label>
-                        <input type="file" name="lampiranfile" id="" class="form-control">
+                        <input type="file" name="lampiran" id="" class="form-control">
                         <text class="muted-text">Silahkan lampirkan proposal penawaran kerja sama, sponsorship dan
                             lainnya.</text>
                     </div>
@@ -127,7 +140,7 @@
 
 {{-- FAQ --}}
 <section>
-    <div class="container">
+    <div class="container" id="meetwithsarjanamalam">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h3>Tanya dan Jawab</h3>

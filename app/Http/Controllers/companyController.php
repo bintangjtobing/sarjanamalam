@@ -126,4 +126,19 @@ class companyController extends Controller
         return back()->with('sukses', 'Dan akan segera dihubungi untuk melakukan
                         konfirmasi kembali terhadap event tersebut.');
     }
+    public function ajukanpartnership(Request $request)
+    {
+        $kerjasama =  new \App\partnershipDB;
+        $kerjasama->partnershipCompany = $request->institusi;
+        $kerjasama->nama_pic = $request->namalengkap;
+        $kerjasama->email = $request->email;
+        $kerjasama->nohp =  $request->nohp;
+        if ($request->hasFile('lampiran')) {
+            $request->file('lampiran')->move('proposal/doc/', $request->file('lampiran')->getClientOriginalName());
+            $kerjasama->lampiran = $request->file('lampiran')->getClientOriginalName();
+        }
+        $kerjasama->save();
+
+        return back()->with('suksesajukan', 'Proposal penawaran kerjasama kamu berhasil kami terima! Tunggu balasan email atau kami akan menghubungi anda untuk konfirmasi pengajuan anda.');
+    }
 }

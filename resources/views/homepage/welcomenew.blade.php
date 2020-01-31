@@ -60,12 +60,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/privacy">Privasi</a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="/help">Bantuan</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/feedback">Umpan balik</a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a href="/how-search-works" class="nav-link" href="#">Cara kerja penelusuran</a>
                             </li>

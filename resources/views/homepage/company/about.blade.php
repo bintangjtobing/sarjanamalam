@@ -97,7 +97,7 @@
                                     <div class="widget-title">Lebih dari kami</div>
                                     <ul class="list">
                                         <li><a href="/hubungi-sarjanamalam">Hubungi kami</a></li>
-                                        <li><a href="/partnership">Relasi sponsor</a></li>
+                                        <li><a href="/partnership">Partnership</a></li>
                                         <li><a href="/event">Event</a></li>
                                         <li><a href="/karir-sarjanamalam">Karir</a></li>
                                         <li><a href="/blog">Blog</a></li>

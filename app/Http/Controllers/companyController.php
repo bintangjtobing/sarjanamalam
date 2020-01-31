@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class companyController extends Controller
 {
+    public function howsearch()
+    {
+        return view('homepage.company.search');
+    }
     public function about()
     {
         $blog = DB::table('blog')

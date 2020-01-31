@@ -107,9 +107,24 @@ class companyController extends Controller
             ->get();
         return view('homepage.company.karir', ['karir' => $karir]);
     }
+    public function seekarir($career_id)
+    {
+        $karir = \App\karirDB::find($career_id);
+        $karirjoin = DB::table('career')
+            ->join('subcareer', 'career.career_id', '=', 'subcareer.subcareer_id')
+            ->where('subcareer.career_id', '=', $career_id)
+            ->select('career.*', 'subcareer.*')
+            ->get();
+        return view('homepage.company.lihatkarir', ['karir' => $karir, 'karirjoin' => $karirjoin]);
+        // dd($karirjoin);
+    }
     public function partnership()
     {
         return view('homepage.company.sponsorship');
+    }
+    public function faq()
+    {
+        return view('homepage.company.faq');
     }
     public function hubungi()
     {

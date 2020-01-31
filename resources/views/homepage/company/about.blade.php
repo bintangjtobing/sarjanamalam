@@ -18,6 +18,10 @@
         });
 
     </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v5.0&appId=114499413304839&autoLogAppEvents=1">
+    </script>
     <meta name="language" content="English">
 
     <title>@yield('title')</title>
@@ -29,10 +33,30 @@
     <link href="{!!asset('css/new/css/font-awesome.css')!!}" rel="stylesheet">
     <link rel="stylesheet" href="{!!asset('css/themify-icons.css')!!}">
     <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
+
+    {{-- METAGRAPH FACEBOOK --}}
+    <meta property="fb:admins" content="114499413304839">
+    <meta property="og:site_name" content="@yield('title')" />
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="@yield('ogtype')" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('metadesc')" />
 </head>
 
 <body>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Sarjanamalam",
+            "url": "https://sarjanamalam.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sarjanamalam.com/search?={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
 
+    </script>
     <div class="body-inner">
 
         <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light">
@@ -112,7 +136,7 @@
                                     <ul class="list">
                                         <li><a href="/frequently-asked-question">F.A.Q</a></li>
                                         <li><a href="/privacy">Privasi</a></li>
-                                        <li><a href="/feedback">Umpan balik</a></li>
+                                        {{-- <li><a href="/feedback">Umpan balik</a></li> --}}
                                     </ul>
                                 </div>
                             </div>

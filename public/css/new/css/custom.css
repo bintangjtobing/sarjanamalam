@@ -183,3 +183,12 @@
     -webkit-text-fill-color: transparent;
     font-weight: 900 !important;
 }
+
+.karirlink_part {
+    color: #3363ac !important;
+}
+
+.karirlink_part:hover {
+    color: #4aa5e7 !important;
+    transition: .25s ease-in-out;
+}

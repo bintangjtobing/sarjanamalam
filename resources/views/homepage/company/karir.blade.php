@@ -15,6 +15,7 @@ sarjanamalam karir')
         </div>
         <div class="row">
             @foreach ($karir as $karirlist)
+            <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
             <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="{!!asset('file/img/karir/'.$karirlist->features_pic)!!}"
@@ -22,8 +23,8 @@ sarjanamalam karir')
                     <div class="card-body">
                         <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>
                         <p class="card-text-black">{{$karirlist->description}}</p>
-                        <a href="#" class="card-link-karir mr-5">Pelajari</a><a href="#" class="card-link-karir">Lihat
-                            pekerjaan</a>
+                        <a href="/pelajari-pekerjaan/{{$karirlist->career_id}}/{{$tokens}}"
+                            class="card-link-karir mr-5">Pelajari</a>
                     </div>
                 </div>
             </div>

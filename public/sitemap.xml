@@ -1,15 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>http://localhost/blog</loc>
-        <lastmod>2020-01-30T00:00:00+07:00</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
-    </url>
-    <url>
         <loc>https://sarjanamalam.com/</loc>
         <lastmod>2020-01-31T16:42:56+07:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://sarjanamalam.com/signin</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/daftar</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url><url>
+        <loc>https://sarjanamalam.com/tentang-sarjana-malam</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/privacy</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/how-search-works</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/frequently-asked-question</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/blog</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/event</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/karir-sarjanamalam</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/partnership</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/hubungi-sarjanamalam</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/cerita-sarjanamalam</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/kirim-pesan</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sarjanamalam.com/request-ad-event</loc>
+        <lastmod>2020-01-31T16:42:56+07:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>

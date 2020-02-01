@@ -43,10 +43,20 @@ class GenerateSitemap extends Command
         // modify this to your own needs
         SitemapGenerator::create('https://sarjanamalam.com')
             ->getSitemap()
-            ->add(Url::create('/blog/')
-                ->setLastModificationDate(Carbon::yesterday())
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
-                ->setPriority(0.1))
+            ->add(Url::create('/tentang-sarjana-malam'))
+            ->add(Url::create('/privacy'))
+            ->add(Url::create('/how-search-works'))
+            ->add(Url::create('/frequently-asked-question'))
+            ->add(Url::create('/blog'))
+            ->add(Url::create('/event'))
+            ->add(Url::create('/karir-sarjanamalam'))
+            ->add(Url::create('/partnership'))
+            ->add(Url::create('/hubungi-sarjanamalam'))
+            ->add(Url::create('/cerita-sarjanamalam'))
+            ->add(Url::create('/kirim-pesan'))
+            ->add(Url::create('/request-ad-event'))
+            ->add(Url::create('/search'))
+            ->add(Url::create('/signin'))
             ->writeToFile(public_path('sitemap.xml'));
     }
 }

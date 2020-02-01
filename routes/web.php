@@ -109,6 +109,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/blog/{tokens}', 'DashboardController@indexblog');
     Route::post('/blog/tambah', 'DashboardController@addblog');
+    Route::get('/delete-blog/{blog_id}', 'DashboardController@deleteblog');
     // GET THE DETAILS
     Route::get('/read/{messages_id}', 'DashboardController@bacapesan');
 

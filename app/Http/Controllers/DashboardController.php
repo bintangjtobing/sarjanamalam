@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\blogDB;
 use App\eventDB;
 use App\messagesDB;
 use App\UserMod;
@@ -114,6 +115,16 @@ class DashboardController extends Controller
             ->select('blog.*')
             ->get();
         return view('authen.blog', ['blog' => $blog]);
+    }
+    public function deleteblog($blog_id)
+    {
+        $blog = blogDB::find($blog_id);
+        if ($blog) {
+            if ($blog->delete()) {
+                DB::statement('ALTER TABLE blog AUTO_INCREMENT = ' . (count(blogDB::all()) + 1) . ';');
+                return back()->with('sukses', 'Blog telah dihapus.');
+            }
+        }
     }
     public function event()
     {

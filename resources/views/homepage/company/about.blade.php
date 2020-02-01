@@ -191,7 +191,7 @@
     <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
     <link rel="stylesheet" href="{!!asset('css/dropzone.css')!!}">
     <script src="{!!asset('js/dropzone.js')!!}"></script>
-
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e34faf019de314d"></script>
 </body>
 
 </html>

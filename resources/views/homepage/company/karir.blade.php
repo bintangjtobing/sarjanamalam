@@ -9,8 +9,8 @@ sarjanamalam karir')
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 m-b-60 text-center">
-                <h4 class="about-title" style="color: #000; !important"><span class="ti-search"></span> Temukan
-                    pekerjaanmu di <strong>sarjanamalam.</strong><br><a href="#">Apa yang ingin kamu kerjakan?</a></h4>
+                <h1 class="about-title" style="color: #000; !important"><span class="ti-search"></span> Temukan
+                    pekerjaanmu di <strong>sarjanamalam.</strong><br><a href="#">Apa yang ingin kamu kerjakan?</a></h1>
             </div>
         </div>
         <div class="row">

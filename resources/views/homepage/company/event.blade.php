@@ -9,7 +9,7 @@ membekali calon sarjana. Seminar')
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1 m-b-60 text-center">
-                <h4 class="about-title">Event's sarjanamalam.</h4>
+                <h1 class="about-title">Event's sarjanamalam.</h1>
                 <h2 class="h2-title">Meriahkan eventmu diforum <b alt="sarjanamalam.">#sarjanamalam.</b><br>jangkau
                     banyak peserta dan kembangin kemampuan peserta dengan ikutin salah satu event berikut</h2>
             </div>

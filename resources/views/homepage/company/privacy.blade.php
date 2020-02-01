@@ -8,7 +8,7 @@ sarjanamalam')
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 m-b-60 text-center">
-                <h2 class="about-title">Privasi & Persyaratan</h2>
+                <h1 class="about-title">Privasi & Persyaratan</h1>
             </div>
         </div>
         <div class="row">

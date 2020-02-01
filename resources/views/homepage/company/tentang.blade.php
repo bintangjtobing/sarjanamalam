@@ -9,7 +9,7 @@ dan mudah dipahami.')
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 m-b-60 text-center">
-                <h4 class="about-title">Tentang sarjanamalam.</h4>
+                <h1 class="about-title">Tentang sarjanamalam.</h1>
                 <h2 class="h2-title">Misi kami adalah <b>memudahkan anda</b> dalam <b>perkuliahan</b> dan
                     <b>berbagi</b>
                     permasalahan

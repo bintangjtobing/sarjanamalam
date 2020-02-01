@@ -8,7 +8,7 @@
     <div class="container" id="meetwithsarjanamalam">
         <div class="row m-b-40">
             <div class="col-lg-12 text-center">
-                <h3>Frequently Asked Question</h3>
+                <h1 class="about-title">Frequently Asked Question</h1>
                 <p>Pertanyaan yang sering diajukan ke kami terkait <span
                         class="text-gradient-blue-sarjana">Sarjanamalam</span></p>
 

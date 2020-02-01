@@ -113,6 +113,9 @@ Route::group(['middleware' => 'auth'], function () {
     // GET THE DETAILS
     Route::get('/read/{messages_id}', 'DashboardController@bacapesan');
 
+    // PARTNERSHIP
+    Route::get('/partnership/{tokens}', 'DashboardController@partnership');
+
     // DELETE VALUE
     Route::get('/trash-messages/{messages_id}', 'DashboardController@pesansampah');
 });

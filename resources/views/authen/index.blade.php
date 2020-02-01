@@ -235,6 +235,14 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/partnership/{{$tokens}}" class="nav-link @yield('aktifpartner')">
+                                <i class="nav-icon fas fa-handshake"></i>
+                                <p>
+                                    Partnership
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-graduation-cap"></i>

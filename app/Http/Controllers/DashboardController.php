@@ -342,4 +342,14 @@ class DashboardController extends Controller
         return back()->with('sukses', 'Dan akan segera dihubungi kembali melalui email/telepon untuk melakukan
                         konfirmasi kembali terhadap event tersebut.');
     }
+
+    public function partnership()
+    {
+        $part = DB::table('partnership')
+            ->orderBy('partnership.created_at', 'DESC')
+            ->select('partnership.*')
+            ->get();
+
+        return view('authen.partnership', ['part' => $part]);
+    }
 }

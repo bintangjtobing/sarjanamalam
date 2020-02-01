@@ -281,10 +281,10 @@ Sarjanamalam.
 													style="font-size: 12px; line-height: 1.5; color: #555555; font-family: Lato, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 18px;">
 													<p
 														style="font-size: 14px; line-height: 1.5; word-break: break-word; mso-line-height-alt: 21px; margin: 0;">
-														Nulla quis scelerisque purus. Fusce auctor massa orci. Integer nec lorem id
-														leo ultrices blandit vel et nulla. Pellentesque eget aliquet mi. Duis dui
-														felis, scelerisque quis rutrum gravida, maximus vitae metus. Maecenas ut diam
-														lacus. In scelerisque.</p>
+														Terima kasih karna telah menjadi keanggotaan Sarjanamalam. Sedikit lagi kamu akan bisa menggunakan
+														fasilitas yang sudah disediakan sarjanamalam untuk saat ini. Jika ada kendala disaat kamu menggunakan
+														layanan kami jangan sungkan untuk mengirimkan kami pesan email ke support@sarjanamalam.com. Terima kasih
+														ya. :)</p>
 												</div>
 											</div>
 											<!--[if mso]></td></tr></table><![endif]-->

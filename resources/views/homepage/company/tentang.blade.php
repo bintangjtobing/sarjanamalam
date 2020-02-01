@@ -91,10 +91,11 @@ dan mudah dipahami.')
                 <h4 class="m-b-20">Berita terbaru sarjanamalam.</h4>
                 <div class="post-thumbnail-list">
                     @foreach ($blog as $blogList)
+                    <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
                     <div class="post-thumbnail-entry">
                         <img src="{!!asset('file/img/blog/'.$blogList->coverimg)!!}" alt="">
                         <div class="post-thumbnail-content">
-                            <a href="#">{{$blogList->blog_title}}</a>
+                            <a href="/read-blog/{{$blogList->blog_id}}/{{$tokens}}">{{$blogList->blog_title}}</a>
                             <span class="post-date"><span class="ti-alarm-clock"></span>
                                 {{date('M, Y',strtotime($blogList->created_at))}}</span>
                         </div>

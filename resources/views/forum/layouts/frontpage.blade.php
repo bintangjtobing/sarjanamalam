@@ -141,9 +141,9 @@
                                 <li role="presentation"><a href="/{{auth()->user()->username}}"
                                         role="menuitem"><strong>{{auth()->user()->name}}</strong></a></li>
                                 {{ csrf_field() }}
-                                <li role="presentation"><a role="menuitem" tabindex="-1"
+                                {{-- <li role="presentation"><a role="menuitem" tabindex="-1"
                                         href="/{{Auth()->user()->username}}">My
-                                        Profile</a></li>
+                                Profile</a></li> --}}
                                 <li role="presentation"><a role="menuitem" tabindex="-3"
                                         href="/logout/{{auth()->user()->id}}">Log Out</a></li>
                             </ul>

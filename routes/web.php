@@ -21,12 +21,17 @@ Route::get('/', function () {
 Route::get('/signin/{tokens}', function () {
     return view('homepage.login');
 });
-Route::get('/signin', function () {
-    return view('homepage.login');
-})->name('signin');
+
 Route::get('/daftar/{csrf_token}', function () {
     return view('homepage.daftar');
 });
+Route::get('/daftar', function () {
+    return view('homepage.daftar');
+})->name('daftar');
+Route::get('/signin', function () {
+    return view('homepage.login');
+})->name('signin');
+
 
 Route::get('/details/{id}', 'ForumController@detailsthreads');
 

@@ -90,6 +90,7 @@ dan mudah dipahami.')
             <div class="col-lg-6">
                 <h4 class="m-b-20">Berita terbaru sarjanamalam.</h4>
                 <div class="post-thumbnail-list">
+                    @if(!$blog->isEmpty())
                     @foreach ($blog as $blogList)
                     <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
                     <div class="post-thumbnail-entry">
@@ -101,6 +102,9 @@ dan mudah dipahami.')
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <p>No blog updated here. Sorry :)</p>
+                    @endif
 
                 </div>
             </div>

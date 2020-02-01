@@ -49,9 +49,7 @@ sarjanamalam. kami di blog resmi kami.')
                 @endforeach
             </a>
             @else
-            <div class="col-lg-11">
-                No data loaded.
-            </div>
+            <p>No data loaded</p>
             @endif
         </div>
 

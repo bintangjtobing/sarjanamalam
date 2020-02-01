@@ -27,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            @if(!$blog->isEmpty())
             @foreach ($blog as $blogList)
             <div class="col-lg-3">
                 <div class="card">
@@ -45,6 +46,9 @@
                 </div>
             </div>
             @endforeach
+            @else
+            <p>No data founded here.</p>
+            @endif
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@
 @section('aktiftentang','active')
 @section('metadesc','Event sarjanamalam. adalah suatu halaman yang berisi event event menarik dan bermanfaat yang akan
 membekali calon sarjana. Seminar')
+<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 @section('metakey','event sarjanamalam, event, komunitas, forum, seminar sarjanamalam, seminar')
 @section('content')
 <section>
@@ -11,7 +12,8 @@ membekali calon sarjana. Seminar')
             <div class="col-lg-10 offset-lg-1 m-b-60 text-center">
                 <h1 class="about-title">Event's sarjanamalam.</h1>
                 <h2 class="h2-title">Meriahkan eventmu diforum <b alt="sarjanamalam.">#sarjanamalam.</b><br>jangkau
-                    banyak peserta dan kembangin kemampuan peserta dengan ikutin salah satu event berikut</h2>
+                    banyak peserta dan dukung kemampuan kamu dengan ikutin salah satu event yang kita bagikan disini
+                </h2>
             </div>
         </div>
     </div>
@@ -41,10 +43,17 @@ membekali calon sarjana. Seminar')
                         <p class="card-text">{!!str_limit($eventitem->deskripsi_event, $limit=100)!!}<br> <b>Mau tau
                                 kelanjutannya dan penasaran akan event tsb?</b></p>
                     </div>
+                    @if($eventitem->status!='finished')
                     <div class="card-body">
-
                         Kursi masih tersedia! <a href="/daftar-event/{{$eventitem->event_id}}">Daftar?</a>
                     </div>
+                    @else
+                    <div class="card-body">
+                        <b>Event ini telah selesai.</b><br>Jangan ketinggalan event event menarik lainnya dengan cara
+                        <a href="/daftar/{{$tokens}}">mendaftar menjadi
+                            keanggotaan</a> <span class="text-gradient-blue-sarjana">Sarjanamalam.</span>
+                    </div>
+                    @endif
                 </div>
             </div>
             @endforeach
@@ -185,20 +194,23 @@ membekali calon sarjana. Seminar')
             <div class="col-lg-8">
                 <div class="heading m-b-40">
                     <h2 class="about-title">Event sarjanamalam.</h2>
-                    <span class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                    {{-- <span class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span> --}}
                 </div>
-                <p> orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                    took a galley of type and scrambled it to make a type specimen book.
-                </p>
-                <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged.
+                <p> Sarjanamalam membantu kamu untuk mempublikasikan acara partner kami melalui media sosial, website.
+                    Bukan hanya membantu mempublikasikan, kita juga membantu dalam proses daftar mendaftar bagi siapapun
+                    yang ingin
+                    datang
+                    ke acara event yang telah kamu ajukan ke Sarjanamalam.</p>
+                <p> Tidak hanya itu, kami juga akan memberikan
+                    data pendaftaran secara transparan kepada event planner dan kami akan menyesuaikan sesuai dengan
+                    permintaan partner yang telah bekerja sama dengan kami dalam event media partner ini.</p>
                 </p>
                 <div class="seperator">EVENT INFO NUMBERS</div>
-                <div class="row text-center">
+                <div class="row">
                     <div class="col-lg-3">
                         <div class="text-center">
                             <div class="counter small"> <span data-speed="3000" data-refresh-interval="50"
-                                    data-to="{{$eventcount->count()}}" data-from="600" data-seperator="true"></span>
+                                    data-to="{{$eventcount->count()}}" data-from="0" data-seperator="true"></span>
                             </div>
                             <p>EVENT TERDAFTAR</p>
                         </div>
@@ -206,7 +218,8 @@ membekali calon sarjana. Seminar')
                     <div class="col-lg-3">
                         <div class="text-center">
                             <div class="counter small"> <span data-speed="4550" data-refresh-interval="50"
-                                    data-to="14825" data-from="48" data-seperator="true"></span> </div>
+                                    data-to="{{$eventfinish->count()}}" data-from="0" data-seperator="true"></span>
+                            </div>
                             <p>EVENT YANG SUDAH BERJALAN</p>
                         </div>
                     </div>

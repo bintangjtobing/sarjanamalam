@@ -40,7 +40,11 @@ class companyController extends Controller
             ->select('events.*')
             ->get();
         $eventcount = \App\eventDB::all();
-        return view('homepage.company.event', ['event' => $event, 'eventcount' => $eventcount]);
+        $eventfinish = DB::table('events')
+            ->where('events.status', '=', 'finised')
+            ->select('events.*')
+            ->get();
+        return view('homepage.company.event', ['event' => $event, 'eventcount' => $eventcount, 'eventfinish' => $eventfinish]);
     }
     public function requestevent()
     {

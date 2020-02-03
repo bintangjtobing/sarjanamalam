@@ -95,7 +95,7 @@ membekali calon sarjana. Seminar')
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="Provinsi">Provinsi</label>
-                            <select name="provinsi" id="" class="custom-select" required>
+                            <select name="provinsi" class="custom-select" required>
                                 <option value="ACEH">Aceh</option>
                                 <option value="SUMATERA BARAT">Sumatera Barat</option>
                                 <option value="SUMATERA UTARA">Sumatera Utara</option>
@@ -134,7 +134,7 @@ membekali calon sarjana. Seminar')
                         </div>
                         <div class="form-group col-md-6">
                             <label for="">Kota</label>
-                            <input type="text" name="kota" id="" class="form-control"
+                            <input type="text" name="kota" class="form-control"
                                 placeholder="Masukkan kota berlangsungnya event" required>
                             <small class="mute-text">*Kota yang dimasukkan bisa lebih dari 1</small>
                         </div>
@@ -178,36 +178,4 @@ membekali calon sarjana. Seminar')
         </div>
     </div>
 </section>
-<script>
-    Dropzone.autoDiscover = false;
-    //Form 1
-    var form2 = $('#fileUpload1');
-    form2.dropzone({
-        url: "http://polo/files/post",
-        addRemoveLinks: true,
-        maxFiles: 1,
-        maxFilesize: 10,
-        acceptedFiles: "image/*",
-    });
-    //Form 2
-    var form2 = $('#fileUpload2');
-    form2.dropzone({
-        url: "http://polo/files/post",
-        maxFilesize: 5,
-        acceptedFiles: "image/*",
-        previewsContainer: "#formFiles2",
-        previewTemplate: $("#formTemplate2").html(),
-    });
-    //Form 3
-    var form3 = $('#fileUpload3');
-    form3.dropzone({
-        url: "http://polo/files/post",
-        maxFilesize: 5,
-        acceptedFiles: "image/*",
-        previewsContainer: "#formFiles3",
-        previewTemplate: $("#formTemplate3").html(),
-        clickable: ".dropzone-attach-files"
-    });
-
-</script>
 @endsection

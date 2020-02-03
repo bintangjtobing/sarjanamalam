@@ -32,8 +32,8 @@ membekali calon sarjana. Seminar')
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <img class="imgpreview-daftar" src="{!!asset('eventstorage/img/'.$eventdaf->picevent)!!}"
-                                alt="">
+                            <img class="imgpreview-daftar img-fluid"
+                                src="{!!asset('eventstorage/img/'.$eventdaf->picevent)!!}" alt="">
                         </div>
                         <div class="form-group col-md-8">
                             <h3>{{$eventdaf->nama_event}}</h3>

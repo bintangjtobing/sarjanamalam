@@ -2,19 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68593210-11"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-68593210-11');
-
-    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -24,18 +12,11 @@
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <meta name="robots" content="index, follow">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
-        referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea'
-        });
 
-    </script>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
+    {{-- <div id="fb-root"></div> --}}
+    {{-- <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v5.0&appId=114499413304839&autoLogAppEvents=1">
-    </script>
+    </script> --}}
     <meta name="language" content="English">
 
     <title>@yield('title')</title>
@@ -189,9 +170,28 @@
     <script src="{!!asset('js/gmap3.min.js')!!}"></script>
     <script src="{!!asset('js/map-styles.js')!!}"></script>
     <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
-    <link rel="stylesheet" href="{!!asset('css/dropzone.css')!!}">
-    <script src="{!!asset('js/dropzone.js')!!}"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e34faf019de314d"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68593210-11"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68593210-11');
+
+    </script>
+    {{-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e34faf019de314d"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea'
+        });
+
+    </script>
 </body>
 
 </html>

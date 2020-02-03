@@ -12,14 +12,8 @@
     <link rel="stylesheet" href="{!!asset('dashboard_admin/plugins/fontawesome-free/css/all.min.css')!!}">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     {{-- TINY MCE --}}
-    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
-        referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea'
-        });
 
-    </script>
+
     <!-- overlayScrollbars -->
     <link rel="stylesheet"
         href="{!!asset('dashboard_admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')!!}">
@@ -410,6 +404,14 @@
                 "ordering": true,
                 "info": true,
             });
+        });
+
+    </script>
+    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea'
         });
 
     </script>

@@ -99,6 +99,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/update/status-event/ unapproved/{event_id}', 'DashboardController@unapprovedstatus');
     Route::get('/update/status-event/running/{event_id}', 'DashboardController@runningstatus');
     Route::get('/update/status-event/declined/{event_id}', 'DashboardController@declinedstatus');
+    Route::get('/update/status-event/finish/{event_id}', 'DashboardController@finishstatus');
 
     Route::get('/karir/{tokens}', 'DashboardController@karir');
     Route::post('/tambah-karir-team', 'DashboardController@addkarir');

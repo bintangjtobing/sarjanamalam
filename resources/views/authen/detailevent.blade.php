@@ -65,7 +65,7 @@
                                         class="fas fa-circle"></i></span> {{$eventget->status}}
                                 @elseif($eventget->status=='running')<span style="color:#007bff"><i
                                         class="fas fa-circle"></i></span> {{$eventget->status}}
-                                @elseif($eventget->status=='declined')<span style="color:#dc3545"><i
+                                @elseif($eventget->status=='declined' )<span style="color:#dc3545"><i
                                         class="fas fa-circle"></i></span> {{$eventget->status}}
                                 @else
                                 <span style="color:#28a745"><i class="fas fa-circle"></i></span> {{$eventget->status}}
@@ -135,8 +135,15 @@
                         @else Pause this event
                         @endif
                     </a>
-                    <a href="/update/status-event/declined/{{$eventget->event_id}}"
-                        class="btn btn-sm btn-danger">Declined</a>
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/update/status-event/declined/{{$eventget->event_id}}"
+                            class="btn btn-sm btn-danger">Declined</a>
+                        @if($eventget->status=='approved' || $eventget->status=='running')
+                        <a href="/update/status-event/finish/{{$eventget->event_id}}"
+                            class="btn btn-sm btn-success">Selesaikan event ini</a>
+                        @endif
+                    </div>
                     <a href="/delete/event/permanent/{{$eventget->event_id}}" class="btn btn-sm btn-danger"><i
                             class="fas fa-trash-alt"></i></a>
                 </div>

@@ -55,10 +55,14 @@
                 @endif">
                     <div class="inner">
                         <h4>{{$evnt->nama_event}}</h4>
-                        <p>{{$evnt->kategori_event}}</p>
+                        <p>Kategori event: <b>{{$evnt->kategori_event}}</b><br>Status: <b>{{$evnt->status}}</b></p>
                     </div>
+                    @if($evnt->status!='finished')
                     <a href="/detail-event/{{$evnt->event_id}}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
+                    @else
+                    <a class="small-box-footer" disabled><b>Event ini telah selesai</b></a>
+                    @endif
                 </div>
             </div>
             @endforeach

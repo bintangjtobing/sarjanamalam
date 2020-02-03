@@ -222,6 +222,13 @@ class DashboardController extends Controller
         $eventget->save();
         return back()->with('sukses', 'Status event telah berhasil diubah ke posisi tidak disetujui.');
     }
+    public function finishstatus($event_id)
+    {
+        $eventget = \App\eventDB::find($event_id);
+        $eventget->status = 'finished';
+        $eventget->save();
+        return back()->with('sukses', 'Status event telah berhasil diubah ke posisi telah selesai.');
+    }
     public function deleteevent($event_id)
     {
         $event = eventDB::find($event_id);

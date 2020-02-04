@@ -94,7 +94,7 @@ dan mudah dipahami.')
                     @foreach ($blog as $blogList)
                     <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
                     <div class="post-thumbnail-entry">
-                        <img src="{!!asset('file/img/blog/'.$blogList->coverimg)!!}" alt="">
+                        <img src="{!!asset('file/blog/'.$blogList->coverimg)!!}" alt="">
                         <div class="post-thumbnail-content">
                             <a href="/read-blog/{{$blogList->blog_id}}/{{$tokens}}">{{$blogList->blog_title}}</a>
                             <span class="post-date"><span class="ti-alarm-clock"></span>

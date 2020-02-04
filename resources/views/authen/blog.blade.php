@@ -31,7 +31,7 @@
             @foreach ($blog as $blogList)
             <div class="col-lg-3">
                 <div class="card">
-                    <img class="card-img-top" src="{!!asset('file/img/blog/'.$blogList->coverimg)!!}"
+                    <img class="card-img-top" src="{!!asset('file/blog/'.$blogList->coverimg)!!}"
                         alt="{{$blogList->blog_title}}">
                     <div class="card-body">
                         <h5 class="card-title">{{$blogList->blog_title}}</h5>
@@ -89,19 +89,12 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="" style="color: #000;">Masukkan gambar blog</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Upload</span>
-                                </div>
-                                <div class="custom-file">
-                                    <input type="file" name="coverimg" id="inputGroupFile01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Upload an image</label>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="">Gambar blog</label>
+                            <input type="file" name="coverimg" id="" class="form-control">
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save changes</button>

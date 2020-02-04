@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-                <img src="{!!asset('file/img/karir/'.$karirget->features_pic)!!}" class="imgevent-det"
+                <img src="{!!asset('file/karir/'.$karirget->features_pic)!!}" class="imgevent-det"
                     alt="{{$karirget->nama_team}}">
                 <p class="text-muted">{!!$karirget->deskripsi!!}</p>
                 <br>

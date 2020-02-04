@@ -18,7 +18,7 @@ sarjanamalam karir')
             <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
             <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top" src="{!!asset('file/img/karir/'.$karirlist->features_pic)!!}"
+                    <img class="card-img-top" src="{!!asset('file/karir/'.$karirlist->features_pic)!!}"
                         alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>

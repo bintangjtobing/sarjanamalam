@@ -35,7 +35,7 @@ kelebihannya.')
                         aria-haspopup="true" aria-expanded="false">
                         <div class="nav-item-user">
                             <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
                                     class="img-profile-user" alt="User Image"></span>
                         </div>
                     </a>

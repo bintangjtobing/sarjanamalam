@@ -29,7 +29,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <div class="post-image">
                             <a href="/read-blog/{{$blist->blog_id}}/{{$tokens}}">
                                 <img alt="{{$blist->blog_title}} image cover blog sarjanamalam"
-                                    src="{!!asset('file/img/blog/'.$blist->coverimg)!!}">
+                                    src="{!!asset('file/blog/'.$blist->coverimg)!!}">
                             </a>
                             <span class="post-meta-category"><a href="">{{$blist->kategori_blog}}</a></span>
                         </div>
@@ -40,7 +40,7 @@ sarjanamalam. kami di blog resmi kami.')
                                     Comments</a></span> --}}
                             <h2>{{$blist->blog_title}}
                             </h2>
-                            <p>{{str_limit($blist->isiblog, $limit=60)}}</p>
+                            <p>{!!str_limit($blist->isiblog, $limit=60)!!}</p>
                             <a href="/read-blog/{{$blist->blog_id}}/{{$tokens}}" class="item-link">Read More <span
                                     class="ti-angle-right"></span></a>
                         </div>

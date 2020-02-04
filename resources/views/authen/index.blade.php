@@ -179,7 +179,7 @@
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                         <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/img/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">

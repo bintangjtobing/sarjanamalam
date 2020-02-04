@@ -18,7 +18,7 @@ sarjanamalam. kami di blog resmi kami.')
                         <div class="post-item-wrap">
                             <div class="post-image">
                                 <a href="#">
-                                    <img alt="" src="{!!asset('file/img/blog/'.$blog->coverimg)!!}">
+                                    <img alt="" src="{!!asset('file/blog/'.$blog->coverimg)!!}">
                                 </a>
                             </div>
                             <div class="post-item-description">

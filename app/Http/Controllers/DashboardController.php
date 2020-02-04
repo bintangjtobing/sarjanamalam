@@ -78,7 +78,7 @@ class DashboardController extends Controller
         $user->role = $request->role;
         $user->jabatan = $request->jabatan;
         if ($request->hasFile('displaypic')) {
-            $request->file('displaypic')->move(public_path('file/img/profilepic/'), $request->file('displaypic')->getClientOriginalName());
+            $request->file('displaypic')->move(public_path('file/profilepic'), $request->file('displaypic')->getClientOriginalName());
             $user->displaypic = $request->file('displaypic')->getClientOriginalName();
         }
         $user->updated_by = auth()->user()->name;
@@ -275,7 +275,7 @@ class DashboardController extends Controller
         $karirget->nama_team = $request->nama_team;
         $karirget->description = $request->description;
         if ($request->hasFile('features_pic')) {
-            $request->file('features_pic')->move(public_path('file/img/karir/'), $request->file('features_pic')->getClientOriginalName());
+            $request->file('features_pic')->move(public_path('file/karir/'), $request->file('features_pic')->getClientOriginalName());
             $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
             $karirget->save();
         }
@@ -308,10 +308,10 @@ class DashboardController extends Controller
         $blog->created_by  = auth()->user()->name;
         $blog->updated_by = '-';
         if ($request->hasFile('coverimg')) {
-            $request->file('coverimg')->move(public_path('file/img/blog/'), $request->file('coverimg')->getClientOriginalName());
+            $request->file('coverimg')->move('file/blog', $request->file('coverimg')->getClientOriginalName());
             $blog->coverimg = $request->file('coverimg')->getClientOriginalName();
-            $blog->save();
         }
+        $blog->save();
         // dd($blog);
 
         return back()->with('sukses', 'Berita berhasil ditambah/diupdate');

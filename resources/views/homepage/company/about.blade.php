@@ -188,7 +188,12 @@
         referrerpolicy="origin"></script>
     <script>
         tinymce.init({
-            selector: 'textarea'
+            selector: 'textarea',
+            setup: function (editor) {
+                editor.on('change', function (e) {
+                    editor.save();
+                });
+            }
         });
 
     </script>

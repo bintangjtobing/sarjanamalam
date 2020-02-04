@@ -277,8 +277,8 @@ class DashboardController extends Controller
         if ($request->hasFile('features_pic')) {
             $request->file('features_pic')->move(public_path('file/img/karir/'), $request->file('features_pic')->getClientOriginalName());
             $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
+            $karirget->save();
         }
-        $karirget->save();
         return back()->with('sukseskarir', 'Berhasil menambahkan tim baru di sistem.');
         // dd($karirget);
     }
@@ -310,9 +310,10 @@ class DashboardController extends Controller
         if ($request->hasFile('coverimg')) {
             $request->file('coverimg')->move(public_path('file/img/blog/'), $request->file('coverimg')->getClientOriginalName());
             $blog->coverimg = $request->file('coverimg')->getClientOriginalName();
+            $blog->save();
         }
         // dd($blog);
-        $blog->save();
+
         return back()->with('sukses', 'Berita berhasil ditambah/diupdate');
     }
     public function addevent(Request $request)

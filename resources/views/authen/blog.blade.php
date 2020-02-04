@@ -54,7 +54,7 @@
 </div>
 <!-- Modal tambah blog -->
 <div class="modal fade" id="addblog" tabindex="-1" role="dialog" aria-labelledby="addblog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="addblog" style="color:#000;">Tambah berita penting baru dari sarjanamalam.
@@ -69,12 +69,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="" style="color: #000;">Judul blog</label>
-                            <input type="text" name="blog_title" class="form-control" id=""
+                            <input type="text" name="blog_title" class="form-control" id="judul"
                                 placeholder="Masukkan judul berita" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="" style="color: #000;">Kategori blog</label>
-                            <select name="kategori_blog" class="custom-select" id="" required>
+                            <select name="kategori_blog" class="custom-select" id="kategori_blog" required>
                                 <option value="Feature Update">Features Update</option>
                                 <option value="What's happening?">What's happening?</option>
                                 <option value="Meet with sarjanamalam.">Meet with sarjanamalam.</option>
@@ -84,7 +84,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="" style="color: #000;">Ceritakan:</label>
-                            <textarea name="isiblog" placeholder="" class="form-control" id="" cols="30" rows="8"
+                            <textarea name="isiblog" placeholder="" class="form-control" id="isiblog" cols="30" rows="8"
                                 required></textarea>
                         </div>
                     </div>

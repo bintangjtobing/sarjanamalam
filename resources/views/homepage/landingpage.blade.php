@@ -1,8 +1,8 @@
 @extends('homepage.welcome')
 @inject('userMod', 'App\UserMod')
 @section('title','Sarjanamalam. | Hi there!')
-@section('metadesc','Hi semua. Yuk ikutan gabung di forum komunitas sarjanamalam. Masuk dulu dan lihat kelebihan
-kelebihannya.')
+@section('metadesc','Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan anda dalam mencari tempat untuk
+saling berbagi ide dan saling berinteraksi untuk merealisasikan ide tersebut.')
 @section('content')
 <div class="cover-container-fluid d-flex w-100 h-100 p-4 flex-column">
     <header class="masthead mb-auto">

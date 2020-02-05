@@ -80,7 +80,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                 <div class="team-desc">
                                     <h3>Bintang Tobing</h3>
                                     <span>Chief Executive Officer<br>Founder</span>
-                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    <p>Jika waktuku berakhir esok, apa yang sudah saya perbuat hari ini? Hal baik atau
+                                        hal buruk?
                                     </p>
                                     <div class="align-center">
                                         <a class="btn btn-xs btn-slide btn-light" href="https://bintangtobing.com">
@@ -105,7 +106,7 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                 <div class="team-desc">
                                     <h3>Rino Gazali</h3>
                                     <span>Chief Finance Officer<br>Co Founder</span>
-                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    <p>
                                     </p>
                                     <div class="align-center">
                                         {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
@@ -135,7 +136,7 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                 <div class="team-desc">
                                     <h3>Riki Ariandu</h3>
                                     <span>Chief Operation Officer<br>Co Founder</span>
-                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    <p>
                                     </p>
                                     <div class="align-center">
                                         {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">
@@ -165,7 +166,7 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                 <div class="team-desc">
                                     <h3>Boby Wijaya</h3>
                                     <span>Chief Design Officer<br>Co Founder</span>
-                                    <p>The most happiest time of the day!. Praesent tristique hendrerit ex ut laoreet.
+                                    <p>
                                     </p>
                                     <div class="align-center">
                                         {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">

@@ -155,15 +155,37 @@
                                 </div>
                                 @endforeach
                                 @else
-                                <p>No threads found!</p>
+                                <div class="alert alert-danger">
+                                    <b>Aduh.. Maaf ya..</b> Tidak ada informasi soal itu.
+                                </div>
+                                @if(Auth::check())
                                 <div class="content mb-3">
                                     <a href="/forum/{{$tokens}}" class="content-title old-blue">
                                         <div class="content-meta">
-                                            <h5>Jadilah orang yang pertama untuk membahas tentang {{$get_search}} ini?
+                                            <h5>Ayo kita bahas tentang <b>{{$get_search}}</b> didalam forum.
                                             </h5>
                                         </div>
                                     </a>
+                                    <div class="content-desc">
+                                        <p>Share ke teman-teman untuk mendapatkan respon balik dari mereka, dan
+                                            berbagilah ke semuanya.</p>
+                                    </div>
                                 </div>
+                                @else
+                                <div class="content mb-3">
+                                    <a href="/daftar/{{$tokens}}" class="content-title old-blue">
+                                        <div class="content-meta">
+                                            <h5>Jadilah orang yang pertama untuk membahas tentang
+                                                <b>{{$get_search}}</b>.
+                                            </h5>
+                                        </div>
+                                    </a>
+                                    <div class="content-desc">
+                                        <p>Jangan sungkan untuk ngobrol bersama teman didalam forum Sarjanamalam.<br>
+                                            Ayo segera daftarkan dirimu.</p>
+                                    </div>
+                                </div>
+                                @endif
                                 @endif
                                 {{-- <div class="rich-results pl-3 mt-3">
                                     <div class="row">

@@ -1,7 +1,8 @@
 @extends('homepage.welcomenew')
 @inject('userMod', 'App\UserMod')
 @section('title','Sarjanamalam. | Hi there!')
-@section('metadesc','Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan anda dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide tersebut.')
+@section('metadesc','Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan pengguna dalam mencari tempat
+untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide tersebut.')
 @section('content')
 <nav class="navbar navbar-expand-sm navbar-light mt-2">
     <div class="container">

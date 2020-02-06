@@ -2,7 +2,8 @@
 @section('title','Tentang sarjanamalam.')
 @section('aktiftentang','active')
 @section('metadesc','Halaman tentang sarjanamalam. dibuat untuk memperkenalkan sarjanamalam. kepada kamu secara ringkas
-dan mudah dipahami.')
+dan mudah dipahami. Sarjanamalam adalah Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan pengguna
+dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide tersebut.')
 @section('metakey','tentang sarjanamalam, about sarjanamalam, tentang kami, lebih banyak tentang kami')
 @section('content')
 <section>

@@ -10,11 +10,11 @@ dan mudah dipahami.')
         <div class="row">
             <div class="col-lg-8 offset-lg-2 m-b-60 text-center">
                 <h1 class="about-title">Tentang sarjanamalam.</h1>
-                <h2 class="h2-title">Misi kami adalah <b>memudahkan anda</b> dalam <b>perkuliahan</b> dan
+                <h2 class="h2-title">Misi kami adalah <b>memudahkan anda</b> dalam <b>mencari tempat</b> untuk saling
                     <b>berbagi</b>
-                    permasalahan
-                    dan
-                    <b>menemukan solusi</b></h2>
+                    ide
+                    dan saling
+                    <b>berinteraksi</b> untuk merealisasikan hal tersebut.</h2>
             </div>
         </div>
     </div>
@@ -54,8 +54,9 @@ dan mudah dipahami.')
             <div class="col-lg-10 center text-center">
                 <h4 class="m-b-10">Lebih lanjut</h4>
                 <h2 class="bluesarjana">Tentang sarjanamalam.</h2>
-                <p class="lead m-b-60 p-para">Suatu usaha yang bergerak dibidang bisnis teknologi dan informasi yang
-                    berfokus pada ranah <b>forum</b> dan <b>mesin pencari yang kompleks</b>.
+                <p class="lead m-b-60 p-para">Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan anda
+                    dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide
+                    tersebut.
                 </p>
             </div>
         </div>

@@ -159,7 +159,8 @@
                                 <div class="content mb-3">
                                     <a href="/forum/{{$tokens}}" class="content-title old-blue">
                                         <div class="content-meta">
-                                            <h3>Menjadi yang pertama untuk membahas ini?</h3>
+                                            <h5>Jadilah orang yang pertama untuk membahas tentang {{$get_search}} ini?
+                                            </h5>
                                         </div>
                                     </a>
                                 </div>
@@ -471,32 +472,31 @@
 
                                         <div class="related-images mb-3">
 
-                                            <img src="https://2.bp.blogspot.com/-2qvsNrNz668/Uxb0ZUofoBI/AAAAAAAAAMU/HuN1_F7XR2I/w1200-h630-p-k-no-nu/Bagas31.png"
+                                            <img src="https://sarjanamalam.com/storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg"
                                                 alt="related-images" class="img-fluid">
 
                                         </div>
 
-                                        <h4 class="card-title">Bagas31 | Download Software Gratis</h4>
-                                        <span class="card-category">Blogging sites</span>
+                                        <h4 class="card-title">Sarjanamalam. Communities</h4>
+                                        <span class="card-category">Officialy Sites</span>
                                     </div>
                                     <div class="card-body">
 
-                                        <p class="card-text card-text-elipsis">Lorem ipsum dolor sit amet consectetur
-                                            adipisicing elit. Atque doloremque nesciunt culpa, inventore nulla molestiae
-                                            praesentium quod, cupiditate quisquam sunt quos officiis soluta. Veritatis
-                                            et unde eaque consectetur laudantium neque.</p>
+                                        <p class="card-text card-text-elipsis">Layanan berbasis situs web aplikasi, yang
+                                            berguna untuk memudahkan pengguna dalam mencari tempat untuk saling berbagi
+                                            ide dan saling berinteraksi untuk merealisasikan ide tersebut.</p>
                                         <a href="" class="content-body">
                                             <div class="content-meta">
                                                 <span class="content-favicon"></span>
-                                                <div class="content-url text-dark fs-14 old-green">bagas31 >
-                                                    terms-of-service</div>
+                                                <div class="content-url text-dark fs-14 old-green">sarjanamalam.com >
+                                                    privacy</div>
                                             </div>
-                                            <p class="content-title old-blue text-dark fs-16">Bagas 31 | Situs download
-                                                masa kini</p>
+                                            {{-- <p class="content-title old-blue text-dark fs-16">Bagas 31 | Situs download
+                                                masa kini</p> --}}
                                         </a>
                                         <div>
-                                            <div><strong>Born:</strong> January 16, 2002 (age 17 years)</div>
-                                            <div><strong>Owner:</strong> Bambang Widjayanto</div>
+                                            <div><strong>Founded on:</strong> Oktober 17, 2019</div>
+                                            <div><strong>Founder:</strong> Bintang Tobing</div>
                                         </div>
 
 
@@ -517,34 +517,7 @@
                                                         <div>Fakhri Husaini</div>
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="">
-                                                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcBAgj/xAA1EAACAQMDAgQFAQYHAAAAAAABAgMABBEFEiExQQYTUWEicYGRobEHFDLB4fAVQkNTYnLR/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQAAQIF/8QAIhEAAgICAgICAwAAAAAAAAAAAAECEQMhBBITMSJBFFFh/9oADAMBAAIRAxEAPwAhZgZKelIC8U5c2Bjfbgj6VLi0d5VBANSyFSGcjBXj501PPHCo86VE5wAWGSavn0aRIy5XIUZNfPMj3XiPUZry4O8yMSAx4Reyj5CpdezS+WjZo9Rt9uG3IR7g0/b3UNzho2yu7BzwQazXTNTu7RBY6gJJ4c4imQ7nh9B/yH6UVeEVubjXDY3QKs8JmQsCodQcZAPufzUTTJKDRpthBbvarlVJ78VEkS0S6K7c89jxTTTyWK+WCDTaxPMfNPNbiscHaK7N6Jrw2LD+AZpVHSJ3OMCuUbywKbCa4ayfb5oU9xTQu7ZZ1QDC4p2XTYZNpJIIpg6NHu3BznOaDot0WQaNhlSCKw3X9F07/GLids20aylWC5xkHGcdhWyxaeY4yokbp61kf7Q7OWHWpLWO7jCSr5jop5Geob0zjNByLWhjB1Vv7K2y0rTDObuHM2CcMy4Vj9RRPoCvfeKLDylWLYCGxj4Y8ZKg+hIH4oDRZdPjSYXeUzxEGJBPzxWifs7ZbxLgJIgvVIdlx8WwjA578g0GMG5rehnJNLG3Ww9uNGtp+SCprg0iGOPCk0/A0kNqWmO5lHJ9ag6fqrXssisuFWnFFs5yVsfg0uLqSa5XtdUiEvlbTnOKVRwkvopsG11i7H+qaeXXbvpvz9KpR0qq1LVTbPIiMNqjDe5/pSPHU8svejUmkglvvFF3armMgsfXtWa+JLl7++kllbdcSHLZ43dcYx6ZqSt68rYZ8kc/mo2owLeLtk4+Xaul4oqNAuzTtA9Z2xN0CzlwrHJ3bsetFHhnUYv3q4aGYrcjb8I4IQdOfqaoLPRzY3GYJGw/wlM53CrvSrKKyctGnxHqaHjwtTthsmZSx9UHcHie48jybqQup/zHrUm0vkQF7d9wb6Gg9ssDXnSr829/5L8KRn84/n+KJlhcfj7Axk0w0W7IlEnJOc0qg+YaVcr8nJ+w3VEa6n/drdpT1A4oAvLt2SUyE85JOfvRX4hmAjEW/Ax96B9Zl2wu/IwD0707xIePCv6Dk7kP6fNJIi7Ms7LuOPTt9z+lXs4s4wVtppblv9x12KPpzk/b60F6ZdoUSOTdggYQHhvdvb0Hzq7W7UALkfIUzGSMtE2bOVKdQc59KkRzDqpJ579aqZLredifWvazmMcmtdtlUFEpt2sUlgaMT5APJB7Z4/sffFDqXKnWBFnhZCuPZhn+ZpRakAwHIPqO1UEl6W1yZi2dr9cYzgChJKGkEbcts1uE7okYnJKiu1D0mUT2McgOcjn2PelXD5C6ZZILF6KvX4JlMkpIYehIOB27D9aGYNIk12aW3VmiSNCzyFCPix8K9xyffpmlSp6XImlQWfHhGCmgZtozakm4XDjgJ3Y/+VKAaPGctcSc7R0QevzpUqdFC0tY9qYH8XcntTkgzwOaVKtlD9pCoViRziqG9sWt9REoZ1E6+au7/sVP5U12lQsraWguNJyph34JuC1vJE556r70qVKuPyG3O2GywUHUT//Z"
-                                                            width="72" height="72">
-                                                        <div>Fakhri Husaini</div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcBAgj/xAA1EAACAQMDAgQFAQYHAAAAAAABAgMABBEFEiExQQYTUWEicYGRobEHFDLB4fAVQkNTYnLR/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQAAQIF/8QAIhEAAgICAgICAwAAAAAAAAAAAAECEQMhBBITMSJBFFFh/9oADAMBAAIRAxEAPwAhZgZKelIC8U5c2Bjfbgj6VLi0d5VBANSyFSGcjBXj501PPHCo86VE5wAWGSavn0aRIy5XIUZNfPMj3XiPUZry4O8yMSAx4Reyj5CpdezS+WjZo9Rt9uG3IR7g0/b3UNzho2yu7BzwQazXTNTu7RBY6gJJ4c4imQ7nh9B/yH6UVeEVubjXDY3QKs8JmQsCodQcZAPufzUTTJKDRpthBbvarlVJ78VEkS0S6K7c89jxTTTyWK+WCDTaxPMfNPNbiscHaK7N6Jrw2LD+AZpVHSJ3OMCuUbywKbCa4ayfb5oU9xTQu7ZZ1QDC4p2XTYZNpJIIpg6NHu3BznOaDot0WQaNhlSCKw3X9F07/GLids20aylWC5xkHGcdhWyxaeY4yokbp61kf7Q7OWHWpLWO7jCSr5jop5Geob0zjNByLWhjB1Vv7K2y0rTDObuHM2CcMy4Vj9RRPoCvfeKLDylWLYCGxj4Y8ZKg+hIH4oDRZdPjSYXeUzxEGJBPzxWifs7ZbxLgJIgvVIdlx8WwjA578g0GMG5rehnJNLG3Ww9uNGtp+SCprg0iGOPCk0/A0kNqWmO5lHJ9ag6fqrXssisuFWnFFs5yVsfg0uLqSa5XtdUiEvlbTnOKVRwkvopsG11i7H+qaeXXbvpvz9KpR0qq1LVTbPIiMNqjDe5/pSPHU8svejUmkglvvFF3armMgsfXtWa+JLl7++kllbdcSHLZ43dcYx6ZqSt68rYZ8kc/mo2owLeLtk4+Xaul4oqNAuzTtA9Z2xN0CzlwrHJ3bsetFHhnUYv3q4aGYrcjb8I4IQdOfqaoLPRzY3GYJGw/wlM53CrvSrKKyctGnxHqaHjwtTthsmZSx9UHcHie48jybqQup/zHrUm0vkQF7d9wb6Gg9ssDXnSr829/5L8KRn84/n+KJlhcfj7Axk0w0W7IlEnJOc0qg+YaVcr8nJ+w3VEa6n/drdpT1A4oAvLt2SUyE85JOfvRX4hmAjEW/Ax96B9Zl2wu/IwD0707xIePCv6Dk7kP6fNJIi7Ms7LuOPTt9z+lXs4s4wVtppblv9x12KPpzk/b60F6ZdoUSOTdggYQHhvdvb0Hzq7W7UALkfIUzGSMtE2bOVKdQc59KkRzDqpJ579aqZLredifWvazmMcmtdtlUFEpt2sUlgaMT5APJB7Z4/sffFDqXKnWBFnhZCuPZhn+ZpRakAwHIPqO1UEl6W1yZi2dr9cYzgChJKGkEbcts1uE7okYnJKiu1D0mUT2McgOcjn2PelXD5C6ZZILF6KvX4JlMkpIYehIOB27D9aGYNIk12aW3VmiSNCzyFCPix8K9xyffpmlSp6XImlQWfHhGCmgZtozakm4XDjgJ3Y/+VKAaPGctcSc7R0QevzpUqdFC0tY9qYH8XcntTkgzwOaVKtlD9pCoViRziqG9sWt9REoZ1E6+au7/sVP5U12lQsraWguNJyph34JuC1vJE556r70qVKuPyG3O2GywUHUT//Z"
-                                                            width="72" height="72">
-                                                        <div>Fakhri Husaini</div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcBAgj/xAA1EAACAQMDAgQFAQYHAAAAAAABAgMABBEFEiExQQYTUWEicYGRobEHFDLB4fAVQkNTYnLR/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQAAQIF/8QAIhEAAgICAgICAwAAAAAAAAAAAAECEQMhBBITMSJBFFFh/9oADAMBAAIRAxEAPwAhZgZKelIC8U5c2Bjfbgj6VLi0d5VBANSyFSGcjBXj501PPHCo86VE5wAWGSavn0aRIy5XIUZNfPMj3XiPUZry4O8yMSAx4Reyj5CpdezS+WjZo9Rt9uG3IR7g0/b3UNzho2yu7BzwQazXTNTu7RBY6gJJ4c4imQ7nh9B/yH6UVeEVubjXDY3QKs8JmQsCodQcZAPufzUTTJKDRpthBbvarlVJ78VEkS0S6K7c89jxTTTyWK+WCDTaxPMfNPNbiscHaK7N6Jrw2LD+AZpVHSJ3OMCuUbywKbCa4ayfb5oU9xTQu7ZZ1QDC4p2XTYZNpJIIpg6NHu3BznOaDot0WQaNhlSCKw3X9F07/GLids20aylWC5xkHGcdhWyxaeY4yokbp61kf7Q7OWHWpLWO7jCSr5jop5Geob0zjNByLWhjB1Vv7K2y0rTDObuHM2CcMy4Vj9RRPoCvfeKLDylWLYCGxj4Y8ZKg+hIH4oDRZdPjSYXeUzxEGJBPzxWifs7ZbxLgJIgvVIdlx8WwjA578g0GMG5rehnJNLG3Ww9uNGtp+SCprg0iGOPCk0/A0kNqWmO5lHJ9ag6fqrXssisuFWnFFs5yVsfg0uLqSa5XtdUiEvlbTnOKVRwkvopsG11i7H+qaeXXbvpvz9KpR0qq1LVTbPIiMNqjDe5/pSPHU8svejUmkglvvFF3armMgsfXtWa+JLl7++kllbdcSHLZ43dcYx6ZqSt68rYZ8kc/mo2owLeLtk4+Xaul4oqNAuzTtA9Z2xN0CzlwrHJ3bsetFHhnUYv3q4aGYrcjb8I4IQdOfqaoLPRzY3GYJGw/wlM53CrvSrKKyctGnxHqaHjwtTthsmZSx9UHcHie48jybqQup/zHrUm0vkQF7d9wb6Gg9ssDXnSr829/5L8KRn84/n+KJlhcfj7Axk0w0W7IlEnJOc0qg+YaVcr8nJ+w3VEa6n/drdpT1A4oAvLt2SUyE85JOfvRX4hmAjEW/Ax96B9Zl2wu/IwD0707xIePCv6Dk7kP6fNJIi7Ms7LuOPTt9z+lXs4s4wVtppblv9x12KPpzk/b60F6ZdoUSOTdggYQHhvdvb0Hzq7W7UALkfIUzGSMtE2bOVKdQc59KkRzDqpJ579aqZLredifWvazmMcmtdtlUFEpt2sUlgaMT5APJB7Z4/sffFDqXKnWBFnhZCuPZhn+ZpRakAwHIPqO1UEl6W1yZi2dr9cYzgChJKGkEbcts1uE7okYnJKiu1D0mUT2McgOcjn2PelXD5C6ZZILF6KvX4JlMkpIYehIOB27D9aGYNIk12aW3VmiSNCzyFCPix8K9xyffpmlSp6XImlQWfHhGCmgZtozakm4XDjgJ3Y/+VKAaPGctcSc7R0QevzpUqdFC0tY9qYH8XcntTkgzwOaVKtlD9pCoViRziqG9sWt9REoZ1E6+au7/sVP5U12lQsraWguNJyph34JuC1vJE556r70qVKuPyG3O2GywUHUT//Z"
-                                                            width="72" height="72">
-                                                        <div>Fakhri Husaini</div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="">
-                                                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAAMEBQcBAgj/xAA1EAACAQMDAgQFAQYHAAAAAAABAgMABBEFEiExQQYTUWEicYGRobEHFDLB4fAVQkNTYnLR/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQAAQIF/8QAIhEAAgICAgICAwAAAAAAAAAAAAECEQMhBBITMSJBFFFh/9oADAMBAAIRAxEAPwAhZgZKelIC8U5c2Bjfbgj6VLi0d5VBANSyFSGcjBXj501PPHCo86VE5wAWGSavn0aRIy5XIUZNfPMj3XiPUZry4O8yMSAx4Reyj5CpdezS+WjZo9Rt9uG3IR7g0/b3UNzho2yu7BzwQazXTNTu7RBY6gJJ4c4imQ7nh9B/yH6UVeEVubjXDY3QKs8JmQsCodQcZAPufzUTTJKDRpthBbvarlVJ78VEkS0S6K7c89jxTTTyWK+WCDTaxPMfNPNbiscHaK7N6Jrw2LD+AZpVHSJ3OMCuUbywKbCa4ayfb5oU9xTQu7ZZ1QDC4p2XTYZNpJIIpg6NHu3BznOaDot0WQaNhlSCKw3X9F07/GLids20aylWC5xkHGcdhWyxaeY4yokbp61kf7Q7OWHWpLWO7jCSr5jop5Geob0zjNByLWhjB1Vv7K2y0rTDObuHM2CcMy4Vj9RRPoCvfeKLDylWLYCGxj4Y8ZKg+hIH4oDRZdPjSYXeUzxEGJBPzxWifs7ZbxLgJIgvVIdlx8WwjA578g0GMG5rehnJNLG3Ww9uNGtp+SCprg0iGOPCk0/A0kNqWmO5lHJ9ag6fqrXssisuFWnFFs5yVsfg0uLqSa5XtdUiEvlbTnOKVRwkvopsG11i7H+qaeXXbvpvz9KpR0qq1LVTbPIiMNqjDe5/pSPHU8svejUmkglvvFF3armMgsfXtWa+JLl7++kllbdcSHLZ43dcYx6ZqSt68rYZ8kc/mo2owLeLtk4+Xaul4oqNAuzTtA9Z2xN0CzlwrHJ3bsetFHhnUYv3q4aGYrcjb8I4IQdOfqaoLPRzY3GYJGw/wlM53CrvSrKKyctGnxHqaHjwtTthsmZSx9UHcHie48jybqQup/zHrUm0vkQF7d9wb6Gg9ssDXnSr829/5L8KRn84/n+KJlhcfj7Axk0w0W7IlEnJOc0qg+YaVcr8nJ+w3VEa6n/drdpT1A4oAvLt2SUyE85JOfvRX4hmAjEW/Ax96B9Zl2wu/IwD0707xIePCv6Dk7kP6fNJIi7Ms7LuOPTt9z+lXs4s4wVtppblv9x12KPpzk/b60F6ZdoUSOTdggYQHhvdvb0Hzq7W7UALkfIUzGSMtE2bOVKdQc59KkRzDqpJ579aqZLredifWvazmMcmtdtlUFEpt2sUlgaMT5APJB7Z4/sffFDqXKnWBFnhZCuPZhn+ZpRakAwHIPqO1UEl6W1yZi2dr9cYzgChJKGkEbcts1uE7okYnJKiu1D0mUT2McgOcjn2PelXD5C6ZZILF6KvX4JlMkpIYehIOB27D9aGYNIk12aW3VmiSNCzyFCPix8K9xyffpmlSp6XImlQWfHhGCmgZtozakm4XDjgJ3Y/+VKAaPGctcSc7R0QevzpUqdFC0tY9qYH8XcntTkgzwOaVKtlD9pCoViRziqG9sWt9REoZ1E6+au7/sVP5U12lQsraWguNJyph34JuC1vJE556r70qVKuPyG3O2GywUHUT//Z"
-                                                            width="72" height="72">
-                                                        <div>Fakhri Husaini</div>
-                                                    </a>
-                                                </li>
+
                                             </ul>
                                         </div>
                                     </div>

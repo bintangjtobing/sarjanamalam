@@ -115,9 +115,9 @@
                         <b class="d-block">{{$eventget->nama_pic}}</b>
                     </p>
                     <p class="text-sm">
-                        {{URL::to('daftar-event/'.$eventget->event_id)}}
+                        {{URL::to('daftar-event/'.base64_encode($eventget->event_id).'/'.$eventget->nama_event)}}
                         <div class="visible-print text-center">
-                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('http://localhost:8000/daftar-event/'.$eventget->event_id))!!}"
+                            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('http://localhost:8000/daftar-event/'.base64_encode($eventget->event_id).'/'.$eventget->nama_event))!!}"
                                 alt="daftar event kamu hanya di sarjanamalam. QRCODE{{$eventget->event_id}}{{$tokens}}">
                             <p>Scan me to visit URL</p>
                         </div>

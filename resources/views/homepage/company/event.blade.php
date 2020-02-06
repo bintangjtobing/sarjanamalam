@@ -31,6 +31,7 @@ membekali calon sarjana. Seminar')
         </div>
         <div class="row">
             @foreach ($event as $eventitem)
+            <?php $enc_eventid = base64_encode($eventitem->event_id) ?>
             <div class="col-md-3">
                 <div class="card">
                     <img class="card-img-top" src="{!!asset('eventstorage/img/'.$eventitem->picevent)!!}"
@@ -45,7 +46,9 @@ membekali calon sarjana. Seminar')
                     </div>
                     @if($eventitem->status!='finished')
                     <div class="card-body">
-                        Kursi masih tersedia! <a href="/daftar-event/{{$eventitem->event_id}}">Daftar?</a>
+
+                        Kursi masih tersedia! <a
+                            href="/daftar-event/{{$enc_eventid}}/{{$eventitem->nama_event}}">Daftar?</a>
                     </div>
                     @else
                     <div class="card-body">

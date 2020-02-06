@@ -9,7 +9,7 @@ Route::get('/clear-cache', function () {
 // HASIL PENCARIAN
 // PROSES CARI
 Route::get('/search', 'SearchController@processcari');
-Route::get('/daftar-event/{event_id}', 'DashboardController@daftarevent');
+Route::get('/daftar-event/{enc_eventid}/{nama_event}', 'DashboardController@daftarevent');
 Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
 
 // MAIL SETTING

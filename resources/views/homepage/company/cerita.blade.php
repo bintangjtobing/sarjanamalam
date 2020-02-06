@@ -136,7 +136,8 @@ sarjanamalam sejak Bintang Tobing menemukan ini ditahun 2019')
                                 <div class="team-desc">
                                     <h3>Riki Ariandu</h3>
                                     <span>Chief Operation Officer<br>Co Founder</span>
-                                    <p>
+                                    <p>Ambil resiko, bermimpi lebih besar, dan berharap lebih besar. Hal hebat berada
+                                        diluar zona nyaman.
                                     </p>
                                     <div class="align-center">
                                         {{-- <a class="btn btn-xs btn-slide btn-light" href="https://facebook.com">

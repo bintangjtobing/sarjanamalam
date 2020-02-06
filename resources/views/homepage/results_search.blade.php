@@ -4,6 +4,7 @@
 
 <head>
     <?php $countget = $search->count() ?>
+    <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64));?>
     <title>{{$get_search}} - Sarjanamalam Search: {!!$countget!!} results found!</title>
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous">
     </script>
@@ -154,7 +155,14 @@
                                 </div>
                                 @endforeach
                                 @else
-                                No threads founded
+                                <p>No threads found!</p>
+                                <div class="content mb-3">
+                                    <a href="/forum/{{$tokens}}" class="content-title old-blue">
+                                        <div class="content-meta">
+                                            <h3>Menjadi yang pertama untuk membahas ini?</h3>
+                                        </div>
+                                    </a>
+                                </div>
                                 @endif
                                 {{-- <div class="rich-results pl-3 mt-3">
                                     <div class="row">

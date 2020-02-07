@@ -1261,16 +1261,16 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v2.1.4",
+            "version": "v2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67"
+                "reference": "29bd5609443e0e822c6692d4c5a8318c07f3c0c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67",
-                "reference": "d6b8c40e2cc1102fb7ed40ecf841bd09d712ab67",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/29bd5609443e0e822c6692d4c5a8318c07f3c0c6",
+                "reference": "29bd5609443e0e822c6692d4c5a8318c07f3c0c6",
                 "shasum": ""
             },
             "require": {
@@ -1320,7 +1320,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2020-01-21T21:06:27+00:00"
+            "time": "2020-02-04T15:37:54+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1492,16 +1492,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.63",
+            "version": "1.0.64",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6"
+                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8132daec326565036bc8e8d1876f77ec183a7bd6",
-                "reference": "8132daec326565036bc8e8d1876f77ec183a7bd6",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d13c43dbd4b791f815215959105a008515d1a2e0",
+                "reference": "d13c43dbd4b791f815215959105a008515d1a2e0",
                 "shasum": ""
             },
             "require": {
@@ -1513,7 +1513,7 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7.10"
+                "phpunit/phpunit": "^5.7.26"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -1572,7 +1572,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-01-04T16:30:31+00:00"
+            "time": "2020-02-05T18:14:17+00:00"
         },
         {
             "name": "league/glide",
@@ -4743,7 +4743,7 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v6.13.1",
+            "version": "v6.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",

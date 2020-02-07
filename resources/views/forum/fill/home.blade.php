@@ -57,7 +57,9 @@
                 <div class="wrap-ut pull-left">
                     <div class="userinfo pull-left">
                         <div class="avatar">
-                            <img src="{{$userMod->getAvatar()}}" alt="" />
+                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                    class="img-profile-user" alt="User Image"></span>
                             <div class="status
                                 @if(auth()->user()->status=='active') green
                                 @else
@@ -80,7 +82,7 @@
                     </div>
                     <div class="posttext pull-left">
                         <h2><a href="/details/{{$thread->id}}/">{{$thread->subject}}</a></h2>
-                        <p>{{$thread->thread}}</p>
+                        <p>{!!str_limit($thread->thread, $limit=60)!!}</p>
                         <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
                     </div>
                     <div class="clearfix"></div>

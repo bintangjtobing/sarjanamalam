@@ -131,8 +131,12 @@
                         <div class="env pull-left"><i class="fa fa-envelope"></i></div>
 
                         <div class="avatar pull-left dropdown">
-                            <a data-toggle="collapse" href="#" data-target=".navHeader"><img
-                                    src="{{$userMod->getAvatar()}}" alt="avatar"><b class="caret"></b></a>
+                            <a data-toggle="collapse" href="#" data-target=".navHeader">
+                                <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                        class="img-profile-user" alt="User Image"></span>
+                                <b class="caret"></b>
+                            </a>
                             <div class="status @if(auth()->user()->status=='active') green
                                 @else
                                     red
@@ -351,6 +355,19 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
+
+    </script>
+    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            setup: function (editor) {
+                editor.on('change', function (e) {
+                    editor.save();
+                });
+            }
+        });
 
     </script>
 

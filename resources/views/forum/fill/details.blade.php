@@ -30,7 +30,7 @@
                     </div>
                     <div class="posttext pull-left">
                         <h2><a href="#">{{$thread->subject}}</a></h2>
-                        <p>{{$thread->thread}}</p>
+                        <p>{!!$thread->thread!!}</p>
                         <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
                     </div>
                     <div class="clearfix"></div>

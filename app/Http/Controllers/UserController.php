@@ -29,10 +29,10 @@ class UserController extends Controller
         \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
         return back()->with('sukses', 'Berhasil! Kami sudah mengirimkan email verifikasi ke email kamu. Harap diverifikasikan agar akun kamu aktif. Terima kasih.');
     }
-    public function verification(Request $request, $id)
+    public function verification(Request $request, $enc_id)
     {
-
-        $data_member = \App\UserMod::find($id);
+        $member = base64_decode($enc_id);
+        $data_member = \App\UserMod::find($member);
         $datetime = date('d M Y h:m:s');
         $data_member->status = 'active';
         $data_member->email_verified_at = $datetime;

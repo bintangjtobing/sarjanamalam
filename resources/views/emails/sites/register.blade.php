@@ -350,8 +350,9 @@ Sarjanamalam.
 								                        <span style="font-size: 16px;">you just need to set you password.</span></p>
 								                </div>
 								            </div>
-								            <!--[if mso]></td></tr></table><![endif]-->
-								            <form action="http://localhost:8000/verification-user/{{$data_member->id}}/{{$tokens}}"
+                                            <!--[if mso]></td></tr></table><![endif]-->
+                                            <?php $enc_id = base64_encode($data_member->id) ?>
+								            <form action="http://localhost:8000/verification-user/{{$enc_id}}/{{$tokens}}"
                                                 method="GET">
                                                 @csrf
 								                <div align="left" class="button-container"

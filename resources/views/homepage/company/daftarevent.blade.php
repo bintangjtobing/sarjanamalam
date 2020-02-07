@@ -4,6 +4,7 @@
 membekali calon sarjana. Seminar')
 @section('metakey','event sarjanamalam, event, komunitas, forum, seminar sarjanamalam, seminar, registrasi event')
 @section('content')
+<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 <section class="registerevent-bg">
     <div class="container">
         <div class="card">
@@ -20,6 +21,7 @@ membekali calon sarjana. Seminar')
                     </div>
                     @endif
                 </div>
+                @if($eventdaf->status!='finished')
                 <form action="/registrasi-event/{{$eventdaf->event_id}}" method="POST">
                     @csrf
                     <h3>Sedikit lagi, kamu akan terdaftar di event ini!</h3>
@@ -91,7 +93,17 @@ membekali calon sarjana. Seminar')
                     </div>
                 </form>
                 <div class="line"></div>
-
+                @else
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Yahh...! Event ini telah selesai.</h3>
+                        <h5>Tapi kamu tidak perlu khawatir ya..<br>Daftar menjadi keanggotaan <span
+                                class="text-gradient-blue-sarjana">sarjanamalam.</span>, maka kamu tidak akan kehilangan
+                            berita berita menarik lainnya.</h5>
+                        <a href="/daftar/{{$tokens}}" class="btn btn-secondary">Buat akunmu</a>
+                    </div>
+                </div>
+                @endif
             </div>
         </div>
     </div>

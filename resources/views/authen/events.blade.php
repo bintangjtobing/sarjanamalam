@@ -61,7 +61,8 @@
                     <a href="/detail-event/{{$evnt->event_id}}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>
                     @else
-                    <a class="small-box-footer" disabled><b>Event ini telah selesai</b></a>
+                    <a href="/detail-event/{{$evnt->event_id}}" class="small-box-footer"><b>Event ini telah
+                            selesai</b></a>
                     @endif
                 </div>
             </div>

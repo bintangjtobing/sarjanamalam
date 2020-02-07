@@ -123,6 +123,7 @@
                         </div>
                 </div>
                 <div class="text-center mt-5 mb-3">
+                    @if($eventget->status!='finished')
                     <a href="/update/status-event/@if($eventget->status=='unapproved')approved/{{$eventget->event_id}}
                         @elseif($eventget->status=='approved')running/{{$eventget->event_id}}
                         @else unapproved/{{$eventget->event_id}}
@@ -146,6 +147,9 @@
                     </div>
                     <a href="/delete/event/permanent/{{$eventget->event_id}}" class="btn btn-sm btn-danger"><i
                             class="fas fa-trash-alt"></i></a>
+                    @else
+                    <div class="alert alert-success">Event telah selesai.</div>
+                    @endif
                 </div>
             </div>
         </div>

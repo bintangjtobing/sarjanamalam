@@ -7,6 +7,7 @@ use App\eventDB;
 use App\messagesDB;
 use App\UserMod;
 use App\karirDB;
+use App\subkarirDB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -144,6 +145,16 @@ class DashboardController extends Controller
             ->get();
         return view('authen.karir', ['karir' => $karir]);
     }
+    public function infokarir($career_id)
+    {
+        $karirget = \App\karirDB::find($career_id);
+        $subinfo = DB::table('career')
+            ->where('subcareer.career_id', '=', $career_id)
+            ->join('subcareer', 'subcareer.subcareer_id', '=', 'career.career_id')
+            ->select('subcareer.*', 'career.*')
+            ->get();
+        return view('authen.infokarir', ['karirget' => $karirget, 'subinfo' => $subinfo]);
+    }
     public function subkarir()
     {
         $subkarir = DB::table('subcareer')
@@ -154,6 +165,41 @@ class DashboardController extends Controller
             ->select('career.*')
             ->get();
         return view('authen.subkarir', ['subkarir' => $subkarir, 'karir' => $karir]);
+    }
+    public function subkaririnfo($subcareer_id)
+    {
+        $subfo = \App\subkarirDB::find($subcareer_id);
+        $subinfo = DB::table('subcareer')
+            ->where('subcareer.subcareer_id', '=', $subcareer_id)
+            ->join('career', 'career.career_id', '=', 'subcareer.subcareer_id')
+            ->select('subcareer.*', 'career.*')
+            ->get();
+        // dd($sub);
+        return view('authen.infoteam', ['subinfo' => $subinfo, 'subfo' => $subfo]);
+    }
+    public function openkarir($subcareer_id)
+    {
+        $sub = \App\subkarirDB::find($subcareer_id);
+        $sub->status = 'Recruitment telah dibuka!';
+        $sub->save();
+        return back()->with('sukses', 'Karir berhasil dibuka!');
+    }
+    public function closekarir($subcareer_id)
+    {
+        $sub = \App\subkarirDB::find($subcareer_id);
+        $sub->status = 'Recruitment telah ditutup!';
+        $sub->save();
+        return back()->with('sukses', 'Karir berhasil ditutup!');
+    }
+    public function trashkarir($subcareer_id)
+    {
+        $sub = subkarirDB::find($subcareer_id);
+        if ($sub) {
+            if ($sub->delete()) {
+                DB::statement('ALTER TABLE subcareer AUTO_INCREMENT = ' . (count(subkarirDB::all()) + 1) . ';');
+                return redirect('/sub-karir/{tokens}')->with('sukseskarir', 'Data pekerjaan telah dihapus.');
+            }
+        }
     }
     public function threads()
     {
@@ -241,11 +287,7 @@ class DashboardController extends Controller
             }
         }
     }
-    public function infokarir($career_id)
-    {
-        $karirget = \App\karirDB::find($career_id);
-        return view('authen.infokarir', ['karirget' => $karirget]);
-    }
+
     // DELETE FUNCTION
     public function pesansampah($messages_id)
     {

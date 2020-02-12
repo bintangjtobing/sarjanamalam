@@ -3,7 +3,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Detail karir</h3>
+        <h3 class="card-title"><strong>{{$karirget->nama_team}}</strong></h3>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
@@ -19,19 +19,25 @@
                 <div class="row">
                     <div class="col-12">
                         <h3>Bagian bagian team</h3>
+                        <p>Jumlah bagian tim: {{$subinfo->count()}}</p>
                         <hr>
                         <div class="post">
-                            <h5>Developer</h5>
+                            @if(!$subinfo->isEmpty())
+                            @foreach ($subinfo as $sub)
+                            <h5><b><span style="font-size:0.95rem;"><i class="fas fa-circle"></i></span>
+                                    {{$sub->nama_subcareer}}</b></h5>
                             <p>
-                                Lorem ipsum represents a long-held tradition for designers,
-                                typographers and the like. Some people hate it and argue for
-                                its demise, but others ignore.
+                                {!!$sub->deskripsi!!}
                             </p>
-
                             <p>
-                                {{-- <a href="#" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1
-                                v2</a> --}}
+                                <a href="/subkarir-info/{{$sub->subcareer_id}}" class="link-black text-sm"><i
+                                        class="fas fa-link mr-1"></i> Lihat detail
+                                    pekerjaan</a>
                             </p>
+                            @endforeach
+                            @else
+                            <h5>Tidak ada bagian didalam tim ini.</h5>
+                            @endif
                         </div>
 
 
@@ -41,7 +47,8 @@
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
                 <img src="{!!asset('file/karir/'.$karirget->features_pic)!!}" class="imgevent-det"
                     alt="{{$karirget->nama_team}}">
-                <p class="text-muted">{!!$karirget->deskripsi!!}</p>
+                <h5><strong>{{$karirget->nama_team}}</strong></h5>
+                <p class="text-muted">Deskripsi:<br>{!!$karirget->description!!}</p>
                 <br>
                 {{-- <div class="text-muted">
                     <p class="text-sm">Client Company

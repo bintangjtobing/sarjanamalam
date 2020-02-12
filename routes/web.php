@@ -52,6 +52,9 @@ Route::get('/event', 'companyController@event');
 Route::post('/post-event', 'companyController@postevent');
 Route::get('/karir-sarjanamalam', 'companyController@karir');
 Route::get('/pelajari-pekerjaan/{career_id}/{tokens}', 'companyController@seekarir');
+Route::get('/detail-pekerjaan/{enc_karirid}/{tokens}', 'companyController@detailkarir');
+Route::get('/form-pendaftaran-umum/{enc_karirid}/{tokens}', 'companyController@form');
+Route::post('/apply-form-job/{tokens}', 'companyController@applyjob');
 Route::get('/partnership', 'companyController@partnership');
 Route::post('/partnership/ajukan-permohonan/{tokens}', 'companyController@ajukanpartnership');
 Route::get('/hubungi-sarjanamalam', 'companyController@hubungi');
@@ -105,7 +108,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/tambah-karir-team', 'DashboardController@addkarir');
     Route::get('/karir-info/{career_id}', 'DashboardController@infokarir');
     Route::get('/sub-karir/{tokens}', 'DashboardController@subkarir');
+    Route::get('/subkarir-info/{subcareer_id}', 'DashboardController@subkaririnfo');
     Route::post('/tambah-subkarir', 'DashboardController@addsubkarir');
+    Route::get('/open-career/{subcareer_id}', 'DashboardController@openkarir');
+    Route::get('/close-career/{subcareer_id}', 'DashboardController@closekarir');
+    Route::get('/trash-career/{subcareer_id}', 'DashboardController@trashkarir');
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
     Route::get('/blog/{tokens}', 'DashboardController@indexblog');

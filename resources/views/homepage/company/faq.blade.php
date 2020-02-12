@@ -22,8 +22,9 @@
                         <h5 class="ac-title"><i class="fa fa-question-circle"></i>
                             Apa itu Sarjanamalam?
                         </h5>
-                        <div style="" class="ac-content">Sarjanamalam adalah platform yang tepat untuk kamu yang mencari
-                            dan menyediakan wadah untuk menambah relasi yang mempunyai satu kesamaan.
+                        <div style="" class="ac-content">Sarjanamalam adalah layanan berbasis situs web aplikasi, yang
+                            berguna untuk memudahkan pengguna dalam mencari tempat untuk saling berbagi ide dan saling
+                            berinteraksi untuk merealisasikan ide tersebut
                         </div>
                     </div>
                     <div class="ac-item">

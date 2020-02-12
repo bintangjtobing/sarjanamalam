@@ -123,6 +123,41 @@ class companyController extends Controller
         return view('homepage.company.lihatkarir', ['karir' => $karir, 'karirjoin' => $karirjoin]);
         // dd($karirjoin);
     }
+    public function detailkarir($enc_karirid)
+    {
+        $dec_id = base64_decode($enc_karirid);
+        $karir = \App\subkarirDB::find($dec_id);
+        return view('homepage.company.detailpekerjaan', ['karir' => $karir]);
+        // dd($karir);
+    }
+    public function form($enc_karirid)
+    {
+        $dec_id = base64_decode($enc_karirid);
+        $karir = \App\subkarirDB::find($dec_id);
+        return view('homepage.company.formumum', ['karir' => $karir]);
+    }
+    public function applyjob(Request $request)
+    {
+        $job = new \App\candidateDB;
+        $job->posisi = $request->posisi;
+        $job->sumber_informasi = $request->sumber_informasi;
+        $job->kota = $request->kota;
+        $job->nama_lengkap = $request->nama_lengkap;
+        $job->noktp = $request->noktp;
+        $job->tempat_lahir = $request->tempat_lahir;
+        $job->tanggal_lahir = $request->tanggal_lahir;
+        $job->jenis_kelamin = $request->jenis_kelamin;
+        $job->agama = $request->agama;
+        $job->alamat_domisili = $request->alamat_domisili;
+        $job->email = $request->email;
+        $job->nohp = $request->nohp;
+        $job->status_perkawinan = $request->status_perkawinan;
+        $job->pendidikan_akhir = $request->pendidikan_akhir;
+        $job->about = $request->about;
+        $job->save();
+
+        return view('homepage.company.formselesai', ['job' => $job]);
+    }
     public function partnership()
     {
         return view('homepage.company.sponsorship');

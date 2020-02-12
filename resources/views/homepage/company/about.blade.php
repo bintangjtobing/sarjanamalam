@@ -189,6 +189,8 @@
     <script>
         tinymce.init({
             selector: 'textarea',
+            branding: false,
+            menubar: false,
             setup: function (editor) {
                 editor.on('change', function (e) {
                     editor.save();

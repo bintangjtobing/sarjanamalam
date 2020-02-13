@@ -133,12 +133,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-7">
-
+                            <div class="the-content">
+                                <div class="content mb-3">
+                                    <div clas="content-meta">
+                                        <span class="content-url old-green mr-1">
+                                            <b>Sekitar {{$countget}} hasil pencarian yang membahas tentang
+                                                {{$get_search}}</b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- First  Content -->
                             <div class="the-content">
                                 @if(!$search->isEmpty())
                                 @foreach ($search as $src)
-                                <div class="content mb-3">
+                                <div class="content mb-4">
                                     <a href="/details/{{$src->id}}" class="content-title old-blue">
                                         <div clas="content-meta">
                                             <span class="content-url old-green mr-1">sarjanamalam.com › forum ›
@@ -149,10 +158,19 @@
                                                 title="check description"></span> --}}
                                         </h3>
                                     </a>
+                                    <div class="content-love">
+                                        <span style="color:#ff5a79; font-size:10px;"><i class="fas fa-heart"></i><i
+                                                class="fas fa-heart"></i><i class="fas fa-heart"></i><i
+                                                class="fas fa-heart"></i><i class="far fa-heart"></i></span> Skor:
+                                        8,3/10 - 85.680 Pengguna yang menyukai pembahasan ini.
+                                    </div>
                                     <div class="content-desc">
-                                        {{Carbon\Carbon::parse($src->created_at)->diffForHumans()}} -
-                                        {!!str_limit($src->thread,
-                                        $limit=160)!!} <a href="/details/{{$src->id}}">Baca lebih lengkap...</a></div>
+                                        <span
+                                            class="datediff">{{Carbon\Carbon::parse($src->created_at)->diffForHumans()}}</span>
+                                        -
+                                        {!!strip_tags(str_limit($src->thread),
+                                        $limit=160)!!}</a>
+                                    </div>
                                 </div>
                                 @endforeach
                                 @else

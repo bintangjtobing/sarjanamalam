@@ -310,6 +310,9 @@ body {
     text-decoration: underline !important;
 }
 
+.pb-10 {
+    padding-bottom: 10rem;
+}
 
 .content .content-desc {
     font-size: 14px;
@@ -535,7 +538,7 @@ body {
 
 /** Footer **/
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }

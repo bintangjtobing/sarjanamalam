@@ -79,6 +79,9 @@
                                 </form>
                                 @if(Auth::check())
                                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                    {{-- <li class="nav-item">
+                                        <i class="fas fa-grip-horizontal"></i>
+                                    </li> --}}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-initial dropdown-toggle" href="#" id="dropdownId"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,7 +135,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-7">
+                        <div class="col-12 col-md-7 pb-10">
                             <div class="the-content">
                                 <div class="content mb-3">
                                     <div clas="content-meta">
@@ -153,7 +156,7 @@
                                             <span class="content-url old-green mr-1">sarjanamalam.com › forum ›
                                                 {!!$src->subject!!}</span>
                                         </div>
-                                        <h3 class="">{{$src->subject}}
+                                        <h3><strong>{{$src->subject}}</strong>
                                             {{-- <span class="content-info fas fa-link fs-14"
                                                 title="check description"></span> --}}
                                         </h3>
@@ -577,7 +580,7 @@
                                 <div class="footer-menu">
                                     <ul>
                                         <li>Indonesia</li>
-                                        <li><strong>Rengas Pulau, Medan City, North Sumatera</strong></li>
+                                        <li><strong>{{$ipGet}}</strong></li>
                                         <li><a href="">From your place (Home)</a></li>
                                         <li><a href="">Use precise location</a></li>
                                         <li><a href="">Learn more</a></li>

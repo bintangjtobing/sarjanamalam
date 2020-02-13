@@ -24,11 +24,16 @@ class ForumController extends Controller
         $threadsdata = DB::table('threads')
             ->select('threads.*')
             ->orderBy('threads.created_at', 'DESC')
-            ->get();
+            ->paginate(15);
         $usersData = DB::table('users')
             ->select('users.*')
             ->get();
-        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData]);
+        $threadsActive = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.id')
+            ->where('threads.created_by', '=', auth()->user()->name)
+            ->select('threads.*', 'users.*')
+            ->get();
+        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive]);
     }
     public function addnewtopic()
     {
@@ -71,11 +76,16 @@ class ForumController extends Controller
         $threadsdata = DB::table('threads')
             ->select('threads.*')
             ->orderBy('threads.created_at', 'DESC')
-            ->get();
+            ->paginate(15);
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
-        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata]);
+        $threadsActive = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.id')
+            ->where('threads.created_by', '=', auth()->user()->name)
+            ->select('threads.*', 'users.*')
+            ->get();
+        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive]);
     }
     /**
      * Store a newly created resource in storage.

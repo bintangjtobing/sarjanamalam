@@ -18,7 +18,8 @@
         "laravel/tinker": "^1.0",
         "paragonie/halite": "^4.6",
         "simplesoftwareio/simple-qrcode": "^2.0",
-        "spatie/laravel-sitemap": "^5.6"
+        "spatie/laravel-sitemap": "^5.6",
+        "stevebauman/location": "^5.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

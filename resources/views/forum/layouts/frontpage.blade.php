@@ -87,7 +87,7 @@
                         {{-- MODAL NEW TOPIC --}}
                         <div class="modal fade" id="newDiscussion" tabindex="-1" role="dialog"
                             aria-labelledby="newDiscussion" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="newDiscussion">Topik Diskusi Baru</h5>
@@ -163,14 +163,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 breadcrumbf">
-                        <a href="/home">Sarjanamalam</a> <span class="diviver">&gt;</span> <a
-                            href="#">@yield('title')</a>
+                        <a href="/home">Sarjanamalam</a> › <a href="#">@yield('title')</a>
                     </div>
                 </div>
 
                 @yield('content')
                 <div class="col-lg-4 col-md-4">
-
                     <!-- -->
                     <div class="sidebarblock">
                         <h3>Categories</h3>
@@ -188,8 +186,8 @@
                     <!--ACTIVE THREADS -->
                     <div class="sidebarblock">
                         <h3>My Active Threads</h3>
-                        @if(count($threadsdata)>0)
-                        @foreach ($threadsdata as $threads)
+                        @if(count($threadsActive)>0)
+                        @foreach ($threadsActive as $threads)
                         <div class="divline"></div>
                         <div class="blocktxt">
                             <a href="#">{{$threads->subject}}</a>
@@ -204,7 +202,7 @@
                     </div>
 
                     <!-- POLL OF THE WEEK-->
-                    <div class="sidebarblock">
+                    {{-- <div class="sidebarblock">
                         <h3>Poll of the Week</h3>
                         <div class="divline"></div>
                         <div class="blocktxt">
@@ -257,7 +255,7 @@
                             </form>
                             <p class="smal">Voting ends on 19th of October</p>
                         </div>
-                    </div>
+                    </div> --}}
 
 
 
@@ -271,26 +269,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-xs-12">
-                <div class="pull-left"><a href="#" class="prevnext"><i class="fa fa-angle-left"></i></a></div>
                 <div class="pull-left">
                     <ul class="paginationforum">
-                        <li class="hidden-xs"><a href="#">1</a></li>
-                        <li class="hidden-xs"><a href="#">2</a></li>
-                        <li class="hidden-xs"><a href="#">3</a></li>
-                        <li class="hidden-xs"><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#" class="active">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li class="hidden-xs"><a href="#">9</a></li>
-                        <li class="hidden-xs"><a href="#">10</a></li>
-                        <li class="hidden-xs hidden-md"><a href="#">11</a></li>
-                        <li class="hidden-xs hidden-md"><a href="#">12</a></li>
-                        <li class="hidden-xs hidden-sm hidden-md"><a href="#">13</a></li>
-                        <li><a href="#">1586</a></li>
+
+                        {{$threadsdata->links()}}
                     </ul>
                 </div>
-                <div class="pull-left"><a href="#" class="prevnext last"><i class="fa fa-angle-right"></i></a></div>
+
                 <div class="clearfix"></div>
             </div>
         </div>

@@ -28,7 +28,9 @@ class SearchController extends Controller
 
         $diffHuman = $created_at->diffForHumans($now);
         $diffHumanU = $updated_at->diffForHumans($now);
-        return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search, 'created_at' => $created_at]);
+
+        $ipGet = $request->getClientIp();
+        return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search, 'created_at' => $created_at, 'ipGet' => $ipGet]);
         // dd($search);
     }
 }

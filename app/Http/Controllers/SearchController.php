@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Thread;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class SearchController extends Controller
 {
@@ -21,7 +22,13 @@ class SearchController extends Controller
             ->orWhere('subject', 'like', "%" . $get_search . "%")
             ->select('threads.*')
             ->paginate(15);
-        return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search]);
+        $now = Carbon::now();
+        $created_at = Carbon::parse($search['created_at']);
+        $updated_at = Carbon::parse($search['updated_at']);
+
+        $diffHuman = $created_at->diffForHumans($now);
+        $diffHumanU = $updated_at->diffForHumans($now);
+        return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search, 'created_at' => $created_at]);
         // dd($search);
     }
 }

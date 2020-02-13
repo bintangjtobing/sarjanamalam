@@ -275,16 +275,18 @@ body {
     margin-bottom: 5px;
 }
 
-
 .content-url {
     font-size: 14px;
-    text-decoration: none;
+    text-decoration: none !important;
     margin-bottom: 5px;
 }
 
-
 .content-body {
     line-height: normal;
+}
+
+.content-meta {
+    text-decoration: none !important;
 }
 
 .content-body,
@@ -302,6 +304,10 @@ body {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.content .content-title h3:hover {
+    text-decoration: underline !important;
 }
 
 
@@ -551,6 +557,7 @@ body {
 
 .old-green {
     color: #3c4043;
+
 }
 
 .old-blue {
@@ -613,4 +620,41 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900 !important;
+}
+
+.btn-gradient-blue-sarjana {
+    background: #4aa5e7;
+    background: -webkit-linear-gradient(to right, #3363ac, #4aa5e7);
+    background: linear-gradient(to right, #3363ac, #4aa5e7);
+    border: 0 !important;
+    border-radius: 40px !important;
+}
+
+.btn-gradient-blue-sarjana:hover {
+    background: #4aa5e7;
+    transition: 2s ease !important;
+    background: -webkit-linear-gradient(to left, #3363ac, #4aa5e7);
+    background: linear-gradient(to left, #3363ac, #4aa5e7);
+    cursor: pointer;
+}
+
+.ordercontent {
+    background-color: #fff !important;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 25px;
+
+}
+
+.ordercontent:hover {
+    cursor: pointer !important;
+    transition: .1s ease-in-out;
+    -webkit-box-shadow: 3px 6px 17px -2px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 3px 6px 17px -2px rgba(0, 0, 0, 0.10);
+    box-shadow: 3px 6px 17px -2px rgba(0, 0, 0, 0.10);
+}
+
+a {
+    text-decoration: none !important;
 }

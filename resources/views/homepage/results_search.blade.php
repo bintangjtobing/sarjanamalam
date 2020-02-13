@@ -1,4 +1,5 @@
 @inject('userMod', 'App\UserMod')
+
 <!doctype html>
 <html lang="en">
 
@@ -138,20 +139,20 @@
                                 @if(!$search->isEmpty())
                                 @foreach ($search as $src)
                                 <div class="content mb-3">
-
                                     <a href="/details/{{$src->id}}" class="content-title old-blue">
                                         <div clas="content-meta">
-                                            {{-- <span class="content-favicon"><img
-                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg0lEQVQ4jaXTu2sUURSA8d+susm6ZI0oKlhEia9KtDKVpBARtNBKG7GysBCskt5/wMJOEDSIj05ILaKIYCkB0cIHgmKQNetOdo3BOBZzHHcGu70wxbn33O9+59y5SZZlhhnrS9GDJMFhnMMJ/MJN3HU2W/ofIBk0WL092sR9nBrI6eIa7uFrxDWM1C+spCWDlf7GXZisHNLBBtxCink0sLfOxRKgnzZPYqICWMAP7MAUppFgrVUF9Lpjh7CEj6jLe/QW+wMgbP6a/Wviy8tTDVrvMBqqP7GIz7gU84PjeQF4dv54jda0/AYOYgRteUPfRxm1UIffmCsAy51N63AGx0IdtuJowHp4hFWMx/rjApB2Wtuwe2AzfMOrsDqCL1jGFnyKEsPge+t0qA+OHj7E/Ob4sijjCdYKQK87dgBv8DTqm4x4Qvm/SAIyXzLop80b8utrR9I4tuMKdlbMXuPFTHs2KwAz7dmFSlL/auP6Ih5iH/bI30UXd+KwXGnY11gbajf+AMEnaxyZfD+GAAAAAElFTkSuQmCC"></span> --}}
-                                            <span
-                                                class="content-url old-green mr-1">{{URL::to('details/'.$src->subject)}}</span>
+                                            <span class="content-url old-green mr-1">sarjanamalam.com › forum ›
+                                                {!!$src->subject!!}</span>
                                         </div>
                                         <h3 class="">{{$src->subject}}
                                             {{-- <span class="content-info fas fa-link fs-14"
                                                 title="check description"></span> --}}
                                         </h3>
                                     </a>
-                                    <div class="content-desc">{{str_limit($src->thread, $limit=160)}}</div>
+                                    <div class="content-desc">
+                                        {{Carbon\Carbon::parse($src->created_at)->diffForHumans()}} -
+                                        {!!str_limit($src->thread,
+                                        $limit=160)!!} <a href="/details/{{$src->id}}">Baca lebih lengkap...</a></div>
                                 </div>
                                 @endforeach
                                 @else
@@ -488,7 +489,7 @@
 
                         </div>
 
-                        <div class="col-12 col-md-5">
+                        {{-- <div class="col-12 col-md-5">
                             <div class="related-content">
                                 <div class="card">
                                     <div class="card-header bg-light">
@@ -514,8 +515,8 @@
                                                 <div class="content-url text-dark fs-14 old-green">sarjanamalam.com >
                                                     privacy</div>
                                             </div>
-                                            {{-- <p class="content-title old-blue text-dark fs-16">Bagas 31 | Situs download
-                                                masa kini</p> --}}
+                                            <p class="content-title old-blue text-dark fs-16">Bagas 31 | Situs download
+                                                masa kini</p>
                                         </a>
                                         <div>
                                             <div><strong>Founded on:</strong> Oktober 17, 2019</div>
@@ -546,7 +547,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
                 </div>

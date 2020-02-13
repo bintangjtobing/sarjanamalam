@@ -581,7 +581,7 @@
                                     <ul>
                                         <li>Indonesia</li>
                                         <li><strong>{{$ipGet}}</strong></li>
-                                        <li><a href="">From your place (Home)</a></li>
+                                        <li><a href="">From your place ({{$position}})</a></li>
                                         <li><a href="">Use precise location</a></li>
                                         <li><a href="">Learn more</a></li>
                                     </ul>

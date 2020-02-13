@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Thread;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Stevebauman\Location\Location;
 
 class SearchController extends Controller
 {
@@ -29,8 +30,8 @@ class SearchController extends Controller
         $diffHuman = $created_at->diffForHumans($now);
         $diffHumanU = $updated_at->diffForHumans($now);
 
-        $ipGet = $request->getClientIp();
-        $position = Location::get($ipGet);
+        $ipGet = \Request::ip();
+        $position = \Location::get($ipGet);
         return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search, 'created_at' => $created_at, 'ipGet' => $ipGet, 'position' => $position]);
         // dd($search);
     }

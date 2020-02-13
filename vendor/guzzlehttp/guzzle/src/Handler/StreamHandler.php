@@ -1,4 +1,5 @@
 <?php
+
 namespace GuzzleHttp\Handler;
 
 use GuzzleHttp\Exception\ConnectException;
@@ -57,7 +58,8 @@ class StreamHandler
             // Determine if the error was a networking error.
             $message = $e->getMessage();
             // This list can probably get more comprehensive.
-            if (strpos($message, 'getaddrinfo') // DNS lookup failed
+            if (
+                strpos($message, 'getaddrinfo') // DNS lookup failed
                 || strpos($message, 'Connection refused')
                 || strpos($message, "couldn't connect to host") // error on HHVM
                 || strpos($message, "connection attempt failed")
@@ -264,7 +266,8 @@ class StreamHandler
 
         // HTTP/1.1 streams using the PHP stream wrapper require a
         // Connection: close header
-        if ($request->getProtocolVersion() == '1.1'
+        if (
+            $request->getProtocolVersion() == '1.1'
             && !$request->hasHeader('Connection')
         ) {
             $request = $request->withHeader('Connection', 'close');
@@ -302,7 +305,8 @@ class StreamHandler
         }
 
         // Microsoft NTLM authentication only supported with curl handler
-        if (isset($options['auth'])
+        if (
+            isset($options['auth'])
             && is_array($options['auth'])
             && isset($options['auth'][2])
             && 'ntlm' == $options['auth'][2]
@@ -411,7 +415,8 @@ class StreamHandler
         } else {
             $scheme = $request->getUri()->getScheme();
             if (isset($value[$scheme])) {
-                if (!isset($value['no'])
+                if (
+                    !isset($value['no'])
                     || !\GuzzleHttp\is_host_in_noproxy(
                         $request->getUri()->getHost(),
                         $value['no']
@@ -500,8 +505,10 @@ class StreamHandler
             STREAM_NOTIFY_COMPLETED     => 'COMPLETED',
             STREAM_NOTIFY_RESOLVE       => 'RESOLVE',
         ];
-        static $args = ['severity', 'message', 'message_code',
-            'bytes_transferred', 'bytes_max'];
+        static $args = [
+            'severity', 'message', 'message_code',
+            'bytes_transferred', 'bytes_max'
+        ];
 
         $value = \GuzzleHttp\debug_resource($value);
         $ident = $request->getMethod() . ' ' . $request->getUri()->withFragment('');

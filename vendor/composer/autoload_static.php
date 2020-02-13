@@ -97,6 +97,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
+            'Stevebauman\\Location\\' => 21,
             'Spatie\\TemporaryDirectory\\' => 26,
             'Spatie\\Sitemap\\' => 15,
             'Spatie\\Robots\\' => 14,
@@ -136,6 +137,9 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
             'Moontoast\\Math\\Exception\\' => 25,
             'Moontoast\\Math\\' => 15,
             'Monolog\\' => 8,
+            'MaxMind\\WebService\\' => 19,
+            'MaxMind\\Exception\\' => 18,
+            'MaxMind\\Db\\' => 11,
         ),
         'L' => 
         array (
@@ -163,6 +167,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GeoIp2\\' => 7,
         ),
         'F' => 
         array (
@@ -187,6 +192,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'C' => 
         array (
             'Cron\\' => 5,
+            'Composer\\CaBundle\\' => 18,
             'ChristofferOK\\LaravelEmojiOne\\' => 30,
             'Carbon\\' => 7,
         ),
@@ -343,6 +349,10 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
         ),
+        'Stevebauman\\Location\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stevebauman/location/src',
+        ),
         'Spatie\\TemporaryDirectory\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/temporary-directory/src',
@@ -440,6 +450,18 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MaxMind\\WebService\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
+        ),
+        'MaxMind\\Exception\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
+        ),
+        'MaxMind\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
+        ),
         'League\\OAuth2\\Server\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-server/src',
@@ -500,6 +522,10 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'GeoIp2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
+        ),
         'Firebase\\JWT\\' => 
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
@@ -547,6 +573,10 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
+        ),
+        'Composer\\CaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
         'ChristofferOK\\LaravelEmojiOne\\' => 
         array (
@@ -637,6 +667,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\UserMod' => __DIR__ . '/../..' . '/app/UserMod.php',
         'App\\blogDB' => __DIR__ . '/../..' . '/app/blogDB.php',
+        'App\\candidateDB' => __DIR__ . '/../..' . '/app/candidateDB.php',
         'App\\categoryDB' => __DIR__ . '/../..' . '/app/categoryDB.php',
         'App\\eventDB' => __DIR__ . '/../..' . '/app/eventDB.php',
         'App\\karirDB' => __DIR__ . '/../..' . '/app/karirDB.php',
@@ -730,6 +761,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOne' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOne.php',
         'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneFacade' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOneFacade.php',
         'ChristofferOK\\LaravelEmojiOne\\LaravelEmojiOneServiceProvider' => __DIR__ . '/..' . '/christofferok/laravel-emojione/src/LaravelEmojiOneServiceProvider.php',
+        'Composer\\CaBundle\\CaBundle' => __DIR__ . '/..' . '/composer/ca-bundle/src/CaBundle.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -1328,6 +1360,36 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Firebase\\JWT\\ExpiredException' => __DIR__ . '/..' . '/firebase/php-jwt/src/ExpiredException.php',
         'Firebase\\JWT\\JWT' => __DIR__ . '/..' . '/firebase/php-jwt/src/JWT.php',
         'Firebase\\JWT\\SignatureInvalidException' => __DIR__ . '/..' . '/firebase/php-jwt/src/SignatureInvalidException.php',
+        'GeoIp2\\Database\\Reader' => __DIR__ . '/..' . '/geoip2/geoip2/src/Database/Reader.php',
+        'GeoIp2\\Exception\\AddressNotFoundException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/AddressNotFoundException.php',
+        'GeoIp2\\Exception\\AuthenticationException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/AuthenticationException.php',
+        'GeoIp2\\Exception\\GeoIp2Exception' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/GeoIp2Exception.php',
+        'GeoIp2\\Exception\\HttpException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/HttpException.php',
+        'GeoIp2\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/InvalidRequestException.php',
+        'GeoIp2\\Exception\\OutOfQueriesException' => __DIR__ . '/..' . '/geoip2/geoip2/src/Exception/OutOfQueriesException.php',
+        'GeoIp2\\Model\\AbstractModel' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/AbstractModel.php',
+        'GeoIp2\\Model\\AnonymousIp' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/AnonymousIp.php',
+        'GeoIp2\\Model\\Asn' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Asn.php',
+        'GeoIp2\\Model\\City' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/City.php',
+        'GeoIp2\\Model\\ConnectionType' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/ConnectionType.php',
+        'GeoIp2\\Model\\Country' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Country.php',
+        'GeoIp2\\Model\\Domain' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Domain.php',
+        'GeoIp2\\Model\\Enterprise' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Enterprise.php',
+        'GeoIp2\\Model\\Insights' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Insights.php',
+        'GeoIp2\\Model\\Isp' => __DIR__ . '/..' . '/geoip2/geoip2/src/Model/Isp.php',
+        'GeoIp2\\ProviderInterface' => __DIR__ . '/..' . '/geoip2/geoip2/src/ProviderInterface.php',
+        'GeoIp2\\Record\\AbstractPlaceRecord' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/AbstractPlaceRecord.php',
+        'GeoIp2\\Record\\AbstractRecord' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/AbstractRecord.php',
+        'GeoIp2\\Record\\City' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/City.php',
+        'GeoIp2\\Record\\Continent' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Continent.php',
+        'GeoIp2\\Record\\Country' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Country.php',
+        'GeoIp2\\Record\\Location' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Location.php',
+        'GeoIp2\\Record\\MaxMind' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/MaxMind.php',
+        'GeoIp2\\Record\\Postal' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Postal.php',
+        'GeoIp2\\Record\\RepresentedCountry' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/RepresentedCountry.php',
+        'GeoIp2\\Record\\Subdivision' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Subdivision.php',
+        'GeoIp2\\Record\\Traits' => __DIR__ . '/..' . '/geoip2/geoip2/src/Record/Traits.php',
+        'GeoIp2\\WebService\\Client' => __DIR__ . '/..' . '/geoip2/geoip2/src/WebService/Client.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
         'GuzzleHttp\\ClientInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientInterface.php',
         'GuzzleHttp\\Cookie\\CookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',
@@ -2733,6 +2795,23 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'League\\OAuth2\\Server\\ResponseTypes\\BearerTokenResponse' => __DIR__ . '/..' . '/league/oauth2-server/src/ResponseTypes/BearerTokenResponse.php',
         'League\\OAuth2\\Server\\ResponseTypes\\RedirectResponse' => __DIR__ . '/..' . '/league/oauth2-server/src/ResponseTypes/RedirectResponse.php',
         'League\\OAuth2\\Server\\ResponseTypes\\ResponseTypeInterface' => __DIR__ . '/..' . '/league/oauth2-server/src/ResponseTypes/ResponseTypeInterface.php',
+        'MaxMind\\Db\\Reader' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader.php',
+        'MaxMind\\Db\\Reader\\Decoder' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Decoder.php',
+        'MaxMind\\Db\\Reader\\InvalidDatabaseException' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/InvalidDatabaseException.php',
+        'MaxMind\\Db\\Reader\\Metadata' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Metadata.php',
+        'MaxMind\\Db\\Reader\\Util' => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db/Reader/Util.php',
+        'MaxMind\\Exception\\AuthenticationException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/AuthenticationException.php',
+        'MaxMind\\Exception\\HttpException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/HttpException.php',
+        'MaxMind\\Exception\\InsufficientFundsException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InsufficientFundsException.php',
+        'MaxMind\\Exception\\InvalidInputException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InvalidInputException.php',
+        'MaxMind\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/InvalidRequestException.php',
+        'MaxMind\\Exception\\IpAddressNotFoundException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/IpAddressNotFoundException.php',
+        'MaxMind\\Exception\\PermissionRequiredException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/PermissionRequiredException.php',
+        'MaxMind\\Exception\\WebServiceException' => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception/WebServiceException.php',
+        'MaxMind\\WebService\\Client' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Client.php',
+        'MaxMind\\WebService\\Http\\CurlRequest' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/CurlRequest.php',
+        'MaxMind\\WebService\\Http\\Request' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/Request.php',
+        'MaxMind\\WebService\\Http\\RequestFactory' => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService/Http/RequestFactory.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
         'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',
@@ -4149,6 +4228,18 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'Spatie\\Sitemap\\Tags\\Tag' => __DIR__ . '/..' . '/spatie/laravel-sitemap/src/Tags/Tag.php',
         'Spatie\\Sitemap\\Tags\\Url' => __DIR__ . '/..' . '/spatie/laravel-sitemap/src/Tags/Url.php',
         'Spatie\\TemporaryDirectory\\TemporaryDirectory' => __DIR__ . '/..' . '/spatie/temporary-directory/src/TemporaryDirectory.php',
+        'Stevebauman\\Location\\Drivers\\Driver' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/Driver.php',
+        'Stevebauman\\Location\\Drivers\\GeoPlugin' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/GeoPlugin.php',
+        'Stevebauman\\Location\\Drivers\\IpApi' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/IpApi.php',
+        'Stevebauman\\Location\\Drivers\\IpApiPro' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/IpApiPro.php',
+        'Stevebauman\\Location\\Drivers\\IpInfo' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/IpInfo.php',
+        'Stevebauman\\Location\\Drivers\\MaxMind' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/MaxMind.php',
+        'Stevebauman\\Location\\Exceptions\\DriverDoesNotExistException' => __DIR__ . '/..' . '/stevebauman/location/src/Exceptions/DriverDoesNotExistException.php',
+        'Stevebauman\\Location\\Exceptions\\LocationException' => __DIR__ . '/..' . '/stevebauman/location/src/Exceptions/LocationException.php',
+        'Stevebauman\\Location\\Facades\\Location' => __DIR__ . '/..' . '/stevebauman/location/src/Facades/Location.php',
+        'Stevebauman\\Location\\Location' => __DIR__ . '/..' . '/stevebauman/location/src/Location.php',
+        'Stevebauman\\Location\\LocationServiceProvider' => __DIR__ . '/..' . '/stevebauman/location/src/LocationServiceProvider.php',
+        'Stevebauman\\Location\\Position' => __DIR__ . '/..' . '/stevebauman/location/src/Position.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\DiactorosFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/DiactorosFactory.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/PsrHttpFactory.php',

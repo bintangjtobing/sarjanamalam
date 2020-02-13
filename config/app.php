@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'LaravelEmojiOne' => ChristofferOK\LaravelEmojiOne\LaravelEmojiOneFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
-
+        'Location'      => 'Stevebauman\Location\Facades\Location',
     ],
 
 ];

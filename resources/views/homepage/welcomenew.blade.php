@@ -122,7 +122,7 @@
                             </li>
                             <?php $currentYear = date('Y'); ?>
                             <li class="nav-item with-divider">
-                                <a class="nav-link">&copy; {{$currentYear}} Sarajanamalam</a>
+                                <a class="nav-link">&copy; {{$currentYear}} Sarjanamalam</a>
                             </li>
 
                         </ul>

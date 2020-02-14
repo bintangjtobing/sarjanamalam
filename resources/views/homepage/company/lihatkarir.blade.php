@@ -14,7 +14,7 @@ sarjanamalam karir')
                 {{-- <a href="#" class="btn btn-primary">Lihat semua karir dibidang ini</a> --}}
             </div>
             <div class="col-lg-4 text-left">
-                <p>{{$karir->description}}</p>
+                {!!$karir->description!!}
             </div>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@ sarjanamalam karir')
             @foreach ($karirjoin as $part)
             <?php $enc_karirid = base64_encode($part->subcareer_id) ?>
 
-            <div class="col-lg-4 text-left squarejob">
+            <div class="col-lg-6 text-left squarejob">
                 <a href="/detail-pekerjaan/{{$enc_karirid}}/{{$tokens}}">
                     <h4 class="karirlink_part">{{$part->nama_subcareer}}</h4>
                 </a>

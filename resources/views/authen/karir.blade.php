@@ -99,7 +99,7 @@
                     <div class="inner">
                         <h4><b>{{$karirlist->nama_team}}</b></h4>
 
-                        <p>{{$karirlist->description}}</p>
+                        <p>{!!$karirlist->description!!}</p>
                     </div>
                     <a href="/karir-info/{{$karirlist->career_id}}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>

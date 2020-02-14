@@ -19,10 +19,10 @@ sarjanamalam karir')
             <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="{!!asset('file/karir/'.$karirlist->features_pic)!!}"
-                        alt="Card image cap">
+                        alt="Karir {{$karirlist->nama_team}} di Sarjanamalam">
                     <div class="card-body">
                         <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>
-                        <p class="card-text-black">{{$karirlist->description}}</p>
+                        <p class="card-text-black">{!!$karirlist->description!!}</p>
                         <a href="/pelajari-pekerjaan/{{$karirlist->career_id}}/{{$tokens}}"
                             class="card-link-karir mr-5">Pelajari</a>
                     </div>

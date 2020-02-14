@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 
 class companyController extends Controller
@@ -112,12 +113,13 @@ class companyController extends Controller
             ->get();
         return view('homepage.company.karir', ['karir' => $karir]);
     }
-    public function seekarir($career_id)
+    public function seekarir($enc_id)
     {
-        $karir = \App\karirDB::find($career_id);
+        $dcrypt_id = decrypt($enc_id);
+        $karir = \App\karirDB::find($dcrypt_id);
         $karirjoin = DB::table('career')
             ->join('subcareer', 'career.career_id', '=', 'subcareer.subcareer_id')
-            ->where('subcareer.career_id', '=', $career_id)
+            ->where('subcareer.career_id', '=', $dcrypt_id)
             ->select('career.*', 'subcareer.*')
             ->get();
         return view('homepage.company.lihatkarir', ['karir' => $karir, 'karirjoin' => $karirjoin]);

@@ -23,8 +23,15 @@ sarjanamalam karir')
                 <p><b>Gambaran pekerjaan
                         {!!$karir->nama_subcareer!!}</b><br>
                     {!!$karir->deskripsi!!}</p>
-                <p><b>Kualifikasi minimal :</b><br>{!!$karir->minimal_kualifikasi!!}</p>
-                <p><b>Kualifikasi yang direkomendasikan :</b><br>{!!$karir->kualifikasi_rekomendasi!!}</p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p><b>Kualifikasi minimal :</b><br>{!!$karir->minimal_kualifikasi!!}</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p><b>Kualifikasi yang direkomendasikan
+                                :</b><br>{!!$karir->kualifikasi_rekomendasi!!}</p>
+                    </div>
+                </div>
                 <p><b>Tanggung jawab pekerjaan :</b><br>{!!$karir->tanggung_jawab!!}</p>
                 {{-- <a href="#" class="btn btn-primary">Lihat semua karir dibidang ini</a> --}}
             </div>

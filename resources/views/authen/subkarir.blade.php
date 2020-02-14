@@ -123,7 +123,7 @@
                     <div class="inner">
                         <h4><b>{{$subkarirlst->nama_subcareer}}</b></h4>
 
-                        <p>{{$subkarirlst->deskripsi}}</p>
+                        <p>{!!$subkarirlst->deskripsi!!}</p>
                     </div>
                     <a href="/subkarir-info/{{$subkarirlst->subcareer_id}}" class="small-box-footer">More info <i
                             class="fas fa-arrow-circle-right"></i></a>

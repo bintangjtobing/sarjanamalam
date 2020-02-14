@@ -79,7 +79,7 @@ Route::get('/blog', 'companyController@blog');
 Route::get('/event', 'companyController@event');
 Route::post('/post-event', 'companyController@postevent');
 Route::get('/karir-sarjanamalam', 'companyController@karir');
-Route::get('/pelajari-pekerjaan/{career_id}/{tokens}', 'companyController@seekarir');
+Route::get('/pelajari-pekerjaan/{enc_id}/{tokens}', 'companyController@seekarir');
 Route::get('/detail-pekerjaan/{enc_karirid}/{tokens}', 'companyController@detailkarir');
 Route::get('/form-pendaftaran-umum/{enc_karirid}/{tokens}', 'companyController@form');
 Route::post('/apply-form-job/{tokens}', 'companyController@applyjob');

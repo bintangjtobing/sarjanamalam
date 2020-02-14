@@ -20438,3 +20438,9 @@ body[data-bg-image] {
     margin-left: -60px;
     background-color: transparent;
 }
+
+.card-img-top-karir {
+    border-radius: 1rem;
+    width: 460px;
+    height: auto;
+}

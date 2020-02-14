@@ -15,25 +15,20 @@ sarjanamalam karir')
         </div>
         <div class="row">
             @foreach ($karir as $karirlist)
-            <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
+            <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64));
+            $enc_id = Crypt::encrypt($karirlist->career_id); ?>
             <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="{!!asset('file/karir/'.$karirlist->features_pic)!!}"
                         alt="Karir {{$karirlist->nama_team}} di Sarjanamalam">
                     <div class="card-body">
                         <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>
-                        <p class="card-text-black">{!!$karirlist->description!!}</p>
-                        <a href="/pelajari-pekerjaan/{{$karirlist->career_id}}/{{$tokens}}"
-                            class="card-link-karir mr-5">Pelajari</a>
+                        <p class="card-text-black">{!!str_limit($karirlist->description,$limit=100)!!}</p>
+                        <a href="/pelajari-pekerjaan/{{$enc_id}}/{{$tokens}}" class="card-link-karir mr-5">Pelajari</a>
                     </div>
                 </div>
             </div>
             @endforeach
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center my-5">
-                <h5 style="text-transform:uppercase;"><a href="/teams">Lihat semua bagian</a></h5>
-            </div>
         </div>
 </section>
 @endsection

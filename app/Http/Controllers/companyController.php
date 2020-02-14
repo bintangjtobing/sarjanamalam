@@ -156,6 +156,7 @@ class companyController extends Controller
         $job->status_perkawinan = $request->status_perkawinan;
         $job->pendidikan_akhir = $request->pendidikan_akhir;
         $job->about = $request->about;
+        $job->status_interview = 'Belum dilihat';
         $job->save();
 
         return view('homepage.company.formselesai', ['job' => $job]);

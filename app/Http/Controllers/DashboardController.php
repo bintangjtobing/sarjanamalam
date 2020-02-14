@@ -11,6 +11,7 @@ use App\subkarirDB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class DashboardController extends Controller
 {
@@ -200,6 +201,26 @@ class DashboardController extends Controller
                 return redirect('/sub-karir/{tokens}')->with('sukseskarir', 'Data pekerjaan telah dihapus.');
             }
         }
+    }
+    public function pelamar()
+    {
+        $pelamar = DB::table('candidate')
+            ->select('candidate.*')
+            ->get();
+        return view('authen.candidate', ['pelamar' => $pelamar]);
+    }
+    public function detailpelamar($enc_id)
+    {
+        $dcrypt_id = decrypt($enc_id);
+        $pelamar = \App\candidateDB::find($dcrypt_id);
+
+        return view('authen.detailpelamar', ['pelamar' => $pelamar]);
+    }
+    public function trashpelamar()
+    {
+    }
+    public  function terimapelamar()
+    {
     }
     public function threads()
     {

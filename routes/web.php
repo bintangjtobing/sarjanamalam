@@ -141,6 +141,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/open-career/{subcareer_id}', 'DashboardController@openkarir');
     Route::get('/close-career/{subcareer_id}', 'DashboardController@closekarir');
     Route::get('/trash-career/{subcareer_id}', 'DashboardController@trashkarir');
+    Route::get('/pelamar/{tokens}', 'DashboardController@pelamar');
+    Route::get('/detail-pelamar/{enc_id}', 'DashboardController@detailpelamar');
+    Route::get('/trash-pelamar/{enc_id}', 'DashboardController@trashpelamar');
+    Route::get('/terima-pelamar/{enc_id}', 'DashboardController@terimapelamar');
+
     Route::get('/threads/{tokens}', 'DashboardController@threads');
 
     Route::get('/blog/{tokens}', 'DashboardController@indexblog');

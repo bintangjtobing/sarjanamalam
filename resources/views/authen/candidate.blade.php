@@ -40,7 +40,7 @@
                                 <span><i class="fas fa-eye"></i></span> {{$cnd->status_interview}}
                                 @elseif($cnd->status_interview=='Diterima')
                                 <span style="color:green;"><i class="fas fa-check-circle"></i></span>
-                                {{$cnd->status_interview=='Diterima'}}
+                                {{$cnd->status_interview}}
                                 @else
                                 <span style="color:red;"><i class=" fas fa-times-circle"></i></span> Ditolak
                                 @endif

@@ -212,6 +212,7 @@ class DashboardController extends Controller
     public function detailpelamar($enc_id)
     {
         $dcrypt_id = decrypt($enc_id);
+
         $pelamar = \App\candidateDB::find($dcrypt_id);
         $pelamar->status_interview = 'Sudah dilihat';
         $pelamar->save();
@@ -221,19 +222,21 @@ class DashboardController extends Controller
     public function trashpelamar($enc_id)
     {
         $dcrypt_id = decrypt($enc_id);
+        $tokens = bin2hex(openssl_random_pseudo_bytes(64));
         $pelamar = \App\candidateDB::find($dcrypt_id);
         $pelamar->status_interview = 'Ditolak';
         $pelamar->save();
 
-        return back()->with('sukses', 'Pelamar ditolak!');
+        return redirect('/pelamar/{$tokens}')->with('sukses', 'Pelamar ditolak!');
     }
     public  function terimapelamar($enc_id)
     {
         $dcrypt_id = decrypt($enc_id);
+        $tokens = bin2hex(openssl_random_pseudo_bytes(64));
         $pelamar = \App\candidateDB::find($dcrypt_id);
         $pelamar->status_interview = 'Diterima';
         $pelamar->save();
-        return back()->with('sukses', 'Pelamar diterima!');
+        return redirect('/pelamar/{tokens}')->with('sukses', 'Pelamar diterima!');
     }
     public function threads()
     {

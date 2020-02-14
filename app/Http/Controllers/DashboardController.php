@@ -213,14 +213,27 @@ class DashboardController extends Controller
     {
         $dcrypt_id = decrypt($enc_id);
         $pelamar = \App\candidateDB::find($dcrypt_id);
+        $pelamar->status_interview = 'Sudah dilihat';
+        $pelamar->save();
 
         return view('authen.detailpelamar', ['pelamar' => $pelamar]);
     }
-    public function trashpelamar()
+    public function trashpelamar($enc_id)
     {
+        $dcrypt_id = decrypt($enc_id);
+        $pelamar = \App\candidateDB::find($dcrypt_id);
+        $pelamar->status_interview = 'Ditolak';
+        $pelamar->save();
+
+        return back()->with('sukses', 'Pelamar ditolak!');
     }
-    public  function terimapelamar()
+    public  function terimapelamar($enc_id)
     {
+        $dcrypt_id = decrypt($enc_id);
+        $pelamar = \App\candidateDB::find($dcrypt_id);
+        $pelamar->status_interview = 'Diterima';
+        $pelamar->save();
+        return back()->with('sukses', 'Pelamar diterima!');
     }
     public function threads()
     {

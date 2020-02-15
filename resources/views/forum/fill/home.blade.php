@@ -84,6 +84,9 @@
                     <div class="views"><i class="fa fa-eye"></i> @if($thread->view_count>999)
                         {{$thread->view_count / 1000 . 'K'}}
                         views
+                        @elseif($thread->view_count>1)
+                        {{$thread->view_count}}
+                        views
                         @else {{$thread->view_count}} view @endif</div>
                     <?php $tanggalformat = date('d-m-Y',strtotime($thread->created_at)) ?>
                     <div class="time"><i class="fa fa-clock-o"></i> {{date('d M Y', strtotime($tanggalformat))}}</div>

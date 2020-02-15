@@ -151,7 +151,8 @@
                                 @if(!$search->isEmpty())
                                 @foreach ($search as $src)
                                 <div class="content mb-4">
-                                    <a href="/details/{{$src->id}}" class="content-title old-blue">
+                                    <?php $enc_id = Crypt::encrypt($src->id); ?>
+                                    <a href="/details/{{$enc_id}}" class="content-title old-blue">
                                         <div clas="content-meta">
                                             <span class="content-url old-green mr-1">sarjanamalam.com › forum ›
                                                 {!!$src->subject!!}</span>

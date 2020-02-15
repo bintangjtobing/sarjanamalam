@@ -61,7 +61,7 @@ Route::get('/signin', function () {
 })->name('signin');
 
 
-Route::get('/details/{id}', 'ForumController@detailsthreads');
+Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');

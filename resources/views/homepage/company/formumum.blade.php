@@ -40,7 +40,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <select name="sumber_informasi" class="custom-select">
+                        <select name="sumber_informasi" class="custom-select" required>
                             <option value="-">-</option>
                             <option value="Iklan SMS">Iklan SMS</option>
                             <option value="Top Karir">Top Karir</option>
@@ -111,7 +111,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <input type="text" name="noktp" class="form-control">
+                        <input type="text" name="noktp" class="form-control" pattern="[0-9]{16}" required>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-4">
                     <div class="form-group">
-                        <input type="text" name="tempat_lahir" placeholder="Tempat lahir" class="form-control">
+                        <input type="text" name="tempat_lahir" placeholder="Tempat lahir" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -136,7 +136,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <select name="jenis_kelamin" class="custom-select">
+                        <select name="jenis_kelamin" class="custom-select" required>
                             <option value="Pria">Pria</option>
                             <option value="Wanita">Wanita</option>
                         </select>
@@ -149,7 +149,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <select name="agama" class="custom-select">
+                        <select name="agama" class="custom-select" required>
                             <option value="Islam">Islam</option>
                             <option value="Kristen">Kristen</option>
                             <option value="Katolik">Katolik</option>
@@ -166,7 +166,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <textarea name="alamat_domisili" cols="30" rows="10"></textarea>
+                        <textarea name="alamat_domisili" cols="30" rows="10" required></textarea>
                     </div>
                 </div>
             </div>
@@ -176,7 +176,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control">
+                        <input type="email" name="email" class="form-control" required>
                     </div>
                 </div>
             </div>
@@ -197,7 +197,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <select name="status_perkawinan" class="custom-select">
+                        <select name="status_perkawinan" class="custom-select" required>
                             <option value="Lajang">Lajang</option>
                             <option value="Menikah">Menikah</option>
                         </select>
@@ -210,7 +210,7 @@ sarjanamalam karir')
                 </div>
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <select name="pendidikan_akhir" class="custom-select">
+                        <select name="pendidikan_akhir" class="custom-select" required>
                             <option value="SMP/SMA/SMK/SMU">SMP/SMA/SMK/SMU</option>
                             <option value="Akademi">Akademi</option>
                             <option value="Sarjana">Sarjana</option>
@@ -224,7 +224,7 @@ sarjanamalam karir')
                 <div class="col-lg-10">
                     <div class="form-group">
                         <p><b>Ceritakan kepada kami, mengapa kami harus menerima kamu?</b></p>
-                        <textarea name="about" cols="30" rows="10"></textarea>
+                        <textarea name="about" cols="30" rows="10" required></textarea>
                     </div>
                 </div>
             </div>

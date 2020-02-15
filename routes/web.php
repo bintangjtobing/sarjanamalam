@@ -100,7 +100,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
     Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
-    Route::get('/details/{id}', 'ForumController@detailsthreads');
+    Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
     // PROFILE CONTROLLER
     Route::get('/{username}', 'profileController@index');
 });

@@ -67,7 +67,8 @@
                         </div>
                     </div>
                     <div class="posttext pull-left">
-                        <h2><a href="/details/{{$thread->id}}/">{{$thread->subject}}</a></h2>
+                        <?php $enc_id = Crypt::encrypt($thread->id); ?>
+                        <h2><a href="/details/{{$enc_id}}/">{{$thread->subject}}</a></h2>
                         <p>{!!str_limit($thread->thread, $limit=60)!!}</p>
                         <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
                     </div>
@@ -80,9 +81,12 @@
                             <div class="mark"></div>
                         </div>
                     </div>
-                    <div class="views"><i class="fa fa-eye"></i> 1,568</div>
+                    <div class="views"><i class="fa fa-eye"></i> @if($thread->view_count>999)
+                        {{$thread->view_count / 1000 . 'K'}}
+                        views
+                        @else {{$thread->view_count}} view @endif</div>
                     <?php $tanggalformat = date('d-m-Y',strtotime($thread->created_at)) ?>
-                    <div class="time"><i class="fa fa-clock-o"></i> {{$tanggalformat}}</div>
+                    <div class="time"><i class="fa fa-clock-o"></i> {{date('d M Y', strtotime($tanggalformat))}}</div>
                 </div>
                 <div class="clearfix"></div>
             </div>

@@ -67,10 +67,11 @@ class ForumController extends Controller
 
         return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
     }
-    public function detailsthreads($id)
+    public function detailsthreads($enc_id)
     {
+        $decrypt = decrypt($enc_id);
         $data_thread = DB::table('threads')
-            ->where('threads.id', '=', $id)
+            ->where('threads.id', '=', $decrypt)
             ->select('threads.*')
             ->get();
         $threadsdata = DB::table('threads')
@@ -85,6 +86,11 @@ class ForumController extends Controller
             ->where('threads.created_by', '=', auth()->user()->name)
             ->select('threads.*', 'users.*')
             ->get();
+
+        $view = \App\Thread::find($decrypt);
+        $view->view_count += 1;
+        $view->save();
+
         return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive]);
     }
     /**

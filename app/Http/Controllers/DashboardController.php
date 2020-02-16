@@ -25,9 +25,21 @@ class DashboardController extends Controller
     public function index()
     {
         $usermg = DB::table('users')
+            ->where('users.email_verified_at', '!=', 'null')
             ->select('users.*')
             ->get();
-        return view('authen.dash', ['usermg' => $usermg]);
+
+        $event = DB::table('events')
+            ->where('events.status', '!=', 'unapproved')
+            ->select('events.*')
+            ->get();
+        $threadData = DB::table('threads')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
+            ->orderBy('threads.created_at', 'DESC')
+            ->select('threads.*', 'category.*')
+            ->limit(4)
+            ->get();
+        return view('authen.dash', ['usermg' => $usermg, 'event' => $event, 'threadData' => $threadData]);
     }
     // USER
     public function usermgmt()

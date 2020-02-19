@@ -81,10 +81,9 @@
                                     alt="Logo Sarjanamalam." class="forum-logo-sarjanamalam img-fluid"></a>
                         </div>
                         <div class="topbar-dropdown">
-                            <a class="title">English <i class="fa fa-caret-down"></i></a>
+                            <a class="title">Discover &nbsp;<i class="fa fa-caret-down"></i></a>
                             <div class="dropdown-list">
-                                <a class="list-entry" href="#">French</a>
-                                <a class="list-entry" href="#">Spanish</a>
+                                <a class="list-entry" href="#">My Messages</a>
                             </div>
                         </div>
                     </div>

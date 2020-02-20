@@ -65,7 +65,7 @@
 
 *,
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -107,4 +107,68 @@ body {
 .forum-logo-sarjanamalam {
     width: 150px;
     height: 100%;
+}
+
+.header-inner {
+    border-bottom: 1px solid #eee;
+}
+
+.newgen-profile {
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.sidebar .widget {
+    border-bottom: 0 !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.widget p {
+    margin-bottom: 0px !important;
+}
+
+.widget h3 {
+    font-weight: 700;
+}
+
+.widget .widget-title,
+.widget>h4 {
+    margin-bottom: 10px !important;
+}
+
+.col-newgen {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.col-newgen .bord {
+    border-right: 1px solid #eee;
+}
+
+.card .card-header {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.tox-tinymce {
+    border: 0px !important;
+    height: 100px !important;
+}
+
+.newtopic-th {
+    font-size: 1rem;
+}
+
+.thread-profilepic {
+    width: 35px !important;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.post-item .card-title {
+    margin-top: .75rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid #eee;
 }

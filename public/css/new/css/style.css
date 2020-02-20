@@ -68,6 +68,16 @@ html {
     overflow-x: hidden;
 }
 
+*,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
 body .body-inner,
 body #wrapper {
     padding: 0;
@@ -847,7 +857,7 @@ section {
 .grid-filter li.active a:hover,
 .grid-filter li.active a:active,
 .grid-filter li.active a:focus {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -863,8 +873,8 @@ section {
 
 .grid-filter.gf-outline li:hover a,
 .grid-filter.gf-outline li.active a {
-    border-color: #2250fc;
-    color: #2250fc;
+    border-color: #2485c1;
+    color: #2485c1;
     background-color: transparent
 }
 
@@ -888,14 +898,14 @@ section {
 
 .grid-filter.gf-lines li:hover a,
 .grid-filter.gf-lines li.active a {
-    color: #2250fc
+    color: #2485c1
 }
 
 .grid-filter.gf-lines li:hover a:after,
 .grid-filter.gf-lines li.active a:after {
     width: 100%;
     left: 0%;
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .grid-filter.gf-line-bottom {
@@ -909,7 +919,7 @@ section {
 
 .grid-filter.gf-classic li:hover a,
 .grid-filter.gf-classic li.active a {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -951,7 +961,7 @@ section {
 .grid-filter.gf-default li:hover a,
 .grid-filter.gf-default li.active a {
     background-color: transparent;
-    color: #2250fc
+    color: #2485c1
 }
 
 .grid-filter.gf-creative li a {
@@ -1202,7 +1212,7 @@ section {
 
 #topbar.topbar-colored,
 #topbar.topbar-colored.dark {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .topbar-dropdown {
@@ -1907,7 +1917,7 @@ section {
 #mainMenu nav>ul>li:hover>span,
 #mainMenu nav>ul>li:focus>a,
 #mainMenu nav>ul>li:focus>span {
-    color: #2250fc
+    color: #2485c1
 }
 
 #mainMenu nav>ul>li.dropdown:before {
@@ -1970,7 +1980,7 @@ section {
 #mainMenu nav>ul>li .dropdown-menu>li [class*=col-]>ul>li>a:hover,
 #mainMenu nav>ul>li .dropdown-menu>li [class*=col-]>ul>li>a:active {
     background-color: transparent;
-    color: #2250fc;
+    color: #2485c1;
     cursor: pointer
 }
 
@@ -1992,7 +2002,7 @@ section {
 #mainMenu nav>ul>li .dropdown-menu>li:active>span,
 #mainMenu nav>ul>li .dropdown-menu>li.hover-active>a,
 #mainMenu nav>ul>li .dropdown-menu>li.hover-active>span {
-    color: #2250fc
+    color: #2485c1
 }
 
 #mainMenu nav>ul>li .dropdown-menu.menu-last {
@@ -2131,7 +2141,7 @@ section {
 #mainMenu.menu-rounded nav>ul>li.current>a,
 #mainMenu.menu-rounded nav>ul>li:hover>a,
 #mainMenu.menu-rounded nav>ul>li:focus>a {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -2143,8 +2153,8 @@ section {
 #mainMenu.menu-outline nav>ul>li.current>a,
 #mainMenu.menu-outline nav>ul>li:hover>a,
 #mainMenu.menu-outline nav>ul>li:focus>a {
-    color: #2250fc;
-    border-color: #2250fc;
+    color: #2485c1;
+    border-color: #2485c1;
     background-color: transparent
 }
 
@@ -2192,7 +2202,7 @@ section {
 #mainMenu.menu-lines nav>ul>li.current>a,
 #mainMenu.menu-lines nav>ul>li:hover>a,
 #mainMenu.menu-lines nav>ul>li:focus>a {
-    color: #2250fc
+    color: #2485c1
 }
 
 #mainMenu.menu-lines nav>ul>li.current>a:after,
@@ -2200,7 +2210,7 @@ section {
 #mainMenu.menu-lines nav>ul>li:focus>a:after {
     width: 100%;
     left: 0%;
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 #mainMenu.menu-creative nav>ul>li {
@@ -2244,7 +2254,7 @@ section {
 #mainMenu.menu-hover-background nav>ul>li.current,
 #mainMenu.menu-hover-background nav>ul>li:hover,
 #mainMenu.menu-hover-background nav>ul>li:focus {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 #mainMenu.menu-hover-background nav>ul>li.current>a,
@@ -2407,13 +2417,13 @@ section {
 }
 
 #dotsMenu ul li:hover {
-    background-color: #2250fc;
+    background-color: #2485c1;
     -webkit-transform: scale(1);
     transform: scale(1)
 }
 
 #dotsMenu ul li.current {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 #dotsMenu ul li a {
@@ -2457,7 +2467,7 @@ section {
 
 #dotsMenu ul li a:hover:before,
 #dotsMenu ul li a.active:before {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 #dotsMenu ul li a:hover>span,
@@ -2694,7 +2704,7 @@ section {
 #mainMenu.dark.menu-rounded nav>ul>li.current>a,
 #mainMenu.dark.menu-rounded nav>ul>li:hover>a,
 #mainMenu.dark.menu-rounded nav>ul>li:focus>a {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -2704,8 +2714,8 @@ section {
 #mainMenu.dark.menu-outline nav>ul>li.current>a,
 #mainMenu.dark.menu-outline nav>ul>li:hover>a,
 #mainMenu.dark.menu-outline nav>ul>li:focus>a {
-    color: #2250fc;
-    border-color: #2250fc
+    color: #2485c1;
+    border-color: #2485c1
 }
 
 .dark:not(.submenu-light) #mainMenu.menu-lines nav>ul>li.current>a,
@@ -2714,7 +2724,7 @@ section {
 #mainMenu.dark.menu-lines nav>ul>li.current>a,
 #mainMenu.dark.menu-lines nav>ul>li:hover>a,
 #mainMenu.dark.menu-lines nav>ul>li:focus>a {
-    color: #2250fc
+    color: #2485c1
 }
 
 .dark:not(.submenu-light) #mainMenu.menu-lines nav>ul>li.current>a:after,
@@ -2723,7 +2733,7 @@ section {
 #mainMenu.dark.menu-lines nav>ul>li.current>a:after,
 #mainMenu.dark.menu-lines nav>ul>li:hover>a:after,
 #mainMenu.dark.menu-lines nav>ul>li:focus>a:after {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .dark:not(.submenu-light) #mainMenu.menu-creative nav>ul>li>a:after,
@@ -2737,7 +2747,7 @@ section {
 #mainMenu.dark.menu-hover-background nav>ul>li.current,
 #mainMenu.dark.menu-hover-background nav>ul>li:hover,
 #mainMenu.dark.menu-hover-background nav>ul>li:focus {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .dark:not(.submenu-light) #mainMenu.menu-hover-background nav>ul>li.current>a,
@@ -3347,7 +3357,7 @@ section {
 .header-extras #shopping-cart>a .shopping-cart-items {
     position: absolute;
     z-index: 1;
-    background: #2250fc;
+    background: #2485c1;
     border-radius: 50%;
     color: #fff;
     font-size: 9px;
@@ -3511,7 +3521,7 @@ section {
     display: none;
     padding: 12px;
     line-height: 12px;
-    background-color: #2250fc;
+    background-color: #2485c1;
     border: 0;
     cursor: pointer;
     border-radius: 5px;
@@ -4095,7 +4105,7 @@ body.side-panel-static #wrapper .container {
 
 .page-menu nav>ul>li:hover>a,
 .page-menu nav>ul>li.active>a {
-    color: #2250fc
+    color: #2485c1
 }
 
 .page-menu nav>ul>li.dropdown {
@@ -4164,7 +4174,7 @@ body.side-panel-static #wrapper .container {
 .page-menu.menu-rounded nav>ul>li.active>a {
     border-color: transparent;
     color: #fff;
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .page-menu.menu-rounded nav>ul>li:hover.dropdown:before,
@@ -4174,8 +4184,8 @@ body.side-panel-static #wrapper .container {
 
 .page-menu.menu-outline nav>ul>li:hover>a,
 .page-menu.menu-outline nav>ul>li.active>a {
-    border-color: #2250fc;
-    color: #2250fc;
+    border-color: #2485c1;
+    color: #2485c1;
     background-color: transparent
 }
 
@@ -4199,14 +4209,14 @@ body.side-panel-static #wrapper .container {
 
 .page-menu.menu-lines nav>ul>li:hover>a,
 .page-menu.menu-lines nav>ul>li.active>a {
-    color: #2250fc
+    color: #2485c1
 }
 
 .page-menu.menu-lines nav>ul>li:hover>a:after,
 .page-menu.menu-lines nav>ul>li.active>a:after {
     width: 100%;
     left: 0%;
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .page-menu.menu-solid nav>ul>li>a {
@@ -4216,7 +4226,7 @@ body.side-panel-static #wrapper .container {
 
 .page-menu.menu-solid nav>ul>li:hover>a,
 .page-menu.menu-solid nav>ul>li.active>a {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -4445,7 +4455,7 @@ body:not(.breakpoint-xs):not(.breakpoint-sm):not(.breakpoint-md) .page-menu nav>
     .page-menu.menu-creative nav>ul>li.active>a,
     .page-menu.inverted nav>ul>li:hover>a,
     .page-menu.inverted nav>ul>li.active>a {
-        color: #2250fc;
+        color: #2485c1;
         background-color: initial;
         border: 0
     }
@@ -4760,7 +4770,7 @@ a:not(.btn):not(.badge):focus,
 a:not(.btn):not(.badge):active {
     text-decoration: none;
     outline: none;
-    color: #2250fc
+    color: #2485c1
 }
 
 a:not(.btn):not(.badge):not(.btn):not([href]):not([tabindex]) {
@@ -5405,9 +5415,9 @@ h6.font-parisienne {
 .grid-item .portfolio-description a:hover i,
 .grid-item .grid-description a:hover i,
 .grid-item .portfolio-links a:hover i {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff;
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .portfolio-item .portfolio-description span,
@@ -6460,7 +6470,7 @@ h6.font-parisienne {
 .post-item .post-video .post-meta-category,
 .post-item .post-audio .post-meta-category,
 .post-item .post-quote-img .post-meta-category {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff;
     font-size: 13px;
     padding: 2px 16px;
@@ -6490,11 +6500,11 @@ h6.font-parisienne {
 
 .post-item .post-quote-img .post-meta-category {
     background-color: #fff;
-    color: #2250fc
+    color: #2485c1
 }
 
 .post-item .post-quote-img .post-meta-category a {
-    color: #2250fc
+    color: #2485c1
 }
 
 .post-item .post-video video,
@@ -6593,7 +6603,7 @@ h6.font-parisienne {
 }
 
 .post-item.quote .post-item-wrap {
-    background-color: #2250fc;
+    background-color: #2485c1;
     border-radius: 4px;
     border-width: 0
 }
@@ -7118,7 +7128,7 @@ h6.font-parisienne {
 }
 
 .comments .comment_number span {
-    color: #2250fc
+    color: #2485c1
 }
 
 .comments .comment {
@@ -7155,7 +7165,7 @@ h6.font-parisienne {
 }
 
 .comments .comment .text .comment-reply-link {
-    color: #2250fc;
+    color: #2485c1;
     font-size: 9px;
     text-transform: uppercase;
     font-weight: 700;
@@ -7191,7 +7201,7 @@ h6.font-parisienne {
 }
 
 .respond-comment span {
-    color: #2250fc
+    color: #2485c1
 }
 
 @media(max-width:991px) {
@@ -7701,7 +7711,7 @@ h6.font-parisienne {
 }
 
 .forum thead tr>th {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff;
     border-bottom: 0
 }
@@ -7725,7 +7735,7 @@ h6.font-parisienne {
 }
 
 .background-theme {
-    background-color: #2250fc !important
+    background-color: #2485c1 !important
 }
 
 .align-items-bottom {
@@ -7827,7 +7837,7 @@ h6.font-parisienne {
 }
 
 .background-primary {
-    background-color: #2250fc !important
+    background-color: #2485c1 !important
 }
 
 .background-secondary {
@@ -8073,7 +8083,7 @@ h6.font-parisienne {
 }
 
 .text-theme {
-    color: #2250fc !important
+    color: #2485c1 !important
 }
 
 .text-blue {
@@ -9531,8 +9541,8 @@ h6.font-parisienne {
 .tags a:focus,
 .tags a:active,
 .tags a.active {
-    background-color: #2250fc;
-    border-color: #2250fc;
+    background-color: #2485c1;
+    border-color: #2485c1;
     color: #fff !important
 }
 
@@ -10029,7 +10039,7 @@ body.breakpoint-sm .col-3 .flickr-widget img .widget-instagram img {
 }
 
 .item-link:hover {
-    color: #2250fc
+    color: #2485c1
 }
 
 .item-link:hover i {
@@ -10055,7 +10065,7 @@ body.breakpoint-sm .col-3 .flickr-widget img .widget-instagram img {
 }
 
 .background-colored {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 #particles-dots {
@@ -10148,7 +10158,7 @@ body.breakpoint-sm .col-3 .flickr-widget img .widget-instagram img {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #2250fc;
+    background-color: #2485c1;
     -webkit-transform: scale(0);
     transform: scale(0);
     -webkit-transition: all .3s cubic-bezier(.55, 0, .1, 1);
@@ -11038,8 +11048,8 @@ td.fc-today {
 }
 
 .fc-event-primary.fc-event {
-    background-color: #2250fc;
-    border-color: #2250fc;
+    background-color: #2485c1;
+    border-color: #2485c1;
     color: #fff
 }
 
@@ -11048,7 +11058,7 @@ td.fc-today {
 }
 
 .fc-event-primary .fc-event-dot {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .fc-event-secondary.fc-event {
@@ -11062,7 +11072,7 @@ td.fc-today {
 }
 
 .fc-event-secondary .fc-event-dot {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .fc-event-warning.fc-event {
@@ -11490,7 +11500,7 @@ div.dataTables_wrapper div.dataTables_length select {
 .icon-set-container .row>[class^=col-]:hover {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff;
     -webkit-box-shadow: 0 6px 38px rgba(0, 0, 0, .05);
     box-shadow: 0 6px 38px rgba(0, 0, 0, .05)
@@ -11498,7 +11508,7 @@ div.dataTables_wrapper div.dataTables_length select {
 
 .icon-set-container .row>[class^=col-]:hover .icon-holder {
     background-color: #fff;
-    color: #2250fc
+    color: #2485c1
 }
 
 .kenburns-bg {
@@ -11655,14 +11665,14 @@ div.dataTables_wrapper div.dataTables_length select {
 .datepicker tbody tr>td.day.today.active,
 .datepicker tbody tr>td.day.active,
 .datepicker tbody tr>td.day.selected {
-    background: #2250fc !important;
+    background: #2485c1 !important;
     color: #fff
 }
 
 .datepicker tbody tr>td.day.today.active:hover,
 .datepicker tbody tr>td.day.active:hover,
 .datepicker tbody tr>td.day.selected:hover {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -11675,7 +11685,7 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 
 .datepicker tbody tr>td.day.range.today {
-    background: #2250fc;
+    background: #2485c1;
     opacity: .4
 }
 
@@ -11689,12 +11699,12 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 
 .datepicker tbody tr>td span.month.active {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
 .datepicker tbody tr>td span.month.active:hover {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -11815,7 +11825,7 @@ div.dataTables_wrapper div.dataTables_length select {
 .datetimepicker table tr td span.active:hover.active,
 .datetimepicker table tr td span.active.disabled.active,
 .datetimepicker table tr td span.active.disabled:hover.active {
-    background: #2250fc !important;
+    background: #2485c1 !important;
     color: #fff
 }
 
@@ -11839,7 +11849,7 @@ div.dataTables_wrapper div.dataTables_length select {
 .datetimepicker table tr>td.today:hover[disabled],
 .datetimepicker table tr>td.today.disabled[disabled],
 .datetimepicker table tr>td.today.disabled:hover[disabled] {
-    background: #2250fc !important;
+    background: #2485c1 !important;
     color: #fff;
     opacity: .7
 }
@@ -12022,7 +12032,7 @@ div.dataTables_wrapper div.dataTables_length select {
 
 .daterangepicker .daterangepicker_input .input-mini.active,
 .daterangepicker .daterangepicker_input .input-mini:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker .daterangepicker_input i {
@@ -12048,7 +12058,7 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 
 .daterangepicker tbody td.today {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -12065,7 +12075,7 @@ div.dataTables_wrapper div.dataTables_length select {
 .daterangepicker tbody td.in-range,
 .daterangepicker tbody td.active:hover,
 .daterangepicker tbody td.in-range:hover {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -12079,27 +12089,27 @@ div.dataTables_wrapper div.dataTables_length select {
 
 .daterangepicker select.ampmselect.active,
 .daterangepicker select.ampmselect:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker select.hourselect.active,
 .daterangepicker select.hourselect:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker select.minuteselect.active,
 .daterangepicker select.minuteselect:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker select.monthselect.active,
 .daterangepicker select.monthselect:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker select.yearselect.active,
 .daterangepicker select.yearselect:focus {
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker .calendar-time i {
@@ -12118,9 +12128,9 @@ div.dataTables_wrapper div.dataTables_length select {
 }
 
 .daterangepicker .ranges li.active {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff;
-    border: 1px solid #2250fc
+    border: 1px solid #2485c1
 }
 
 .daterangepicker .ranges {
@@ -12147,7 +12157,7 @@ div.dataTables_wrapper div.dataTables_length select {
 .daterangepicker td.active:not(.off),
 .daterangepicker td.active:hover,
 .daterangepicker .active.end-date.in-range {
-    background: #2250fc !important;
+    background: #2485c1 !important;
     color: #fff !important
 }
 
@@ -12246,7 +12256,7 @@ input.dates:after {
 }
 
 .accordion.accordion-theme .ac-item {
-    background-color: #2250fc;
+    background-color: #2485c1;
     border: 0
 }
 
@@ -12311,7 +12321,7 @@ input.dates:after {
 }
 
 .alert.alert-primary {
-    background-color: #2250fc;
+    background-color: #2485c1;
     border-color: #093cfc
 }
 
@@ -12440,8 +12450,8 @@ a.btn:not([href]):not([tabindex]) {
     padding: 12px 18px;
     position: relative;
     text-transform: uppercase;
-    background-color: #2250fc;
-    border-color: #2250fc;
+    background-color: #2485c1;
+    border-color: #2485c1;
     border-width: 1px;
     border-style: solid;
     color: #fff;
@@ -12521,8 +12531,8 @@ a.btn:not([href]):not([tabindex]).btn-outline {
     background-color: transparent;
     border-width: 2px;
     border-style: solid;
-    border-color: #2250fc;
-    color: #2250fc
+    border-color: #2485c1;
+    color: #2485c1
 }
 
 button.btn.btn-outline:hover,
@@ -12537,10 +12547,10 @@ a.btn:not([href]):not([tabindex]).btn-outline:hover,
 a.btn:not([href]):not([tabindex]).btn-outline:focus,
 a.btn:not([href]):not([tabindex]).btn-outline:active,
 a.btn:not([href]):not([tabindex]).btn-outline.active {
-    background-color: #2250fc;
+    background-color: #2485c1;
     border-width: 2px;
     border-style: solid;
-    border-color: #2250fc;
+    border-color: #2485c1;
     color: #fff
 }
 
@@ -12650,8 +12660,8 @@ a.btn:not([href]):not([tabindex]).btn-transparent.btn-inverted {
 button.btn.btn-primary,
 .btn:not(.close):not(.mfp-close).btn-primary,
 a.btn:not([href]):not([tabindex]).btn-primary {
-    background-color: #2250fc;
-    border-color: #2250fc
+    background-color: #2485c1;
+    border-color: #2485c1
 }
 
 button.btn.btn-primary:hover,
@@ -13153,7 +13163,7 @@ a.btn:not([href]):not([tabindex]).btn-icon-holder:before {
 button.btn.btn-icon-holder.btn-outline:before,
 .btn:not(.close):not(.mfp-close).btn-icon-holder.btn-outline:before,
 a.btn:not([href]):not([tabindex]).btn-icon-holder.btn-outline:before {
-    border-left: 2px solid #2250fc
+    border-left: 2px solid #2485c1
 }
 
 button.btn.btn-icon-holder.btn-outline.btn-dark:before,
@@ -13544,7 +13554,7 @@ a.btn:not([href]):not([tabindex]).disabled {
 .heading-text.heading-gradient h2>* {
     -webkit-text-fill-color: transparent !important;
     -webkit-background-clip: text !important;
-    background: radial-gradient(circle at left top, #4b72ff 9%, #2250fc 48%, #6442ff 91%)
+    background: radial-gradient(circle at left top, #4b72ff 9%, #2485c1 48%, #6442ff 91%)
 }
 
 .heading-text.heading-section>h2 {
@@ -13559,7 +13569,7 @@ a.btn:not([href]):not([tabindex]).disabled {
     position: absolute;
     height: 2px;
     width: 100px;
-    background-color: #2250fc;
+    background-color: #2485c1;
     bottom: -30px;
     left: 0;
     right: 0
@@ -13716,7 +13726,7 @@ a.btn:not([href]):not([tabindex]).disabled {
 }
 
 .heading-creative strong {
-    color: #2250fc
+    color: #2485c1
 }
 
 #header:not([data-transparent=true]).dark .heading-creative {
@@ -13758,9 +13768,9 @@ ul.nav li.dropdown:hover>ul.dropdown-menu {
 }
 
 .tabs .nav-tabs .nav-link.active {
-    color: #2250fc;
+    color: #2485c1;
     background-color: transparent;
-    border-bottom: 2px solid #2250fc
+    border-bottom: 2px solid #2485c1
 }
 
 .tabs .nav-tabs .dropdown-menu {
@@ -13796,9 +13806,9 @@ ul.nav li.dropdown:hover>ul.dropdown-menu {
 }
 
 .tabs.tabs-vertical .nav-tabs .nav-link.active {
-    color: #2250fc;
+    color: #2485c1;
     background-color: transparent;
-    border-right: 2px solid #2250fc
+    border-right: 2px solid #2485c1
 }
 
 .tabs.tabs-folder .nav-tabs {
@@ -15391,13 +15401,13 @@ div.icon-box:before {
 }
 
 .icon-box.effect.dark .icon i:after {
-    -webkit-box-shadow: 0 0 0 3px #2250fc;
-    box-shadow: 0 0 0 3px #2250fc
+    -webkit-box-shadow: 0 0 0 3px #2485c1;
+    box-shadow: 0 0 0 3px #2485c1
 }
 
 .icon-box.effect.dark .icon i:hover,
 .icon-box.effect.dark:hover .icon i {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .icon-box.effect .icon i:hover:after,
@@ -15776,7 +15786,7 @@ div.icon-box:before {
 }
 
 .text-box.text-box-light:hover {
-    background: #2250fc
+    background: #2485c1
 }
 
 .text-box.text-box-light:hover i,
@@ -15845,7 +15855,7 @@ div.icon-box:before {
 .feature-box:hover h2,
 .feature-box:hover h3,
 .feature-box:hover h4 {
-    color: #2250fc
+    color: #2485c1
 }
 
 .feature-box h2,
@@ -16008,7 +16018,7 @@ div.icon-box:before {
 }
 
 .flickity-button:hover {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .flickity-button:hover:before {
@@ -16082,7 +16092,7 @@ div.icon-box:before {
 
 .inspiro-slider.arrows-dark .flickity-button:hover,
 .carousel.arrows-dark .flickity-button:hover {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .inspiro-slider.arrows-dark .flickity-button:hover:before,
@@ -16097,7 +16107,7 @@ div.icon-box:before {
 
 .inspiro-slider.arrows-grey .flickity-button:hover,
 .carousel.arrows-grey .flickity-button:hover {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .inspiro-slider.arrows-grey .flickity-button:hover:before,
@@ -16611,7 +16621,7 @@ div.icon-box:before {
 }
 
 .dropcap.dropcap-colored {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -16620,7 +16630,7 @@ span.highlight {
 }
 
 .highlight.highlight-primary {
-    color: #2250fc;
+    color: #2485c1;
     font-weight: 700
 }
 
@@ -16658,7 +16668,7 @@ span.highlight {
 }
 
 .highlight.highlight-colored {
-    background-color: #2250fc;
+    background-color: #2485c1;
     color: #fff
 }
 
@@ -16799,7 +16809,7 @@ span.highlight {
 .progress-bar {
     height: 100%;
     padding: 10px;
-    background-color: #2250fc;
+    background-color: #2485c1;
     -webkit-box-shadow: none;
     box-shadow: none
 }
@@ -17432,7 +17442,7 @@ body.breakpoint-sm hr.space-xxlg {
 }
 
 .blockquote {
-    border-left: 3px solid #2250fc;
+    border-left: 3px solid #2485c1;
     font-size: 20px;
     padding: 10px 20px;
     margin: 0 0 20px
@@ -17457,7 +17467,7 @@ body.breakpoint-sm hr.space-xxlg {
 }
 
 .blockquote-color {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .blockquote-color small {
@@ -17749,7 +17759,7 @@ select[multiple] {
 }
 
 .badge-primary {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .mfp-bg {
@@ -18269,7 +18279,7 @@ screen and (max-height:300px) {
 }
 
 .mfp-ajax-holder .mfp-close:hover {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -18337,7 +18347,7 @@ screen and (max-height:300px) {
 }
 
 .list-colored li a {
-    color: #2250fc;
+    color: #2485c1;
     font-weight: 600
 }
 
@@ -18352,7 +18362,7 @@ screen and (max-height:300px) {
     height: 12px;
     border-radius: 50%;
     margin-right: 9px;
-    background-color: #2250fc;
+    background-color: #2485c1;
     float: left;
     margin-top: 6px
 }
@@ -18426,7 +18436,7 @@ screen and (max-height:300px) {
 
 .list-icon.list-icon-colored li:before,
 .list-icon.icon-list-colored i {
-    color: #2250fc
+    color: #2485c1
 }
 
 .list-icon li:before {
@@ -18481,8 +18491,8 @@ screen and (max-height:300px) {
 }
 
 a.list-group-item.active {
-    background-color: #2250fc;
-    border: #2250fc
+    background-color: #2485c1;
+    border: #2485c1
 }
 
 a.list-group-item.active h1,
@@ -18526,7 +18536,7 @@ a.list-group-item.active.active {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #2250fc;
+    background: #2485c1;
     position: relative;
     top: -10px;
     right: 8px
@@ -18538,7 +18548,7 @@ a.list-group-item.active.active {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #2250fc;
+    background-color: #2485c1;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -18676,7 +18686,7 @@ a.list-group-item.active.active {
 .post-navigation a:hover {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    color: #2250fc
+    color: #2485c1
 }
 
 .post-navigation .post-next {
@@ -18849,7 +18859,7 @@ a.list-group-item.active.active {
 }
 
 .call-to-action.call-to-action-colored {
-    background-color: #2250fc
+    background-color: #2485c1
 }
 
 .call-to-action.call-to-action-colored h3,
@@ -19397,7 +19407,7 @@ body.breakpoint-xs .grid li {
 }
 
 .pricing-table.colored .plan-header {
-    background-color: #2250fc;
+    background-color: #2485c1;
     border-color: rgba(0, 0, 0, .05);
     color: #fff
 }
@@ -19645,7 +19655,7 @@ body.breakpoint-lg .pricing-table .col-lg-2 .plan-list ul li {
 }
 
 .timeline .timeline-item .timeline-icon {
-    background-color: #2250fc;
+    background-color: #2485c1;
     position: absolute;
     border-radius: 50%;
     left: 0;
@@ -19815,7 +19825,7 @@ video {
 }
 
 .bg-overlay[data-style="2"] {
-    background: #2250fc;
+    background: #2485c1;
     opacity: .9
 }
 
@@ -19830,7 +19840,7 @@ video {
 }
 
 .bg-overlay[data-style="5"] {
-    background: radial-gradient(circle at left top, #09c8e6 20%, #2250fc 38%, #5839e4 66%);
+    background: radial-gradient(circle at left top, #09c8e6 20%, #2485c1 38%, #5839e4 66%);
     opacity: .9
 }
 
@@ -20107,14 +20117,14 @@ body[data-bg-image] {
 
 .wizard>.steps ul li>a:hover,
 .wizard>.steps ul li>a:active {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
 .wizard>.steps ul li.current a,
 .wizard>.steps ul li.current a:hover,
 .wizard>.steps ul li.current a:active {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
@@ -20327,14 +20337,14 @@ body[data-bg-image] {
 
 .wizard[data-orientation=vertical][data-style="1"]>.steps ul li:hover a .number,
 .wizard[data-orientation=vertical][data-style="1"]>.steps ul li:active a .number {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 
 .wizard[data-orientation=vertical][data-style="1"]>.steps ul li.current a .number,
 .wizard[data-orientation=vertical][data-style="1"]>.steps ul li.current a:hover .number,
 .wizard[data-orientation=vertical][data-style="1"]>.steps ul li.current a:active .number {
-    background: #2250fc;
+    background: #2485c1;
     color: #fff
 }
 

@@ -25,9 +25,7 @@ Route::get('/route-clear', function () {
     $exitCode = Artisan::call('route:clear');
     return '<h1>Route cache cleared</h1>';
 });
-route::get('/newgen', function () {
-    return view('forum.layouts.newstyle');
-});
+
 //Clear View cache:
 Route::get('/view-clear', function () {
     $exitCode = Artisan::call('view:clear');
@@ -38,6 +36,9 @@ Route::get('/view-clear', function () {
 Route::get('/config-cache', function () {
     $exitCode = Artisan::call('config:cache');
     return '<h1>Clear Config cleared</h1>';
+});
+Route::get('/newgen', function () {
+    return view('forum.layouts.newstyle');
 });
 // HASIL PENCARIAN
 // PROSES CARI

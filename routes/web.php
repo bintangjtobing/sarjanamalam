@@ -72,7 +72,7 @@ Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/verification-user/{enc_id}/{tokens}', 'UserController@verification');
-Route::get('/logout/{id}', 'AuthController@logout');
+Route::get('/logout/{id}/{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
 Route::get('/tentang-sarjana-malam', 'companyController@about');

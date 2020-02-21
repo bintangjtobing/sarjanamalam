@@ -22,9 +22,11 @@ class ForumController extends Controller
             ->select('sub_category.*')
             ->get();
         $threadsdata = DB::table('threads')
-            ->select('threads.*')
+            ->join('users', 'users.id', '=', 'threads.created_by')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
             ->orderBy('threads.created_at', 'DESC')
-            ->paginate(15);
+            ->paginate(5);
         $usersData = DB::table('users')
             ->select('users.*')
             ->get();
@@ -61,7 +63,7 @@ class ForumController extends Controller
         $threadsnew->users_id = auth()->user()->id;
         $threadsnew->thread = $request->threads;
         $threadsnew->logIp = $request->getClientIp();
-        $threadsnew->created_by = auth()->user()->name;
+        $threadsnew->created_by = auth()->user()->id;
         $threadsnew->updated_by = auth()->user()->name;
         $threadsnew->save();
 
@@ -71,8 +73,10 @@ class ForumController extends Controller
     {
         $decrypt = decrypt($enc_id);
         $data_thread = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.created_by')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
             ->where('threads.id', '=', $decrypt)
-            ->select('threads.*')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
             ->get();
         $threadsdata = DB::table('threads')
             ->select('threads.*')

@@ -128,6 +128,7 @@
                             <h3 class="text-center">Bintang Tobing</h3>
                             <p class="text-center">Medan, Indonesia</p>
                         </div>
+                        <hr>
                         <div class="row text-center col-newgen">
                             <div class="col-6 bord">
                                 <h3>698</h3>
@@ -138,6 +139,7 @@
                                 <p>Views</p>
                             </div>
                         </div>
+                        <hr>
                         <div class="row text-center">
                             <div class="col-lg-12">
                                 <a href="#">
@@ -146,11 +148,7 @@
                             </div>
                         </div>
                         <hr>
-
-
                     </div>
-
-
                     <div class="content col-lg-6">
 
                         <div class="page-title">
@@ -162,6 +160,21 @@
                                 <div class="card-body">
                                     <form id="form2" class="form-validate">
                                         @csrf
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <label for="">Judul topik pembahasan</label>
+                                                <input type="text" name="subject" id="subject"
+                                                    class="form-control mb-3">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <label for="">Pilih kategori topik</label>
+                                                <select name="" class="form-control mb-3" id="">
+                                                    <option value="">Abcd</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-lg-12 mb-3">
                                                 <textarea name="" id="newwrite" placeholder="Tulis disini" cols="30"
@@ -187,6 +200,23 @@
                                     <div class="card-body">
                                         <div class="card-text">
                                             <div class="row">
+                                                <div class="col-lg-12 text-center">
+                                                    <p><span style="font-size: 3rem; color: #4aa5e7;"><i
+                                                                class="far fa-check-circle"></i></span><br><span
+                                                            class="text-gradient-blue-sarjana">Berhasil!</span> Thread
+                                                        baru berhasil diterbitkan!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="row">
                                                 <div class="col-lg-8 text-left">
                                                     <p><span class="post-meta-date"><img
                                                                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
@@ -195,13 +225,13 @@
                                                             Tobing</span></p>
                                                 </div>
                                                 <div class="col-lg-4 text-right">
-                                                    <p>3 jam yang lalu</p>
+                                                    <span class="text-gradient-blue-sarjana">#techno</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-title">
                                             <h4>Standard post with single threads</h4>
-                                            <p><span class="text-gradient-blue-sarjana">#techno</span></p>
+                                            <p class="muted-text">Dibuat 3 jam yang lalu</p>
                                         </div>
                                         <div class="card-text">
                                             <p>It has survived not only five centuries, but also the leap into
@@ -213,16 +243,30 @@
                                         <div class="card-text">
                                             <div class="row">
                                                 <div class="col-lg-7 text-left">
-                                                    <span class="mr-3"><a href="#"><i class="fas fa-heart"></i> 1,985
-                                                            likes</a></span><span><a href="#"><i
-                                                                class="fas fa-comment"></i>
+                                                    <span style="font-size: .75rem;" class="mr-3"><a href="#"><i
+                                                                class="fas fa-bookmark"></i> 1,985
+                                                            favorited</a></span><span style="font-size: .75rem;"><a
+                                                            href="#"><i class="fas fa-comment"></i>
                                                             657
                                                             comments</a></span>
                                                 </div>
                                                 <div class="col-lg-5 text-right">
-                                                    <span><a href="#"><i class="far fa-eye"></i> 2K+
+                                                    <span style="font-size: .75rem;"><a href="#"><i
+                                                                class="far fa-eye"></i> 2K+
                                                             views</a></span>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-text my-3">
+                                            <div class="row">
+                                                <div class="col-lg-12 text-left">
+                                                    <span style="font-size: 1rem;" class="mr-3"><a><i
+                                                                class="bookmark far fa-bookmark"></i>
+                                                            Favorite</a></span>
+                                                    <span style="font-size: 1rem;"><a href=""><i
+                                                                class="far fa-comment"></i> Comment</a></span>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -233,15 +277,7 @@
 
 
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
-                            </li>
+
                         </ul>
 
                     </div>
@@ -311,8 +347,16 @@
         <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
 
         {{-- Javacript started --}}
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                $(".bookmark").click(function (e) {
+                    e.preventDefault()
+                    $(this).toggleClass('fas')
+                });
+            });
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -337,6 +381,7 @@
             });
 
         </script>
+
 </body>
 
 </html>

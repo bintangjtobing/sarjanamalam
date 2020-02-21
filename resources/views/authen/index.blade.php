@@ -420,7 +420,9 @@
         referrerpolicy="origin"></script>
     <script>
         tinymce.init({
-            selector: 'textarea',
+            selector: 'textarea#newwrite',
+            toolbar: false,
+            statusbar: false,
             branding: false,
             menubar: false,
             setup: function (editor) {

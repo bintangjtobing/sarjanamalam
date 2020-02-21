@@ -2,118 +2,138 @@
 @section('title','Home')
 @inject('userMod', 'App\UserMod')
 @section('content')
-<div class="row">
-    <div class="col-lg-8 col-xs-12 col-md-8">
-        <div class="pull-center">
-            <ul class="paginationforum">
-                {{$threadsdata->links()}}
-            </ul>
+<?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
+
+<div class="page-title">
+    <div class="card">
+        <div class="card-header">
+            <span class="newtopic-th"><span><i class="fas fa-pen-square"></i> Bagikan topik
+                    baru</span></span>
         </div>
-        <div class="clearfix"></div>
+        <div class="card-body">
+            <form action="/verify-add-new-topic/{{$tokens}}" method="post">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label for="">Judul topik pembahasan</label>
+                        <input type="text" name="subject" id="subject" class="form-control mb-3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label for="">Pilih kategori topik</label>
+                        <select name="category" class="form-control mb-3" id="">
+                            @foreach ($category_data as $cat)
+                            <option value="{{$cat->category_id}}">{{$cat->category}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 mb-3">
+                        <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
+                            autofocus></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-right">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-gradient-blue-sarjana">Buat
+                                topik</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-8">
-            @if(session('suksestambahdiskusi'))
-            <div class="post greenpost">
-                <div class="wrap-ut pull-left">
-                    <div class="userinfo pull-left">
-                        <div class="avatar">
+<div id="blog">
+    @if(session('suksestambahdiskusi'))
+    <div class="post-item">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p><span style="font-size: 3rem; color: #4aa5e7;"><i
+                                        class="far fa-check-circle"></i></span><br><span
+                                    class="text-gradient-blue-sarjana">Berhasil!</span>
+                                {{session('suksestambahdiskusi')}}
+                            </p>
                         </div>
                     </div>
-                    <div class="posttext pull-left">
-                        <h2><a><span style="font-size:2.25rem;"><i class="far fa-check-circle"></i></span>
-                                Congratulations!</a></h2>
-                        <small class="text-muted">{{session('suksestambahdiskusi')}}</small>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
-                <div class="postinfo pull-left">
-
-                </div>
-                <div class="clearfix"></div>
             </div>
-            @endif
-            <!-- POST -->
-            @if(count($threadsdata)>0)
-            @foreach ($threadsdata as $thread)
-            <div class="post">
-                <div class="wrap-ut pull-left">
-                    <div class="userinfo pull-left">
-                        <div class="avatar">
-                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
-                                    class="img-profile-user" alt="User Image"></span>
-                            <div class="status
-                                @if(auth()->user()->status=='active') green
-                                @else
-                                    red
-                                @endif
-                            ">&nbsp;</div>
-                        </div>
-
-                        <div class="icons">
-                            <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
-                            <img src="{{asset('storage/icon/icon1.png')}}" alt="" /><img
-                                src="{{asset('storage/icon/icon4.png')}}" alt="" />
-                            @if($thread->created_by==auth()->user()->name )
-                            <a href="/delete-threads/{{$thread->id}}/verify/{{$tokens}}"><span
-                                    style="font-size: 18px; color: #df5b5b;"><i class="fas fa-times-circle"
-                                        data-toggle="tooltip" data-placement="bottom"
-                                        title="Hapus topik"></i></span></a>
-                            @endif
-                        </div>
-                    </div>
-                    <div class="posttext pull-left">
-                        <?php $enc_id = Crypt::encrypt($thread->id); ?>
-                        <h2><a href="/details/{{$enc_id}}/">{{$thread->subject}}</a></h2>
-                        <p>{!!str_limit($thread->thread, $limit=60)!!}</p>
-                        <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="postinfo pull-left">
-                    <div class="comments">
-                        <div class="commentbg">
-                            560
-                            <div class="mark"></div>
-                        </div>
-                    </div>
-                    <div class="views"><i class="fa fa-eye"></i> @if($thread->view_count>999)
-                        {{$thread->view_count / 1000 . 'K'}}
-                        views
-                        @elseif($thread->view_count>1)
-                        {{$thread->view_count}}
-                        views
-                        @else {{$thread->view_count}} view @endif</div>
-                    <?php $tanggalformat = date('d-m-Y',strtotime($thread->created_at)) ?>
-                    <div class="time"><i class="fa fa-clock-o"></i> {{date('d M Y', strtotime($tanggalformat))}}</div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            @endforeach
-            @else
-            <div class="post greenpost">
-                <div class="wrap-ut pull-left">
-                    <div class="userinfo pull-left">
-                        <div class="avatar">
-                        </div>
-                    </div>
-                    <div class="posttext pull-left">
-                        <h2><a>
-                                Yahh... Belum ada postingan topik pembahasan nih! @emojione(':cry:')</a></h2>
-                        <small>Yuk buat topik pembahasan seputar apapun.<a data-toggle="modal"
-                                data-target="#newDiscussion">Mulai diskusi baru</a></small>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="postinfo pull-left">
-
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            @endif
         </div>
-        @endsection
+    </div>
+    @endif
+    @foreach ($threadsdata as $thread)
+    <div class="post-item">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-8 text-left">
+                            <p><span class="post-meta-date"><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                                        alt="img-profile-user" class="img-fluid thread-profilepic">
+                                    {{$thread->name}}</span></p>
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <span class="text-gradient-blue-sarjana">#{{$thread->category}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <?php $enc_id = Crypt::encrypt($thread->id); ?>
+                    <h4><a href="/details/{{$enc_id}}/" style="font-weight: 600;">{{$thread->subject}}</a> </h4>
+                    <p class="muted-text">Dibuat {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
+                </div>
+                <div class="card-text">
+                    <p>{!!str_limit($thread->thread, $limit=120)!!}</p>
+                </div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-7 text-left">
+                            <span style="font-size: .75rem;" class="mr-3"><a href="#"><i class="fas fa-bookmark"></i>
+                                    1,985
+                                    favorited</a></span><span style="font-size: .75rem;"><a href="#"><i
+                                        class="fas fa-comment"></i>
+                                    657
+                                    response</a></span>
+                        </div>
+                        <div class="col-lg-5 text-right">
+                            <span style="font-size: .75rem;"><a href="#"><i class="far fa-eye"></i>
+                                    @if($thread->view_count>999){{$thread->view_count/1000}}
+                                    views
+                                    @elseif($thread->view_count>1){{$thread->view_count}}
+                                    views
+                                    @else {{$thread->view_count}} view @endif</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-text my-3">
+                    <div class="row">
+                        <div class="col-lg-12 text-left">
+                            <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
+                                    Favorite</a></span>
+                            <span style="font-size: 1rem;"><a href=""><i class="far fa-comment"></i>
+                                    Respond</a></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+
+</div>
+
+
+<ul class="pagination">
+    {{$threadsdata->links()}}
+</ul>
+@endsection

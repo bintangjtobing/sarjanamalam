@@ -42,6 +42,7 @@
         #dc3545 !important;
     --light:
         #f8f9fa !important;
+
     --dark:
         #343a40 !important;
 
@@ -153,8 +154,9 @@ body {
 }
 
 .tox-tinymce {
-    border: 0px !important;
-    height: 100px !important;
+    border: .50px solid #ced4da !important;
+    height: 200px !important;
+    border-radius: 5px !important;
 }
 
 .newtopic-th {
@@ -168,7 +170,21 @@ body {
 }
 
 .post-item .card-title {
-    margin-top: .75rem;
-    padding-bottom: .75rem;
+    margin-top: .55rem;
+    padding-bottom: .15rem;
     border-bottom: 1px solid #eee;
+}
+
+.icon-bookmark-active {
+    color: #3698d4 !important;
+}
+
+.card-body .alert {
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px !important;
+    width: 100% !important;
+    border: 1px solid #e6d178 !important;
+    background-color: #fdf7e3 !important;
+    color: #121212 !important;
+    font-size: 12px;
 }

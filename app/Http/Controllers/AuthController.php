@@ -19,7 +19,7 @@ class AuthController extends Controller
         }
         return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }
-    public function logout()
+    public function logout($log)
     {
         Auth::logout();
         return redirect('/');

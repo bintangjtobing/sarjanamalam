@@ -2,69 +2,97 @@
 @section('title','Details Discussion')
 @inject('userMod', 'App\UserMod')
 @section('content')
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-8">
-            <!-- POST -->
-
-            @foreach ($data_thread as $thread)
-            <div class="post">
-                <div class="wrap-ut pull-left">
-                    <div class="userinfo pull-left">
-                        <div class="avatar">
-                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
-                                    class="img-profile-user" alt="User Image"></span>
-                            <div class="status
-                                @if(auth()->user()->status=='active') green
-                                @else
-                                    red
-                                @endif
-                            ">&nbsp;</div>
+<div id="blog">
+    @foreach ($data_thread as $thread)
+    <div class="post-item">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-12 text-left">
+                            <p><span class="post-meta-date"><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                                        alt="img-profile-user" class="img-fluid thread-profilepic">
+                                    {{$thread->name}}</span></p>
                         </div>
 
-                        <div class="icons">
-                            <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
-                            <img src="{{asset('storage/icon/icon1.png')}}" alt="" /><img
-                                src="{{asset('storage/icon/icon4.png')}}" alt="" />
-                        </div>
                     </div>
-                    <div class="posttext pull-left">
-                        <h2><a href="#">{{$thread->subject}}</a></h2>
-                        <p>{!!$thread->thread!!}</p>
-                        <small class="text-muted">Diposting oleh {{$thread->created_by}}</small>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
+                <div class="card-title">
+                    <?php $enc_id = Crypt::encrypt($thread->id); ?>
+                    <h4><a href="/details/{{$enc_id}}/" style="font-weight: 600;">{{$thread->subject}}</a> </h4>
+                    <p class="muted-text">Dibuat
+                        {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}} &nbsp; <span><a href="#"><i
+                                    class="far fa-eye"></i>
+                                @if($thread->view_count>999){{$thread->view_count/1000}}
+                                views
+                                @elseif($thread->view_count>1){{$thread->view_count}}
+                                views
+                                @else {{$thread->view_count}} view @endif</a></span></p>
+                </div>
+                <div class="card-text">
+                    <p>{!!$thread->thread!!}</p>
+                </div>
+                <hr>
+                <div class="card-text">
 
-                <div class="clearfix"></div>
-                <div class="postinfobot">
-
-                    <div class="likeblock pull-left">
-                        <a href="#" class="up"><i class="fa fa-thumbs-o-up"></i>25</a>
-                        <a href="#" class="down"><i class="fa fa-thumbs-o-down"></i>3</a>
+                </div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-7 text-left">
+                            <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
+                                    Favorite</a></span>
+                            <span style="font-size: 1rem;"><a href=""><i class="far fa-comment"></i>
+                                    Respond</a></span>
+                        </div>
                     </div>
-
-                    <div class="prev pull-left">
-                        <a href="#"><i class="fa fa-reply"></i></a>
-                    </div>
-                    <?php $date=date('d-M-Y', strtotime($thread->created_at));
-                        $time = date('h:i A', strtotime($thread->created_at))?>
-                    <div class="posted pull-left"><i class="fa fa-clock-o"></i> Posted on : {{$date}} @ {{$time}}
-                    </div>
-
-                    <div class="next pull-right">
-                        <a href="#"><i class="fa fa-share"></i></a>
-
-                        <a href="#"><i class="fa fa-flag"></i></a>
-                    </div>
-
-                    <div class="clearfix"></div>
                 </div>
             </div>
-
-            @endforeach
-
         </div>
-        @endsection
+    </div>
+    <div class="post-item">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-12 text-left">
+                            <h3>Your response?</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-12 text-left mb-3">
+                            <textarea name="threads" id="" placeholder="Tulis disini" autofocus></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 mb-3">
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Terima kasih telah berkontribusi respon di Sarjanamalam!<br>Pastikan kamu merespon topik
+                                dengan detail dan bagikan apa yang kamu bisa!<br><b>Dan hindari</b>, untuk
+                                beriklan, membahas pembahasan sara dan hal yang tidak diperbolehkan di
+                                Sarjanamalam.<br>Untuk lebih lengkapnya, lihat <a href="#">peraturan, serta tips yang
+                                    berlaku dalam merespon topik.</a>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-left">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-gradient-blue-sarjana">Submit your
+                                    response</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+
+</div>
+@endsection

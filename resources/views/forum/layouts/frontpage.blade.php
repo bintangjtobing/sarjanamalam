@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 d-none d-sm-block">
+                    {{-- <div class="col-md-6 d-none d-sm-block">
                         <div class="social-icons social-icons-colored-hover">
                             <ul>
                                 <li><a href="#"><span style="font-size: 20px;"><i class="far fa-comment"></i></span></a>
@@ -82,7 +82,7 @@
                             </ul>
 
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

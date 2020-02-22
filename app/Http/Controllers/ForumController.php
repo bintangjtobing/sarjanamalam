@@ -75,8 +75,9 @@ class ForumController extends Controller
         $data_thread = DB::table('threads')
             ->join('users', 'users.id', '=', 'threads.created_by')
             ->join('category', 'category.category_id', '=', 'threads.category_id')
+            ->join('comment_threads', 'comment_threads.user_id', '=', 'users.id' && 'comment_threads.threads_id', '=', 'threads.id')
             ->where('threads.id', '=', $decrypt)
-            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.username', 'comment_threads.*')
             ->get();
         $threadsdata = DB::table('threads')
             ->select('threads.*')
@@ -96,6 +97,18 @@ class ForumController extends Controller
         $view->save();
 
         return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive]);
+    }
+    public function comments($enc_id, Request $request)
+    {
+        $decrypt = decrypt($enc_id);
+        $commentN = new \App\commentDB;
+        $commentN->user_id = auth()->user()->id;
+        $commentN->threads_id = $decrypt;
+        $commentN->comments = $request->commenttext;
+        $commentN->created_by = auth()->user()->name;
+        // dd($commentN);
+        $commentN->save();
+        return back()->with('suksesresponse', 'Respon kamu berhasil di terbitkan.');
     }
     /**
      * Store a newly created resource in storage.

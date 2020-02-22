@@ -47,32 +47,79 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="post-item">
-        <div class="card">
-            <div class="card-body">
+                <hr>
                 <div class="card-text">
                     <div class="row">
-                        <div class="col-lg-12 text-left">
-                            <h3>Your response?</h3>
+                        <div class="col-lg-12 ">
+                            <h5>Comments (0)</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 my-2">
+                            <p><span class=""><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                                        alt="img-profile-user" class="img-fluid thread-profilepic">
+                                </span><b>Admin Sarjana</b>&nbsp;{{'@'.$thread->username}} &#9679;
+                                {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                It has survived not only five centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+@if(session('suksesresponse'))
+<div class="post-item">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-text">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p><span style="font-size: 3rem; color: #4aa5e7;"><i
+                                    class="fas fa-check-circle"></i></span><br><span
+                                class="text-gradient-blue-sarjana">Berhasil!</span>
+                            {{session('suksesresponse')}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+<div class="post-item">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-text">
+                <div class="row">
+                    <div class="col-lg-12 text-left">
+                        <h3>Your response?</h3>
+                    </div>
+                </div>
+            </div>
+            <form action="/response-comments/{{$enc_id}}" method="post">
+                {{ csrf_field() }}
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-12 text-left mb-3">
-                            <textarea name="threads" id="" placeholder="Tulis disini" autofocus></textarea>
+                            <textarea name="commenttext" id="" placeholder="Tulis disini" autofocus></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                Terima kasih telah berkontribusi respon di Sarjanamalam!<br>Pastikan kamu merespon topik
+                                Terima kasih telah berkontribusi respon di Sarjanamalam!<br>Pastikan kamu merespon
+                                topik
                                 dengan detail dan bagikan apa yang kamu bisa!<br><b>Dan hindari</b>, untuk
                                 beriklan, membahas pembahasan sara dan hal yang tidak diperbolehkan di
-                                Sarjanamalam.<br>Untuk lebih lengkapnya, lihat <a href="#">peraturan, serta tips yang
+                                Sarjanamalam.<br>Untuk lebih lengkapnya, lihat <a href="#">peraturan, serta tips
+                                    yang
                                     berlaku dalam merespon topik.</a>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -89,10 +136,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-    @endforeach
+</div>
+@endforeach
 
 </div>
 @endsection

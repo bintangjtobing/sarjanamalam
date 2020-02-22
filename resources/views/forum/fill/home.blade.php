@@ -119,7 +119,8 @@
                         <div class="col-lg-12 text-left">
                             <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
                                     Favorite</a></span>
-                            <span style="font-size: 1rem;"><a href=""><i class="far fa-comment"></i>
+                            <span style="font-size: 1rem;"><a href="/details/{{$enc_id}}#response"><i
+                                        class="far fa-comment"></i>
                                     Respond</a></span>
                         </div>
 

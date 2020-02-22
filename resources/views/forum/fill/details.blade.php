@@ -51,24 +51,21 @@
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-12 ">
-                            <h5>Comments (0)</h5>
+                            <h5>Comments ({{$commentData->count()}})</h5>
                         </div>
                     </div>
+                    @foreach ($commentData as $comment)
                     <div class="row">
                         <div class="col-lg-12 my-2">
-                            <p><span class=""><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
-                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                            <p><span class=""><img src="@if(!$comment->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('file/profilepic/'.$comment->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
-                                </span><b>Admin Sarjana</b>&nbsp;{{'@'.$thread->username}} &#9679;
-                                {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem
-                                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                It has survived not only five centuries, but also the leap into electronic
-                                typesetting, remaining essentially unchanged.</p>
+                                </span><b>{{$comment->name}}</b>&nbsp;{{'@'.$comment->username}} &#9679;
+                                {{Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}</p>
+                            <p>{!!$comment->comments!!}</p>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -94,7 +91,7 @@
 </div>
 @endif
 <div class="post-item">
-    <div class="card">
+    <div class="card" id="response">
         <div class="card-body">
             <div class="card-text">
                 <div class="row">

@@ -108,6 +108,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
     Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
     Route::post('/response-comments/{enc_id}', 'ForumController@comments');
+    Route::get('/search-events/{tokens}', 'ForumController@searchforum');
+    Route::get('/jobs/{tokens}', 'ForumController@jobs');
     // PROFILE CONTROLLER
     Route::get('/{username}', 'profileController@index');
 });

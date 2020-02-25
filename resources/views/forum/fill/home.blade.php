@@ -1,4 +1,5 @@
 @extends('forum.layouts.frontpage')
+@section('aktifthreads','active')
 @section('title','Home')
 @inject('userMod', 'App\UserMod')
 @section('content')

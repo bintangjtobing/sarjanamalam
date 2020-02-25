@@ -107,9 +107,10 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="/forum/{{$tokens}}" class="active">Threads</a></li>
-                                    <li><a href="#">Events</a></li>
-                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="/forum/{{$tokens}}" class="@yield('aktifthreads')">Threads</a></li>
+                                    <li><a href="/search-events/{{$tokens}}" class="@yield('aktifevents')">Events</a>
+                                    </li>
+                                    <li><a href="/jobs/{{$tokens}}" class="@yield('aktifjobs')">Jobs</a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -37,6 +37,33 @@ class ForumController extends Controller
             ->get();
         return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive]);
     }
+    public function searchforum()
+    {
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $event = DB::table('events')
+            ->where('events.status', '!=', 'declined')
+            ->orderBy('events.created_at', 'DESC')
+            ->select('events.*')
+            ->get();
+        $eventcount = \App\eventDB::all();
+        $eventfinish = DB::table('events')
+            ->where('events.status', '=', 'finised')
+            ->select('events.*')
+            ->get();
+        return view('forum.fill.eventsforum', ['category_data' => $category_data, 'event' => $event, 'eventcount' => $eventcount, 'eventfinish' => $eventfinish]);
+    }
+    public function jobs()
+    {
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $jobs = DB::table('subcareer')
+            ->select('subcareer.*')
+            ->get();
+        return view('forum.fill.jobs', ['category_data' => $category_data, 'jobs' => $jobs]);
+    }
     public function addnewtopic()
     {
         $category_data = DB::table('category')

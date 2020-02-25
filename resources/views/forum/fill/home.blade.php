@@ -4,7 +4,27 @@
 @inject('userMod', 'App\UserMod')
 @section('content')
 <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
-
+<div id="blog">
+    @if(session('suksestambahdiskusi'))
+    <div class="post-item">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p><span style="font-size: 3rem; color: #4aa5e7;"><i
+                                        class="far fa-check-circle"></i></span><br><span
+                                    class="text-gradient-blue-sarjana">Berhasil!</span>
+                                {{session('suksestambahdiskusi')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endif
+</div>
 <div class="page-title">
     <div class="card">
         <div class="card-header">
@@ -51,25 +71,7 @@
 </div>
 
 <div id="blog">
-    @if(session('suksestambahdiskusi'))
-    <div class="post-item">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <p><span style="font-size: 3rem; color: #4aa5e7;"><i
-                                        class="far fa-check-circle"></i></span><br><span
-                                    class="text-gradient-blue-sarjana">Berhasil!</span>
-                                {{session('suksestambahdiskusi')}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    @endif
+
     @foreach ($threadsdata as $thread)
     <div class="post-item">
         <div class="card">
@@ -102,8 +104,8 @@
                                     1,985
                                     favorited</a></span><span style="font-size: .75rem;"><a href="#"><i
                                         class="fas fa-comment"></i>
-                                    657
-                                    response</a></span>
+                                    {{$commentData->count()}} response</a></span>
+
                         </div>
                         <div class="col-lg-5 text-right">
                             <span style="font-size: .75rem;"><a href="#"><i class="far fa-eye"></i>

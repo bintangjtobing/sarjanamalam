@@ -124,152 +124,152 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="sidebar sticky-sidebar col-lg-3">
+                    {{-- <div class="sidebar sticky-sidebar col-lg-3">
 
                         <div class="widget ">
                             <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                 @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
                                 alt="User profile" class="img-fluid newgen-profile">
                             <h3 class="text-center">{{auth()->user()->name}}</h3>
-                            <p class="text-center">Medan, Indonesia</p>
-                        </div>
-                        <hr>
-                        <div class="row text-center col-newgen">
-                            <div class="col-6 bord">
-                                <h3>698</h3>
-                                <p>Circles</p>
-                            </div>
-                            <div class="col-6">
-                                <h3>1K+</h3>
-                                <p>Views</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row text-center">
-                            <div class="col-lg-12">
-                                <a href="#">
-                                    <h5>See profiles</h5>
-                                </a>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row text-center">
-                            <div class="col-lg-12">
-
-                                <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
-                                    <h5><span style="color:red;"><i class="fas fa-power-off"></i></span> Logout</h5>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- KONTEN WEB --}}
-                    <div class="content col-lg-6">
-                        @yield('content')
-                    </div>
-
-
-                    <div class="sidebar sticky-sidebar col-lg-3">
-
-                        <div class="widget  widget-newsletter">
-                            <form class="widget-subscribe-form" novalidate action="include/subscribe-form.php"
-                                role="form" method="post">
-                                <h4 class="widget-title">Trending Topic</h4>
-                                <ul class="list list-arrow-icons">
-                                    @foreach ($category_data as $cat)
-                                    <li> <a title="" href="#">{{$cat->category}} </a></li>
-                                    @endforeach
-                                </ul>
-                            </form>
-                        </div>
-                        <div class="widget  widget-tags">
-                            <h3 class="widget-title">Trending Hashtags</h3>
-                            <div class="tags">
-                                <a href="#">#Design</a>
-                                <a href="#">#Portfolio</a>
-                                <a href="#">#Digital</a>
-                                <a href="#">#Branding</a>
-                                <a href="#">#HTML</a>
-                                <a href="#">#Clean</a>
-                                <a href="#">#Peace</a>
-                                <a href="#">#Love</a>
-                                <a href="#">#CSS3</a>
-                                <a href="#">#jQuery</a>
-                            </div>
-                        </div>
-
-
-                    </div>
-
+                    <p class="text-center">Medan, Indonesia</p>
                 </div>
+                <hr>
+                <div class="row text-center col-newgen">
+                    <div class="col-6 bord">
+                        <h3>698</h3>
+                        <p>Circles</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>1K+</h3>
+                        <p>Impress</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <a href="#">
+                            <h5>See profiles</h5>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+
+                        <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
+                            <h5><span style="color:red;"><i class="fas fa-sign-out-alt"></i></span></h5>
+                        </a>
+                    </div>
+                </div>
+            </div> --}}
+            {{-- KONTEN WEB --}}
+            <div class="content col-lg-9">
+                @yield('content')
             </div>
-        </section>
 
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org/",
-                "@type": "WebSite",
-                "name": "Sarjanamalam",
-                "url": "https://sarjanamalam.com/tentang-sarjana-malam",
-                "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://sarjanamalam.com/{search_term_string}",
-                    "query-input": "required name=search_term_string"
-                }
+
+            <div class="sidebar sticky-sidebar col-lg-3">
+
+                <div class="widget  widget-newsletter">
+                    <form class="widget-subscribe-form" novalidate action="include/subscribe-form.php" role="form"
+                        method="post">
+                        <h4 class="widget-title">Trending Topic</h4>
+                        <ul class="list list-arrow-icons">
+                            @foreach ($category_data as $cat)
+                            <li> <a title="" href="#">{{$cat->category}} </a></li>
+                            @endforeach
+                        </ul>
+                    </form>
+                </div>
+                <div class="widget  widget-tags">
+                    <h3 class="widget-title">Trending Hashtags</h3>
+                    <div class="tags">
+                        <a href="#">#Design</a>
+                        <a href="#">#Portfolio</a>
+                        <a href="#">#Digital</a>
+                        <a href="#">#Branding</a>
+                        <a href="#">#HTML</a>
+                        <a href="#">#Clean</a>
+                        <a href="#">#Peace</a>
+                        <a href="#">#Love</a>
+                        <a href="#">#CSS3</a>
+                        <a href="#">#jQuery</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </div>
+    </div>
+    </section>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "Sarjanamalam",
+            "url": "https://sarjanamalam.com/tentang-sarjana-malam",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sarjanamalam.com/{search_term_string}",
+                "query-input": "required name=search_term_string"
             }
+        }
 
-        </script>
-        <script src="{!!asset('js/jquery.js')!!}"></script>
-        <script src="{!!asset('js/plugins.js')!!}"></script>
-        <script src="{!!asset('js/functions.js')!!}"></script>
-        <script type='text/javascript'
-            src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIus-_huNW25Jl7RPmHgoGZjD5udgBMI'>
-        </script>
-        <script src="{!!asset('js/gmap3.min.js')!!}"></script>
-        <script src="{!!asset('js/map-styles.js')!!}"></script>
-        <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
+    </script>
+    <script src="{!!asset('js/jquery.js')!!}"></script>
+    <script src="{!!asset('js/plugins.js')!!}"></script>
+    <script src="{!!asset('js/functions.js')!!}"></script>
+    <script type='text/javascript'
+        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIus-_huNW25Jl7RPmHgoGZjD5udgBMI'>
+    </script>
+    <script src="{!!asset('js/gmap3.min.js')!!}"></script>
+    <script src="{!!asset('js/map-styles.js')!!}"></script>
+    <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
 
-        {{-- Javacript started --}}
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
-            referrerpolicy="origin"></script>
-        <script>
-            tinymce.init({
-                selector: 'textarea#newwrite',
-                toolbar: false,
-                statusbar: false,
-                branding: false,
-                menubar: false,
-                setup: function (editor) {
-                    editor.on('change', function (e) {
-                        editor.save();
-                    });
-                }
-            });
+    {{-- Javacript started --}}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.tiny.cloud/1/8ll77vzod9z7cah153mxwug6wu868fhxsr291kw3tqtbu9om/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#newwrite',
+            toolbar: false,
+            statusbar: false,
+            branding: false,
+            menubar: false,
+            setup: function (editor) {
+                editor.on('change', function (e) {
+                    editor.save();
+                });
+            }
+        });
 
-        </script>
-        <script>
-            tinymce.init({
-                selector: 'textarea',
-                toolbar: true,
-                statusbar: false,
-                branding: false,
-                menubar: false,
-                setup: function (editor) {
-                    editor.on('change', function (e) {
-                        editor.save();
-                    });
-                }
-            });
+    </script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            toolbar: true,
+            statusbar: false,
+            branding: false,
+            menubar: false,
+            setup: function (editor) {
+                editor.on('change', function (e) {
+                    editor.save();
+                });
+            }
+        });
 
-        </script>
+    </script>
 </body>
 
 </html>

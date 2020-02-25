@@ -172,8 +172,8 @@
                                         <span
                                             class="datediff">{{Carbon\Carbon::parse($src->created_at)->diffForHumans()}}</span>
                                         -
-                                        {!!strip_tags(str_limit($src->thread),
-                                        $limit=160)!!}</a>
+                                        {!!strip_tags($src->thread)!!}</a>
+                                        <br><span>Oleh {{$src->updated_by}}</span>
                                     </div>
                                 </div>
                                 @endforeach

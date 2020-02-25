@@ -51,7 +51,7 @@
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-12 ">
-                            <h5>Comments ({{$commentData->count()}})</h5>
+                            <h5>Responses ({{$commentData->count()}})</h5>
                         </div>
                     </div>
                     @foreach ($commentData as $comment)

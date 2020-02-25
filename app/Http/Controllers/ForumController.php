@@ -35,7 +35,47 @@ class ForumController extends Controller
             ->where('threads.created_by', '=', auth()->user()->name)
             ->select('threads.*', 'users.*')
             ->get();
-        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive]);
+        $commentData = DB::table('threads')
+            ->join('comment_threads', 'comment_threads.threads_id', '=', 'threads.id')
+            ->where('threads.id', '=', 'comment_threads.threads_id')
+            ->select('comment_threads.*', 'threads.*')
+            ->get();
+        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
+    }
+    public function detailsthreads($enc_id)
+    {
+        $decrypt = decrypt($enc_id);
+        $data_thread = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.created_by')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
+
+            ->where('threads.id', '=', $decrypt)
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.username')
+            ->get();
+        $commentData = DB::table('comment_threads')
+            ->join('users', 'users.id', '=', 'comment_threads.user_id')
+            ->join('threads', 'threads.id', '=', 'comment_threads.threads_id')
+            ->where('comment_threads.threads_id', '=', $decrypt)
+            ->select('comment_threads.*', 'users.name', 'users.displaypic', 'users.username')
+            ->get();
+        $threadsdata = DB::table('threads')
+            ->select('threads.*')
+            ->orderBy('threads.created_at', 'DESC')
+            ->paginate(15);
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $threadsActive = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.id')
+            ->where('threads.created_by', '=', auth()->user()->name)
+            ->select('threads.*', 'users.*')
+            ->get();
+
+        $view = \App\Thread::find($decrypt);
+        $view->view_count += 1;
+        $view->save();
+
+        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
     }
     public function searchforum()
     {
@@ -96,41 +136,7 @@ class ForumController extends Controller
 
         return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
     }
-    public function detailsthreads($enc_id)
-    {
-        $decrypt = decrypt($enc_id);
-        $data_thread = DB::table('threads')
-            ->join('users', 'users.id', '=', 'threads.created_by')
-            ->join('category', 'category.category_id', '=', 'threads.category_id')
 
-            ->where('threads.id', '=', $decrypt)
-            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.username')
-            ->get();
-        $commentData = DB::table('comment_threads')
-            ->join('users', 'users.id', '=', 'comment_threads.user_id')
-            ->join('threads', 'threads.id', '=', 'comment_threads.threads_id')
-            ->where('comment_threads.threads_id', '=', $decrypt)
-            ->select('comment_threads.*', 'users.name', 'users.displaypic', 'users.username')
-            ->get();
-        $threadsdata = DB::table('threads')
-            ->select('threads.*')
-            ->orderBy('threads.created_at', 'DESC')
-            ->paginate(15);
-        $category_data = DB::table('category')
-            ->select('category.*')
-            ->get();
-        $threadsActive = DB::table('threads')
-            ->join('users', 'users.id', '=', 'threads.id')
-            ->where('threads.created_by', '=', auth()->user()->name)
-            ->select('threads.*', 'users.*')
-            ->get();
-
-        $view = \App\Thread::find($decrypt);
-        $view->view_count += 1;
-        $view->save();
-
-        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
-    }
     public function comments($enc_id, Request $request)
     {
         $decrypt = decrypt($enc_id);

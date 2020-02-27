@@ -1,5 +1,6 @@
 @extends('forum.layouts.frontpage')
 @section('title','Details Discussion')
+@section('aktifthreads','active')
 @inject('userMod', 'App\UserMod')
 @section('content')
 <div id="blog">
@@ -35,7 +36,6 @@
                 </div>
                 <hr>
                 <div class="card-text">
-
                 </div>
                 <div class="card-text">
                     <div class="row">
@@ -138,6 +138,4 @@
     </div>
 </div>
 @endforeach
-
-</div>
 @endsection

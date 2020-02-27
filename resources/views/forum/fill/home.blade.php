@@ -26,46 +26,45 @@
     @endif
 </div>
 <div class="page-title">
-    <div class="card">
-        <div class="card-header">
-            <span class="newtopic-th"><span><i class="fas fa-pen-square"></i> Bagikan topik
-                    baru</span></span>
-        </div>
-        <div class="card-body">
-            <form action="/verify-add-new-topic/{{$tokens}}" method="post">
-                {{ csrf_field() }}
-                <div class="row">
-                    <div class="col-lg-12">
-                        <label for="">Judul topik pembahasan</label>
-                        <input type="text" name="subject" id="subject" class="form-control mb-3">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <label for="">Pilih kategori topik</label>
-                        <select name="category" class="form-control mb-3" id="">
-                            @foreach ($category_data as $cat)
-                            <option value="{{$cat->category_id}}">{{$cat->category}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 mb-3">
-                        <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
-                            autofocus></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-right">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-gradient-blue-sarjana">Buat
-                                topik</button>
+    <div class="accordion accordion-shadow">
+        <div class="ac-item ac-active">
+            <h5 class="ac-title my-3"><i class="fa fa-rocket"></i> Bagikan topik baru</h5>
+            <div class="ac-content">
+                <form action="/verify-add-new-topic/{{$tokens}}" method="post">
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="">Judul topik pembahasan</label>
+                            <input type="text" name="subject" id="subject" class="form-control mb-3">
                         </div>
                     </div>
-                </div>
-            </form>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="">Pilih kategori topik</label>
+                            <select name="category" class="form-control mb-3" id="">
+                                @foreach ($category_data as $cat)
+                                <option value="{{$cat->category_id}}">{{$cat->category}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-3">
+                            <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
+                                autofocus></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-right">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-gradient-blue-sarjana">Buat
+                                    topik</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

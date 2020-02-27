@@ -12209,7 +12209,7 @@ input.dates:after {
 
 .accordion .ac-item .ac-title:before {
     font-size: 18px;
-    content: "";
+    content: "\e9be";
     font-family: inspiro-icons;
     right: 0;
     position: absolute
@@ -12228,7 +12228,7 @@ input.dates:after {
 }
 
 .accordion .ac-item.ac-active .ac-title:before {
-    content: ""
+    content: "\e9a1";
 }
 
 .accordion.accordion-shadow .ac-item {

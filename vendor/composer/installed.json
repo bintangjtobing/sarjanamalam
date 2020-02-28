@@ -857,26 +857,26 @@
     },
     {
         "name": "firebase/php-jwt",
-        "version": "v5.0.0",
-        "version_normalized": "5.0.0.0",
+        "version": "v5.1.0",
+        "version_normalized": "5.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/firebase/php-jwt.git",
-            "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-            "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
+            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": " 4.8.35"
+            "phpunit/phpunit": "^4.8|^5"
         },
-        "time": "2017-06-27T22:17:23+00:00",
+        "time": "2020-02-24T23:15:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -3237,17 +3237,17 @@
     },
     {
         "name": "phpdocumentor/reflection-docblock",
-        "version": "5.0.0",
-        "version_normalized": "5.0.0.0",
+        "version": "5.1.0",
+        "version_normalized": "5.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-            "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f"
+            "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/a48807183a4b819072f26e347bbd0b5199a9d15f",
-            "reference": "a48807183a4b819072f26e347bbd0b5199a9d15f",
+            "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+            "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
             "shasum": ""
         },
         "require": {
@@ -3261,7 +3261,7 @@
             "doctrine/instantiator": "^1",
             "mockery/mockery": "^1"
         },
-        "time": "2020-02-09T09:16:15+00:00",
+        "time": "2020-02-22T12:28:44+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -7173,17 +7173,17 @@
     },
     {
         "name": "tightenco/collect",
-        "version": "v6.16.0",
-        "version_normalized": "6.16.0.0",
+        "version": "v6.17.0",
+        "version_normalized": "6.17.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tightenco/collect.git",
-            "reference": "75e997d1803c2e979ce6f314a5df8a97a8af93b0"
+            "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tightenco/collect/zipball/75e997d1803c2e979ce6f314a5df8a97a8af93b0",
-            "reference": "75e997d1803c2e979ce6f314a5df8a97a8af93b0",
+            "url": "https://api.github.com/repos/tightenco/collect/zipball/bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
+            "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
             "shasum": ""
         },
         "require": {
@@ -7195,7 +7195,7 @@
             "nesbot/carbon": "^2.23.0",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2020-02-18T17:25:13+00:00",
+        "time": "2020-02-25T19:45:47+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

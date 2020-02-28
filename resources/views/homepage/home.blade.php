@@ -32,7 +32,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                 @if(Auth::check())
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        aria-haspopup="true" aria-expanded="false" style="padding-top: 3px;">
                         <div class="nav-item-user">
                             <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                 @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
@@ -58,7 +58,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
             <div>
                 <form action="/search?" method="GET">
                     @csrf
-                    <h2 class="search-title text-gradient-blue-sarjana">Sarjanamalam.</h2>
+                    <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2>
                     <div class="main-search">
                         <span class="search-icon icon-left fas fa-search"></span>
                         <input type="search" name="get_value" class="form-control" autofocus>

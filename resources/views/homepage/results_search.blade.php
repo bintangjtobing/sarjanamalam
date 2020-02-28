@@ -166,14 +166,15 @@
                                         <span style="color:#ff5a79; font-size:10px;"><i class="fas fa-heart"></i><i
                                                 class="fas fa-heart"></i><i class="fas fa-heart"></i><i
                                                 class="fas fa-heart"></i><i class="far fa-heart"></i></span> Skor:
-                                        8,3/10 - 85.680 Pengguna yang menyukai pembahasan ini.
+                                        8,3/10 - 85.680 Pengguna yang bergabung dalam pembahasan ini.
                                     </div>
                                     <div class="content-desc">
                                         <span
-                                            class="datediff">{{Carbon\Carbon::parse($src->created_at)->diffForHumans()}}</span>
+                                            class="datediff">{{Carbon\Carbon::parse($src->created_at)->diffForHumans()}}
+                                            oleh <b>{{$src->updated_by}}</b></span>
                                         -
                                         {!!strip_tags($src->thread)!!}</a>
-                                        <br><span>Oleh {{$src->updated_by}}</span>
+
                                     </div>
                                 </div>
                                 @endforeach

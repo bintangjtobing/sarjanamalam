@@ -91,7 +91,7 @@
 </div>
 @endif
 <div class="post-item">
-    <div class="card" id="response">
+    <div class="card">
         <div class="card-body">
             <div class="card-text">
                 <div class="row">

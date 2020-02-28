@@ -37,7 +37,7 @@ class ForumController extends Controller
             ->get();
         $commentData = DB::table('threads')
             ->join('comment_threads', 'comment_threads.threads_id', '=', 'threads.id')
-            ->where('threads.id', '=', 'comment_threads.threads_id')
+            ->where('comment_threads.threads_id', '=','')
             ->select('comment_threads.*', 'threads.*')
             ->get();
         return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);

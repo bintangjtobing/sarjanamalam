@@ -26,7 +26,7 @@
                         <tr>
                             <td>{{$i++}}</td>
                             <td>{{$item->subject}}</td>
-                            <td>{{str_limit($item->thread, $limit=70)}}
+                            <td>{!!str_limit($item->thread, $limit=70)!!}
                             </td>
                             <td>{{$item->created_by}}</td>
                             <td><a href="/delete-threads/{{$item->id}}" class="btn btn-danger btn-sm"><i

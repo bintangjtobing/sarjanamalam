@@ -173,7 +173,7 @@
                                             class="datediff">{{Carbon\Carbon::parse($src->created_at)->diffForHumans()}}
                                             oleh <b>{{$src->updated_by}}</b></span>
                                         -
-                                        {!!strip_tags($src->thread)!!}</a>
+                                        {!!strip_tags(str_limit($src->thread, $limit=120))!!}</a>
 
                                     </div>
                                 </div>

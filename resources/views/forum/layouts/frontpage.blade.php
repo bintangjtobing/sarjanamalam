@@ -75,15 +75,15 @@
                     <div class="header-extras">
                         <ul>
                             <li>
-                                <a id="btn-search" href="#"> <i class="fas fa-search"></i></a>
-                            </li>
-                            <li>
                                 <div class="p-dropdown">
-                                    <a href="#"><i class="fas fa-user"></i></a>
+                                    <a href="#"><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                            @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                            alt="Profile picture" class="img-roundedforum"></a>
+                                    <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">English</a></li>
+                                        <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
+                                        </li>
+                                        <li><a href="/logout/{{auth()->user()->id}}/{{$tokens}}">Sign out</a></li>
                                     </ul>
                                 </div>
                             </li>

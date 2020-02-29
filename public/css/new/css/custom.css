@@ -244,3 +244,15 @@
     border-radius: 25px;
     max-width: 100%;
 }
+
+.img-roundedforum {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: .7;
+}
+
+.img-roundedforum:hover {
+    opacity: 1;
+}

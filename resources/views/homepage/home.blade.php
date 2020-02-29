@@ -42,7 +42,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                     <div class="dropdown-menu text-center" aria-labelledby="dropdownId">
                         <a class="dropdown-item nav-user-name" href="#"><span
                                 class="font-weight-bold ">{{auth()->user()->name}}</span></a>
-                        <a class="dropdown-item" href="#">Profile Saya</a>
+                        <a class="dropdown-item" href="/{{auth()->user()->username}}">Profile Saya</a>
                         <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="dropdown-item">Keluar</a>
                     </div>
                 </li>

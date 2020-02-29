@@ -111,7 +111,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/search-events/{tokens}', 'ForumController@searchforum');
     Route::get('/jobs/{tokens}', 'ForumController@jobs');
     // PROFILE CONTROLLER
-    Route::get('/{username}', 'profileController@index');
+    Route::get('/{username}', 'ForumController@username');
 });
 
 // DASHBOARD CONTROLLER MENU

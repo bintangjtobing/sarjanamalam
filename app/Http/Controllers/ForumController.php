@@ -37,7 +37,7 @@ class ForumController extends Controller
             ->get();
         $commentData = DB::table('threads')
             ->join('comment_threads', 'comment_threads.threads_id', '=', 'threads.id')
-            ->where('comment_threads.threads_id', '=','')
+            ->where('comment_threads.threads_id', '=', '')
             ->select('comment_threads.*', 'threads.*')
             ->get();
         return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
@@ -212,5 +212,35 @@ class ForumController extends Controller
                 return back()->with('suksestambahdiskusi', 'Topik pembahasan berhasil dihapus.');
             }
         }
+    }
+    public function username($username)
+    {
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $subcat_data = DB::table('sub_category')
+            ->select('sub_category.*')
+            ->get();
+        $threadsdata = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.created_by')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
+            ->orderBy('threads.created_at', 'DESC')
+            ->paginate(15);
+        $usersData = DB::table('users')
+            ->select('users.*')
+            ->get();
+        $threadsActive = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.id')
+            ->where('threads.created_by', '=', auth()->user()->name)
+            ->select('threads.*', 'users.*')
+            ->get();
+        $commentData = DB::table('threads')
+            ->join('comment_threads', 'comment_threads.threads_id', '=', 'threads.id')
+            ->where('comment_threads.threads_id', '=', '')
+            ->select('comment_threads.*', 'threads.*')
+            ->get();
+        $user = \App\UserMod::find($username);
+        return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user]);
     }
 }

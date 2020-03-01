@@ -21,7 +21,7 @@ kamu ingin cari tau.')
     @csrf
     <div class="form-row">
         <div class="col-md-12">
-            <input class="form-control" type="text" name="nama_lengkap" placeholder="Nama lengkap" required>
+            <input class="form-control" type="text" name="nama_lengkap" placeholder="Nama lengkap" required autofocus>
         </div>
     </div>
     <div class="form-row">

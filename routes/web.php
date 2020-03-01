@@ -46,6 +46,12 @@ Route::get('/search', 'SearchController@processcari');
 Route::get('/daftar-event/{enc_eventid}/{nama_event}', 'DashboardController@daftarevent');
 Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
 
+// RNHKBP GLUGUR FORMS
+Route::get('/eForms-rnhkbpglugur', function () {
+    return view('partner.rnhkbp');
+});
+Route::post('/submit-eForms/{tokens}', 'partnerController@submitforms');
+
 // MAIL SETTING
 
 // HOMEPAGE WEB ROUTE

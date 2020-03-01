@@ -303,7 +303,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/logout/{{auth()->user()->id}}" class="nav-link">
+                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>
                                     Sign out

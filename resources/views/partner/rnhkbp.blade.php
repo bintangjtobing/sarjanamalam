@@ -153,6 +153,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-2">
                     <p><b>Instagram</b><br>Gunakan hanya username, contoh: rnhkbpglugur</p>

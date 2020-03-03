@@ -76,8 +76,9 @@
                         <ul>
                             <li>
                                 <div class="p-dropdown">
-                                    <a href="#"><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                            @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                    <a href="#"><img
+                                            src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                            @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture" class="img-roundedforum"></a>
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
@@ -154,7 +155,7 @@
                 {{-- <div class="sidebar sticky-sidebar col-lg-3">
                         <div class="widget ">
                             <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                 alt="User profile" class="img-fluid newgen-profile">
                             <h3 class="text-center">{{auth()->user()->name}}</h3>
                 <p class="text-center">Medan, Indonesia</p>

@@ -34,7 +34,8 @@ membekali calon sarjana. Seminar')
             <?php $enc_eventid = base64_encode($eventitem->event_id) ?>
             <div class="col-md-3">
                 <div class="card">
-                    <img class="card-img-top" src="{!!asset('eventstorage/img/'.$eventitem->picevent)!!}"
+                    <img class="card-img-top"
+                        src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$eventitem->picevent)!!}"
                         alt="Event image">
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">{{$eventitem->tglevent}} | {{$eventitem->waktu_event}}

@@ -85,8 +85,9 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link nav-initial dropdown-toggle" href="#" id="dropdownId"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                                            <span><img
+                                                    src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                                     class="img-profile-user" alt="User Image"></span>
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownId">

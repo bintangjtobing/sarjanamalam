@@ -78,8 +78,9 @@
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-8 text-left">
-                            <p><span class="post-meta-date"><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
-                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                            <p><span class="post-meta-date"><img
+                                        src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$thread->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
                                     {{$thread->name}}</span></p>
                         </div>

@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-                <img src="{!!asset('file/karir/'.$karirget->features_pic)!!}" class="imgevent-det"
+                <img src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$karirget->features_pic)!!}" class="imgevent-det"
                     alt="{{$karirget->nama_team}}">
                 <h5><strong>{{$karirget->nama_team}}</strong></h5>
                 <p class="text-muted">Deskripsi:<br>{!!$karirget->description!!}</p>

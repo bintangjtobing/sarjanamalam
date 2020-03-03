@@ -94,8 +94,9 @@ class DashboardController extends Controller
         $user->role = $request->role;
         $user->jabatan = $request->jabatan;
         if ($request->hasFile('displaypic')) {
-            $request->file('displaypic')->move(public_path('file/profilepic'), $request->file('displaypic')->getClientOriginalName());
-            $user->displaypic = $request->file('displaypic')->getClientOriginalName();
+            \Cloudder::upload($request->file('displaypic'));
+            $upC = \Cloudder::getPublicId();
+            $user->displaypic = $upC;
         }
         $user->updated_by = auth()->user()->name;
 
@@ -367,9 +368,11 @@ class DashboardController extends Controller
         $karirget = new \App\karirDB;
         $karirget->nama_team = $request->nama_team;
         $karirget->description = $request->description;
+
         if ($request->hasFile('features_pic')) {
-            $request->file('features_pic')->move(public_path('file/karir/'), $request->file('features_pic')->getClientOriginalName());
-            $karirget->features_pic = $request->file('features_pic')->getClientOriginalName();
+            \Cloudder::upload($request->file('features_pic'));
+            $upC = \Cloudder::getPublicId();
+            $karirget->features_pic = $upC;
             $karirget->save();
         }
         return back()->with('sukseskarir', 'Berhasil menambahkan tim baru di sistem.');
@@ -401,8 +404,9 @@ class DashboardController extends Controller
         $blog->created_by  = auth()->user()->name;
         $blog->updated_by = '-';
         if ($request->hasFile('coverimg')) {
-            $request->file('coverimg')->move('file/blog', $request->file('coverimg')->getClientOriginalName());
-            $blog->coverimg = $request->file('coverimg')->getClientOriginalName();
+            \Cloudder::upload($request->file('coverimg'));
+            $upC = \Cloudder::getPublicId();
+            $blog->coverimg = $upC;
         }
         $blog->save();
         // dd($blog);
@@ -434,8 +438,9 @@ class DashboardController extends Controller
         $post->updated_by = $request->getClientIp();
 
         if ($request->hasFile('picevent')) {
-            $request->file('picevent')->move('eventstorage/img/', $request->file('picevent')->getClientOriginalName());
-            $post->picevent = $request->file('picevent')->getClientOriginalName();
+            \Cloudder::upload($request->file('picevent'));
+            $upC = \Cloudder::getPublicId();
+            $post->picevent = $upC;
             $post->save();
             // dd($post);
         }

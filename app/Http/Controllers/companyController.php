@@ -79,10 +79,10 @@ class companyController extends Controller
         $post->status = 'unapproved';
         $post->created_by = $request->getClientIp();
         $post->updated_by = $request->getClientIp();
-
         if ($request->hasFile('picevent')) {
-            $request->file('picevent')->move('eventstorage/img/', $request->file('picevent')->getClientOriginalName());
-            $post->picevent = $request->file('picevent')->getClientOriginalName();
+            \Cloudder::upload($request->file('picevent'));
+            $upC = \Cloudder::getPublicId();
+            $post->picevent = $upC;
             $post->save();
             // dd($post);
         }
@@ -200,11 +200,13 @@ class companyController extends Controller
         $kerjasama->nama_pic = $request->namalengkap;
         $kerjasama->email = $request->email;
         $kerjasama->nohp =  $request->nohp;
+
         if ($request->hasFile('lampiran')) {
-            $request->file('lampiran')->move('proposal/doc/', $request->file('lampiran')->getClientOriginalName());
-            $kerjasama->lampiran = $request->file('lampiran')->getClientOriginalName();
+            \Cloudder::upload($request->file('lampiran'));
+            $upC = \Cloudder::getPublicId();
+            $kerjasama->lampiran = $upC;
+            $kerjasama->save();
         }
-        $kerjasama->save();
 
         return back()->with('suksesajukan', 'Proposal penawaran kerjasama kamu berhasil kami terima! Tunggu balasan email atau kami akan menghubungi anda untuk konfirmasi pengajuan anda.');
     }

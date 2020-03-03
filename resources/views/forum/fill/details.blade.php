@@ -11,8 +11,9 @@
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-12 text-left">
-                            <p><span class="post-meta-date"><img src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
-                                        @else{!!asset('file/profilepic/'.$thread->displaypic)!!}@endif"
+                            <p><span class="post-meta-date"><img
+                                        src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$thread->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
                                     {{$thread->name}}</span></p>
                         </div>
@@ -57,8 +58,9 @@
                     @foreach ($commentData as $comment)
                     <div class="row">
                         <div class="col-lg-12 my-2">
-                            <p><span class=""><img src="@if(!$comment->displaypic){!!asset('storage/img/default.png')!!}
-                                        @else{!!asset('file/profilepic/'.$comment->displaypic)!!}@endif"
+                            <p><span class=""><img
+                                        src="@if(!$comment->displaypic){!!asset('storage/img/default.png')!!}
+                                        @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$comment->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
                                 </span><b>{{$comment->name}}</b>&nbsp;{{'@'.$comment->username}} &#9679;
                                 {{Carbon\Carbon::parse($comment->created_at)->diffForHumans()}}</p>

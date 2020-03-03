@@ -34,8 +34,9 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false" style="padding-top: 3px;">
                         <div class="nav-item-user">
-                            <span><img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('file/profilepic/'.auth()->user()->displaypic)!!}@endif"
+                            <span><img
+                                    src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                     class="img-profile-user" alt="User Image"></span>
                         </div>
                     </a>

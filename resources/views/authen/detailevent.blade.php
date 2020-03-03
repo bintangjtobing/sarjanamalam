@@ -103,9 +103,10 @@
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-                <img class="imgevent-det" src="@if(!$eventget->picevent)
+                <img class="imgevent-det"
+                    src="@if(!$eventget->picevent)
                 {!!asset('storage/img/noimg-event.jpg')!!}
-                                @else{!!asset('eventstorage/img/'.$eventget->picevent)!!}@endif">
+                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$eventget->picevent)!!}@endif">
                 <br>
                 <div class="text-muted">
                     <p class="text-sm">Diselenggarakan oleh:

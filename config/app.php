@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
+        JD\Cloudder\CloudderServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -231,6 +232,7 @@ return [
         'LaravelEmojiOne' => ChristofferOK\LaravelEmojiOne\LaravelEmojiOneFacade::class,
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Location'      => 'Stevebauman\Location\Facades\Location',
+        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
     ],
 
 ];

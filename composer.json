@@ -12,6 +12,7 @@
         "christofferok/laravel-emojione": "^4.0",
         "fideloper/proxy": "^4.0",
         "fzaninotto/faker": "^1.9",
+        "jrm2k6/cloudder": "^0.6.0",
         "laravel/framework": "5.8.*",
         "laravel/passport": "7.5.1",
         "laravel/telescope": "^2.1",

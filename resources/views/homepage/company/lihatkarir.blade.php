@@ -19,7 +19,7 @@ sarjanamalam karir')
         </div>
         <div class="row">
             <div class="col-lg-5 text-left">
-                <img class="card-img-top-karir img-fluid" src="{!!asset('file/karir/'.$karir->features_pic)!!}"
+                <img class="card-img-top-karir img-fluid" src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$karir->features_pic)!!}"
                     alt="Karir {{$karir->nama_team}} di Sarjanamalam">
             </div>
             <div class="col-lg-7 text-left">

@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\DB;
 
 class partnerController extends Controller
 {
+    public function index()
+    {
+        $data = \App\formData::all();
+        return view('partner.rnhkbp', ['data' => $data]);
+    }
     public function submitforms(Request $request)
     {
         $forms = new \App\formData;

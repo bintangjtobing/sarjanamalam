@@ -2,6 +2,7 @@
 //Clear Cache facade value:
 
 use PhpParser\Builder\Function_;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('cache:clear');
@@ -47,9 +48,7 @@ Route::get('/daftar-event/{enc_eventid}/{nama_event}', 'DashboardController@daft
 Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
 
 // RNHKBP GLUGUR FORMS
-Route::get('/eForms-rnhkbpglugur', function () {
-    return view('partner.rnhkbp');
-});
+Route::get('/eForms-rnhkbpglugur', 'partnerController@index');
 Route::post('/submit-eForms/{tokens}', 'partnerController@submitforms');
 
 // MAIL SETTING

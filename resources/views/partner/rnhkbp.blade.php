@@ -10,7 +10,12 @@
         <div class="row m-b-30">
             <div class="col-lg-12">
                 <h3><strong>e-Forms RNHKBP GLUGUR</strong></h3>
-                <small>Formulir registrasi/daftar ulang keanggotaan Remaja Naposobulung HKBP GLUGUR tahun 2020.</small>
+                <p>Formulir registrasi/daftar ulang keanggotaan Remaja Naposobulung HKBP GLUGUR tahun
+                    2020.<br><span class="text-gradient-blue-sarjana">{{$data->count()}}</span>
+                    <b>Orang
+                        yang terdaftar</b></p>
+
+
             </div>
         </div>
         <form action="/submit-eForms/{{$tokens}}" method="POST">

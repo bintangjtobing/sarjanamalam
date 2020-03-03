@@ -24,6 +24,7 @@ class partnerController extends Controller
         $forms->alamat = $request->alamat;
         $forms->email = $request->email;
         $forms->instagram = 'https://instagram.com/' . $request->instagram;
+        $forms->device = $request->header('User-Agent');
         $forms->logIP = $request->getClientIp();
         $forms->status_formulir = $request->status_formulir;
 

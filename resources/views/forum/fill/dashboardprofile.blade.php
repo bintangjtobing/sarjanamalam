@@ -117,7 +117,7 @@
                                 <input type="text" name="" class="form-control" id="">
                             </div>
                             <div class="col-lg-6">
-                                <label for="">Tahun masuk</label>
+                                <label for="">Tahun selesai</label>
                                 <input type="text" name="" class="form-control" id="">
                             </div>
                         </div>

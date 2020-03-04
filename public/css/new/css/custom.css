@@ -264,3 +264,7 @@
     overflow-y: scroll;
     height: 200px;
 }
+
+.school-history {
+    width: 80px !important;
+}

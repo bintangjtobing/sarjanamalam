@@ -117,6 +117,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/jobs/{tokens}', 'ForumController@jobs');
     // PROFILE CONTROLLER
     Route::get('/{username}', 'ForumController@username');
+
+    // DASHBOARD PROFILE CONTROLLER
+    Route::post('/summary-add/{enc_id}/{tokens}', 'ForumController@summaryadd');
+    Route::post('/interested-add/{enc_id}/{tokens}', 'ForumController@interestedadd');
+    Route::post('/university-add/{enc_id}/{tokens}', 'ForumController@universityadd');
 });
 
 // DASHBOARD CONTROLLER MENU

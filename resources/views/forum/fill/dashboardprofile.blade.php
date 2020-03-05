@@ -49,9 +49,10 @@
 </head>
 
 <body>
-
+    <?php $enc_id = base64_encode(auth()->user()->id) ?>
     {{-- MODAL TAMBAH BARU HERE --}}
     <!-- Modal Summary Add new -->
+
     <div class="modal fade" id="summaryAdd" tabindex="-1" role="dialog" aria-labelledby="summaryAdd" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
@@ -61,7 +62,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="" method="post">
+                <form action="/summary-add/{{$enc_id}}/{{$tokens}}" method="post">
+                    {{ csrf_field() }}
                     <div class="modal-body">
                         <textarea name="summary" id="" cols="30" rows="10"></textarea>
                     </div>
@@ -83,9 +85,11 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="" method="post">
+                <form action="/interested-add/{{$enc_id}}/{{$tokens}}" method="post">
+                    {{ csrf_field() }}
                     <div class="modal-body">
-                        <input type="text" name="" id="" class="form-control" placeholder="Kesukaan (Cth: Berenang)">
+                        <input type="text" name="liked" id="" class="form-control"
+                            placeholder="Kesukaan (Cth: Berenang)">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save
@@ -105,20 +109,21 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="" method="post">
+                <form action="/university-add/{{$enc_id}}/{{$tokens}}" method="post">
+                    {{ csrf_field() }}
                     <div class="modal-body">
                         <label for="">Sekolah<span class="text-gradient-blue-sarjana">*</span></label>
                         <input type="text" name="" class="form-control mb-4" id="">
                         <label for="">Bidang studi</label>
-                        <input type="text" name="" class="form-control mb-4" id="">
+                        <input type="text" name="studi" class="form-control mb-4" id="">
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <label for="">Tahun masuk</label>
-                                <input type="text" name="" class="form-control" id="">
+                                <input type="text" name="year_in" class="form-control" id="">
                             </div>
                             <div class="col-lg-6">
                                 <label for="">Tahun selesai</label>
-                                <input type="text" name="" class="form-control" id="">
+                                <input type="text" name="year_out" class="form-control" id="">
                             </div>
                         </div>
                     </div>
@@ -272,6 +277,31 @@
                     </div>
                 </div>
                 <div class="content col-lg-6">
+                    {{-- Berhasil summary --}}
+                    @if(session('suksessummary'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Berhasil!</strong> {{session('suksessummary')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
+                    @if(session('suksesinterest'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Berhasil!</strong> {{session('suksesinterest')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
+                    @if(session('suksesuniversity'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Berhasil!</strong> {{session('suksesuniversity')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
                     {{-- SUMMARY --}}
                     <div id="blog">
                         <div class="post-item">

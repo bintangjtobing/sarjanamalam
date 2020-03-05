@@ -243,4 +243,36 @@ class ForumController extends Controller
         $user = \App\UserMod::find($username);
         return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user]);
     }
+
+    public function summaryadd(Request $request)
+    {
+        $detail = new \App\detailUserDB;
+        $detail->userid  = auth()->user()->id;
+        $detail->summary = $request->summary;
+
+        $detail->save();
+        return back()->with('suksessummary', 'Informasi singkat tentang kamu berhasil di simpan!');
+    }
+    public function interestedadd(Request $request)
+    {
+        $detail = new \App\detailUserDB;
+        $detail->userid  = auth()->user()->id;
+        $detail->interested = $request->liked;
+
+        $detail->save();
+        return back()->with('suksesinterest', 'Informasi yang kamu suka berhasil di simpan!');
+    }
+    public function universityadd(Request $request)
+    {
+        $detail = new \App\detailUserDB;
+        $detail->userid  = auth()->user()->id;
+        $detail->university = $request->university;
+        $detail->bidang_studi = $request->studi;
+        $detail->tahun_masuk = $request->year_in;
+        $detail->tahun_keluar = $request->year_out;
+        // dd($detail);
+
+        $detail->save();
+        return back()->with('suksesuniversity', 'Informasi tentang pendidikan kamu berhasil di simpan!');
+    }
 }

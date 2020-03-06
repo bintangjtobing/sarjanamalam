@@ -82,7 +82,8 @@
                                             alt="Profile picture" class="img-roundedforum"></a>
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
-                                        <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
+                                        <?php $enc_id = base64_encode(auth()->user()->id) ?>
+                                        <li><a href="/{{auth()->user()->username}}/{{$enc_id}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/logout/{{auth()->user()->id}}/{{$tokens}}">Sign out</a></li>
                                     </ul>

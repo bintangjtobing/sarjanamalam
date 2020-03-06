@@ -8,11 +8,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Mail\successRegisteredUser;
 use Carbon\Traits\Timestamp;
+use Illuminate\Support\MessageBag;
 
 class UserController extends Controller
 {
     public function create_account(Request $request)
     {
+        // VALIDATING INPUTS
+        $this->validate($request, [
+            'username' => 'required|unique:users|min:5',
+            'email' => 'required|unique:users|email',
+        ]);
+
         $data_member = new \App\UserMod;
         $data_member->name = $request->nama_lengkap;
         $data_member->username = $request->username;

@@ -64,6 +64,17 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#success-alert").hide();
+            $("#myWish").click(function showAlert() {
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+                    $("#success-alert").slideUp(500);
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>

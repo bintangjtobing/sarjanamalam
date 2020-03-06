@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use \App\Thread;
+use Illuminate\Contracts\Encryption\DecryptException;
 
 class ForumController extends Controller
 {
@@ -213,8 +214,9 @@ class ForumController extends Controller
             }
         }
     }
-    public function username($username)
+    public function username($username, $enc_id)
     {
+        $decrypt = decrypt($enc_id);
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();

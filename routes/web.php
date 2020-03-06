@@ -116,7 +116,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/search-events/{tokens}', 'ForumController@searchforum');
     Route::get('/jobs/{tokens}', 'ForumController@jobs');
     // PROFILE CONTROLLER
-    Route::get('/{username}/{enc_id}', 'ForumController@username');
+    Route::get('/{username}', 'ForumController@username');
 
     // DASHBOARD PROFILE CONTROLLER
     Route::post('/summary-add/{enc_id}/{tokens}', 'ForumController@summaryadd');

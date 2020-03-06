@@ -46,7 +46,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                         <?php
                         $getId = auth()->user()->id;
                         $enc_id = base64_encode($getId); ?>
-                        <a class="dropdown-item" href="/{{auth()->user()->username}}/{{$enc_id}}">Profile Saya</a>
+                        <a class="dropdown-item" href="/{{auth()->user()->username}}">Profile Saya</a>
                         <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="dropdown-item">Keluar</a>
                     </div>
                 </li>

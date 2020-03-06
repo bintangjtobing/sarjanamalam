@@ -113,7 +113,7 @@
                     {{ csrf_field() }}
                     <div class="modal-body">
                         <label for="">Sekolah<span class="text-gradient-blue-sarjana">*</span></label>
-                        <input type="text" name="" class="form-control mb-4" id="">
+                        <input type="text" name="university" class="form-control mb-4" id="">
                         <label for="">Bidang studi</label>
                         <input type="text" name="studi" class="form-control mb-4" id="">
                         <div class="form-row">
@@ -170,7 +170,7 @@
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
-                                        <li><a href="/{{auth()->user()->username}}/{{$enc_id}}">Dashboard Profile</a>
+                                        <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/logout/{{auth()->user()->id}}/{{$tokens}}">Sign out</a></li>
                                     </ul>
@@ -323,11 +323,13 @@
 
                                     </div>
                                     <div class="card-title">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type specimen book. It has survived not only five centuries, but also
-                                            the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                        @foreach ($userGet as $getDetails)
+                                        @if($getDetails->summary != '')
+                                        <p>{!!$getDetails->summary!!}</p>
+                                        @else
+                                        @endif
+                                        @endforeach
+
                                     </div>
                                 </div>
                             </div>
@@ -354,22 +356,12 @@
                                     <div class="card-title">
                                         <div class="widget  widget-tags">
                                             <div class="tags">
-                                                <a href="#">Design</a>
-                                                <a href="#">Portfolio</a>
-                                                <a href="#">Digital</a>
-                                                <a href="#">Branding</a>
-                                                <a href="#">HTML</a>
-                                                <a href="#">Clean</a>
-                                                <a href="#">Peace</a>
-                                                <a href="#">Love</a>
-                                                <a href="#">CSS3</a>
-                                                <a href="#">jQuery</a>
-                                                <a href="#">HTML</a>
-                                                <a href="#">Clean</a>
-                                                <a href="#">Peace</a>
-                                                <a href="#">Love</a>
-                                                <a href="#">CSS3</a>
-                                                <a href="#">jQuery</a>
+                                                @foreach ($userGet as $getDetails)
+                                                @if($getDetails->interested != '')
+                                                <a href="#">{!!$getDetails->interested!!}</a>
+                                                @else
+                                                @endif
+                                                @endforeach
                                             </div>
                                         </div>
                                     </div>
@@ -397,18 +389,21 @@
                                     </div>
                                     <div class="card-title">
                                         <div class="row">
-                                            <div class="col-lg-8">
-                                                <p><strong>Universitas Prima Indonesia</strong><br>Kuliah disini
-                                                    mengambil
-                                                    jurusan Sistem Informasi dan gagal melanjutkan kuliah di semester 3.
-                                                </p>
+                                            @foreach ($userGet as $getDetails)
+                                            @if($getDetails->university != '' && $getDetails->bidang_studi != '' &&
+                                            $getDetails->tahun_masuk != '' && $getDetails->tahun_keluar != '')
+                                            <div class="col-lg-12">
+                                                <h6>{{$getDetails->university}}</h6>
+                                                <p>{{$getDetails->tahun_masuk}}
+                                                    - {{$getDetails->tahun_keluar}}</p>
                                             </div>
-                                            <div class="col-lg-4 text-right">
-                                                <img class="school-history"
-                                                    src="https://lh3.googleusercontent.com/proxy/FzyOPoDHGiCZu1KnRdQ1C84vzDf21sVgnZjB3kjS815yGtegCYuz8MHpZFKOyzDrEiJ4X6e1xwm3MTsjyC2cRENPJHAoFyb3W-enI8sK8ncLzNBJJIJcbfZqYwp8MgW0aooKwjFA8h_CDNgZl5o"
-                                                    alt="">
-                                            </div>
+                                            @else
+
+                                            @endif
+
+                                            @endforeach
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

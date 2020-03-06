@@ -214,9 +214,9 @@ class ForumController extends Controller
             }
         }
     }
-    public function username($username, $enc_id)
+    public function username($username)
     {
-        $decrypt = decrypt($enc_id);
+
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
@@ -243,7 +243,19 @@ class ForumController extends Controller
             ->select('comment_threads.*', 'threads.*')
             ->get();
         $user = \App\UserMod::find($username);
-        return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user]);
+        $userJoin = DB::table('users')
+            ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+            ->select('user_detail.*', 'users.*')
+            ->first();
+
+        $userGet = DB::table('users')
+            ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+            ->where('user_detail.userid', '=', auth()->user()->id)
+            ->select('user_detail.*', 'users.*')
+            ->get();
+
+        // dd($userJoin->id == 1);
+        return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet]);
     }
 
     public function summaryadd(Request $request)

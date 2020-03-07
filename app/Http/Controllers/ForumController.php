@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use \App\Thread;
+use \App\UserMod;
 use Illuminate\Contracts\Encryption\DecryptException;
 
 class ForumController extends Controller
@@ -216,7 +218,6 @@ class ForumController extends Controller
     }
     public function username($username)
     {
-
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
@@ -257,7 +258,47 @@ class ForumController extends Controller
         // dd($userJoin->id == 1);
         return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet]);
     }
+    public function settings($username)
+    {
+        $category_data = DB::table('category')
+            ->select('category.*')
+            ->get();
+        $subcat_data = DB::table('sub_category')
+            ->select('sub_category.*')
+            ->get();
+        $threadsdata = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.created_by')
+            ->join('category', 'category.category_id', '=', 'threads.category_id')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
+            ->orderBy('threads.created_at', 'DESC')
+            ->paginate(15);
+        $usersData = DB::table('users')
+            ->select('users.*')
+            ->get();
+        $threadsActive = DB::table('threads')
+            ->join('users', 'users.id', '=', 'threads.id')
+            ->where('threads.created_by', '=', auth()->user()->name)
+            ->select('threads.*', 'users.*')
+            ->get();
+        $commentData = DB::table('threads')
+            ->join('comment_threads', 'comment_threads.threads_id', '=', 'threads.id')
+            ->where('comment_threads.threads_id', '=', '')
+            ->select('comment_threads.*', 'threads.*')
+            ->get();
+        $user = \App\UserMod::find($username);
+        $userJoin = DB::table('users')
+            ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+            ->select('user_detail.*', 'users.*')
+            ->first();
 
+        $userGet = DB::table('users')
+            ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+            ->where('user_detail.userid', '=', auth()->user()->id)
+            ->select('user_detail.*', 'users.*')
+            ->get();
+        // dd($userJoin->id == 1);
+        return view('forum.settings.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet]);
+    }
     public function summaryadd(Request $request)
     {
         $detail = new \App\detailUserDB;
@@ -288,5 +329,49 @@ class ForumController extends Controller
 
         $detail->save();
         return back()->with('suksesuniversity', 'Informasi tentang pendidikan kamu berhasil di simpan!');
+    }
+
+    public function updatename(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update(['name' => $request->input('nama_lengkap')]);
+        return back()->with('sukses', 'Berhasil memperbarui data nama anda!');
+    }
+    public function updateusername(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update(['username' => $request->input('username')]);
+        return back()->with('sukses', 'Berhasil memperbarui username anda!');
+    }
+    public function updateponsel(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update(['ponsel' => $request->input('ponsel')]);
+        return back()->with('sukses', 'Berhasil memperbarui nomor ponsel anda!');
+    }
+    public function updateemail(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update(['email' => $request->input('email')]);
+        return back()->with('sukses', 'Berhasil memperbarui email anda!');
+    }
+    public function updatepassword(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update([
+                'password' => Hash::make($request->input('new_password')),
+                'verified_password' => $request->input('verified_password')
+            ]);
+        return back()->with('sukses', 'Berhasil memperbarui password anda!');
     }
 }

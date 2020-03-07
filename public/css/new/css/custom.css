@@ -268,3 +268,24 @@
 .school-history {
     width: 80px !important;
 }
+
+.settingtab {
+    background-color: #fff !important;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.settingtab:hover {
+    background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+.accordion .ac-item .ac-title::before {
+    content: "";
+    font-family: "";
+
+}
+
+.accordion .ac-item.ac-active .ac-title::before {
+    content: "";
+    font-family: "";
+
+}

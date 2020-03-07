@@ -172,6 +172,8 @@
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
                                         <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
+                                        <li><a href="/{{auth()->user()->username}}/settings">Settings</a>
+                                        </li>
                                         <li><a href="/logout/{{auth()->user()->id}}/{{$tokens}}">Sign out</a></li>
                                     </ul>
                                 </div>
@@ -263,8 +265,8 @@
                     <hr>
                     <div class="row text-center">
                         <div class="col-lg-12">
-                            <a href="#">
-                                <h5>See profiles</h5>
+                            <a a href="/{{auth()->user()->username}}/settings">
+                                <h5><span><i class="fas fa-cog"></i></span> Settings</h5>
                             </a>
                         </div>
                     </div>

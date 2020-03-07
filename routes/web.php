@@ -115,8 +115,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/response-comments/{enc_id}', 'ForumController@comments');
     Route::get('/search-events/{tokens}', 'ForumController@searchforum');
     Route::get('/jobs/{tokens}', 'ForumController@jobs');
+
     // PROFILE CONTROLLER
     Route::get('/{username}', 'ForumController@username');
+    Route::get('/{username}/settings', 'ForumController@settings');
+
+    // SETTINGS POST
+    Route::post('/{username}/settings/update_name/{tokens}', 'ForumController@updatename');
+    Route::post('/{username}/settings/update_username/{tokens}', 'ForumController@updateusername');
+    Route::post('/{username}/settings/update_ponsel/{tokens}', 'ForumController@updateponsel');
+    Route::post('/{username}/settings/update_email/{tokens}', 'ForumController@updateemail');
+    Route::post('/{username}/settings/update_password/{tokens}', 'ForumController@updatepassword');
 
     // DASHBOARD PROFILE CONTROLLER
     Route::post('/summary-add/{enc_id}/{tokens}', 'ForumController@summaryadd');

@@ -49,6 +49,7 @@ return array(
     'App\\candidateDB' => $baseDir . '/app/candidateDB.php',
     'App\\categoryDB' => $baseDir . '/app/categoryDB.php',
     'App\\commentDB' => $baseDir . '/app/commentDB.php',
+    'App\\detailUserDB' => $baseDir . '/app/detailUserDB.php',
     'App\\eventDB' => $baseDir . '/app/eventDB.php',
     'App\\formData' => $baseDir . '/app/formData.php',
     'App\\karirDB' => $baseDir . '/app/karirDB.php',

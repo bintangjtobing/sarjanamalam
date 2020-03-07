@@ -679,6 +679,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\candidateDB' => __DIR__ . '/../..' . '/app/candidateDB.php',
         'App\\categoryDB' => __DIR__ . '/../..' . '/app/categoryDB.php',
         'App\\commentDB' => __DIR__ . '/../..' . '/app/commentDB.php',
+        'App\\detailUserDB' => __DIR__ . '/../..' . '/app/detailUserDB.php',
         'App\\eventDB' => __DIR__ . '/../..' . '/app/eventDB.php',
         'App\\formData' => __DIR__ . '/../..' . '/app/formData.php',
         'App\\karirDB' => __DIR__ . '/../..' . '/app/karirDB.php',

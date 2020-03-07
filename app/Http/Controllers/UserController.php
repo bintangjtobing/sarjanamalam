@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         // VALIDATING INPUTS
         $this->validate($request, [
-            'username' => 'required|unique:users|min:5',
+            'username' => 'required|unique:users|min:5|regex:/^\S*$/u',
             'email' => 'required|unique:users|email',
         ]);
 

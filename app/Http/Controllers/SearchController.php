@@ -33,6 +33,6 @@ class SearchController extends Controller
         $ipGet = \Request::ip();
         // $position = \Location::get($ipGet);
         return view('homepage.results_search', ['search' => $search, 'get_search' => $get_search, 'created_at' => $created_at, 'ipGet' => $ipGet]);
-        // dd($search);
+        // dd($get_search);
     }
 }

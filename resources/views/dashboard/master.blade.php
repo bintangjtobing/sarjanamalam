@@ -96,7 +96,7 @@
                                             <a href="#" class="dropdown-item">User Account</a>
                                             <a href="/edit/{{auth()->user()->id}}/{{$tokens}}"
                                                 class="dropdown-item">Settings</a>
-                                            <a href="/logout/{{auth()->user()->id}}" class="dropdown-item">Log
+                                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="dropdown-item">Log
                                                 Out</a>
                                         </div>
                                     </div>

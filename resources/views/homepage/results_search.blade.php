@@ -94,7 +94,7 @@
                                             <a class="dropdown-item nav-user-name" href="#"><span
                                                     class="font-weight-bold ">{{auth()->user()->name}}</span></a>
                                             <a class="dropdown-item" href="#">Profile Saya</a>
-                                            <a href="/logout/{{auth()->user()->id}}" class="dropdown-item">Keluar</a>
+                                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="dropdown-item">Keluar</a>
                                         </div>
                                     </li>
                                 </ul>

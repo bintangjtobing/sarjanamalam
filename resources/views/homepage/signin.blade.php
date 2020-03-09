@@ -34,9 +34,9 @@
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Jangan pernah lepaskan ide idemu dengan masuk ke platform <span
-                                class="text-gradient-blue-sarjana">sarjanamalam.</span></h3>
-                        <p>Never lose your brilliant ideas with loggin platform.</p>
+                        <h3>Fokus pada apa yang kamu ingin bicarakan dan berbagi pendapat dengan baca orang di platform
+                            <span class="text-gradient-blue-sarjana">sarjanamalam.</span></h3>
+                        <p>Focus on what you're talking about and share it with friends.</p>
                         <div class="page-links">
                             <a href="/signin/{{$tokens}}" class="@yield('activelog')">Login</a><a
                                 href="/daftar/{{$tokens}}" class="@yield('activereg')">Register</a>

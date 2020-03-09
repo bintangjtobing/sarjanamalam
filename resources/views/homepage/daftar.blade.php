@@ -1,6 +1,6 @@
 @extends('homepage.signin')
 @section('activereg','active')
-@section('titleweb','Sarjanamalam. | Buat akunmu.')
+@section('titleweb',"Focus on what you're talking about | Sarjanamalam.")
 @section('desctitle','Buat akun baru sarjanamalam kamu. Gabung bersama forum dan bahas tentang apa yang kamu alami dan
 kamu ingin cari tau.')
 @section('contentauth')

@@ -71,12 +71,12 @@ label {
 }
 
 .gist {
-   overflow: auto;
+    overflow: auto;
 }
 
 .gist .blob-wrapper.data {
-   max-height: 350px;
-   overflow: auto;
+    max-height: 350px;
+    overflow: auto;
 }
 
 .list-group-item {
@@ -104,7 +104,8 @@ label {
     }
 }
 
-p, pre {
+p,
+pre {
     margin-bottom: 2em;
 }
 
@@ -113,6 +114,7 @@ ul.nobullets {
     padding: 0;
     list-style: none;
 }
+
 ul.nobullets li {
     padding-bottom: 1em;
     margin-bottom: 1em;
@@ -132,10 +134,13 @@ input[type="text"] {
     color: #fff;
     text-align: center;
 }
-#footer a:link, #footer a:visited {
+
+#footer a:link,
+#footer a:visited {
     color: #fff;
     border-bottom: 1px dotted #fff;
 }
+
 #jumbo {
     background: #c1deef;
     color: #000;
@@ -146,6 +151,7 @@ input[type="text"] {
 #jumbo h1 {
     font-size: 28px;
 }
+
 #jumbo .btn {
     border-radius: 0;
     font-size: 16px;

@@ -1,5 +1,5 @@
 .form-body {
-    background-color: #23394A;
+    background-color: #243B53;
 }
 
 .website-logo {
@@ -88,7 +88,7 @@
 }
 
 .form-content {
-    background-color: #23394A;
+    background-color: #243B53;
 }
 
 .form-content .form-group {
@@ -205,12 +205,12 @@
 
 .form-content input[type="checkbox"]:not(:checked)+label:after,
 .form-content input[type="checkbox"]:checked+label:after {
-    color: #23394A;
+    color: #243B53;
 }
 
 .form-content input[type="radio"]:not(:checked)+label:after,
 .form-content input[type="radio"]:checked+label:after {
-    background-color: #23394A;
+    background-color: #243B53;
 }
 
 .form-content .custom-options input[type="checkbox"]:not(:checked)+label,
@@ -231,7 +231,7 @@
 
 .form-content .form-button .ibtn {
     background-color: #fff;
-    color: #23394A;
+    color: #243B53;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
 }
@@ -453,7 +453,7 @@
 
 .form-body.without-side .form-content .form-button .ibtn {
     background-color: #fff;
-    color: #23394A;
+    color: #243B53;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.16);
 }

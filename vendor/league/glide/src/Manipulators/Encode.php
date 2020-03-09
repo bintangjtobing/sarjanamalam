@@ -22,8 +22,8 @@ class Encode extends BaseManipulator
 
         if (in_array($format, ['jpg', 'pjpg'], true)) {
             $image = $image->getDriver()
-                           ->newImage($image->width(), $image->height(), '#fff')
-                           ->insert($image, 'top-left', 0, 0);
+                ->newImage($image->width(), $image->height(), '#fff')
+                ->insert($image, 'top-left', 0, 0);
         }
 
         if ($format === 'pjpg') {

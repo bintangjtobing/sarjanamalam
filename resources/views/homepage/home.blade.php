@@ -65,7 +65,8 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                     <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2>
                     <div class="main-search">
                         <span class="search-icon icon-left fas fa-search"></span>
-                        <input type="search" name="get_value" class="form-control" autofocus>
+                        <input type="search" name="get_value" class="form-control"
+                            placeholder="Temukan pembahasan disini..." autofocus>
                     </div>
                 </form>
             </div>

@@ -67,7 +67,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     public function render(\Throwable $exception): FlattenException
     {
         $exception = FlattenException::createFromThrowable($exception, null, [
-            'Content-Type' => 'text/html; charset='.$this->charset,
+            'Content-Type' => 'text/html; charset=' . $this->charset,
         ]);
 
         return $exception->setAsString($this->renderException($exception));
@@ -162,7 +162,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             } elseif ('null' === $item[0]) {
                 $formattedValue = '<em>null</em>';
             } elseif ('boolean' === $item[0]) {
-                $formattedValue = '<em>'.strtolower(var_export($item[1], true)).'</em>';
+                $formattedValue = '<em>' . strtolower(var_export($item[1], true)) . '</em>';
             } elseif ('resource' === $item[0]) {
                 $formattedValue = '<em>resource</em>';
             } else {
@@ -233,12 +233,12 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             $text = $file;
             if (null !== $rel = $this->getFileRelative($text)) {
                 $rel = explode('/', $rel, 2);
-                $text = sprintf('<abbr title="%s%2$s">%s</abbr>%s', $this->projectDir, $rel[0], '/'.($rel[1] ?? ''));
+                $text = sprintf('<abbr title="%s%2$s">%s</abbr>%s', $this->projectDir, $rel[0], '/' . ($rel[1] ?? ''));
             }
         }
 
         if (0 < $line) {
-            $text .= ' at line '.$line;
+            $text .= ' at line ' . $line;
         }
 
         if (false !== $link = $this->getFileLink($file, $line)) {
@@ -267,7 +267,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             $code = preg_replace('#^<code.*?>\s*<span.*?>(.*)</span>\s*</code>#s', '\\1', $code);
             // split multiline spans
             $code = preg_replace_callback('#<span ([^>]++)>((?:[^<]*+<br \/>)++[^<]*+)</span>#', function ($m) {
-                return "<span $m[1]>".str_replace('<br />', "</span><br /><span $m[1]>", $m[2]).'</span>';
+                return "<span $m[1]>" . str_replace('<br />', "</span><br /><span $m[1]>", $m[2]) . '</span>';
             }, $code);
             $content = explode('<br />', $code);
 
@@ -277,10 +277,10 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             }
 
             for ($i = max($line - $srcContext, 1), $max = min($line + $srcContext, \count($content)); $i <= $max; ++$i) {
-                $lines[] = '<li'.($i == $line ? ' class="selected"' : '').'><a class="anchor" name="line'.$i.'"></a><code>'.$this->fixCodeMarkup($content[$i - 1]).'</code></li>';
+                $lines[] = '<li' . ($i == $line ? ' class="selected"' : '') . '><a class="anchor" name="line' . $i . '"></a><code>' . $this->fixCodeMarkup($content[$i - 1]) . '</code></li>';
             }
 
-            return '<ol start="'.max($line - $srcContext, 1).'">'.implode("\n", $lines).'</ol>';
+            return '<ol start="' . max($line - $srcContext, 1) . '">' . implode("\n", $lines) . '</ol>';
         }
 
         return '';
@@ -308,7 +308,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
     private function formatFileFromText(string $text)
     {
         return preg_replace_callback('/in ("|&quot;)?(.+?)\1(?: +(?:on|at))? +line (\d+)/s', function ($match) {
-            return 'in '.$this->formatFile($match[2], $match[3]);
+            return 'in ' . $this->formatFile($match[2], $match[3]);
         }, $text);
     }
 
@@ -318,7 +318,7 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             $replacements = [];
             foreach ($context as $key => $val) {
                 if (is_scalar($val)) {
-                    $replacements['{'.$key.'}'] = $val;
+                    $replacements['{' . $key . '}'] = $val;
                 }
             }
 
@@ -336,14 +336,14 @@ class HtmlErrorRenderer implements ErrorRendererInterface
             return '';
         }
 
-        return '<path d="'.self::GHOST_ADDONS[date('m-d')].'" fill="#fff" fill-opacity="0.6"></path>';
+        return '<path d="' . self::GHOST_ADDONS[date('m-d')] . '" fill="#fff" fill-opacity="0.6"></path>';
     }
 
     private function include(string $name, array $context = []): string
     {
         extract($context, EXTR_SKIP);
         ob_start();
-        include __DIR__.'/../Resources/'.$name;
+        include __DIR__ . '/../Resources/' . $name;
 
         return trim(ob_get_clean());
     }

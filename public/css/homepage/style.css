@@ -136,9 +136,9 @@ body {
 .inner-bg-image {
     background: #fff;
     /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to bottom, #2a465b, #23394A); */
+    /* background: -webkit-linear-gradient(to bottom, #2a465b, #243B53); */
     /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to bottom, #2a465b, #23394A); */
+    /* background: linear-gradient(to bottom, #2a465b, #243B53); */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%232b58a2' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%232949b1' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23515dae' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%237151b9' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2332286d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%239b4996' points='1203 546 1552 900 1162 900'/%3E%3Cppolygon fill='%23562550' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23723d67' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%233d4d82' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23965f52' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%232f2541' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23628a96' points='943 900 1210 900 971 687'/%3E%3C/svg%3E"); */
@@ -415,7 +415,7 @@ body {
     position: absolute;
     left: 20px;
     top: 15px;
-    color: #23394A;
+    color: #243B53;
 }
 
 .resultstyle .footer {
@@ -444,7 +444,7 @@ body {
 }
 
 .resultstyle .pagination li.active>a {
-    color: #23394A;
+    color: #243B53;
     background-color: transparent;
 }
 
@@ -466,7 +466,7 @@ body {
 .resultstyle .nav-initial {
     width: 36px;
     height: 36px;
-    background-color: #23394A;
+    background-color: #243B53;
     border-radius: 999em;
     font-size: 20px;
     text-align: center;
@@ -525,7 +525,7 @@ body {
 }
 
 .sidebar .menu-section ul li.active {
-    border-right: 2px solid #23394A;
+    border-right: 2px solid #243B53;
 }
 
 .sidebar .menu-section ul li>a {

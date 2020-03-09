@@ -12,10 +12,10 @@
 //     font-weight: 900;
 //     line-height: 18px;
 //     float: left;
-//     color: #FFF;
+//     color: #fff;
 //     padding-right: 0.5em;
 //     margin: auto 0.5em auto -1.5em;
-// }        
+// }
 // #toast-container > .toast-warning .toast-message:before {
 //     content: "\f06a";
 // }
@@ -31,24 +31,25 @@
 
 
 #toast-container {
-  // Background color
-  .toast {
-    background-color: $primary;
-  }
 
-  .toast-success {
-    background-color: $success;
-  }
+    // Background color
+    .toast {
+        background-color: $primary;
+    }
 
-  .toast-error {
-    background-color: $danger;
-  }
+    .toast-success {
+        background-color: $success;
+    }
 
-  .toast-info {
-    background-color: $info;
-  }
+    .toast-error {
+        background-color: $danger;
+    }
 
-  .toast-warning {
-    background-color: $warning;
-  }
+    .toast-info {
+        background-color: $info;
+    }
+
+    .toast-warning {
+        background-color: $warning;
+    }
 }

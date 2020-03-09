@@ -98,8 +98,8 @@
 		c0.51-0.177,1.086,0.041,1.155,0.292c0.012-0.207,0.019-0.415,0.019-0.624C-264.882,294.45-265.951,291.869-267.707,289.921z"/>
 	
 		<radialGradient id="SVGID_3_" cx="639.9374" cy="854.3203" r="8.0916" gradientTransform="matrix(0.3583 0.4654 0.7924 -0.61 -1185.5491 516.2996)" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:#FFFFFF"/>
-		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+		<stop  offset="0" style="stop-color:#fffFFF"/>
+		<stop  offset="1" style="stop-color:#fffFFF;stop-opacity:0"/>
 	</radialGradient>
 	<path class="st4" d="M-276.397,296.757c-3.541,2.726-7.71,3.25-9.311,1.17c-1.602-2.08-0.029-5.976,3.512-8.702
 		s7.71-3.25,9.311-1.17C-271.283,290.135-272.855,294.031-276.397,296.757z"/>

@@ -72,8 +72,6 @@ Route::get('/signin', function () {
 })->name('signin');
 
 
-Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
-
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/verification-user/{enc_id}/{tokens}', 'UserController@verification');
@@ -102,7 +100,7 @@ Route::post('/kirim-pesan', 'companyController@kirimpesan');
 Route::get('/request-ad-event', 'companyController@requestevent');
 Route::get('/read-blog/{blog_id}/{tokens}', 'companyController@readblog');
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth', 'web'], function () {
     Route::get('/home', function () {
         return view('homepage.home');
     });

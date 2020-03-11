@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sarjanamalam Forum :: @yield('title')</title>
+    <title>Messages</title>
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
-    <meta name="title" content="Sarjanamalam Forum :: @yield('title')">
+    <meta name="title" content="Messages">
     <meta name="description"
         content="Complex search engine, including discussions in the community system. Sarjanamalam can help you in your lectures and daily activities.">
     <meta name="language" content="English">
@@ -40,7 +40,6 @@
 </head>
 
 <body>
-
     {{-- HEADER & MENU --}}
     <div class="body-inner">
         <header id="header" data-fullwidth="true" class="header-alternative">
@@ -53,17 +52,6 @@
                                 data-placement="bottom" title="Back to homepage" class="logo-default">
                         </a>
                     </div>
-
-
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="#" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-
-
                     <div class="header-extras">
                         <ul>
                             <li>
@@ -126,108 +114,17 @@
                 </div>
             </div>
         </header>
-        {{-- <header id="header" data-fullwidth="true" class="header-alternative">
-            <div class="header-inner">
-                <div class="container">
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="search" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-                    <div id="mainMenu-trigger">
-                        <a class="lines-button x"><span class="lines"></span></a>
-                    </div>
-                    <div id="mainMenu" class="menu-center menu-lowercase">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="/forum/{{$tokens}}" class="@yield('aktifthreads')">Threads</a></li>
-        <li><a href="/search-events/{{$tokens}}" class="@yield('aktifevents')">Events</a>
-        </li>
-        <li><a href="/jobs/{{$tokens}}" class="@yield('aktifjobs')">Jobs</a></li>
-        </ul>
-        </nav>
-    </div>
-    </div>
-    </div>
-    </div>
-    </header> --}}
 
-    <section id="page-content" class="sidebar-both">
-        <div class="container">
-            <div class="row">
-                {{-- <div class="sidebar sticky-sidebar col-lg-3">
-                        <div class="widget ">
-                            <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                alt="User profile" class="img-fluid newgen-profile">
-                            <h3 class="text-center">{{auth()->user()->name}}</h3>
-                <p class="text-center">Medan, Indonesia</p>
-            </div>
-            <hr>
-            <div class="row text-center col-newgen">
-                <div class="col-6 bord">
-                    <h3>698</h3>
-                    <p>Circles</p>
-                </div>
-                <div class="col-6">
-                    <h3>1K+</h3>
-                    <p>Impress</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <a href="#">
-                        <h5>See profiles</h5>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
-                        <h5><span style="color:red;"><i class="fas fa-sign-out-alt"></i></span></h5>
-                    </a>
-                </div>
-            </div>
-        </div> --}}
-        <div class="content col-lg-9">
-            @yield('content')
-        </div>
-        <div class="sidebar sticky-sidebar col-lg-3">
+        <section id="page-content" class="sidebar-both">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="content col-lg-12">
+                        @yield('content')
+                    </div>
 
-            <div class="widget  widget-newsletter">
-                <form class="widget-subscribe-form" novalidate action="/" role="form" method="post">
-                    <h4 class="widget-title">Trending Topic</h4>
-                    <ul class="list list-arrow-icons">
-                        @foreach ($category_data as $cat)
-                        <li> <a title="" href="#">{{$cat->category}} </a></li>
-                        @endforeach
-                    </ul>
-                </form>
-            </div>
-            <div class="widget  widget-tags">
-                <h3 class="widget-title">Trending Hashtags</h3>
-                <div class="tags">
-                    <a href="#">#Design</a>
-                    <a href="#">#Portfolio</a>
-                    <a href="#">#Digital</a>
-                    <a href="#">#Branding</a>
-                    <a href="#">#HTML</a>
-                    <a href="#">#Clean</a>
-                    <a href="#">#Peace</a>
-                    <a href="#">#Love</a>
-                    <a href="#">#CSS3</a>
-                    <a href="#">#jQuery</a>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
-    </section>
+        </section>
     </div>
 
     <script type="application/ld+json">
@@ -258,6 +155,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -302,6 +200,66 @@
         })
 
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var receiver_id = '';
+        var my_id = "{{Auth::id()}}";
+        $(document).ready(function () {
+            // ajax  setup  form csrf  token
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('.user').click(function () {
+                $('.user').removeClass('activechat');
+                $(this).addClass('activechat');
+
+                receiver_id = $(this).attr('id');
+                // alert(receiver_id);
+                $.ajax({
+                    type: "get",
+                    url: '/message/' + receiver_id,
+                    data: '',
+                    cache: false,
+                    success: function (data) {
+                        $('#messages').html(data);
+                    }
+                });
+            });
+            $(document).on('keyup', '.input-text input', function (e) {
+                var message = $(this).val();
+                // mengecek jika  enter key ditekan dan message tidak kosong begitu juga  dengan receiver is selected.
+                if (e.keyCode == 13 && message != '' && receiver_id != '') {
+                    $(this).val(''); // ketika ditekan tombol enter, text box akan kosong
+
+                    var datastr = "receiver_id=" + receiver_id + "&message=" + message;
+                    $.ajax({
+                        type: "post",
+                        url: "/message/post",
+                        data: {
+                            "_token": "{{csrf_token()}}",
+                            receiver_id,
+                            message
+                        },
+                        cache: false,
+                        success: function (data) {
+
+                        },
+                        error: function (jqXHR, status, err) {
+                            alert('Exception:', exception);
+                        },
+                        complete: function () {
+
+                        }
+                    });
+                    // alert()
+                }
+            });
+        });
+
+    </script>
+
 </body>
 
 </html>

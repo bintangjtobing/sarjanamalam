@@ -254,15 +254,25 @@
 }
 
 .img-roundedforum:hover {
+    transition: .25s ease-in-out;
     opacity: 1;
 }
 
 .scroll-box {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
     padding: 10px;
     overflow-y: scroll;
-    height: 200px;
+    height: 550px;
+}
+
+.scroll-user-active {
+    /* border: 1px solid #ced4da;
+    border-radius: .25rem; */
+    /* padding: 10px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
 }
 
 .school-history {
@@ -288,4 +298,110 @@
     content: "";
     font-family: "";
 
+}
+
+.chaticon-forum {
+    width: 25px;
+    object-fit: cover;
+    opacity: .7;
+}
+
+.chaticon-forum:hover {
+    cursor: pointer;
+    transition: .25s ease-in-out;
+    opacity: 1;
+}
+
+.img-messagesuser {
+    object-fit: cover;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+}
+
+.img-messagesuser-about {
+    object-fit: cover;
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50%;
+
+}
+
+.user-about {
+    border-bottom: 1px solid #ced4da;
+    padding-bottom: 1.5rem;
+}
+
+.select-media {
+    background-color: rgba(255, 255, 255);
+    padding-top: 1rem;
+    padding-bottom: .60rem;
+    padding-left: .25rem;
+    border-radius: .25rem;
+}
+
+.select-media:hover {
+    cursor: pointer;
+    background-color: rgba(206, 212, 218, 0.15);
+    transition: .35s ease-in-out;
+}
+
+.userinfohead {
+    padding-top: 1rem;
+}
+
+.userinfohead h5 {
+    font-weight: 700;
+}
+
+.badge-light {
+    color: #fff !important;
+    background-color: #2485c1 !important;
+}
+
+.received,
+.sent {
+    width: 45%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 20px;
+}
+
+.received p,
+.sent p {
+    margin-bottom: 0 !important;
+}
+
+.sent p.date {
+    color: #393939;
+    font-size: .5rem;
+}
+
+.received p.date {
+    color: #393939;
+    font-size: .5rem;
+}
+
+.sent p,
+.received p {
+    font-size: .9rem;
+    color: #121212;
+}
+
+.received {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+}
+
+.sent {
+    background-color: #ced4da;
+    float: right;
+    text-align: right;
+    border: 1px solid #ced4da;
+}
+
+.activechat {
+    background-color: rgba(206, 212, 218, 0.15);
 }

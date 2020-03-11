@@ -34,9 +34,10 @@
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
-                        <h3>Fokus pada apa yang kamu ingin bicarakan dan berbagi pendapat dengan baca orang di platform
+                        <h3>Fokus pada apa yang ingin kamu bicarakan dan berbagi pendapat dengan orang sekitarmu di
+                            platform
                             <span class="text-gradient-blue-sarjana">sarjanamalam.</span></h3>
-                        <p>Focus on what you're talking about and share it with friends.</p>
+                        <p>Focus and share your opinion on what they're talking on our platform forum.</p>
                         <div class="page-links">
                             <a href="/signin/{{$tokens}}" class="@yield('activelog')">Login</a><a
                                 href="/daftar/{{$tokens}}" class="@yield('activereg')">Register</a>

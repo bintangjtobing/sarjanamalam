@@ -1,9 +1,14 @@
 @extends('forum.layouts.frontpage')
 @section('aktifevents','active')
+@section('discover','Events')
+@section('aktifdw-events','active')
 @section('title','Events')
 @inject('userMod', 'App\UserMod')
 <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 @section('content')
+<div class="blog my-3">
+    <h3><b>Find your <span class="text-gradient-blue-sarjana">events</span> here.</b></h3>
+</div>
 <div class="blog">
     @foreach ($event as $evtData)
     <?php $enc_eventid = base64_encode($evtData->event_id) ?>

@@ -10,15 +10,11 @@
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <meta name="title" content="Account Settings">
     <meta name="description" content="Settings your account.">
-    <meta name="keywords" content="sarjanamalam, sarjana, malam, forum sarjana, forum sarjana malam, forum,">
-    <meta name="robots" content="index, nofollow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="title" content="Sarjanamalam Forum">
+
+
     <meta name="description"
         content="Complex search engine, including discussions in the community system. Sarjanamalam can help you in your lectures and daily activities.">
-    <meta name="keywords" content="sarjanamalam, sarjana, malam, forum sarjana, forum sarjana malam, forum,">
-    <meta name="robots" content="index, nofollow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <meta name="language" content="English">
     <meta name="author" content="Sarjanamalam.">
     <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>

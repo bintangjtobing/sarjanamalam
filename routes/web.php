@@ -100,7 +100,7 @@ Route::post('/kirim-pesan', 'companyController@kirimpesan');
 Route::get('/request-ad-event', 'companyController@requestevent');
 Route::get('/read-blog/{blog_id}/{tokens}', 'companyController@readblog');
 
-Route::group(['middleware' => 'auth', 'web'], function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', function () {
         return view('homepage.home');
     });
@@ -117,6 +117,11 @@ Route::group(['middleware' => 'auth', 'web'], function () {
     // PROFILE CONTROLLER
     Route::get('/{username}', 'ForumController@username');
     Route::get('/{username}/settings', 'ForumController@settings');
+
+    // PRIVATE MESSAGES
+    Route::get('/messages/{tokens}', 'MessagesController@index');
+    Route::get('/message/{id}', 'MessagesController@getMessage')->name('message');
+    Route::post('/message/post', 'MessagesController@sendMessage');
 
     // SETTINGS POST
     Route::post('/{username}/settings/update_name/{tokens}', 'ForumController@updatename');

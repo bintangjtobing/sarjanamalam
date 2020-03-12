@@ -37,13 +37,13 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="">Judul topik pembahasan</label>
-                            <input type="text" name="subject" id="subject" class="form-control mb-3">
+                            <input type="text" name="subject" id="subject" class="form-control mb-3" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="">Pilih kategori topik</label>
-                            <select name="category" class="form-control mb-3" id="">
+                            <select name="category" class="form-control mb-3" required>
                                 @foreach ($category_data as $cat)
                                 <option value="{{$cat->category_id}}">{{$cat->category}}</option>
                                 @endforeach
@@ -54,7 +54,7 @@
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
-                                autofocus></textarea>
+                                autofocus required></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -102,30 +102,28 @@
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-7 text-left">
-                            <span style="font-size: .75rem;" class="mr-3"><a href="#"><i class="fas fa-bookmark"></i>
+                            {{-- <span style="font-size: .75rem;" class="mr-3"><a href="#"><i class="fas fa-bookmark"></i>
                                     1,985
-                                    favorited</a></span><span style="font-size: .75rem;"><a href="#"><i
-                                        class="fas fa-comment"></i>
-                                    {{$commentData->count()}} response</a></span>
-
-                        </div>
-                        <div class="col-lg-5 text-right">
-                            <span style="font-size: .75rem;"><a href="#"><i class="far fa-eye"></i>
+                                    favorited</a></span> --}}
+                            <span style="font-size: .75rem;" class="mr-2"><a href="#"><i class="far fa-eye"></i>
                                     @if($thread->view_count>999){{$thread->view_count/1000}}
                                     views
                                     @elseif($thread->view_count>1){{$thread->view_count}}
                                     views
                                     @else {{$thread->view_count}} view @endif</a></span>
+                            <span style="font-size: .75rem;"><a href="#"><i class="fas fa-comment"></i>
+                                    {{$commentData->count()}} response</a></span>
+
                         </div>
                     </div>
                 </div>
                 <div class="card-text my-3">
                     <div class="row">
                         <div class="col-lg-12 text-left">
-                            <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
-                                    Favorite</a></span>
+                            {{-- <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
+                                    Favorite</a></span> --}}
                             <span style="font-size: 1rem;"><a href="/details/{{$enc_id}}"><i class="far fa-comment"></i>
-                                    Respond</a></span>
+                                    Gabung pembahasan</a></span>
                         </div>
 
                     </div>

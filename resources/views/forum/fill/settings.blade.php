@@ -56,19 +56,14 @@
                             <img src="{!!asset('storage/logoofficial-mini.png')!!}" class="logo-default">
                         </a>
                     </div>
-
-
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="#" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-
-
                     <div class="header-extras">
                         <ul>
+                            <li>
+                                <a href="/messages/{{$tokens}}">
+                                    <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1583810435/based/paper-plane_tbosw0.svg"
+                                        class="chaticon-forum mx-2" data-toggle="tooltip" data-placement="bottom"
+                                        title="Private Messages"></a>
+                            </li>
                             <li>
                                 <div class="p-dropdown">
                                     <a href="#"><img
@@ -78,6 +73,8 @@
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
+                                        <li><a><b>{{auth()->user()->name}}</b></a></li>
+                                        <hr>
                                         <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/{{auth()->user()->username}}/settings">Settings</a>
@@ -97,7 +94,8 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li class="dropdown"><a href="#">Discover <i class="fas fa-caret-down"></i></a>
+                                    <li class="dropdown"><a href="#">Account settings <i
+                                                class="fas fa-caret-down"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="/forum/{{$tokens}}">Threads</a></li>
                                             <li><a href="/search-events/{{$tokens}}">Events</a>

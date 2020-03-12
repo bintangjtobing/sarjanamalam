@@ -152,10 +152,10 @@ class Mailable implements MailableContract, Renderable
 
             return $mailer->send($this->buildView(), $this->buildViewData(), function ($message) {
                 $this->buildFrom($message)
-                     ->buildRecipients($message)
-                     ->buildSubject($message)
-                     ->runCallbacks($message)
-                     ->buildAttachments($message);
+                    ->buildRecipients($message)
+                    ->buildSubject($message)
+                    ->runCallbacks($message)
+                    ->buildAttachments($message);
             });
         });
     }
@@ -177,7 +177,8 @@ class Mailable implements MailableContract, Renderable
         $queueName = property_exists($this, 'queue') ? $this->queue : null;
 
         return $queue->connection($connection)->pushOn(
-            $queueName ?: null, new SendQueuedMailable($this)
+            $queueName ?: null,
+            new SendQueuedMailable($this)
         );
     }
 
@@ -195,7 +196,9 @@ class Mailable implements MailableContract, Renderable
         $queueName = property_exists($this, 'queue') ? $this->queue : null;
 
         return $queue->connection($connection)->laterOn(
-            $queueName ?: null, $delay, new SendQueuedMailable($this)
+            $queueName ?: null,
+            $delay,
+            new SendQueuedMailable($this)
         );
     }
 
@@ -212,7 +215,8 @@ class Mailable implements MailableContract, Renderable
             Container::getInstance()->call([$this, 'build']);
 
             return Container::getInstance()->make('mailer')->render(
-                $this->buildView(), $this->buildViewData()
+                $this->buildView(),
+                $this->buildViewData()
             );
         });
     }
@@ -303,7 +307,7 @@ class Mailable implements MailableContract, Renderable
     protected function buildMarkdownText($markdown, $data)
     {
         return $this->textView
-                ?? $markdown->renderText($this->markdown, $data);
+            ?? $markdown->renderText($this->markdown, $data);
     }
 
     /**
@@ -314,7 +318,7 @@ class Mailable implements MailableContract, Renderable
      */
     protected function buildFrom($message)
     {
-        if (! empty($this->from)) {
+        if (!empty($this->from)) {
             $message->from($this->from[0]['address'], $this->from[0]['name']);
         }
 
@@ -369,7 +373,9 @@ class Mailable implements MailableContract, Renderable
 
         foreach ($this->rawAttachments as $attachment) {
             $message->attachData(
-                $attachment['data'], $attachment['name'], $attachment['options']
+                $attachment['data'],
+                $attachment['name'],
+                $attachment['options']
             );
         }
 
@@ -582,6 +588,7 @@ class Mailable implements MailableContract, Renderable
             $this->{$property}[] = [
                 'name' => $recipient->name ?? null,
                 'address' => $recipient->email,
+
             ];
         }
 
@@ -597,7 +604,7 @@ class Mailable implements MailableContract, Renderable
      */
     protected function addressesToArray($address, $name)
     {
-        if (! is_array($address) && ! $address instanceof Collection) {
+        if (!is_array($address) && !$address instanceof Collection) {
             $address = is_string($name) ? [['name' => $name, 'email' => $address]] : [$address];
         }
 
@@ -641,7 +648,7 @@ class Mailable implements MailableContract, Renderable
         ];
 
         return collect($this->{$property})->contains(function ($actual) use ($expected) {
-            if (! isset($expected['name'])) {
+            if (!isset($expected['name'])) {
                 return $actual['address'] == $expected['address'];
             }
 

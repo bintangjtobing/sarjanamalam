@@ -33,10 +33,10 @@ class UrlBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testGetUrlWithDomainAndPort()
     {
-        $urlBuilder = new UrlBuilder('http://localhost:8000');
+        $urlBuilder = new UrlBuilder('https://sarjanamalam.com');
 
         $this->assertEquals(
-            'http://localhost:8000/image.jpg?w=100',
+            'https://sarjanamalam.com/image.jpg?w=100',
             $urlBuilder->getUrl('image.jpg', ['w' => '100'])
         );
     }

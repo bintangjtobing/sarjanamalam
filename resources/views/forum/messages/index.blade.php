@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Messages</title>
@@ -69,6 +70,8 @@
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
+                                        <li><a><b>{{auth()->user()->name}}</b></a></li>
+                                        <hr>
                                         <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/{{auth()->user()->username}}/settings">Settings</a>
@@ -200,21 +203,54 @@
         })
 
     </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         var receiver_id = '';
         var my_id = "{{Auth::id()}}";
         $(document).ready(function () {
             // ajax  setup  form csrf  token
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     }
+            // });
+            // PUSHER APP
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = true;
+
+            var pusher = new Pusher('22899963d46555aef8ea', {
+                cluster: 'ap2',
+                forceTLS: true
+            });
+
+            var channel = pusher.subscribe('my-channel');
+            channel.bind('my-event', function (data) {
+
+                // alert(JSON.stringify(data));
+                if (my_id == data.from) {
+                    $('#' + data.to).click();
+                } else if (my_id == data.to) {
+                    if (receiver_id == data.from) {
+                        // Jika receiver selected, reload the selected user
+                        $('#' + data.from).click();
+                    } else {
+                        // if receiver is not selected, add notif to that user
+                        var pending = parseInt($('#' + data.from).find('.badge-light').html());
+                        if (pending) {
+                            $('#' + data.from).find('.badge-light').html(pending + 1);
+                        } else {
+                            $('#' + data.from).append(
+                                '<span class="pending badge badge-light">1</span>');
+                        }
+                    }
                 }
             });
+
             $('.user').click(function () {
                 $('.user').removeClass('activechat');
                 $(this).addClass('activechat');
-
+                $(this).find('.badge-light').remove();
                 receiver_id = $(this).attr('id');
                 // alert(receiver_id);
                 $.ajax({
@@ -224,10 +260,14 @@
                     cache: false,
                     success: function (data) {
                         $('#messages').html(data);
+                        scrolltoBottomFunc();
+
                     }
                 });
             });
             $(document).on('keyup', '.input-text input', function (e) {
+
+
                 var message = $(this).val();
                 // mengecek jika  enter key ditekan dan message tidak kosong begitu juga  dengan receiver is selected.
                 if (e.keyCode == 13 && message != '' && receiver_id != '') {
@@ -242,21 +282,24 @@
                             receiver_id,
                             message
                         },
+
                         cache: false,
-                        success: function (data) {
-
-                        },
-                        error: function (jqXHR, status, err) {
-                            alert('Exception:', exception);
-                        },
+                        success: function (data) {},
+                        error: function (jqXHR, status, err) {},
                         complete: function () {
-
+                            scrolltoBottomFunc();
                         }
                     });
                     // alert()
                 }
             });
         });
+        // make scroll down auto
+        function scrolltoBottomFunc() {
+            $('.scroll-box').animate({
+                scrollTop: $('.scroll-box').get(0).scrollHeight
+            }, 50);
+        }
 
     </script>
 

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use \App\Thread;
 use \App\UserMod;
 use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\MessageBag;
 
 class ForumController extends Controller
 {
@@ -373,5 +374,26 @@ class ForumController extends Controller
                 'verified_password' => $request->input('verified_password')
             ]);
         return back()->with('sukses', 'Berhasil memperbarui password anda!');
+    }
+    public function updatepic(Request $request, $username)
+    {
+        $this->validate($request, [
+            'Display_Picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        if ($request->hasFile('Display_Picture')) {
+            \Cloudder::upload($request->file('Display_Picture'));
+            $upC = \Cloudder::getPublicId();
+
+            $namedata = DB::table('users')
+                ->select('users.*')
+                ->where('users.username', '=', $username)
+                ->update([
+                    'displaypic' => $upC,
+                ]);
+        }
+
+
+
+        return back()->with('sukses', 'Berhasil memperbarui foto profile anda!');
     }
 }

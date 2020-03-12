@@ -10,8 +10,12 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
             <ul class="navbar-nav navbar-mobile ml-auto mt-2 mt-lg-0">
                 <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
                 @if(Auth::check())
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/forum/{{$tokens}}">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/messages/{{$tokens}}">
+                        Messages</a>
                 </li>
                 @if(auth()->user()->role=='executive')
                 <li class="nav-item">

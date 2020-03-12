@@ -19,20 +19,25 @@
                                 <div class="user media select-media" id="{{$user->id}}">
                                     <img class="mr-3 img-messagesuser" src="@if(!$user->displaypic){{asset('storage/img/default.png')}}
                                         @else
-                                {{$user->displaypic}}
-                                @endif" alt="Hi! This is {{$user->name}} picture.">
+                                        {!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$user->displaypic)!!}
+                                @endif" alt="{{$user->name}} picture.">
                                     <div class="media-body">
-                                        <h6 class="mt-0">{{$user->name}} <span class="badge badge-light">1</span></h5>
+                                        <h6 class="mt-0">{{$user->name}}
+                                            {{-- will show unread count --}}
+                                            @if($user->unread)
+                                            <span class="badge badge-light">{{$user->unread}}</span>
+                                            @endif
+                                            </h5>
                                             <p class="muted-text">{{$user->email}}</p>
                                     </div>
                                 </div>
                                 @endforeach
                             </div>
                         </div>
-                        <div class="col-lg-6" id="messages">
-                            
+                        <div class="col-lg-9" id="messages">
+
                         </div>
-                        <div class="col-lg-3">
+                        {{-- <div class="col-lg-3">
                             <div class="media user-about">
                                 <img class="mr-3 img-messagesuser-about"
                                     src="https://images.unsplash.com/photo-1535498051285-5613026fae05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
@@ -56,7 +61,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

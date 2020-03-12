@@ -256,51 +256,15 @@
                                                     <p
                                                         style="font-size: 22px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 26px; margin: 0;">
                                                         <span style="font-size: 22px;">Hello
-                                                            <b>{{$data_member->name}}</b>, registration
-                                                            completed!</span></p>
+                                                            <b>{{$dataUser->name}}</b>,</span></p>
                                                 </div>
                                             </div>
                                             <!--[if mso]></td></tr></table><![endif]-->
                                             <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 5px; padding-bottom: 30px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Lato, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.5;padding-top:5px;padding-right:10px;padding-bottom:30px;padding-left:10px;">
-                                                <div
-                                                    style="font-size: 12px; line-height: 1.5; color: #555555; font-family: Lato, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 18px;">
-                                                    <p
-                                                        style="font-size: 14px; line-height: 1.5; word-break: break-word; mso-line-height-alt: 21px; margin: 0;">
-                                                        Terima kasih karna telah menjadi keanggotaan Sarjanamalam.
-                                                        Sedikit lagi kamu akan bisa menggunakan
-                                                        fasilitas yang sudah disediakan sarjanamalam untuk saat ini.
-                                                        Jika ada kendala disaat kamu menggunakan
-                                                        layanan kami jangan sungkan untuk mengirimkan kami pesan email
-                                                        ke support@sarjanamalam.com. Terima kasih
-                                                        ya. :)</p>
-                                                </div>
-                                            </div>
+
                                             <!--[if mso]></td></tr></table><![endif]-->
-                                            <div align="center" class="img-container center fixedwidth"
-                                                style="padding-right: 0px;padding-left: 0px;">
-                                                <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 0px;padding-left: 0px;" align="center"><![endif]--><img
-                                                    align="center" alt="Image" border="0" class="center fixedwidth"
-                                                    src="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1580354743/email/illo_m0tjem.png')!!}"
-                                                    style="text-decoration: none; -ms-interpolation-mode: bicubic; border: 0; height: auto; width: 100%; max-width: 530px; display: block;"
-                                                    title="Image" width="530" />
-                                                <!--[if mso]></td></tr></table><![endif]-->
-                                            </div>
                                             <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 10px; padding-left: 10px; padding-top: 20px; padding-bottom: 10px; font-family: Arial, sans-serif"><![endif]-->
-                                            <div
-                                                style="color:#555555;font-family:Lato, Arial, Helvetica Neue, Helvetica, sans-serif;line-height:1.2;padding-top:20px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
-                                                <div
-                                                    style="font-size: 12px; line-height: 1.2; color: #555555; font-family: Lato, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
-                                                    <p
-                                                        style="font-size: 16px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 19px; margin: 0;">
-                                                        <span style="font-size: 16px;">Thanks so much for joining our
-                                                            site! </span><br /><span style="font-size: 16px;">Your
-                                                            username is: <span
-                                                                style="color: #2485c1; font-size: 16px;"><strong>{{$data_member->username}}</strong></span></span>
-                                                    </p>
-                                                </div>
-                                            </div>
+
                                             <!--[if mso]></td></tr></table><![endif]-->
                                             <!--[if (!mso)&(!IE)]><!-->
                                         </div>
@@ -334,20 +298,16 @@
                                                     style="font-size: 12px; line-height: 1.2; color: #555555; font-family: Lato, Arial, Helvetica Neue, Helvetica, sans-serif; mso-line-height-alt: 14px;">
                                                     <p
                                                         style="font-size: 16px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 19px; margin: 0;">
-                                                        <span style="font-size: 16px;">To finish signing up and <span
-                                                                style="color: #132f40; font-size: 16px;"><strong>activate
-                                                                    your account
-                                                                </strong></span></span></p>
-                                                    <p
-                                                        style="font-size: 16px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 19px; margin: 0;">
-                                                        <span style="font-size: 16px;">you just need to set you
-                                                            password.</span></p>
+                                                        <span style="font-size: 16px;">Kami mendapatkan laporan bahwa
+                                                            kamu baru saja kehilangan akun
+                                                            kamu. Tenang! Kami bisa bantu kok!</span></p>
+
                                                 </div>
                                             </div>
                                             <!--[if mso]></td></tr></table><![endif]-->
-                                            <?php $enc_id = base64_encode($data_member->id) ?>
+                                            <?php $enc_id = base64_encode($dataUser->id) ?>
                                             <form
-                                                action="https://sarjanamalam.com/verification-user/{{$enc_id}}/{{$tokens}}"
+                                                action="https://sarjanamalam.com/reset-account/{{$enc_id}}/{{$tokens}}"
                                                 method="GET">
                                                 @csrf
                                                 <div align="left" class="button-container"
@@ -370,7 +330,7 @@
 															</span>
 														</span>
 													</a> -->
-                                                        <button type="submit" class="btn btn-primary">Verify
+                                                        <button type="submit" class="btn btn-primary">Reset your
                                                             account</button>
                                                     </div>
                                                     <!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->

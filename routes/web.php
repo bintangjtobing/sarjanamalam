@@ -73,8 +73,10 @@ Route::get('/signin', function () {
 
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
+Route::post('/reset-account', 'UserController@resetAccount');
 Route::post('/get-verification/{tokens}', 'AuthController@validateLogin');
 Route::get('/verification-user/{enc_id}/{tokens}', 'UserController@verification');
+Route::get('/reset-account/{enc_id}/{tokens}', 'UserController@getAcc');
 Route::get('/logout/{id}/{tokens}', 'AuthController@logout');
 
 // LINK KHUSUS
@@ -129,6 +131,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/{username}/settings/update_ponsel/{tokens}', 'ForumController@updateponsel');
     Route::post('/{username}/settings/update_email/{tokens}', 'ForumController@updateemail');
     Route::post('/{username}/settings/update_password/{tokens}', 'ForumController@updatepassword');
+    Route::post('/{username}/settings/update_pic/{tokens}', 'ForumController@updatepic');
 
     // DASHBOARD PROFILE CONTROLLER
     Route::post('/summary-add/{enc_id}/{tokens}', 'ForumController@summaryadd');

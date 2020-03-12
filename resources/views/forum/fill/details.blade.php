@@ -1,5 +1,6 @@
 @extends('forum.layouts.frontpage')
 @section('title','Details Discussion')
+@section('discover','Detail Threads')
 @section('aktifthreads','active')
 @inject('userMod', 'App\UserMod')
 @section('content')
@@ -38,17 +39,6 @@
                 <hr>
                 <div class="card-text">
                 </div>
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-lg-7 text-left">
-                            <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
-                                    Favorite</a></span>
-                            <span style="font-size: 1rem;"><a href=""><i class="far fa-comment"></i>
-                                    Respond</a></span>
-                        </div>
-                    </div>
-                </div>
-                <hr>
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-12 ">
@@ -98,7 +88,7 @@
             <div class="card-text">
                 <div class="row">
                     <div class="col-lg-12 text-left">
-                        <h3>Your response?</h3>
+                        <h3>Pendapatmu?</h3>
                     </div>
                 </div>
             </div>

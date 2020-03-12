@@ -53,17 +53,6 @@
                                 data-placement="bottom" title="Back to homepage" class="logo-default">
                         </a>
                     </div>
-
-
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="#" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-
-
                     <div class="header-extras">
                         <ul>
                             <li>
@@ -81,6 +70,8 @@
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
+                                        <li><a><b>{{auth()->user()->name}}</b></a></li>
+                                        <hr>
                                         <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/{{auth()->user()->username}}/settings">Settings</a>
@@ -126,108 +117,45 @@
                 </div>
             </div>
         </header>
-        {{-- <header id="header" data-fullwidth="true" class="header-alternative">
-            <div class="header-inner">
-                <div class="container">
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="search" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-                    <div id="mainMenu-trigger">
-                        <a class="lines-button x"><span class="lines"></span></a>
-                    </div>
-                    <div id="mainMenu" class="menu-center menu-lowercase">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="/forum/{{$tokens}}" class="@yield('aktifthreads')">Threads</a></li>
-        <li><a href="/search-events/{{$tokens}}" class="@yield('aktifevents')">Events</a>
-        </li>
-        <li><a href="/jobs/{{$tokens}}" class="@yield('aktifjobs')">Jobs</a></li>
-        </ul>
-        </nav>
-    </div>
-    </div>
-    </div>
-    </div>
-    </header> --}}
 
-    <section id="page-content" class="sidebar-both">
-        <div class="container">
-            <div class="row">
-                {{-- <div class="sidebar sticky-sidebar col-lg-3">
-                        <div class="widget ">
-                            <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                alt="User profile" class="img-fluid newgen-profile">
-                            <h3 class="text-center">{{auth()->user()->name}}</h3>
-                <p class="text-center">Medan, Indonesia</p>
-            </div>
-            <hr>
-            <div class="row text-center col-newgen">
-                <div class="col-6 bord">
-                    <h3>698</h3>
-                    <p>Circles</p>
-                </div>
-                <div class="col-6">
-                    <h3>1K+</h3>
-                    <p>Impress</p>
-                </div>
-            </div>
-            <hr>
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <a href="#">
-                        <h5>See profiles</h5>
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
-                        <h5><span style="color:red;"><i class="fas fa-sign-out-alt"></i></span></h5>
-                    </a>
-                </div>
-            </div>
-        </div> --}}
-        <div class="content col-lg-9">
-            @yield('content')
-        </div>
-        <div class="sidebar sticky-sidebar col-lg-3">
 
-            <div class="widget  widget-newsletter">
-                <form class="widget-subscribe-form" novalidate action="/" role="form" method="post">
-                    <h4 class="widget-title">Trending Topic</h4>
-                    <ul class="list list-arrow-icons">
-                        @foreach ($category_data as $cat)
-                        <li> <a title="" href="#">{{$cat->category}} </a></li>
-                        @endforeach
-                    </ul>
-                </form>
-            </div>
-            <div class="widget  widget-tags">
-                <h3 class="widget-title">Trending Hashtags</h3>
-                <div class="tags">
-                    <a href="#">#Design</a>
-                    <a href="#">#Portfolio</a>
-                    <a href="#">#Digital</a>
-                    <a href="#">#Branding</a>
-                    <a href="#">#HTML</a>
-                    <a href="#">#Clean</a>
-                    <a href="#">#Peace</a>
-                    <a href="#">#Love</a>
-                    <a href="#">#CSS3</a>
-                    <a href="#">#jQuery</a>
+        <section id="page-content" class="sidebar-both">
+            <div class="container">
+                <div class="row">
+                    <div class="content col-lg-9">
+                        @yield('content')
+                    </div>
+                    <div class="sidebar sticky-sidebar col-lg-3">
+
+                        <div class="widget  widget-newsletter">
+                            <form class="widget-subscribe-form" novalidate action="/" role="form" method="post">
+                                <h4 class="widget-title">Trending Topic</h4>
+                                <ul class="list list-arrow-icons">
+                                    @foreach ($category_data as $cat)
+                                    <li> <a title="" href="#">{{$cat->category}} </a></li>
+                                    @endforeach
+                                </ul>
+                            </form>
+                        </div>
+                        {{-- <div class="widget  widget-tags">
+                            <h3 class="widget-title">Trending Hashtags</h3>
+                            <div class="tags">
+                                <a href="#">#Design</a>
+                                <a href="#">#Portfolio</a>
+                                <a href="#">#Digital</a>
+                                <a href="#">#Branding</a>
+                                <a href="#">#HTML</a>
+                                <a href="#">#Clean</a>
+                                <a href="#">#Peace</a>
+                                <a href="#">#Love</a>
+                                <a href="#">#CSS3</a>
+                                <a href="#">#jQuery</a>
+                            </div>
+                        </div> --}}
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
-    </section>
+        </section>
     </div>
 
     <script type="application/ld+json">

@@ -11,5 +11,5 @@
 </div>
 <div class="input-text">
     <input type="text" name="message" id="message" class="submit form-control my-1"
-        placeholder="Tulis pesan kamu disini..." autofocus>
+        placeholder="Tulis pesan kamu disini..." autofocus required>
 </div>

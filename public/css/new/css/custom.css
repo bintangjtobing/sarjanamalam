@@ -247,10 +247,10 @@
 
 .img-roundedforum {
     object-fit: cover;
-    width: 40px;
-    height: 40px;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50%;
-    opacity: .7;
+    opacity: .9;
 }
 
 .img-roundedforum:hover {
@@ -404,4 +404,15 @@
 
 .activechat {
     background-color: rgba(206, 212, 218, 0.15);
+}
+
+.form-reset {
+    background-color: #fff !important;
+    border-radius: .25rem !important;
+    border: 1px solid #ced4da !important;
+
+}
+
+.form-reset::placeholder {
+    color: #ced4da !important;
 }

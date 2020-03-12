@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/ae026c985d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-style.css')!!}">
     <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-theme2.css')!!}">
+    <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
 </head>
 
 <body>

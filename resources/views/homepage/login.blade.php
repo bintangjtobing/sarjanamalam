@@ -23,7 +23,37 @@ kamu ingin cari tau.')
     <input class="form-control" type="password" name="password" placeholder="Password" required>
     {{-- <input type="checkbox" id="chk1"><label for="chk1">Remeber me</label> --}}
     <div class="form-button">
-        <button id="submit" type="submit" class="ibtn">Login</button> <a href="#">Forget password?</a>
+        <button id="submit" type="submit" class="ibtn">Login</button></form> <a href="" data-toggle="modal"
+    data-target="#forgetPassword">Forget password?</a>
+
+<!-- Modal password -->
+<div class="modal fade" id="forgetPassword" tabindex="-1" role="dialog" aria-labelledby="forgetPassword"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgetPassword"><b>Kembalikan akun anda.</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/reset-account" method="post">
+                {{ csrf_field() }}
+                <div class="modal-body">
+                    <p style="color:#121212; font-weight:300;">Ketik username yang anda daftarkan pertama kali,
+                        dan
+                        kami akan
+                        mengirimkan instruksi reset
+                        akun ke email yang berhubungan dengan username anda.</p>
+                    <input type="text" name="username" class="form-control form-reset"
+                        placeholder="Masukkan username anda" autofocus required>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Reset akun</button>
+                </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
+</div>
 @endsection

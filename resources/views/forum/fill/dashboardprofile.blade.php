@@ -157,6 +157,12 @@
                     <div class="header-extras">
                         <ul>
                             <li>
+                                <a href="/messages/{{$tokens}}">
+                                    <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1583810435/based/paper-plane_tbosw0.svg"
+                                        class="chaticon-forum mx-2" data-toggle="tooltip" data-placement="bottom"
+                                        title="Private Messages"></a>
+                            </li>
+                            <li>
                                 <div class="p-dropdown">
                                     <a href="#"><img
                                             src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
@@ -165,6 +171,8 @@
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
+                                        <li><a><b>{{auth()->user()->name}}</b></a></li>
+                                        <hr>
                                         <li><a href="/{{auth()->user()->username}}">Dashboard Profile</a>
                                         </li>
                                         <li><a href="/{{auth()->user()->username}}/settings">Settings</a>

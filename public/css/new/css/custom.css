@@ -416,3 +416,37 @@
 .form-reset::placeholder {
     color: #ced4da !important;
 }
+
+.widget-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    padding-left: 1rem !important;
+    padding-top: 1rem !important;
+}
+
+.lilist {
+    line-height: 1.5rem !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem !important;
+    border-bottom: 1px solid #ced4da;
+}
+
+.lilist:hover {
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.030) !important;
+    border-bottom: 2px solid #ced4da;
+}
+
+.trend-list {
+    font-weight: 400;
+}
+
+.widget-tags {
+    background-color: #fff;
+    border: 1px solid #ced4da !important;
+
+    border-radius: .25rem;
+}

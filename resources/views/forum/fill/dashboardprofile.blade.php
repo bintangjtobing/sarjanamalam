@@ -358,8 +358,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-title">
-                                        <div class="widget  widget-tags">
+                                    <div class="card-title" style="border: 0px !important;">
+                                        <div class="widget widget-tags">
                                             <div class="tags">
                                                 @foreach ($userGet as $getDetails)
                                                 @if($getDetails->interested != '')

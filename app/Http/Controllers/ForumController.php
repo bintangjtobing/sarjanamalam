@@ -22,6 +22,7 @@ class ForumController extends Controller
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $subcat_data = DB::table('sub_category')
             ->select('sub_category.*')
             ->get();
@@ -44,7 +45,7 @@ class ForumController extends Controller
             ->where('comment_threads.threads_id', '=', '')
             ->select('comment_threads.*', 'threads.*')
             ->get();
-        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
+        return view('forum.fill.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'countdesc' => $countdesc]);
     }
     public function detailsthreads($enc_id)
     {
@@ -56,6 +57,7 @@ class ForumController extends Controller
             ->where('threads.id', '=', $decrypt)
             ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.username')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $commentData = DB::table('comment_threads')
             ->join('users', 'users.id', '=', 'comment_threads.user_id')
             ->join('threads', 'threads.id', '=', 'comment_threads.threads_id')
@@ -79,13 +81,14 @@ class ForumController extends Controller
         $view->view_count += 1;
         $view->save();
 
-        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive, 'commentData' => $commentData]);
+        return view('forum.fill.details', ['data_thread' => $data_thread, 'category_data' => $category_data, 'threadsdata' => $threadsdata, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'countdesc' => $countdesc]);
     }
     public function searchforum()
     {
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $event = DB::table('events')
             ->where('events.status', '!=', 'declined')
             ->orderBy('events.created_at', 'DESC')
@@ -96,17 +99,18 @@ class ForumController extends Controller
             ->where('events.status', '=', 'finised')
             ->select('events.*')
             ->get();
-        return view('forum.fill.eventsforum', ['category_data' => $category_data, 'event' => $event, 'eventcount' => $eventcount, 'eventfinish' => $eventfinish]);
+        return view('forum.fill.eventsforum', ['category_data' => $category_data, 'event' => $event, 'eventcount' => $eventcount, 'eventfinish' => $eventfinish, 'countdesc' => $countdesc]);
     }
     public function jobs()
     {
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $jobs = DB::table('subcareer')
             ->select('subcareer.*')
             ->get();
-        return view('forum.fill.jobs', ['category_data' => $category_data, 'jobs' => $jobs]);
+        return view('forum.fill.jobs', ['category_data' => $category_data, 'jobs' => $jobs, 'countdesc' => $countdesc]);
     }
     public function addnewtopic()
     {
@@ -222,6 +226,7 @@ class ForumController extends Controller
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $subcat_data = DB::table('sub_category')
             ->select('sub_category.*')
             ->get();
@@ -257,13 +262,14 @@ class ForumController extends Controller
             ->get();
 
         // dd($userJoin->id == 1);
-        return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet]);
+        return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet, 'countdesc' => $countdesc]);
     }
     public function settings($username)
     {
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
+        $countdesc  = \App\Thread::orderBy('view_count', 'DESC')->take(5)->get();
         $subcat_data = DB::table('sub_category')
             ->select('sub_category.*')
             ->get();
@@ -298,7 +304,7 @@ class ForumController extends Controller
             ->select('user_detail.*', 'users.*')
             ->get();
         // dd($userJoin->id == 1);
-        return view('forum.settings.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet]);
+        return view('forum.settings.home', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet, 'countdesc' => $countdesc]);
     }
     public function summaryadd(Request $request)
     {

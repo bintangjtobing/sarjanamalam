@@ -126,32 +126,16 @@
                         @yield('content')
                     </div>
                     <div class="sidebar sticky-sidebar col-lg-3">
-
-                        <div class="widget  widget-newsletter">
-                            <form class="widget-subscribe-form" novalidate action="/" role="form" method="post">
-                                <h4 class="widget-title">Trending Topic</h4>
-                                <ul class="list list-arrow-icons">
-                                    @foreach ($category_data as $cat)
-                                    <li> <a title="" href="#">{{$cat->category}} </a></li>
-                                    @endforeach
-                                </ul>
-                            </form>
+                        <div class="widget widget-tags">
+                            <h3 class="widget-title">5 Trendic Topics</h3>
+                            <ul class="list list-arrow-icons">
+                                @foreach ($countdesc as $count)
+                                <?php $enc_id = Crypt::encrypt($count->id); ?>
+                                <li class="lilist"><a class="trend-list"
+                                        href="/details/{{$enc_id}}/">{{str_limit($count->subject, $limit=40)}}</a></li>
+                                @endforeach
+                            </ul>
                         </div>
-                        {{-- <div class="widget  widget-tags">
-                            <h3 class="widget-title">Trending Hashtags</h3>
-                            <div class="tags">
-                                <a href="#">#Design</a>
-                                <a href="#">#Portfolio</a>
-                                <a href="#">#Digital</a>
-                                <a href="#">#Branding</a>
-                                <a href="#">#HTML</a>
-                                <a href="#">#Clean</a>
-                                <a href="#">#Peace</a>
-                                <a href="#">#Love</a>
-                                <a href="#">#CSS3</a>
-                                <a href="#">#jQuery</a>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>

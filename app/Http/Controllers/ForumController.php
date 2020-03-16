@@ -29,7 +29,7 @@ class ForumController extends Controller
         $threadsdata = DB::table('threads')
             ->join('users', 'users.id', '=', 'threads.created_by')
             ->join('category', 'category.category_id', '=', 'threads.category_id')
-            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.verified')
             ->orderBy('threads.created_at', 'DESC')
             ->paginate(15);
         $usersData = DB::table('users')

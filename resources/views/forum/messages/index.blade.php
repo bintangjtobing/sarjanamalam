@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Messages</title>
@@ -66,7 +66,17 @@
                                     <a href="#"><img
                                             src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                            alt="Profile picture" class="img-roundedforum"></a>
+                                            alt="Profile picture"
+                                            class="img-roundedforum"></a>@if(auth()->user()->verified==1)
+                                    <span title="Verified" style="
+    position: relative;
+    margin-left: -15px;
+    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 15px;
+    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                            alt="Verified" style="width:15px !important; height:15px !important;
+                                            margin-left:2px;position:relative;"></span>
+                                    @else
+                                    @endif
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
@@ -203,7 +213,7 @@
         })
 
     </script>
-
+    <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         var receiver_id = '';

@@ -20456,3 +20456,8 @@ body[data-bg-image] {
     width: 460px;
     height: auto;
 }
+
+.post-item img .verified-span {
+    width: 20px !important;
+    height: 20px !important;
+}

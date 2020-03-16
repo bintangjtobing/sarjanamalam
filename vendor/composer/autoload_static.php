@@ -697,6 +697,7 @@ class ComposerStaticInit897b9cc9a22c06d5313ade0928e2ae49
         'App\\provinsiDB' => __DIR__ . '/../..' . '/app/provinsiDB.php',
         'App\\subcategoryDB' => __DIR__ . '/../..' . '/app/subcategoryDB.php',
         'App\\subkarirDB' => __DIR__ . '/../..' . '/app/subkarirDB.php',
+        'App\\todoDB' => __DIR__ . '/../..' . '/app/todoDB.php',
         'BaconQrCode\\Common\\AbstractEnum' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/BaconQrCode/Common/AbstractEnum.php',
         'BaconQrCode\\Common\\BitArray' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/BaconQrCode/Common/BitArray.php',
         'BaconQrCode\\Common\\BitMatrix' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/BaconQrCode/Common/BitMatrix.php',

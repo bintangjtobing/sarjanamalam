@@ -62,6 +62,7 @@ return array(
     'App\\provinsiDB' => $baseDir . '/app/provinsiDB.php',
     'App\\subcategoryDB' => $baseDir . '/app/subcategoryDB.php',
     'App\\subkarirDB' => $baseDir . '/app/subkarirDB.php',
+    'App\\todoDB' => $baseDir . '/app/todoDB.php',
     'BaconQrCode\\Common\\AbstractEnum' => $vendorDir . '/bacon/bacon-qr-code/src/BaconQrCode/Common/AbstractEnum.php',
     'BaconQrCode\\Common\\BitArray' => $vendorDir . '/bacon/bacon-qr-code/src/BaconQrCode/Common/BitArray.php',
     'BaconQrCode\\Common\\BitMatrix' => $vendorDir . '/bacon/bacon-qr-code/src/BaconQrCode/Common/BitMatrix.php',

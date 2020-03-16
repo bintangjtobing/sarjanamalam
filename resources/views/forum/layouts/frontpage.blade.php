@@ -66,7 +66,17 @@
                                     <a href="#"><img
                                             src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                            alt="Profile picture" class="img-roundedforum"></a>
+                                            alt="Profile picture"
+                                            class="img-roundedforum"></a>@if(auth()->user()->verified==1)
+                                    <span title="Verified" style="
+    position: relative;
+    margin-left: -15px;
+    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 15px;
+    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                            alt="Verified" style="width:15px !important; height:15px !important;
+                                            margin-left:2px;position:relative;"></span>
+                                    @else
+                                    @endif
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
@@ -126,7 +136,7 @@
                         @yield('content')
                     </div>
                     <div class="sidebar sticky-sidebar col-lg-3">
-                        <div class="widget widget-tags">
+                        <div class="widget widget-tags mb-3">
                             <h3 class="widget-title">5 Trendic Topics</h3>
                             <ul class="list list-arrow-icons">
                                 @foreach ($countdesc as $count)
@@ -134,6 +144,15 @@
                                 <li class="lilist"><a class="trend-list"
                                         href="/details/{{$enc_id}}/">{{str_limit($count->subject, $limit=40)}}</a></li>
                                 @endforeach
+                            </ul>
+                        </div>
+                        <div class="widget mt-4" style="box-shadow:0 0 0px 0 !important;">
+                            <h3>List To Do Task</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Sarapan
+                                    <span class="badge badge-danger badge-pill"><i class="fas fa-minus"></i></span>
+                                </li>
                             </ul>
                         </div>
                     </div>

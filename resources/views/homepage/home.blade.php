@@ -41,12 +41,21 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                             <span><img
                                     src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                 @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                    class="img-profile-user" alt="User Image"></span>
+                                    class="img-profile-user" alt="User Image"></span>@if(auth()->user()->verified==1)
+                            <span title="Verified" style="
+    position: relative;
+    margin-left: -15px;
+    margin-top: 25px; background-color: #fff; border-radius: 50%;"><img
+                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                    alt="Verified"
+                                    style="width:15px !important; height:15px !important; margin-left:2px;"></span>
+                            @else
+                            @endif
                         </div>
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="dropdownId">
                         <a class="dropdown-item nav-user-name" href="#"><span
-                                class="font-weight-bold ">{{auth()->user()->name}}</span></a>
+                                class="font-weight-bold">{{auth()->user()->name}}</span></a>
                         <?php
                         $getId = auth()->user()->id;
                         $enc_id = base64_encode($getId); ?>
@@ -66,15 +75,28 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
             <div>
                 <form action="/search?" method="GET">
                     @csrf
-                    <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2>
-                    <div class="main-search">
-                        <span class="search-icon icon-left fas fa-search"></span>
-                        <input type="search" name="get_value" class="form-control"
-                            placeholder="Temukan pembahasan disini..." autofocus>
-                    </div>
-                </form>
+                    {{-- <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2> --}}
+                    {{-- Get a real time --}}
+                    <?php
+                    date_default_timezone_set("Asia/Jakarta");
+                    $timeNow = date('H:i');
+                    $Hour = date('H');
+
+                    ?>
+                    <span class="text-gradient-blue-sarjana"
+                        style="font-size: 6rem; line-height:0.3em;">{{$timeNow}}</span>
+                    <h2 class="search-title text-gradient-blue-sarjana" id="titlecallback" style="line-height: 1.65;">
+                        @if(($Hour >= 01) && ($Hour<=11)) {{'Selamat pagi,'}} @elseif(($Hour>=11) && ($Hour<=15))
+                                {{'Selamat siang,'}} @elseif(($Hour>=15)&& ($Hour<=18)) {{'Selamat sore,'}}
+                                    @else{{'Selamat malam,'}} @endif @if(Auth::check()){{auth()->user()->name}} @else
+                                    Sarjana @endif</h2> <div class="main-search">
+                                    <span class="search-icon icon-left fas fa-search"></span>
+                                    <input type="search" name="get_value" class="form-control"
+                                        placeholder="Temukan pembahasan disini..." autofocus>
             </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
 @endsection

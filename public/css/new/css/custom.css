@@ -246,6 +246,7 @@
 }
 
 .img-roundedforum {
+    position: relative;
     object-fit: cover;
     width: 40px !important;
     height: 40px !important;
@@ -411,6 +412,10 @@
     border-radius: .25rem !important;
     border: 1px solid #ced4da !important;
 
+}
+
+.sidebar .widget {
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
 }
 
 .form-reset::placeholder {

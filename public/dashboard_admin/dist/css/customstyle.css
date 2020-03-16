@@ -1,3 +1,35 @@
+.bg-gradient-blue-sarjana {
+    background: #4aa5e7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3363ac, #4aa5e7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3363ac, #4aa5e7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text-gradient-blue-sarjana {
+    background: linear-gradient(to right, #4aa5e7 0%, #3363ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900 !important;
+}
+
+.btn-gradient-blue-sarjana {
+    background: #4aa5e7;
+    background: -webkit-linear-gradient(to right, #3363ac, #4aa5e7);
+    background: linear-gradient(to right, #3363ac, #4aa5e7);
+    border: 0 !important;
+    border-radius: 40px !important;
+}
+
+.btn-gradient-blue-sarjana:hover {
+    background: #4aa5e7;
+    transition: 2s ease !important;
+    background: -webkit-linear-gradient(to left, #3363ac, #4aa5e7);
+    background: linear-gradient(to left, #3363ac, #4aa5e7);
+    cursor: pointer;
+}
+
 .img-edit {
     max-width: 70px !important;
     max-height: auto;

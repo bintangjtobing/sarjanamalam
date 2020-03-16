@@ -5,6 +5,11 @@
 <div class="container-fluid">
     <!-- Info boxes -->
     <div class="row">
+        <div class="col-12 text-center p-5">
+            <h1 class="text-gradient-blue-sarjana">{!!$usermg->count()!!}<span> users</span></h1>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>

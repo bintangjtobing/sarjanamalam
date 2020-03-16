@@ -20,7 +20,16 @@
                                     <img class="mr-3 img-messagesuser" src="@if(!$user->displaypic){{asset('storage/img/default.png')}}
                                         @else
                                         {!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$user->displaypic)!!}
-                                @endif" alt="{{$user->name}} picture.">
+                                @endif" alt="{{$user->name}} picture.">@if($user->verified==1)
+                                    <span title="Verified" style="
+    position: relative;
+    margin-left: -15px;
+    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 5px;
+    right: 13px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                            alt="Verified" style="width:15px !important; height:15px !important;
+                                            margin-left:2px;position:relative;"></span>
+                                    @else
+                                    @endif
                                     <div class="media-body">
                                         <h6 class="mt-0">{{$user->name}}
                                             {{-- will show unread count --}}

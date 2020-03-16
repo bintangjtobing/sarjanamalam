@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserMod extends Model
 {
     protected $table = 'users';
-    protected $fillable = ['name', 'email', 'jabatan', 'password', 'role', 'status', 'verified_password', 'displaypic', 'created_by', 'updated_by', 'alamat', 'kota', 'provinsi', 'kodepos', 'tanggallahir', 'username', 'bulanlahir', 'tahunlahir', 'ponsel'];
+    protected $fillable = ['name', 'email', 'jabatan', 'password', 'role', 'status', 'verified_password', 'displaypic', 'created_by', 'updated_by', 'alamat', 'kota', 'provinsi', 'kodepos', 'tanggallahir', 'username', 'bulanlahir', 'tahunlahir', 'ponsel', 'verified'];
 
     public function getAvatar()
     {

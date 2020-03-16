@@ -167,7 +167,17 @@
                                     <a href="#"><img
                                             src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                                            alt="Profile picture" class="img-roundedforum"></a>
+                                            alt="Profile picture"
+                                            class="img-roundedforum"></a>@if(auth()->user()->verified==1)
+                                    <span title="Verified" style="
+    position: relative;
+    margin-left: -15px;
+    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 15px;
+    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                            alt="Verified" style="width:15px !important; height:15px !important;
+                                            margin-left:2px;position:relative;"></span>
+                                    @else
+                                    @endif
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
@@ -214,222 +224,198 @@
                 </div>
             </div>
         </header>
-        {{-- <header id="header" data-fullwidth="true" class="header-alternative">
-            <div class="header-inner">
-                <div class="container">
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="search" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-                    <div id="mainMenu-trigger">
-                        <a class="lines-button x"><span class="lines"></span></a>
-                    </div>
-                    <div id="mainMenu" class="menu-center menu-lowercase">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="/forum/{{$tokens}}" class="@yield('aktifthreads')">Threads</a></li>
-        <li><a href="/search-events/{{$tokens}}" class="@yield('aktifevents')">Events</a>
-        </li>
-        <li><a href="/jobs/{{$tokens}}" class="@yield('aktifjobs')">Jobs</a></li>
-        </ul>
-        </nav>
-    </div>
-    </div>
-    </div>
-    </div>
-    </header> --}}
-
-    <section id="page-content" class="sidebar-both">
-        <div class="container">
-            <div class="row">
-                <div class="sidebar sticky-sidebar col-lg-3">
-                    <div class="widget ">
-                        <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+        <section id="page-content" class="sidebar-both">
+            <div class="container">
+                <div class="row">
+                    <div class="sidebar sticky-sidebar col-lg-4">
+                        <div class="widget" style="box-shadow:0 0 0px 0 !important;">
+                            <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
                                 @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
-                            alt="User profile" class="img-fluid newgen-profile">
-                        <h3 class="text-center">{{auth()->user()->name}}</h3>
-                        <p class="text-center">Medan, Indonesia</p>
-                    </div>
-                    <hr>
-                    <div class="row text-center col-newgen">
-                        <div class="col-6 bord">
-                            <h3>698</h3>
-                            <p>Circles</p>
+                                alt="User profile" class="img-fluid newgen-profile" style="max-width: 200px
+                                !important;margin-left: 70px !important;">
+                            <h3 class="text-center">{{auth()->user()->name}}@if(auth()->user()->verified==1)
+                                <span title="Verified"><img
+                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                        alt="Verified" style="width: 1.25rem; height: auto;"></span>
+                                @else
+                                @endif</h3>
+                            <p class="text-center">Medan, Indonesia</p>
                         </div>
-                        <div class="col-6">
-                            <h3>1K+</h3>
-                            <p>Impress</p>
+                        <hr>
+                        <div class="row text-center col-newgen">
+                            <div class="col-6 bord">
+                                <h3>698</h3>
+                                <p>Circles</p>
+                            </div>
+                            <div class="col-6">
+                                <h3>1K+</h3>
+                                <p>Impress</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <a a href="/{{auth()->user()->username}}/settings">
+                                    <h5><span><i class="fas fa-cog"></i></span> Settings</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
+                                    <h5><span style="color:red;"><i class="fas fa-sign-out-alt"></i></span></h5>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <hr>
-                    <div class="row text-center">
-                        <div class="col-lg-12">
-                            <a a href="/{{auth()->user()->username}}/settings">
-                                <h5><span><i class="fas fa-cog"></i></span> Settings</h5>
-                            </a>
+                    <div class="content col-lg-7">
+                        {{-- Berhasil summary --}}
+                        @if(session('suksessummary'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Berhasil!</strong> {{session('suksessummary')}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="row text-center">
-                        <div class="col-lg-12">
-                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}">
-                                <h5><span style="color:red;"><i class="fas fa-sign-out-alt"></i></span></h5>
-                            </a>
+                        @endif
+                        @if(session('suksesinterest'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Berhasil!</strong> {{session('suksesinterest')}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
-                </div>
-                <div class="content col-lg-6">
-                    {{-- Berhasil summary --}}
-                    @if(session('suksessummary'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Berhasil!</strong> {{session('suksessummary')}}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif
-                    @if(session('suksesinterest'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Berhasil!</strong> {{session('suksesinterest')}}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif
-                    @if(session('suksesuniversity'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Berhasil!</strong> {{session('suksesuniversity')}}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @endif
-                    {{-- SUMMARY --}}
-                    <div id="blog">
-                        <div class="post-item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">
-                                        <div class="row">
-                                            <div class="col-lg-8 text-left">
-                                                <h5>Tentang kamu</h5>
-                                            </div>
-                                            <div class="col-lg-4 text-right">
-                                                <a data-toggle="modal" data-target="#summaryAdd"><span><i
-                                                            class="fas fa-plus"></i></span></a>
-                                                {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
+                        @endif
+                        @if(session('suksesuniversity'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Berhasil!</strong> {{session('suksesuniversity')}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+                        {{-- SUMMARY --}}
+                        <div id="blog">
+                            <div class="post-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="row">
+                                                <div class="col-lg-8 text-left">
+                                                    <h5>Tentang kamu</h5>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <a data-toggle="modal" data-target="#summaryAdd"><span><i
+                                                                class="fas fa-plus"></i></span></a>
+                                                    {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
                                                             class="fas fa-pencil-alt"></i></span></a> --}}
+                                                </div>
                                             </div>
+
                                         </div>
+                                        <div class="card-title">
+                                            @foreach ($userGet as $getDetails)
+                                            @if($getDetails->summary != '')
+                                            <p>{!!$getDetails->summary!!}</p>
+                                            @else
+                                            @endif
+                                            @endforeach
 
-                                    </div>
-                                    <div class="card-title">
-                                        @foreach ($userGet as $getDetails)
-                                        @if($getDetails->summary != '')
-                                        <p>{!!$getDetails->summary!!}</p>
-                                        @else
-                                        @endif
-                                        @endforeach
-
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {{-- LIKED --}}
-                    <div id="blog">
-                        <div class="post-item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">
-                                        <div class="row">
-                                            <div class="col-lg-8 text-left">
-                                                <h5>Hal yang kamu suka</h5>
-                                            </div>
-                                            <div class="col-lg-4 text-right">
-                                                <a data-toggle="modal" data-target="#likedAdd"><span><i
-                                                            class="fas fa-plus"></i></span></a>
-                                                {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
+                        {{-- LIKED --}}
+                        <div id="blog">
+                            <div class="post-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="row">
+                                                <div class="col-lg-8 text-left">
+                                                    <h5>Hal yang kamu suka</h5>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <a data-toggle="modal" data-target="#likedAdd"><span><i
+                                                                class="fas fa-plus"></i></span></a>
+                                                    {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
                                                             class="fas fa-pencil-alt"></i></span></a> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-title" style="border: 0px !important;">
+                                            <div class="widget widget-tags" style="border:0 !important;">
+                                                <div class="tags">
+                                                    @foreach ($userGet as $getDetails)
+                                                    @if($getDetails->interested != '')
+                                                    <a href="#">{!!$getDetails->interested!!}</a>
+                                                    @else
+                                                    @endif
+                                                    @endforeach
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-title" style="border: 0px !important;">
-                                        <div class="widget widget-tags">
-                                            <div class="tags">
+                                </div>
+                            </div>
+                        </div>
+                        {{-- SCHOOL --}}
+                        <div id="blog">
+                            <div class="post-item">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-text">
+                                            <div class="row">
+                                                <div class="col-lg-8 text-left">
+                                                    <h5>Informasi pendidikan</h5>
+                                                </div>
+                                                <div class="col-lg-4 text-right">
+                                                    <a data-toggle="modal" data-target="#schoolAdd"><span><i
+                                                                class="fas fa-plus"></i></span></a>
+                                                    {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
+                                                            class="fas fa-pencil-alt"></i></span></a> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-title">
+                                            <div class="row">
                                                 @foreach ($userGet as $getDetails)
-                                                @if($getDetails->interested != '')
-                                                <a href="#">{!!$getDetails->interested!!}</a>
+                                                @if($getDetails->university != '' && $getDetails->bidang_studi != '' &&
+                                                $getDetails->tahun_masuk != '' && $getDetails->tahun_keluar != '')
+                                                <div class="col-lg-12">
+                                                    <h6>{{$getDetails->university}}</h6>
+                                                    <p>{{$getDetails->tahun_masuk}}
+                                                        - {{$getDetails->tahun_keluar}}</p>
+                                                </div>
                                                 @else
+
                                                 @endif
+
                                                 @endforeach
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{-- SCHOOL --}}
-                    <div id="blog">
-                        <div class="post-item">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-text">
-                                        <div class="row">
-                                            <div class="col-lg-8 text-left">
-                                                <h5>Informasi pendidikan</h5>
-                                            </div>
-                                            <div class="col-lg-4 text-right">
-                                                <a data-toggle="modal" data-target="#schoolAdd"><span><i
-                                                            class="fas fa-plus"></i></span></a>
-                                                {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
-                                                            class="fas fa-pencil-alt"></i></span></a> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-title">
-                                        <div class="row">
-                                            @foreach ($userGet as $getDetails)
-                                            @if($getDetails->university != '' && $getDetails->bidang_studi != '' &&
-                                            $getDetails->tahun_masuk != '' && $getDetails->tahun_keluar != '')
-                                            <div class="col-lg-12">
-                                                <h6>{{$getDetails->university}}</h6>
-                                                <p>{{$getDetails->tahun_masuk}}
-                                                    - {{$getDetails->tahun_keluar}}</p>
-                                            </div>
-                                            @else
-
-                                            @endif
-
-                                            @endforeach
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar sticky-sidebar col-lg-3">
-
-                    <div class="widget  widget-newsletter">
+                    {{-- <div class="sidebar sticky-sidebar col-lg-3">
+                    <div class="widget  widget-newsletter" style="box-shadow:0 0 0px 0 !important;">
                         <form class="widget-subscribe-form" novalidate action="/" role="form" method="post">
-                            <h4 class="widget-title">User graphic</h4>
+                            <h4 class="widget-title">Trend</h4>
                             <ul class="list list-arrow-icons">
                                 @foreach ($category_data as $cat)
                                 <li> <a title="" href="#">{{$cat->category}} </a></li>
-                                @endforeach
-                            </ul>
-                        </form>
-                    </div>
+                    @endforeach
+                    </ul>
+                    </form>
                 </div>
-            </div>
-        </div>
+            </div> --}}
+    </div>
+    </div>
     </section>
     </div>
 

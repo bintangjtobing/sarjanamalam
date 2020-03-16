@@ -84,7 +84,15 @@
                                         src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
                                         @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$thread->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
-                                    {{$thread->name}}</span></p>
+                                    {{$thread->name}}</span>
+                                @if($thread->verified==1)
+                                <span title="Verified"><img
+                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                        alt="Verified"
+                                        style="width:20px !important; height:20px !important; margin-left:.35rem;"></span>
+                                @else
+                                @endif
+                            </p>
                         </div>
                         <div class="col-lg-4 text-right">
                             <span class="text-gradient-blue-sarjana">#{{$thread->category}}</span>

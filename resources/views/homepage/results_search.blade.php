@@ -86,7 +86,7 @@
                                         <a class="nav-link nav-initial dropdown-toggle" href="#" id="dropdownId"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span><img
-                                                    src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                                    src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                 @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                                     class="img-profile-user" alt="User Image"></span>
                                         </a>

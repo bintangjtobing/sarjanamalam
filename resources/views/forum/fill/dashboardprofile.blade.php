@@ -165,7 +165,7 @@
                             <li>
                                 <div class="p-dropdown">
                                     <a href="#"><img
-                                            src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                            src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)
@@ -229,18 +229,21 @@
                 <div class="row">
                     <div class="sidebar sticky-sidebar col-lg-4">
                         <div class="widget" style="box-shadow:0 0 0px 0 !important;">
-                            <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
-                                @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
+                            @foreach ($user as $us)
+                            <img src="@if($us->displaypic!=''){!!url('https://res.cloudinary.com/sarjanamalam/image/upload/'.$us->displaypic)!!}
+                                @else{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}@endif"
                                 alt="User profile" class="img-fluid newgen-profile" style="max-width: 200px
                                 !important;margin-left: 70px !important;">
-                            <h3 class="text-center">{{auth()->user()->name}}@if(auth()->user()->verified==1)
+                            <h3 class="text-center">{{$us->name}}@if($us->verified==1)
                                 <span title="Verified"><img
                                         src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
                                         alt="Verified" style="width: 1.25rem; height: auto;"></span>
                                 @else
                                 @endif</h3>
+                            @endforeach
                             <p class="text-center">Medan, Indonesia</p>
                         </div>
+
                         <hr>
                         <div class="row text-center col-newgen">
                             <div class="col-6 bord">
@@ -252,6 +255,8 @@
                                 <p>Impress</p>
                             </div>
                         </div>
+                        @foreach ($user as $us)
+                        @if(Auth()->user()->id == $us->id)
                         <hr>
                         <div class="row text-center">
                             <div class="col-lg-12">
@@ -260,6 +265,19 @@
                                 </a>
                             </div>
                         </div>
+                        @else
+                        <div class="row text-center">
+                            <div class="col-lg-12 addcircle">
+                                <a href="#">
+                                    <h5><span id="circlefollow"><i class="fas fa-plus-circle"></i></span> Add to circle
+                                    </h5>
+                                </a>
+                            </div>
+                        </div>
+                        @endif
+                        @endforeach
+                        @foreach ($user as $us)
+                        @if(Auth()->user()->id == $us->id)
                         <hr>
                         <div class="row text-center">
                             <div class="col-lg-12">
@@ -268,6 +286,8 @@
                                 </a>
                             </div>
                         </div>
+                        @endif
+                        @endforeach
                     </div>
                     <div class="content col-lg-7">
                         {{-- Berhasil summary --}}
@@ -306,8 +326,13 @@
                                                     <h5>Tentang kamu</h5>
                                                 </div>
                                                 <div class="col-lg-4 text-right">
+                                                    @foreach ($user as $us)
+                                                    @if(Auth()->user()->id == $us->id)
                                                     <a data-toggle="modal" data-target="#summaryAdd"><span><i
                                                                 class="fas fa-plus"></i></span></a>
+                                                    @else
+                                                    @endif
+                                                    @endforeach
                                                     {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
                                                             class="fas fa-pencil-alt"></i></span></a> --}}
                                                 </div>
@@ -338,8 +363,13 @@
                                                     <h5>Hal yang kamu suka</h5>
                                                 </div>
                                                 <div class="col-lg-4 text-right">
+                                                    @foreach ($user as $us)
+                                                    @if(Auth()->user()->id == $us->id)
                                                     <a data-toggle="modal" data-target="#likedAdd"><span><i
                                                                 class="fas fa-plus"></i></span></a>
+                                                    @else
+                                                    @endif
+                                                    @endforeach
                                                     {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
                                                             class="fas fa-pencil-alt"></i></span></a> --}}
                                                 </div>
@@ -372,8 +402,13 @@
                                                     <h5>Informasi pendidikan</h5>
                                                 </div>
                                                 <div class="col-lg-4 text-right">
+                                                    @foreach ($user as $us)
+                                                    @if(Auth()->user()->id == $us->id)
                                                     <a data-toggle="modal" data-target="#schoolAdd"><span><i
                                                                 class="fas fa-plus"></i></span></a>
+                                                    @else
+                                                    @endif
+                                                    @endforeach
                                                     {{-- <a data-toggle="modal" data-target="#summaryEdit"><span><i
                                                             class="fas fa-pencil-alt"></i></span></a> --}}
                                                 </div>

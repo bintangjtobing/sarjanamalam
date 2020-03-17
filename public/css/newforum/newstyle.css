@@ -130,6 +130,9 @@ body {
 .newgen-profile {
     border-radius: 50%;
     margin-bottom: 2rem;
+    object-fit: cover;
+    width: 200px !important;
+    height: 200px !important;
 }
 
 .sidebar .widget {

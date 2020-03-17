@@ -29,7 +29,7 @@ class ForumController extends Controller
         $threadsdata = DB::table('threads')
             ->join('users', 'users.id', '=', 'threads.created_by')
             ->join('category', 'category.category_id', '=', 'threads.category_id')
-            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.verified')
+            ->select('threads.*', 'category.category', 'users.name', 'users.displaypic', 'users.verified', 'users.username')
             ->orderBy('threads.created_at', 'DESC')
             ->paginate(15);
         $usersData = DB::table('users')
@@ -249,20 +249,33 @@ class ForumController extends Controller
             ->where('comment_threads.threads_id', '=', '')
             ->select('comment_threads.*', 'threads.*')
             ->get();
-        $user = \App\UserMod::find($username);
+        // $user = \App\UserMod::find($username);
+        $user = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->get();
+        foreach ($user as $userGet) {
+            if ($userGet->id) {
+                $userGet = DB::table('users')
+                    ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+                    ->select('user_detail.*', 'users.*')
+                    ->where('user_detail.userid', '=', $userGet->id)
+                    ->get();
+            }
+        }
         $userJoin = DB::table('users')
             ->join('user_detail', 'user_detail.userid', '=', 'users.id')
             ->select('user_detail.*', 'users.*')
             ->first();
-
-        $userGet = DB::table('users')
-            ->join('user_detail', 'user_detail.userid', '=', 'users.id')
-            ->where('user_detail.userid', '=', auth()->user()->id)
-            ->select('user_detail.*', 'users.*')
-            ->get();
+        // $userGet = DB::table('users')
+        //     ->join('user_detail', 'user_detail.userid', '=', 'users.id')
+        //     ->select('user_detail.*', 'users.*')
+        //     ->where('user_detail.userid', '=', auth()->user()->id)
+        //     ->get();
 
         // dd($userJoin->id == 1);
         return view('forum.fill.dashboardprofile', ['category_data' => $category_data, 'subcat_data' => $subcat_data, 'threadsdata' => $threadsdata, 'usersData' => $usersData, 'threadsActive' => $threadsActive, 'commentData' => $commentData, 'user' => $user, 'userGet' => $userGet, 'countdesc' => $countdesc]);
+        // dd($user);
     }
     public function settings($username)
     {

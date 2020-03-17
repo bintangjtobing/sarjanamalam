@@ -17,7 +17,7 @@
                             <div class="scroll-user-active">
                                 @foreach ($users as $user)
                                 <div class="user media select-media" id="{{$user->id}}">
-                                    <img class="mr-3 img-messagesuser" src="@if(!$user->displaypic){{asset('storage/img/default.png')}}
+                                    <img class="mr-3 img-messagesuser" src="@if(!$user->displaypic){{asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')}}
                                         @else
                                         {!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$user->displaypic)!!}
                                 @endif" alt="{{$user->name}} picture.">@if($user->verified==1)

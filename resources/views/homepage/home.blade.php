@@ -39,7 +39,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                         aria-haspopup="true" aria-expanded="false" style="padding-top: 3px;">
                         <div class="nav-item-user">
                             <span><img
-                                    src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                    src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                 @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                     class="img-profile-user" alt="User Image"></span>@if(auth()->user()->verified==1)
                             <span title="Verified" style="
@@ -89,7 +89,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                         @if(($Hour >= 01) && ($Hour<=11)) {{'Selamat pagi,'}} @elseif(($Hour>=11) && ($Hour<=15))
                                 {{'Selamat siang,'}} @elseif(($Hour>=15)&& ($Hour<=18)) {{'Selamat sore,'}}
                                     @else{{'Selamat malam,'}} @endif @if(Auth::check()){{auth()->user()->name}} @else
-                                    Sarjana @endif</h2> <div class="main-search">
+                                    gengs! @endif</h2> <div class="main-search">
                                     <span class="search-icon icon-left fas fa-search"></span>
                                     <input type="search" name="get_value" class="form-control"
                                         placeholder="Temukan pembahasan disini..." autofocus>

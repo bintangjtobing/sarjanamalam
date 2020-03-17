@@ -451,7 +451,26 @@
 
 .widget-tags {
     background-color: #fff;
-    border: 1px solid #ced4da !important;
+    border: 1px solid rgba(0, 0, 0, .125) !important;
 
     border-radius: .25rem;
+}
+
+.addcircle {
+    background-color: #1c74b7;
+    padding: 5px;
+    border-radius: .25rem;
+    border: 1.25px solid #3064af;
+}
+
+.addcircle h5,
+.addcircle span {
+    color: #fff !important;
+    margin-top: 5px;
+}
+
+.addcircle:hover {
+    background-color: #3064af;
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }

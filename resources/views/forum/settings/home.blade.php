@@ -30,7 +30,7 @@
                             <div class="row settingtab">
                                 <div class="col-lg-10">
                                     <p class="mt-3">
-                                        <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                        <img src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)

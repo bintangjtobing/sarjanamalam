@@ -81,10 +81,11 @@
                     <div class="row">
                         <div class="col-lg-8 text-left">
                             <p><span class="post-meta-date"><img
-                                        src="@if(!$thread->displaypic){!!asset('storage/img/default.png')!!}
+                                        src="@if(!$thread->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                         @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$thread->displaypic)!!}@endif"
                                         alt="img-profile-user" class="img-fluid thread-profilepic">
-                                    {{$thread->name}}</span>
+                                    <a href="/{{$thread->username}}"
+                                        style="color: #3c3c3c !important; font-weight:600;">{{$thread->name}}</a></span>
                                 @if($thread->verified==1)
                                 <span title="Verified"><img
                                         src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"

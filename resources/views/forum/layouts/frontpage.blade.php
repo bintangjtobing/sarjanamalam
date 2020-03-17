@@ -64,7 +64,7 @@
                             <li>
                                 <div class="p-dropdown">
                                     <a href="#"><img
-                                            src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                                            src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)

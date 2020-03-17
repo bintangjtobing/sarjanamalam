@@ -178,7 +178,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="@if(!auth()->user()->displaypic){!!asset('storage/img/default.png')!!}
+                        <img src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                 @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                             class="img-circle elevation-2" alt="Logo" . {{auth()->user()->name}}>
                     </div>

@@ -4,34 +4,34 @@
 
 .website-logo {
     display: inline-block;
-    top: 50%;
-    left: 220px;
+    top: 35%;
+    left: 170px;
     right: initial;
     bottom: initial;
 }
 
 .website-logo img {
-    width: 150px;
+    width: 200px;
 }
 
 .website-logo .logo {
-    background-image: url("../../../storage/logoofficial.png");
+    background-image: url("https://res.cloudinary.com/sarjanamalam/image/upload/v1584417675/based/logoofficial-min_s9qfp5.png");
 }
 
 .website-logo .logo img {
-    width: 150px;
+    width: 200px;
 }
 
 .website-logo-inside img {
-    width: 150px;
+    width: 200px;
 }
 
 .website-logo-inside .logo {
-    background-image: url("../../../storage/logoofficial.png");
+    background-image: url("https://res.cloudinary.com/sarjanamalam/image/upload/v1584417675/based/logoofficial-min_s9qfp5.png");
 }
 
 .website-logo-inside .logo img {
-    width: 150px;
+    width: 200px;
 }
 
 .img-holder {
@@ -64,7 +64,7 @@
 
 .img-holder .bg {
     opacity: 1;
-    background-image: url("../../../storage/logopname.jpg");
+    background-image: url("https://res.cloudinary.com/sarjanamalam/image/upload/v1584416351/based/sarjanamalam-joinus-min_xy7p8w.jpg");
 }
 
 .form-holder {

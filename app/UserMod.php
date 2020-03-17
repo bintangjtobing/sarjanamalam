@@ -12,7 +12,7 @@ class UserMod extends Model
     public function getAvatar()
     {
         if (!$this->displaypic) {
-            return asset('storage/img/default.png');
+            return asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png');
         }
         return asset('https://res.cloudinary.com/sarjanamalam/image/upload/' . $this->displaypic);
     }

@@ -21,7 +21,9 @@
         <div class="website-logo">
             <a href="/">
                 <div class="logo">
-                    <img class="logo-size" src="{!!asset('storage/logoofficial.png')!!}" alt="">
+                    <img class="logo-size"
+                        src="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584417675/based/logoofficial-min_s9qfp5.png')!!}"
+                        alt="">
                 </div>
             </a>
         </div>

@@ -31,11 +31,13 @@
 
     {{-- METAGRAPH FACEBOOK --}}
     <meta property="fb:admins" content="114499413304839">
-    <meta property="og:site_name" content="Dashboard Profile :: {{auth()->user()->name}}" />
+    <meta property="og:site_name" content="Add me to your circle: {{auth()->user()->name}}" />
     <meta property="og:url" content="{{Request::url()}}" />
     <meta property="og:type" content="@yield('ogtype')" />
-    <meta property="og:title" content="Dashboard Profile :: {{auth()->user()->name}}" />
+    <meta property="og:title" content="Add me to your circle: {{auth()->user()->name}}" />
     <meta property="og:description" content="@yield('metadesc')" />
+    <meta property="og:image" content="@if(!auth()->user()->displaypic){!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
+        @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -143,17 +145,6 @@
                             <img src="{!!asset('storage/logoofficial-mini.png')!!}" class="logo-default">
                         </a>
                     </div>
-
-
-                    <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i
-                                class="icon-x"></i></a>
-                        <form class="search-form" action="#" method="get">
-                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-
-
                     <div class="header-extras">
                         <ul>
                             <li>
@@ -165,7 +156,7 @@
                             <li>
                                 <div class="p-dropdown">
                                     <a href="#"><img
-                                            src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
+                                            src="@if(!auth()->user()->displaypic){!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)
@@ -241,7 +232,29 @@
                                 @else
                                 @endif</h3>
                             @endforeach
-                            <p class="text-center">Medan, Indonesia</p>
+                            {{-- BIO USER --}}
+                            @foreach ($userGet as $getDetails)
+                            @if($getDetails->summary != '')
+                            <p class="text-center">
+                                {!!strip_tags($getDetails->summary)!!}<br>
+                                <a href="https://{{$getDetails->website}}">{{$getDetails->website}}</a>
+                            </p>
+                            @if($getDetails->facebook != '' || $getDetails->instagram != '' || $getDetails->twitter !=
+                            '')
+                            <hr>
+                            <p class="text-center">
+                                <span><i class="fab fa-facebook-square"></i>&nbsp;facebook.com/<a
+                                        href="https://facebook.com/{{$getDetails->facebook}}"><b>{{$getDetails->facebook}}</b></a></span><br>
+                                <span><i class="fab fa-instagram-square"></i>&nbsp;instagram.com/<a
+                                        href="https://instagram.com/{{$getDetails->facebook}}"><b>{{$getDetails->instagram}}</b></a></span><br>
+                                <span><i class="fab fa-twitter-square"></i>&nbsp;twitter.com/<a
+                                        href="https://twitter.com/{{$getDetails->twitter}}"><b>{{$getDetails->twitter}}</b></a></span>
+                            </p>
+                            @else
+                            @endif
+                            @else
+                            @endif
+                            @endforeach</p>
                         </div>
 
                         <hr>
@@ -482,8 +495,15 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
@@ -520,6 +540,8 @@
         });
 
     </script>
+
+
 </body>
 
 </html>

@@ -132,6 +132,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/{username}/settings/update_email/{tokens}', 'ForumController@updateemail');
     Route::post('/{username}/settings/update_password/{tokens}', 'ForumController@updatepassword');
     Route::post('/{username}/settings/update_pic/{tokens}', 'ForumController@updatepic');
+    Route::post('/{username}/settings/update_website/{tokens}', 'ForumController@updatewebsite');
+    Route::post('/{username}/settings/update_social/{tokens}', 'ForumController@updatesocial');
 
     // DASHBOARD PROFILE CONTROLLER
     Route::post('/summary-add/{enc_id}/{tokens}', 'ForumController@summaryadd');

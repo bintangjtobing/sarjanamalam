@@ -410,9 +410,28 @@ class ForumController extends Controller
                     'displaypic' => $upC,
                 ]);
         }
-
-
-
         return back()->with('sukses', 'Berhasil memperbarui foto profile anda!');
+    }
+    public function updatewebsite(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update([
+                'website' => $request->websites
+            ]);
+        return back()->with('sukses', 'Berhasil menambah website anda!');
+    }
+    public function updatesocial(Request $request, $username)
+    {
+        $namedata = DB::table('users')
+            ->select('users.*')
+            ->where('users.username', '=', $username)
+            ->update([
+                'facebook' => $request->facebook,
+                'instagram' => $request->instagram,
+                'twitter' => $request->twitter,
+            ]);
+        return back()->with('sukses', 'Berhasil edit social links anda!');
     }
 }

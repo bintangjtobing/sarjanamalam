@@ -236,6 +236,157 @@
             </div>
         </div>
     </div>
+    <div class="card" id="kontak">
+        <div class="card-body">
+            <div class="card-text">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3>Informasi situs sosial</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-title" style="border-bottom:0px;">
+                <div class="accordion accordion-flat">
+                    <div class="ac-item">
+                        <h5 class="ac-title">
+                            <div class="row settingtab">
+                                <div class="col-lg-10">
+                                    <p class="mt-3"><b><span><i class="fas fa-globe"></i> </span>
+                                            Website</b><br><a
+                                            href="http://{{auth()->user()->website}}">{{auth()->user()->website}}</a>
+                                    </p>
+                                </div>
+                                <div class="col-lg-2 text-right" style="margin-top:1.25rem;">
+                                    <span style="font-size: 2rem; color: #777"><i
+                                            class="fas fa-chevron-right"></i></span>
+                                </div>
+                            </div>
+                        </h5>
+                        <div class="ac-content">
+                            <form action="/{{auth()->user()->username}}/settings/update_website/{{$tokens}}"
+                                method="post">
+                                {{ csrf_field() }}
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="websites" class="form-control mb-3"
+                                                placeholder="www.yourwebsites.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="submit" class="btn btn-primary">Simpan perubahan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="ac-item">
+                        <h5 class="ac-title">
+                            <div class="row settingtab">
+                                <div class="col-lg-10">
+                                    <p class="mt-3"><b><span><i class="fas fa-share-alt-square"></i> </span>
+                                            Social Links</b></p>
+                                </div>
+                                <div class="col-lg-2 text-right" style="margin-top:1.25rem;">
+                                    <span style="font-size: 2rem; color: #777"><i
+                                            class="fas fa-chevron-right"></i></span>
+                                </div>
+                            </div>
+                        </h5>
+                        <div class="ac-content">
+                            <form action="/{{auth()->user()->username}}/settings/update_social/{{$tokens}}"
+                                method="post">
+                                {{ csrf_field() }}
+                                @if(Auth()->user()->facebook != '' || Auth()->user()->instagram != '' ||
+                                Auth()->user()->twitter != '')
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <p><span><i class="fab fa-facebook-square"></i></span>&nbsp;
+                                            <a href="https://facebook.com/{{auth()->user()->facebook}}" style="color:
+                                                grey !important; font-weight:600;">{{auth()->user()->facebook}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <p><span><i class="fab fa-instagram-square"></i></span>&nbsp;
+                                            <a href="https://instagram.com/{{auth()->user()->instagram}}" style="color:
+                                                grey !important; font-weight:600;">{{auth()->user()->instagram}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <p><span><i class="fab fa-twitter-square"></i></span>&nbsp;
+                                            <a href="https://twitter.com/{{auth()->user()->twitter}}" style="color:
+                                                grey !important; font-weight:600;">{{auth()->user()->twitter}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                @elseif(Auth()->user()->facebook == '' || Auth()->user()->instagram == '' ||
+                                Auth()->user()->twitter == '')
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3"><span
+                                                            style="color: grey;"><i class="fab fa-facebook-square"></i>
+                                                        </span>
+                                                        &nbsp; facebook.com/</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="username"
+                                                    aria-describedby="basic-addon3" name="facebook">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3"><span
+                                                            style="color: grey;"><i class="fab fa-instagram-square"></i>
+                                                        </span>
+                                                        &nbsp; instagram.com/</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="username"
+                                                    aria-describedby="basic-addon3" name="instagram">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3"><span
+                                                            style="color: grey;"><i class="fab fa-twitter-square"></i>
+                                                        </span>
+                                                        &nbsp; twitter.com/</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="username"
+                                                    aria-describedby="basic-addon3" name="twitter" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @else
+                                @endif
+                                <div class="form-row">
+                                    <button type="submit" class="btn btn-primary">Simpan perubahan</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <div class="card" id="security">
         <div class="card-body">
             <div class="card-text">

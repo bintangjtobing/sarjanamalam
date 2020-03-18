@@ -30,6 +30,10 @@ class UserController extends Controller
         $data_member->role = 'user';
         $data_member->jabatan = 'user';
         $data_member->verified = '0';
+        $data_member->website = '';
+        $data_member->facebook = '';
+        $data_member->instagram = '';
+        $data_member->twitter = '';
         $data_member->status = 'inactive';
         $data_member->password = Hash::make($request->password);
         $data_member->verified_password = $request->ver_password;

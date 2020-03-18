@@ -131,10 +131,14 @@
             <div class="container">
                 <div class="row">
                     <div class="sidebar col-lg-3">
-                        <div class="widget  widget-newsletter">
+                        <div class="widget  widget-newsletter" style="box-shadow:0 0 0 0;">
                             <ul class="list list-arrow-icons">
                                 <li><a href="#umum" class="@yield('aktifumum')"><span><i class="fas fa-cog"></i></span>
                                         Umum</a>
+                                </li>
+                                <li><a href="#kontak" class="@yield('aktifkontak')"><span><i
+                                                class="fas fa-id-badge"></i></span>
+                                        Informasi situs sosial</a>
                                 </li>
                                 <li><a href="#security" class="@yield('aktifkeamanan')"><span><i
                                                 class="fas fa-shield-alt"></i></span>

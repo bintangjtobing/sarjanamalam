@@ -118,13 +118,15 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
 
         <div class="grid-layout grid-2-columns" data-margin="20" data-item="grid-item" data-lightbox="gallery">
             <div class="grid-item">
-                <a href="/karir-sarjanamalam"><img src="{!!asset('storage/blog/1.jpg')!!}">
+                <a href="/karir-sarjanamalam"><img
+                        src="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584497896/based/work-with-us_osooxh.jpg')!!}">
                     <h4>Karir di sarjanamalam.</h4>
                     <p>Gabung bersama kami</p>
                 </a>
             </div>
             <div class="grid-item">
-                <a href="/hubungi-sarjanamalam"><img src="{!!asset('storage/blog/2.jpg')!!}">
+                <a href="/hubungi-sarjanamalam"><img
+                        src="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584497896/based/call-us_vzc47y.jpg')!!}">
                     <h4>Hubungi kami</h4>
                     <p>Katakan halo</p>
                 </a>

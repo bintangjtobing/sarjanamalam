@@ -32,7 +32,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{URL::current()}}">
     <meta property="og:image"
-        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
+        content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584421114/based/Official_sarjanamalam_logo_copyright_2020_hecjnh.jpg')!!}">
     <meta property="og:description" content="@yield('metadesc')">
     <meta property="og:site_name" content="Sarjanamalam.">
     {{-- TWITTER SOCMED --}}
@@ -94,7 +94,8 @@
                                             <a class="dropdown-item nav-user-name" href="#"><span
                                                     class="font-weight-bold ">{{auth()->user()->name}}</span></a>
                                             <a class="dropdown-item" href="#">Profile Saya</a>
-                                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}" class="dropdown-item">Keluar</a>
+                                            <a href="/logout/{{auth()->user()->id}}/{{$tokens}}"
+                                                class="dropdown-item">Keluar</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -520,7 +521,7 @@
 
                                         <div class="related-images mb-3">
 
-                                            <img src="https://sarjanamalam.com/storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg"
+                                            <img src="https://sarjanamalam.com/https://res.cloudinary.com/sarjanamalam/image/upload/v1584421114/based/Official_sarjanamalam_logo_copyright_2020_hecjnh.jpg"
                                                 alt="related-images" class="img-fluid">
 
                                         </div>

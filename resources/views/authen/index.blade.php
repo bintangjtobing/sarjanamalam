@@ -31,7 +31,7 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="/">
     <meta property="og:image"
-        content="{!!asset('storage/img/Official%20sarjanamalam%20logo%20copyright%202020.jpg')!!}">
+        content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584421114/based/Official_sarjanamalam_logo_copyright_2020_hecjnh.jpg')!!}">
     <meta property="og:description" content="@yield('metadesc')">
     <meta property="og:site_name" content="Sarjanamalam.">
 

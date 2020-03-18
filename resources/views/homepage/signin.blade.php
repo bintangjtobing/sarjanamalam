@@ -13,6 +13,22 @@
     <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-style.css')!!}">
     <link rel="stylesheet" type="text/css" href="{!!asset('css/homepage/loginreg/iofrm-theme2.css')!!}">
     <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
+
+    {{-- SOCIAL MEDIA TAGS --}}
+    {{-- TWITTER SOCMED --}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sarjanamalamcom">
+    <meta name="twitter:creator" content="@sarjanamalamcom">
+
+    {{-- METAGRAPH FACEBOOK --}}
+    <meta property="fb:admins" content="114499413304839">
+    <meta property="og:site_name" content="@yield('title')" />
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="@yield('ogtype')" />
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('metadesc')" />
+    <meta property="og:image"
+        content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584496636/based/join_p9rabw.jpg')!!}">
 </head>
 
 <body>

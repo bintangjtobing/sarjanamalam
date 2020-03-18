@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="widget">
-                                    <div class="widget-title">Lebih dari kami</div>
+                                    <div class="widget-title" style="padding-left:0 !important;">Lebih dari kami</div>
                                     <ul class="list">
                                         <li><a href="/hubungi-sarjanamalam">Hubungi kami</a></li>
                                         <li><a href="/partnership">Partnership</a></li>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="col-lg-3">
                                 <div class="widget">
-                                    <div class="widget-title">Dukungan</div>
+                                    <div class="widget-title" style="padding-left:0 !important;">Dukungan</div>
                                     <ul class="list">
                                         <li><a href="/frequently-asked-question">F.A.Q</a></li>
                                         <li><a href="/privacy">Privasi</a></li>

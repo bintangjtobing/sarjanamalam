@@ -236,7 +236,7 @@
                     <h3 class="card-title">Latest Members</h3>
 
                     <div class="card-tools">
-                        <span class="badge badge-danger">8 New Members</span>
+                        <span class="badge badge-danger">{{$usermg->count()}} New Members</span>
                         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                 class="fas fa-minus"></i>
                         </button>
@@ -248,52 +248,21 @@
                 <!-- /.card-header -->
                 <div class="card-body p-0">
                     <ul class="users-list clearfix">
+                        @foreach ($usermg->take(12) as $user)
                         <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user1-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Alexander Pierce</a>
-                            <span class="users-list-date">Today</span>
+                            <img class="newgen-profile" src="@if(!auth()->user()->displaypic){!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
+        @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$user->displaypic)!!}@endif"
+                                alt="{{$user->name}} Image">
+                            <a class="users-list-name" href="/{{$user->username}}" target="_blank">{{$user->name}}</a>
+                            <span class="users-list-date">{{date('d M', strtotime($user->created_at))}}</span>
                         </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user8-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Norman</a>
-                            <span class="users-list-date">Yesterday</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user7-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Jane</a>
-                            <span class="users-list-date">12 Jan</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user6-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">John</a>
-                            <span class="users-list-date">12 Jan</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user2-160x160.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Alexander</a>
-                            <span class="users-list-date">13 Jan</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user5-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Sarah</a>
-                            <span class="users-list-date">14 Jan</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user4-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Nora</a>
-                            <span class="users-list-date">15 Jan</span>
-                        </li>
-                        <li>
-                            <img src="{!!asset('dashboard_admin/dist/img/user3-128x128.jpg')!!}" alt="User Image">
-                            <a class="users-list-name" href="#">Nadia</a>
-                            <span class="users-list-date">15 Jan</span>
-                        </li>
+                        @endforeach
                     </ul>
                     <!-- /.users-list -->
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer text-center">
-                    <a href="javascript::">View All Users</a>
+                    <a href="/user-config/{{$tokens}}">View All Users</a>
                 </div>
                 <!-- /.card-footer -->
             </div>

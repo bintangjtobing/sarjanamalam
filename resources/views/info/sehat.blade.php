@@ -6,13 +6,13 @@
 <div id="slider" class="inspiro-slider dots-creative" data-height-xs="360">
 
     <div class="slide kenburns"
-        style="background-image:url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584673024/based/covid-1_dvwv7r.jpg');">
+        style="background-image:url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584687818/based/covid-3_zc2hex.jpg');">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="slide-captions text-center text-light">
 
-                <span class="strong">SIAP SIAGA COVID-19 INDONESIA<br><b>Case Fatality Rate: 4.1%</b></span>
-                <h1>UPDATE PER 19 MARET 2020 (GLOBAL)</h1>
+                <span class="strong">SIAP SIAGA COVID-19 INDONESIA<br><b>Case Fatality Rate: 4.2%</b></span>
+                <h1>UPDATE PER 20 MARET 2020 (GLOBAL)</h1>
 
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="col-md-4">
                 <div class="text-center">
                     <div class="counter display-4 d-block text-dark mb-2">
-                        <span data-suffix="" data-to="1651" data-from="0"></span></div>
+                        <span data-suffix="" data-to="1898" data-from="0"></span></div>
                     <h3>JUMLAH ORANG YANG <span class="text-gradient-blue-sarjana">DIPERIKSA</span></h3>
                 </div>
 
@@ -62,7 +62,7 @@
             <div class="col-md-4">
                 <div class="text-center">
                     <div class="counter display-4 d-block text-dark mb-2">
-                        <span data-suffix="" data-to="1178" data-from="0"></span>
+                        <span data-suffix="" data-to="1570" data-from="0"></span>
                     </div>
                     <h3>NEGATIF <span class="text-gradient-blue-sarjana">COVID-19</span></h3>
                 </div>
@@ -173,9 +173,6 @@
                         <ul>
                             <li>
                                 <h4>Hindari menyentuh mata, hidung, mulut</h5>
-                            </li>
-                            <li>
-                                <h4>Cuci tangan kurang lebih dari 20 detik pakai air, sabun, atau hand sanitizer</h4>
                             </li>
                             <li>
                                 <h4>Cuci tangan kurang lebih dari 20 detik pakai air, sabun, atau hand sanitizer</h4>

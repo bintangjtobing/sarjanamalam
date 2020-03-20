@@ -58,7 +58,7 @@ Route::get('/sarjanamalam-peduli-sehat', 'OptionalController@index');
 
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    return view('homepage.login');
+    return view('homepage.home');
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.login');

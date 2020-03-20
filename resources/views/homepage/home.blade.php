@@ -68,7 +68,6 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">

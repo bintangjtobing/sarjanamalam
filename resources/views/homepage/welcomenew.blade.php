@@ -93,6 +93,22 @@
             }
 
     </script>
+    <div id="cookieNotify" class="modal-strip cookie-notify background-dark" data-delay="3000" data-expire="1"
+        data-cookie-name="cookiebar2020_1" data-cookie-enabled="true" style="background-color: #3485c1;color: #fff;">
+        <div class="container">
+            <div class="row p-2">
+                <div class="col-lg-8 text-sm-center sm-center sm-m-b-10 m-t-5">Temukan informasi terbaru tentang
+                    COVID-19 <a href="https://sarjanamalam.com/sarjanamalam-peduli-sehat" class="text-light"><span>
+                            <b>disini.</b> <i class="fa fa-info-circle"></i></span></a>
+                </div>
+                <div class="col-lg-4 text-right sm-text-center sm-center">
+                    <button type="button" class="close" data-dismiss="modal-strip" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="homestyle inner inner-bg-image">
 
         @yield('content')

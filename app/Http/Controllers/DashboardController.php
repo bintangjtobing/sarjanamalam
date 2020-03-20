@@ -46,7 +46,7 @@ class DashboardController extends Controller
     {
         $usermg = DB::table('users')
             ->select('users.*')
-            ->orderBy('users.created_at', 'ASC')
+            ->orderBy('users.created_at', 'DESC')
             ->get();
         return view('authen.user', ['usermg' => $usermg]);
     }

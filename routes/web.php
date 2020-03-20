@@ -51,11 +51,14 @@ Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent')
 Route::get('/eForms-rnhkbpglugur', 'partnerController@index');
 Route::post('/submit-eForms/{tokens}', 'partnerController@submitforms');
 
+
+// TAMBAHAN INFO
+Route::get('/sarjanamalam-peduli-sehat', 'OptionalController@index');
 // MAIL SETTING
 
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    return view('homepage.home');
+    return view('homepage.login');
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.login');

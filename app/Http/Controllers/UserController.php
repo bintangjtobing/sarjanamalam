@@ -69,7 +69,7 @@ class UserController extends Controller
             return redirect('/');
         }
         // check  if we have a logged providers
-        $socialProvider = \App\socialprovider::where('provider_id', $socialProvider->getId())->first();
+        $socialProvider = socialprovider::where('provider_id', $socialProvider->getId())->first();
         if (!$socialProvider) {
             // create new  user & provider
             $user = UserMod::firstOrCreate(

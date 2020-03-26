@@ -12,7 +12,7 @@ use App\socialprovider;
 use Carbon\Traits\Timestamp;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\MessageBag;
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 
 class UserController extends Controller
 {
@@ -69,7 +69,7 @@ class UserController extends Controller
             return redirect('/');
         }
         // check  if we have a logged providers
-        $socialProvider = socialprovider::where('provider_id', $socialProvider->getId())->first();
+        $socialProvider = \App\socialprovider::where('provider_id', $socialProvider->getId())->first();
         if (!$socialProvider) {
             // create new  user & provider
             $user = UserMod::firstOrCreate(

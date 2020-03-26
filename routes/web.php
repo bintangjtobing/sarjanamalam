@@ -76,8 +76,8 @@ Route::get('/signin', function () {
 })->name('signin');
 
 // FACEBOOK, TWITTER, GOOGLE AUTH
-Route::get('auth/{provider}', 'UserController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'UserController@handleProviderCallback');
+Route::get('/auth/{provider}', 'UserController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'UserController@handleProviderCallback');
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/reset-account', 'UserController@resetAccount');

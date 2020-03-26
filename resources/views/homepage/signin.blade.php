@@ -63,11 +63,9 @@
                         </div>
                         @yield('contentauth')
                         <div class="other-links">
-                            <span>Pantau terus sosial medianya <span
-                                    class="text-gradient-blue-sarjana">#sarjanamalam</span><a
-                                    href="http://facebook.com/sarjanamalamdotcom" target="_blank">Facebook</a><a
-                                    href="http://instagram.com/sarjanamalamdotcom" target="_blank">Instagram</a><a
-                                    href="https://twitter.com/sarjanamalamcom" target="_blank">Twitter</a>
+                            <span>Atau login / daftar menggunakan </span><a href="/auth/facebook"
+                                target="_blank">Facebook</a><a href="/auth/google" target="_blank">Google</a><a
+                                href="/auth/twitter" target="_blank">Twitter</a>
                         </div>
                     </div>
                 </div>

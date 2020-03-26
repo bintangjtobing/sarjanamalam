@@ -46,6 +46,6 @@ return [
     'google' => [
         'client_id' => '544855069309-2msb0e98iq89b93e0d8v4168bme56pd5.apps.googleusercontent.com',
         'client_secret' => 'Kiq5orG2HyDKEPj-on3pqAYQ',
-        'redirect' => 'https://sarjanamalam.com/Oauth/google/callback',
+        'redirect' => 'https://sarjanamalam.com/auth/google/callback',
     ],
 ];

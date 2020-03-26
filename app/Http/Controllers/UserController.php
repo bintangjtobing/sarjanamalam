@@ -51,9 +51,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -61,10 +61,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($provider)
     {
         try {
-            $socialUser = Socialite::driver('facebook')->user();
+            $socialUser = Socialite::driver($provider)->user();
         } catch (\Exception $e) {
             return redirect('/');
         }
@@ -78,7 +78,7 @@ class UserController extends Controller
                 ['username' => $socialUser->getName()]
             );
             $user->socialProvider()->create(
-                ['provider_id' => $socialUser->getId(), 'provider' => 'facebook']
+                ['provider_id' => $socialUser->getId(), 'provider' => $provider]
             );
         } else {
             $user = $socialProvider->user;
@@ -87,10 +87,6 @@ class UserController extends Controller
 
             return redirect('/');
         }
-
-
-        return $user->getEmail();
-        // $user->token;
     }
     public function verification(Request $request, $enc_id)
     {

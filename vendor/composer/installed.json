@@ -911,26 +911,26 @@
     },
     {
         "name": "firebase/php-jwt",
-        "version": "v5.1.0",
-        "version_normalized": "5.1.0.0",
+        "version": "v5.2.0",
+        "version_normalized": "5.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/firebase/php-jwt.git",
-            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
+            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
-            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
+            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
+            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "^4.8|^5"
+            "phpunit/phpunit": ">=4.8 <=9"
         },
-        "time": "2020-02-24T23:15:03+00:00",
+        "time": "2020-03-25T18:49:23+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -955,7 +955,11 @@
             }
         ],
         "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-        "homepage": "https://github.com/firebase/php-jwt"
+        "homepage": "https://github.com/firebase/php-jwt",
+        "keywords": [
+            "jwt",
+            "php"
+        ]
     },
     {
         "name": "fzaninotto/faker",
@@ -1760,6 +1764,72 @@
         ]
     },
     {
+        "name": "laravel/socialite",
+        "version": "v4.3.2",
+        "version_normalized": "4.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/laravel/socialite.git",
+            "reference": "4bd66ee416fea04398dee5b8c32d65719a075db4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/laravel/socialite/zipball/4bd66ee416fea04398dee5b8c32d65719a075db4",
+            "reference": "4bd66ee416fea04398dee5b8c32d65719a075db4",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "guzzlehttp/guzzle": "~6.0",
+            "illuminate/http": "~5.7.0|~5.8.0|^6.0|^7.0",
+            "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0",
+            "league/oauth1-client": "~1.0",
+            "php": "^7.1.3"
+        },
+        "require-dev": {
+            "illuminate/contracts": "~5.7.0|~5.8.0|^6.0|^7.0",
+            "mockery/mockery": "^1.0",
+            "phpunit/phpunit": "^7.0|^8.0"
+        },
+        "time": "2020-02-04T15:30:01+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.x-dev"
+            },
+            "laravel": {
+                "providers": [
+                    "Laravel\\Socialite\\SocialiteServiceProvider"
+                ],
+                "aliases": {
+                    "Socialite": "Laravel\\Socialite\\Facades\\Socialite"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Laravel\\Socialite\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylor@laravel.com"
+            }
+        ],
+        "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+        "homepage": "https://laravel.com",
+        "keywords": [
+            "laravel",
+            "oauth"
+        ]
+    },
+    {
         "name": "laravel/telescope",
         "version": "v2.1.7",
         "version_normalized": "2.1.7.0",
@@ -2000,17 +2070,17 @@
     },
     {
         "name": "league/flysystem",
-        "version": "1.0.65",
-        "version_normalized": "1.0.65.0",
+        "version": "1.0.66",
+        "version_normalized": "1.0.66.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8"
+            "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
-            "reference": "8f17b3ba67097aafb8318cd5c553b1acf7c891c8",
+            "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/021569195e15f8209b1c4bebb78bd66aa4f08c21",
+            "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21",
             "shasum": ""
         },
         "require": {
@@ -2040,7 +2110,7 @@
             "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
             "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
         },
-        "time": "2020-03-08T18:53:20+00:00",
+        "time": "2020-03-17T18:58:12+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2145,6 +2215,71 @@
             "league",
             "manipulation",
             "processing"
+        ]
+    },
+    {
+        "name": "league/oauth1-client",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/oauth1-client.git",
+            "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/oauth1-client/zipball/fca5f160650cb74d23fc11aa570dd61f86dcf647",
+            "reference": "fca5f160650cb74d23fc11aa570dd61f86dcf647",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.0",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "^0.9",
+            "phpunit/phpunit": "^4.0",
+            "squizlabs/php_codesniffer": "^2.0"
+        },
+        "time": "2016-08-17T00:36:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "League\\OAuth1\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ben Corlett",
+                "email": "bencorlett@me.com",
+                "homepage": "http://www.webcomm.com.au",
+                "role": "Developer"
+            }
+        ],
+        "description": "OAuth 1.0 Client Library",
+        "keywords": [
+            "Authentication",
+            "SSO",
+            "authorization",
+            "bitbucket",
+            "identity",
+            "idp",
+            "oauth",
+            "oauth1",
+            "single sign on",
+            "trello",
+            "tumblr",
+            "twitter"
         ]
     },
     {
@@ -2588,17 +2723,17 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "2.31.0",
-        "version_normalized": "2.31.0.0",
+        "version": "2.32.0",
+        "version_normalized": "2.32.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "bbc0ab53f41a4c6f223c18efcdbd9bc725eb5d2d"
+            "reference": "7410a349613bf32d02d8aaed1c669698ddd2b718"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bbc0ab53f41a4c6f223c18efcdbd9bc725eb5d2d",
-            "reference": "bbc0ab53f41a4c6f223c18efcdbd9bc725eb5d2d",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7410a349613bf32d02d8aaed1c669698ddd2b718",
+            "reference": "7410a349613bf32d02d8aaed1c669698ddd2b718",
             "shasum": ""
         },
         "require": {
@@ -2607,6 +2742,7 @@
             "symfony/translation": "^3.4 || ^4.0 || ^5.0"
         },
         "require-dev": {
+            "doctrine/orm": "^2.7",
             "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
             "kylekatarnls/multi-tester": "^1.1",
             "phpmd/phpmd": "^2.8",
@@ -2614,7 +2750,7 @@
             "phpunit/phpunit": "^7.5 || ^8.0",
             "squizlabs/php_codesniffer": "^3.4"
         },
-        "time": "2020-03-01T11:11:58+00:00",
+        "time": "2020-03-24T16:01:47+00:00",
         "bin": [
             "bin/carbon"
         ],
@@ -3110,17 +3246,17 @@
     },
     {
         "name": "paragonie/sodium_compat",
-        "version": "v1.12.2",
-        "version_normalized": "1.12.2.0",
+        "version": "v1.13.0",
+        "version_normalized": "1.13.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/paragonie/sodium_compat.git",
-            "reference": "3b953109fdfc821c1979bc829c8b7421721fef82"
+            "reference": "bbade402cbe84c69b718120911506a3aa2bae653"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/3b953109fdfc821c1979bc829c8b7421721fef82",
-            "reference": "3b953109fdfc821c1979bc829c8b7421721fef82",
+            "url": "https://api.github.com/repos/paragonie/sodium_compat/zipball/bbade402cbe84c69b718120911506a3aa2bae653",
+            "reference": "bbade402cbe84c69b718120911506a3aa2bae653",
             "shasum": ""
         },
         "require": {
@@ -3134,7 +3270,7 @@
             "ext-libsodium": "PHP < 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security.",
             "ext-sodium": "PHP >= 7.0: Better performance, password hashing (Argon2i), secure memory management (memzero), and better security."
         },
-        "time": "2019-12-30T03:11:08+00:00",
+        "time": "2020-03-20T21:48:09+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -3457,27 +3593,27 @@
     },
     {
         "name": "phpoption/phpoption",
-        "version": "1.7.2",
-        "version_normalized": "1.7.2.0",
+        "version": "1.7.3",
+        "version_normalized": "1.7.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/schmittjoh/php-option.git",
-            "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959"
+            "reference": "4acfd6a4b33a509d8c88f50e5222f734b6aeebae"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
-            "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
+            "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/4acfd6a4b33a509d8c88f50e5222f734b6aeebae",
+            "reference": "4acfd6a4b33a509d8c88f50e5222f734b6aeebae",
             "shasum": ""
         },
         "require": {
-            "php": "^5.5.9 || ^7.0"
+            "php": "^5.5.9 || ^7.0 || ^8.0"
         },
         "require-dev": {
             "bamarni/composer-bin-plugin": "^1.3",
             "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
         },
-        "time": "2019-12-15T19:35:24+00:00",
+        "time": "2020-03-21T18:07:53+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -3570,17 +3706,17 @@
     },
     {
         "name": "phpseclib/phpseclib",
-        "version": "2.0.25",
-        "version_normalized": "2.0.25.0",
+        "version": "2.0.26",
+        "version_normalized": "2.0.26.0",
         "source": {
             "type": "git",
             "url": "https://github.com/phpseclib/phpseclib.git",
-            "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0"
+            "reference": "09655fcc1f8bab65727be036b28f6f20311c126c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
-            "reference": "c18159618ed7cd7ff721ac1a8fec7860a475d2f0",
+            "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/09655fcc1f8bab65727be036b28f6f20311c126c",
+            "reference": "09655fcc1f8bab65727be036b28f6f20311c126c",
             "shasum": ""
         },
         "require": {
@@ -3598,7 +3734,7 @@
             "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
             "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
         },
-        "time": "2020-02-25T04:16:50+00:00",
+        "time": "2020-03-13T04:15:39+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4234,23 +4370,23 @@
     },
     {
         "name": "psr/log",
-        "version": "1.1.2",
-        "version_normalized": "1.1.2.0",
+        "version": "1.1.3",
+        "version_normalized": "1.1.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-fig/log.git",
-            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+            "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-            "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+            "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2019-11-01T11:05:21+00:00",
+        "time": "2020-03-23T09:12:05+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -5305,17 +5441,17 @@
     },
     {
         "name": "spatie/crawler",
-        "version": "4.6.7",
-        "version_normalized": "4.6.7.0",
+        "version": "4.6.8",
+        "version_normalized": "4.6.8.0",
         "source": {
             "type": "git",
             "url": "https://github.com/spatie/crawler.git",
-            "reference": "db5cee0941df9882b286384615f98396a591c791"
+            "reference": "3c1eb2d38b4a18560d3f48087597f9786f95b694"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/spatie/crawler/zipball/db5cee0941df9882b286384615f98396a591c791",
-            "reference": "db5cee0941df9882b286384615f98396a591c791",
+            "url": "https://api.github.com/repos/spatie/crawler/zipball/3c1eb2d38b4a18560d3f48087597f9786f95b694",
+            "reference": "3c1eb2d38b4a18560d3f48087597f9786f95b694",
             "shasum": ""
         },
         "require": {
@@ -5326,13 +5462,13 @@
             "spatie/browsershot": "^3.14",
             "spatie/robots-txt": "^1.0.1",
             "symfony/dom-crawler": "^4.0 || ^5.0",
-            "tightenco/collect": "^5.6|^6.0"
+            "tightenco/collect": "^5.6|^6.0|^7.0"
         },
         "require-dev": {
             "larapack/dd": "^1.1",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2020-03-09T19:54:38+00:00",
+        "time": "2020-03-13T10:56:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -7346,17 +7482,17 @@
     },
     {
         "name": "tightenco/collect",
-        "version": "v6.17.0",
-        "version_normalized": "6.17.0.0",
+        "version": "v7.3.0",
+        "version_normalized": "7.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/tightenco/collect.git",
-            "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab"
+            "reference": "306a4def08c9781ff74fcf1e012f22cbf8686348"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/tightenco/collect/zipball/bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
-            "reference": "bc554bfb79fc02b4e6e1dd463a7fa8470119e9ab",
+            "url": "https://api.github.com/repos/tightenco/collect/zipball/306a4def08c9781ff74fcf1e012f22cbf8686348",
+            "reference": "306a4def08c9781ff74fcf1e012f22cbf8686348",
             "shasum": ""
         },
         "require": {
@@ -7368,7 +7504,7 @@
             "nesbot/carbon": "^2.23.0",
             "phpunit/phpunit": "^7.0"
         },
-        "time": "2020-02-25T19:45:47+00:00",
+        "time": "2020-03-09T16:52:33+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -7449,17 +7585,17 @@
     },
     {
         "name": "vlucas/phpdotenv",
-        "version": "v3.6.0",
-        "version_normalized": "3.6.0.0",
+        "version": "v3.6.1",
+        "version_normalized": "3.6.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/vlucas/phpdotenv.git",
-            "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156"
+            "reference": "8f7961f7b9deb3b432452c18093cf16f88205902"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1bdf24f065975594f6a117f0f1f6cabf1333b156",
-            "reference": "1bdf24f065975594f6a117f0f1f6cabf1333b156",
+            "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8f7961f7b9deb3b432452c18093cf16f88205902",
+            "reference": "8f7961f7b9deb3b432452c18093cf16f88205902",
             "shasum": ""
         },
         "require": {
@@ -7468,9 +7604,13 @@
             "symfony/polyfill-ctype": "^1.9"
         },
         "require-dev": {
+            "ext-filter": "*",
             "phpunit/phpunit": "^4.8.35 || ^5.0 || ^6.0 || ^7.0"
         },
-        "time": "2019-09-10T21:37:39+00:00",
+        "suggest": {
+            "ext-filter": "Required to use the boolean validator."
+        },
+        "time": "2020-03-12T13:44:00+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

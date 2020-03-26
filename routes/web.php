@@ -3,6 +3,7 @@
 
 use PhpParser\Builder\Function_;
 use Illuminate\Support\Facades\DB;
+use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('cache:clear');
@@ -74,6 +75,9 @@ Route::get('/signin', function () {
     return view('homepage.login');
 })->name('signin');
 
+// FACEBOOK, TWITTER, GOOGLE AUTH
+Route::get('auth/facebook', 'UserController@redirectToProvider');
+Route::get('auth/facebook/callback', 'UserController@handleProviderCallback');
 
 Route::post('/create-account/{tokens}', 'UserController@create_account');
 Route::post('/reset-account', 'UserController@resetAccount');

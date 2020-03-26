@@ -16,4 +16,8 @@ class UserMod extends Model
         }
         return asset('https://res.cloudinary.com/sarjanamalam/image/upload/' . $this->displaypic);
     }
+    function socialProvider()
+    {
+        return $this->hasMany(socialprovider::class);
+    }
 }

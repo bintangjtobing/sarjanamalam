@@ -164,6 +164,7 @@ return [
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -233,6 +234,7 @@ return [
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
         'Location'      => 'Stevebauman\Location\Facades\Location',
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

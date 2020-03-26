@@ -33,5 +33,19 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-
+    'facebook' => [
+        'client_id' => '114499413304839',
+        'client_secret' => 'f66f5187e540bda2ccfb9d75fcf41f8c',
+        'redirect' => 'https://sarjanamalam.com/auth/facebook/callback',
+    ],
+    'twitter' => [
+        'client_id' => 'Gz8YhcR2Mdo8v2ZAAh5iA0jYK',
+        'client_secret' => 'o9LMtwFQilTEC33pLzgN11v6T1igCzE1GQN7847cSk7IGPPFoR',
+        'redirect' => 'https://sarjanamalam.com/auth/twitter/callback',
+    ],
+    'google' => [
+        'client_id' => '544855069309-2msb0e98iq89b93e0d8v4168bme56pd5.apps.googleusercontent.com',
+        'client_secret' => 'Kiq5orG2HyDKEPj-on3pqAYQ',
+        'redirect' => 'https://sarjanamalam.com/Oauth/google/callback',
+    ],
 ];

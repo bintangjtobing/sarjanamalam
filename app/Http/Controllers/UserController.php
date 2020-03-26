@@ -8,9 +8,11 @@ use App\UserMod;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Mail\successRegisteredUser;
+use App\socialprovider;
 use Carbon\Traits\Timestamp;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\MessageBag;
+use Socialite;
 
 class UserController extends Controller
 {
@@ -43,6 +45,52 @@ class UserController extends Controller
         $data_member->save();
         \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
         return back()->with('sukses', 'Berhasil! Verifikasikan email yang telah kami kirimkan ke pesan masuk email kamu. Jika tidak ada, coba periksa di folder spam. Terima kasih.');
+    }
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback()
+    {
+        try {
+            $socialUser = Socialite::driver('facebook')->user();
+        } catch (\Exception $e) {
+            return redirect('/');
+        }
+        // check  if we have a logged providers
+        $socialProvider = socialprovider::where('provider_id', $socialProvider->getId())->first();
+        if (!$socialProvider) {
+            // create new  user & provider
+            $user = UserMod::firstOrCreate(
+                ['email' => $socialUser->getEmail()],
+                ['name' => $socialUser->getName()],
+                ['username' => $socialUser->getName()]
+            );
+            $user->socialProvider()->create(
+                ['provider_id' => $socialUser->getId(), 'provider' => 'facebook']
+            );
+        } else {
+            $user = $socialProvider->user;
+
+            auth()->login($user);
+
+            return redirect('/');
+        }
+
+
+        return $user->getEmail();
+        // $user->token;
     }
     public function verification(Request $request, $enc_id)
     {

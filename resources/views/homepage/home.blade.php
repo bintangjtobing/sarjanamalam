@@ -54,7 +54,7 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                             @endif
                         </div>
                     </a>
-                    <div class="dropdown-menu text-center" aria-labelledby="dropdownId">
+                    <div class="dropdown-menu text-center" aria-labelledby="dropdownId" style="margin-top:.5rem;">
                         <a class="dropdown-item nav-user-name" href="#"><span
                                 class="font-weight-bold">{{auth()->user()->name}}</span></a>
                         <?php

@@ -34,15 +34,26 @@ kamu ingin cari tau.')
 <form action="/create-account/{{$tokens}}" method="post">
     @csrf
     <div class="form-row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <input class="form-control" type="text" name="nama_lengkap" placeholder="Nama lengkap" required autofocus>
         </div>
-    </div>
-    <div class="form-row">
         <div class="col-md-6">
             <input class="form-control" type="text" name="username" placeholder="Username" required>
         </div>
-        <div class="col-md-6">
+    </div>
+    <div class="form-row">
+        <div class="col-md-8">
+            <input type="text" name="datebirthday" placeholder="Tanggal lahir" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+            <select name="gender" class="custom-select" required>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-12">
             <input class="form-control" type="email" name="email" placeholder="Email" required>
         </div>
     </div>
@@ -56,6 +67,7 @@ kamu ingin cari tau.')
                 placeholder="Ulangi password" required pattern=".{8,}">
         </div>
     </div>
+
     <div class="form-row">
         <div class="col-md-12">
             <div class="form-button">

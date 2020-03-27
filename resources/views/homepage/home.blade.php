@@ -4,7 +4,8 @@
 @section('metadesc','Layanan berbasis situs web aplikasi, yang berguna untuk memudahkan pengguna dalam mencari tempat
 untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide tersebut.')
 @section('content')
-<nav class="navbar navbar-expand-sm navbar-light mt-2">
+<nav class="navbar navbar-expand-sm navbar-light py-2"
+    style="background-color:#fff; box-shadow: 0 0 10px 0 rgba(154, 161, 171, .35);">
     <div class="container">
         <div class="d-flex justify-content-end w-100" id="collapsibleNavId">
             <ul class="navbar-nav navbar-mobile ml-auto mt-2 mt-lg-0">
@@ -82,9 +83,9 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                     $Hour = date('H');
 
                     ?>
-                    <span class="text-gradient-blue-sarjana"
+                    <span class="text-gradient-white-sarjana"
                         style="font-size: 6rem; line-height:0.3em;">{{$timeNow}}</span>
-                    <h2 class="search-title text-gradient-blue-sarjana" id="titlecallback" style="line-height: 1.65;">
+                    <h2 class="search-title text-gradient-white-sarjana" id="titlecallback" style="line-height: 1.65;">
                         @if(($Hour >= 01) && ($Hour<=11)) {{'Selamat pagi,'}} @elseif(($Hour>=11) && ($Hour<=15))
                                 {{'Selamat siang,'}} @elseif(($Hour>=15)&& ($Hour<=18)) {{'Selamat sore,'}}
                                     @else{{'Selamat malam,'}} @endif @if(Auth::check()){{auth()->user()->name}} @else

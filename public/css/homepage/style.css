@@ -98,7 +98,7 @@ body {
     border-radius: 25px;
     position: relative;
     background-color: #fff;
-    box-shadow: 0 0 35px 0 rgba(154, 161, 171, .15);
+    box-shadow: 0 0 10px 0 rgba(154, 161, 171, .35);
 }
 
 .main-search .search-icon {
@@ -136,11 +136,14 @@ body {
 }
 
 .inner-bg-image {
-    /* background: #fff; */
+    /* background-image: url('https://source.unsplash.com/1920x1080/?talking,meeting,black'); */
+    background:
+        linear-gradient(rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .75)),
+        url(https://source.unsplash.com/1920x1080/?talking,meeting,black);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('https://source.unsplash.com/collection/9691631');
 }
 
 .homestyle a {
@@ -640,6 +643,13 @@ body {
 
 .text-gradient-blue-sarjana {
     background: linear-gradient(to right, #4aa5e7 0%, #3363ac 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900 !important;
+}
+
+.text-gradient-white-sarjana {
+    background: linear-gradient(to right, #fff 0%, #f0f9ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900 !important;

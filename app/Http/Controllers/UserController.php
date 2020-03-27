@@ -28,7 +28,12 @@ class UserController extends Controller
         $data_member->name = $request->nama_lengkap;
         $data_member->username = $request->username;
         $data_member->email = $request->email;
-        $data_member->displaypic  =  'sa-default_mdrqnt.png';
+        $choosegender = $request->gender;
+        $data_member->gender = $choosegender;
+        if ($choosegender == 'L')
+            $data_member->displaypic  =  'male_zbindd.png';
+        else
+            $data_member->displaypic  =  'female_bqreki.png';
         $data_member->role = 'user';
         $data_member->jabatan = 'user';
         $data_member->verified = '0';
@@ -36,6 +41,7 @@ class UserController extends Controller
         $data_member->facebook = '';
         $data_member->instagram = '';
         $data_member->twitter = '';
+        $data_member->birthday = $request->datebirthday;
         $data_member->status = 'inactive';
         $data_member->password = Hash::make($request->password);
         $data_member->verified_password = $request->ver_password;
@@ -45,6 +51,7 @@ class UserController extends Controller
         $data_member->save();
         \Mail::to($data_member->email)->send(new successRegisteredUser($data_member));
         return back()->with('sukses', 'Berhasil! Verifikasikan email yang telah kami kirimkan ke pesan masuk email kamu. Jika tidak ada, coba periksa di folder spam. Terima kasih.');
+        // dd($data_member);
     }
     /**
      * Redirect the user to the GitHub authentication page.

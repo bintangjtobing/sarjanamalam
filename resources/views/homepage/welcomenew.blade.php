@@ -113,7 +113,7 @@
 
         @yield('content')
 
-        <footer class="footer pb-3">
+        <footer class="footer py-1" style="background-color:#fff; box-shadow: 0 0 10px 0 rgba(154, 161, 171, .35);">
             <nav class="navbar navbar-expand-sm navbar-light">
                 <div class="container-fluid">
                     <div class="" id="collapsibleNavId">

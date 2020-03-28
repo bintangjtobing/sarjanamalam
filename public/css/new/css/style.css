@@ -6452,8 +6452,8 @@ h6.font-parisienne {
 
 .post-item img {
     object-fit: cover;
-    width: 50px !important;
-    height: 50px !important;
+    width: 35px !important;
+    height: 35px !important;
     border-radius: 50%;
 }
 

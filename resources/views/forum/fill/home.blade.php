@@ -50,7 +50,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
@@ -70,9 +69,7 @@
         </div>
     </div>
 </div>
-
 <div id="blog">
-
     @foreach ($threadsdata as $thread)
     <div class="post-item">
         <div class="card">
@@ -90,7 +87,7 @@
                                 <span title="Verified"><img
                                         src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
                                         alt="Verified"
-                                        style="width:20px !important; height:20px !important; margin-left:.35rem;"></span>
+                                        style="width:15px !important; height:15px !important; margin-left:.10rem;"></span>
                                 @else
                                 @endif
                             </p>
@@ -141,10 +138,7 @@
         </div>
     </div>
     @endforeach
-
 </div>
-
-
 <ul class="pagination">
     {{$threadsdata->links()}}
 </ul>

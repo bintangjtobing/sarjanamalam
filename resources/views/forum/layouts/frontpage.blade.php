@@ -40,7 +40,6 @@
 </head>
 
 <body>
-
     {{-- HEADER & MENU --}}
     <div class="body-inner">
         <header id="header" data-fullwidth="true" class="header-alternative">
@@ -68,11 +67,8 @@
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)
-                                    <span title="Verified" style="
-    position: relative;
-    margin-left: -15px;
-    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 15px;
-    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                    <span title="Verified" style="position: relative; margin-left: -15px; margin-top: 25px; background-color: #fff; border-radius: 50%;top: 15px; right: 3px;">
+                                        <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
                                             alt="Verified" style="width:15px !important; height:15px !important;
                                             margin-left:2px;position:relative;"></span>
                                     @else
@@ -93,8 +89,6 @@
 
                         </ul>
                     </div>
-
-
                     <div id="mainMenu-trigger">
                         <a class="lines-button x"><span class="lines"></span></a>
                     </div>
@@ -127,8 +121,6 @@
                 </div>
             </div>
         </header>
-
-
         <section id="page-content" class="sidebar-both">
             <div class="container">
                 <div class="row">
@@ -146,21 +138,11 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <div class="widget mt-4" style="box-shadow:0 0 0px 0 !important;">
-                            <h3>List To Do Task</h3>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Sarapan
-                                    <span class="badge badge-danger badge-pill"><i class="fas fa-minus"></i></span>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",

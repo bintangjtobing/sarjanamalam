@@ -79,6 +79,56 @@ body {
     min-height: 100vh;
 }
 
+.text-overflow a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.main-search {
+    position: relative;
+    background-color: #fff;
+}
+
+.main-search .search-group {
+    position: relative;
+    z-index: 99;
+}
+
+.main-search #result {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    max-height: 250px;
+    overflow-y: scroll;
+
+}
+
+.main-search #result {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    overflow-y: scroll;
+
+}
+
+.main-search #result .result-item {
+    margin-top: 30px;
+    max-height: 150px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.main-search #result.final {
+
+    margin-top: -30px;
+    background-color: #fff;
+
+}
+
 .main-search .form-control {
     border: 0;
     background-color: rgba(0, 0, 0, 0) !important;
@@ -112,6 +162,7 @@ body {
 .main-search .search-icon.icon-left {
     left: 20px !important;
     right: auto;
+    top: 25px !important;
 }
 
 .nav-item.with-divider {

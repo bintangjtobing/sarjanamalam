@@ -69,34 +69,43 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
         </div>
     </div>
 </nav>
+
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
             <div>
-                <form action="/search?" method="GET">
-                    @csrf
-                    {{-- <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2> --}}
-                    {{-- Get a real time --}}
-                    <?php
+                {{-- <form action="/search?" method="GET"> --}}
+                @csrf
+                {{-- <h2 class="search-title text-gradient-blue-sarjana" style="line-height: 1.65;">Sarjanamalam.</h2> --}}
+                {{-- Get a real time --}}
+                <?php
                     date_default_timezone_set("Asia/Jakarta");
                     $timeNow = date('H:i');
                     $Hour = date('H');
 
                     ?>
-                    <span class="text-gradient-white-sarjana"
-                        style="font-size: 6rem; line-height:0.3em;">{{$timeNow}}</span>
-                    <h2 class="search-title text-gradient-white-sarjana" id="titlecallback" style="line-height: 1.65;">
-                        @if(($Hour >= 01) && ($Hour<=11)) {{'Selamat pagi,'}} @elseif(($Hour>=11) && ($Hour<=15))
-                                {{'Selamat siang,'}} @elseif(($Hour>=15)&& ($Hour<=18)) {{'Selamat sore,'}}
-                                    @else{{'Selamat malam,'}} @endif @if(Auth::check()){{auth()->user()->name}} @else
-                                    gengs! @endif</h2> <div class="main-search">
+                <span class="text-gradient-white-sarjana"
+                    style="font-size: 6rem; line-height:0.3em;">{{$timeNow}}</span>
+                <h2 class="search-title text-gradient-white-sarjana" id="titlecallback" style="line-height: 1.65;">
+                    @if(($Hour >= 01) && ($Hour<=11)) {{'Selamat pagi,'}} @elseif(($Hour>=11) && ($Hour<=15))
+                            {{'Selamat siang,'}} @elseif(($Hour>=15)&& ($Hour<=18)) {{'Selamat sore,'}}
+                                @else{{'Selamat malam,'}} @endif @if(Auth::check()){{auth()->user()->name}} @else gengs!
+                                @endif</h2> <div class="main-search">
+                                <div class="search-group">
                                     <span class="search-icon icon-left fas fa-search"></span>
-                                    <input type="search" name="get_value" class="form-control"
+                                    <input type="text" id="search" name="get_value" class="form-control"
                                         placeholder="Temukan pembahasan disini..." autofocus>
+                                </div>
+                                {{-- <table class="table table-bordered table-hover text-left">
+                                    <tbody>
+                                    </tbody>
+                                </table> --}}
+                                <div id="result"></div>
             </div>
-            </form>
+            {{-- </form> --}}
         </div>
     </div>
 </div>
 </div>
+
 @endsection

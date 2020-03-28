@@ -44,7 +44,7 @@ Route::get('/newgen', function () {
 });
 // HASIL PENCARIAN
 // PROSES CARI
-Route::get('/search', 'SearchController@processcari');
+Route::get('/search', 'SearchController@processcari')->name('search');
 Route::get('/daftar-event/{enc_eventid}/{nama_event}', 'DashboardController@daftarevent');
 Route::post('/registrasi-event/{event_id}', 'companyController@registrasievent');
 

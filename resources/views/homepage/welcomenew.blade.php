@@ -48,6 +48,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="keywords" content="sarjanamalam, sarjanamalam communities, sarjana,malam, communities, forum online">
+    <meta name="_token" conntent="{{csrf_token()}}">
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -73,6 +74,7 @@
 
     {{-- VERIFICATION --}}
     <meta name="yandex-verification" content="047b2f981a7891e7" />
+
 </head>
 
 <body>
@@ -178,6 +180,53 @@
                     editor.save();
                 });
             }
+        });
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            //alert("test");
+            //fetch_customer_data();
+
+            function fetch_customer_data(query = '') {
+                $.ajax({
+                    url: "{{ route('search') }}",
+                    method: 'GET',
+                    data: {
+                        query: query
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data)
+                        $('#result').addClass("final");
+                        let html = `<div class="result-item"><table class="table table-bordered table-hover text-left">
+                            <tbody> ${data.table_data}
+                            </tbody>
+                        </table></div>`;
+                        //nyari apa bang? wkwkwk petik petik dimana  bang? yang di bawah esc  itu? atau petik 1?yang tadi  itu? ya
+                        $('#result').html(html);
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                })
+            }
+
+            // dimana browsernya dek ?kwwwk
+            $('#search').keyup(function () {
+                var query = $(this).val();
+                //console.log(query);
+                if (query) {
+
+                    fetch_customer_data(query);
+                } else {
+                    $('#result').html('');
+                    $('#result').removeClass("final");
+                }
+
+            });
+
         });
 
     </script>

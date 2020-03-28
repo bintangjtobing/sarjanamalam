@@ -6,7 +6,7 @@
 @inject('userMod', 'App\UserMod')
 <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 @section('content')
-<div class="blog my-3">
+<div class="blog mb-3">
     <h3><b>Find your <span class="text-gradient-blue-sarjana">jobs</span> here.</b></h3>
 </div>
 <div class="blog">

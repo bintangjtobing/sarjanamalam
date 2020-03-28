@@ -67,7 +67,8 @@
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)
-                                    <span title="Verified" style="position: relative; margin-left: -15px; margin-top: 25px; background-color: #fff; border-radius: 50%;top: 15px; right: 3px;">
+                                    <span title="Verified"
+                                        style="position: relative; margin-left: -15px; margin-top: 25px; background-color: #fff; border-radius: 50%;top: 15px; right: 3px;">
                                         <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
                                             alt="Verified" style="width:15px !important; height:15px !important;
                                             margin-left:2px;position:relative;"></span>
@@ -109,7 +110,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <form action="" method="get"><input type="search" class="search-for"
+                                        <form action="/search?" method="GET"><input type="search" class="search-for"
                                                 placeholder="Search topic here..." name="get_value" id="" value="">
                                         </form>
                                     </li>
@@ -124,24 +125,25 @@
         <section id="page-content" class="sidebar-both">
             <div class="container">
                 <div class="row">
-                    <div class="content col-lg-9">
-                        @yield('content')
-                    </div>
                     <div class="sidebar sticky-sidebar col-lg-3">
                         <div class="widget widget-tags mb-3">
                             <h3 class="widget-title">5 Trendic Topics</h3>
-                            <ul class="list list-arrow-icons">
+                            <ul class="list list-arrow-icons" style="margin-bottom:0 !important;">
                                 @foreach ($countdesc as $count)
-                                <?php $enc_id = Crypt::encrypt($count->id); ?>
+
                                 <li class="lilist"><a class="trend-list"
                                         href="/details/{{$enc_id}}/">{{str_limit($count->subject, $limit=40)}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
+                    <div class="content col-lg-9">
+                        @yield('content')
+                    </div>
                 </div>
             </div>
         </section>
+
     </div>
     <script type="application/ld+json">
         {

@@ -42,6 +42,7 @@ Route::get('/config-cache', function () {
 Route::get('/newgen', function () {
     return view('forum.layouts.newstyle');
 });
+
 // HASIL PENCARIAN
 // PROSES CARI
 Route::get('/search', 'SearchController@processcari')->name('search');
@@ -108,6 +109,7 @@ Route::get('/cerita-sarjanamalam', 'companyController@cerita');
 Route::post('/kirim-pesan', 'companyController@kirimpesan');
 Route::get('/request-ad-event', 'companyController@requestevent');
 Route::get('/read-blog/{blog_id}/{tokens}', 'companyController@readblog');
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', function () {

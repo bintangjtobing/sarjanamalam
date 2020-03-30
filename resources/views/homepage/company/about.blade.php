@@ -25,6 +25,7 @@
     <link href="{!!asset('css/new/css/red.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/event-style.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/new/css/font-awesome.css')!!}" rel="stylesheet">
+    <link href="{!!asset('css/datatables.min.css')!!}" rel="stylesheet">
     <link rel="stylesheet" href="{!!asset('css/themify-icons.css')!!}">
     <link rel="stylesheet" href="{!!asset('css/new/css/custom.css')!!}">
 
@@ -195,6 +196,47 @@
                     editor.save();
                 });
             }
+        });
+
+    </script>
+    <script src="{!!asset('js/datatables.min.js')!!}"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#datatable').DataTable({
+                buttons: [{
+                    extend: 'print',
+                    title: 'Test Data export',
+                    exportOptions: {
+                        columns: "thead th:not(.noExport)"
+                    }
+                }, {
+                    extend: 'pdf',
+                    title: 'Test Data export',
+                    exportOptions: {
+                        columns: "thead th:not(.noExport)"
+                    }
+                }, {
+                    extend: 'excel',
+                    title: 'Test Data export',
+                    exportOptions: {
+                        columns: "thead th:not(.noExport)"
+                    }
+                }, {
+                    extend: 'csv',
+                    title: 'Test Data export',
+                    exportOptions: {
+                        columns: "thead th:not(.noExport)"
+                    }
+                }, {
+                    extend: 'copy',
+                    title: 'Test Data export',
+                    exportOptions: {
+                        columns: "thead th:not(.noExport)"
+                    }
+                }]
+            });
+            table.buttons().container().appendTo('#export_buttons');
+            $("#export_buttons .btn").removeClass('btn-secondary').addClass('btn-light');
         });
 
     </script>

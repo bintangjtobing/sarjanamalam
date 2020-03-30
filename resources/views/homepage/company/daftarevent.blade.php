@@ -35,7 +35,8 @@ membekali calon sarjana. Seminar')
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <img class="imgpreview-daftar img-fluid"
-                                src="{!!asset('eventstorage/img/'.$eventdaf->picevent)!!}" alt="">
+                                src="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload'.$eventdaf->picevent)!!}"
+                                alt="Event sarjanamalam | {{$eventdaf->nama_event}}">
                         </div>
                         <div class="form-group col-md-8">
                             <h3>{{$eventdaf->nama_event}}</h3>

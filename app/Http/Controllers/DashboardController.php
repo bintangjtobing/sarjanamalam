@@ -28,7 +28,6 @@ class DashboardController extends Controller
             ->where('users.email_verified_at', '!=', 'null')
             ->select('users.*')
             ->get();
-
         $event = DB::table('events')
             ->where('events.status', '!=', 'unapproved')
             ->select('events.*')

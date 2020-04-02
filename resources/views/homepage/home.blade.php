@@ -46,8 +46,8 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                             <span title="Verified" style="
     position: relative;
     margin-left: -15px;
-    margin-top: 25px; background-color: #fff; border-radius: 50%;"><img
-                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+    margin-top: 25px; border-radius: 50%;"><img
+                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
                                     alt="Verified"
                                     style="width:15px !important; height:15px !important; margin-left:2px;"></span>
                             @else

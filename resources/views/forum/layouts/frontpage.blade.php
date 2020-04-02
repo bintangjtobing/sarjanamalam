@@ -68,8 +68,8 @@
                                             alt="Profile picture"
                                             class="img-roundedforum"></a>@if(auth()->user()->verified==1)
                                     <span title="Verified"
-                                        style="position: relative; margin-left: -15px; margin-top: 25px; background-color: #fff; border-radius: 50%;top: 15px; right: 3px;">
-                                        <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                        style="position: relative; margin-left: -15px; margin-top: 25px; border-radius: 50%;top: 15px; right: 3px;">
+                                        <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
                                             alt="Verified" style="width:15px !important; height:15px !important;
                                             margin-left:2px;position:relative;"></span>
                                     @else

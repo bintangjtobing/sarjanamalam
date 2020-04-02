@@ -85,7 +85,7 @@
                                         style="color: #3c3c3c !important; font-weight:600;">{{$thread->name}}</a></span>
                                 @if($thread->verified==1)
                                 <span title="Verified"><img
-                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
                                         alt="Verified"
                                         style="width:15px !important; height:15px !important; margin-left:.10rem;"></span>
                                 @else

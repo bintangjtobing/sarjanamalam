@@ -163,8 +163,8 @@
                                     <span title="Verified" style="
     position: relative;
     margin-left: -15px;
-    margin-top: 25px; background-color: #fff; border-radius: 50%; top: 15px;
-    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+    margin-top: 25px; border-radius: 50%; top: 15px;
+    right: 3px;"><img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
                                             alt="Verified" style="width:15px !important; height:15px !important;
                                             margin-left:2px;position:relative;"></span>
                                     @else
@@ -227,7 +227,7 @@
                                 !important;margin-left: 70px !important;">
                             <h3 class="text-center">{{$us->name}}@if($us->verified==1)
                                 <span title="Verified"><img
-                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1584348883/based/checkmark_ty9wnj.svg"
+                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
                                         alt="Verified" style="width: 1.25rem; height: auto;"></span>
                                 @else
                                 @endif</h3>

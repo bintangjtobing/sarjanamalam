@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="bintang j tobing">
+    <meta name="author" content="Sarjanamalam.com">
     <meta name="description" content="@yield('metadesc')">
     <meta name="keywords" content="@yield('metakey')">
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">

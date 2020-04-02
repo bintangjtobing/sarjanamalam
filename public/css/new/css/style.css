@@ -1495,7 +1495,8 @@ section {
 
 #header .header-inner #logo a .logo-default,
 #header #header-wrap #logo a .logo-default {
-    display: block
+    display: block;
+    letter-spacing: 0.2px;
 }
 
 #header .header-inner #logo a,

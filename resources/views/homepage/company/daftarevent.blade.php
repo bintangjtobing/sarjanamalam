@@ -1,8 +1,10 @@
 @extends('homepage.company.about')
 @section('title','Daftar event '. $eventdaf->nama_event)
-@section('metadesc','Event sarjanamalam. adalah suatu halaman yang berisi event event menarik dan bermanfaat yang akan
-membekali calon sarjana. Seminar')
-@section('metakey','event sarjanamalam, event, komunitas, forum, seminar sarjanamalam, seminar, registrasi event')
+@section('metadesc','Event '. $eventdaf->nama_event . ' adalah event yang menarik dan bermanfaat yang akan membekali
+calon sarjana.')
+@section('metakey','event sarjanamalam, event, komunitas, forum, seminar sarjanamalam, seminar, registrasi event,
+'.$eventdaf->nama_event.' di sarjanamalam')
+@section('ogtype','website.event')
 @section('content')
 <?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 <section class="registerevent-bg">

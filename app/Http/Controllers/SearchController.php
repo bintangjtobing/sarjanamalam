@@ -61,7 +61,7 @@ class SearchController extends Controller
                 foreach ($search as $data) {
                     $output .= '
                         <tr>
-                            <td>' . '<div class="text-overflow"><a href="#">' . str_limit(strip_tags($data->thread), $limit = 75) . '</a></div>' . '</td>
+                            <td>' . '<div class="text-overflow"><a href="#">' . Str::limit(strip_tags($data->thread), $limit = 75) . '</a></div>' . '</td>
                         </tr>
                     ';
                 }

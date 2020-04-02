@@ -19,11 +19,12 @@ sarjanamalam karir')
             $enc_id = Crypt::encrypt($karirlist->career_id); ?>
             <div class="col-md-4">
                 <div class="card">
-                    <img class="card-img-top" src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$karirlist->features_pic)!!}"
+                    <img class="card-img-top"
+                        src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$karirlist->features_pic)!!}"
                         alt="Karir {{$karirlist->nama_team}} di Sarjanamalam">
                     <div class="card-body">
                         <h5 class="card-title-strong">{{$karirlist->nama_team}}</h5>
-                        <p class="card-text-black">{!!str_limit($karirlist->description,$limit=100)!!}</p>
+                        <p class="card-text-black">{!!Str::limit($karirlist->description,100)!!}</p>
                         <a href="/pelajari-pekerjaan/{{$enc_id}}/{{$tokens}}" class="card-link-karir mr-5">Pelajari</a>
                     </div>
                 </div>

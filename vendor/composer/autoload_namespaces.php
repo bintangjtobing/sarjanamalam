@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'SimpleSoftwareIO\\QrCode\\' => array($vendorDir . '/simplesoftwareio/simple-qrcode/src'),
-    'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
     'JD\\Cloudder' => array($vendorDir . '/jrm2k6/cloudder/src'),
     'BaconQrCode' => array($vendorDir . '/bacon/bacon-qr-code/src'),

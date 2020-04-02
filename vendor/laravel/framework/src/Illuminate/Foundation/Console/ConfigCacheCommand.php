@@ -2,11 +2,11 @@
 
 namespace Illuminate\Foundation\Console;
 
-use Throwable;
-use LogicException;
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Contracts\Console\Kernel as ConsoleKernelContract;
+use Illuminate\Filesystem\Filesystem;
+use LogicException;
+use Throwable;
 
 class ConfigCacheCommand extends Command
 {
@@ -60,8 +60,7 @@ class ConfigCacheCommand extends Command
         $configPath = $this->laravel->getCachedConfigPath();
 
         $this->files->put(
-            $configPath,
-            '<?php return ' . var_export($config, true) . ';' . PHP_EOL
+            $configPath, '<?php return '.var_export($config, true).';'.PHP_EOL
         );
 
         try {
@@ -82,7 +81,7 @@ class ConfigCacheCommand extends Command
      */
     protected function getFreshConfiguration()
     {
-        $app = require $this->laravel->bootstrapPath() . '/app.php';
+        $app = require $this->laravel->bootstrapPath().'/app.php';
 
         $app->useStoragePath($this->laravel->storagePath());
 

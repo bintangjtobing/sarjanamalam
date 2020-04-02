@@ -13,6 +13,7 @@ use Carbon\Traits\Timestamp;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\MessageBag;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -45,7 +46,7 @@ class UserController extends Controller
         $data_member->status = 'inactive';
         $data_member->password = Hash::make($request->password);
         $data_member->verified_password = $request->ver_password;
-        $data_member->remember_token = str_random(50);
+        $data_member->remember_token = Str::random(50);
         $data_member->created_by = $request->header('User-Agent');;
         $data_member->updated_by = 'guest';
         $data_member->save();

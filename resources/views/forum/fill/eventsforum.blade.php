@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="card-text">
-                    <p>{!!str_limit($evtData->deskripsi_event, $limit=120)!!}</p>
+                    <p>{!!Str::limit($evtData->deskripsi_event, 120)!!}</p>
                 </div>
                 <div class="card-text">
                     <div class="row">

@@ -132,7 +132,7 @@
                                 @foreach ($countdesc as $count)
 
                                 <li class="lilist"><a class="trend-list"
-                                        href="/details/{{$enc_id}}/">{{str_limit($count->subject, $limit=40)}}</a></li>
+                                        href="/details/{{$enc_id}}/">{{Str::limit($count->subject, 40)}}</a></li>
                                 @endforeach
                             </ul>
                         </div>

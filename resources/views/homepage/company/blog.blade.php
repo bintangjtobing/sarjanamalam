@@ -40,7 +40,7 @@ sarjanamalam. kami di blog resmi kami.')
                                     Comments</a></span> --}}
                             <h2>{{$blist->blog_title}}
                             </h2>
-                            <p>{!!str_limit($blist->isiblog, $limit=60)!!}</p>
+                            <p>{!!Str::limit($blist->isiblog, 60)!!}</p>
                             <a href="/read-blog/{{$blist->blog_id}}/{{$tokens}}" class="item-link">Read More <span
                                     class="ti-angle-right"></span></a>
                         </div>

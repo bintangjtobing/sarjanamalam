@@ -190,7 +190,7 @@
                                     <td class="mailbox-name"><a
                                             href="/read/{{$psn->messages_id}}">{{$psn->nama_lengkap}}</a></td>
                                     <td class="mailbox-subject"><b>{{$psn->subject}}</b> -
-                                        {!!str_limit($psn->messages, $limit=100)!!}
+                                        {!!Str::limit($psn->messages, 100)!!}
                                     </td>
                                     <td class="mailbox-attachment"></td>
                                     <td class="mailbox-date">{{$psn->created_at}}</td>

@@ -365,8 +365,8 @@
                                 <a href="" class="product-title">{{$thread->subject}}
                                     <span class="badge badge-warning float-right">{{$thread->category}}</span></a>
                                 <span class="product-description">
-                                    {!!str_limit($thread->thread,
-                                    $limit=50)!!}
+                                    {!!Str::limit($thread->thread,
+                                    50)!!}
                                 </span>
                             </div>
                         </li>

@@ -103,7 +103,7 @@
                     <p class="muted-text">Dibuat {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
                 </div>
                 <div class="card-text">
-                    <p>{!!str_limit($thread->thread, $limit=120)!!}</p>
+                    <p>{!!Str::limit($thread->thread, 120);!!}</p>
                 </div>
                 <div class="card-text">
                     <div class="row">

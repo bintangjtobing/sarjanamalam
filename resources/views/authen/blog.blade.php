@@ -35,7 +35,7 @@
                         alt="{{$blogList->blog_title}}">
                     <div class="card-body">
                         <h5 class="card-title">{{$blogList->blog_title}}</h5>
-                        <p class="card-text">{!!str_limit($blogList->isiblog, $limit=60)!!}</p>
+                        <p class="card-text">{!!Str::limit($blogList->isiblog, 60)!!}</p>
                         <div class="btn-group" role="group">
                             <a href="#" class="btn btn-primary" title="Lihat blog detail"><i class="fas fa-eye"></i></a>
                             <a href="#" title="Edit blog" class="btn btn-warning"><i class="fas fa-edit"></i></a>

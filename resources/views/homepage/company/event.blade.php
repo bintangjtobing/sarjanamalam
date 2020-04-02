@@ -42,7 +42,7 @@ membekali calon sarjana. Seminar')
                         </h6>
                         <h5 class="card-title">{{$eventitem->nama_event}}</h5>
                         <p class="card-text">{{$eventitem->harga_event}}</p>
-                        <p class="card-text">{!!str_limit($eventitem->deskripsi_event, $limit=100)!!}<br> <b>Mau tau
+                        <p class="card-text">{!!Str::limit($eventitem->deskripsi_event, 100)!!}<br> <b>Mau tau
                                 kelanjutannya dan penasaran akan event tsb?</b></p>
                     </div>
                     @if($eventitem->status!='finished')

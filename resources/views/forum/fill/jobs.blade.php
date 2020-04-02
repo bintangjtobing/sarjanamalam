@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="card-text">
-                    <p>{!!str_limit($jobData->deskripsi, $limit=120)!!}</p>
+                    <p>{!!Str::limit($jobData->deskripsi, 120)!!}</p>
                 </div>
                 <div class="card-text">
                     <div class="row">

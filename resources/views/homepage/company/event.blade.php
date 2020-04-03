@@ -3,7 +3,7 @@
 @section('aktiftentang','active')
 @section('metadesc','Event sarjanamalam. adalah suatu halaman yang berisi event event menarik dan bermanfaat yang akan
 membekali calon sarjana. Seminar')
-<?php $tokens = bin2hex(openssl_random_pseudo_bytes(64)); ?>
+v
 @section('metakey','event sarjanamalam, event, komunitas, forum, seminar sarjanamalam, seminar')
 @section('content')
 <section>

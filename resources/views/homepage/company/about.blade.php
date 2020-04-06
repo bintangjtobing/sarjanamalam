@@ -84,9 +84,9 @@
     <section class="p-t-18 p-b-0">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-lg-12 m-b-30">
+                        <div class="col-lg-6 m-b-30">
                             <h4>Ikuti kami di sosial media</h4>
                             <div class="social-icons social-icons-light social-icons-colored-hover">
                                 <ul>
@@ -100,6 +100,35 @@
                                                 class="fab fa-instagram"></i></a>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-b-30">
+                            <h4>What we build</h4>
+                            <div class="social-icons">
+                                <div class="webuild">
+                                    <ul>
+                                        <li class="social-facebook"><a
+                                                href="https://facebook.com/sarjanamalamdotcom"><img
+                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
+                                                    alt=""></a>
+                                        </li>
+                                        <li class="social-facebook"><a
+                                                href="https://facebook.com/sarjanamalamdotcom"><img
+                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
+                                                    alt=""></a>
+                                        </li>
+                                        <li class="social-facebook"><a
+                                                href="https://facebook.com/sarjanamalamdotcom"><img
+                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
+                                                    alt=""></a>
+                                        </li>
+                                        <li class="social-facebook"><a
+                                                href="https://facebook.com/sarjanamalamdotcom"><img
+                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
+                                                    alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

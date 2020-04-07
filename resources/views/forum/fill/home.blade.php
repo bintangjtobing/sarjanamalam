@@ -73,7 +73,7 @@
     @foreach ($threadsdata as $thread)
     <div class="post-item">
         <div class="card">
-        <div class="card-body">
+            <div class="card-body">
                 <div class="card-text">
                     <div class="row">
                         <div class="col-lg-8 text-left">
@@ -139,7 +139,7 @@
     </div>
     @endforeach
 </div>
-<ul class="pagination">
+<ul class="pagination justify-content-center">
     {{$threadsdata->links()}}
 </ul>
 @endsection

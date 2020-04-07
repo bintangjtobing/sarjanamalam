@@ -475,3 +475,23 @@
     cursor: pointer;
     transition: .3s ease-in-out;
 }
+
+.webuild .card-title img {
+    width: 50px;
+    height: auto;
+}
+
+.webuild .card-text {
+    font-size: .875rem;
+}
+
+.webuild h4 {
+    font-size: 1.4375rem;
+    margin-bottom: 0 !important;
+}
+
+.webuild .mockup-build {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}

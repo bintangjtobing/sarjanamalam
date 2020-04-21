@@ -122,6 +122,7 @@
                                 alt="daftar event kamu hanya di sarjanamalam. QRCODE{{$eventget->event_id}}{{$tokens}}">
                             <p>Scan me to visit URL</p>
                         </div>
+
                 </div>
                 <div class="text-center mt-5 mb-3">
                     @if($eventget->status!='finished')

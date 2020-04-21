@@ -204,7 +204,6 @@
                             <tbody> ${data.table_data}
                             </tbody>
                         </table></div>`;
-                        //nyari apa bang? wkwkwk petik petik dimana  bang? yang di bawah esc  itu? atau petik 1?yang tadi  itu? ya
                         $('#result').html(html);
                     },
                     error: function (err) {
@@ -213,7 +212,6 @@
                 })
             }
 
-            // dimana browsernya dek ?kwwwk
             $('#search').keyup(function () {
                 var query = $(this).val();
                 //console.log(query);

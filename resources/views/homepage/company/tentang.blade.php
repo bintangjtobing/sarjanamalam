@@ -148,10 +148,10 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                         <p class="card-text">Supporting you in your projects. We are integrated trusted technology
                             partner.
                         </p>
-                        <a href="https://occulto.site" target="_blank" class="card-link"><b>Get Started</b></a>
+                        <a href="#" target="_blank" class="card-link"><b>Get Started</b></a>
                         <a href="/hubungi-sarjanamalam" class="card-link"><b>Help</b></a>
                         <img class="mockup-build img-responsive"
-                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1586242168/based/part-mock_dmpmul.png"
+                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1588389948/sarjanaku_vca4n2.png"
                             alt="">
                     </div>
                 </div>
@@ -160,15 +160,17 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
-                                src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
+                                src="https://res.cloudinary.com/sarjanamalam/image/upload/v1588389268/cos/media/logo-full-circle_erq5ow.png"
                                 alt=""></h5>
-                        <h4>Occulto</h4>
-                        <p class="card-text">Help you send and receive honest words and always keeping you in Occulto
+                        <h4>Charities ForHumanity</h4>
+                        <p class="card-text">Help people who are not reached by the government in tackling the covid-19
+                            pandemic.
                         </p>
-                        <a href="https://occulto.site" target="_blank" class="card-link"><b>Get Started</b></a>
+                        <a href="https://charitiesforhumanity.com" target="_blank" class="card-link"><b>Get
+                                Started</b></a>
                         <a href="/hubungi-sarjanamalam" class="card-link"><b>Help</b></a>
                         <img class="mockup-build img-responsive"
-                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1586242168/based/part-mock_dmpmul.png"
+                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1588389831/cos/media/charities_uiqb6z.png"
                             alt="">
                     </div>
                 </div>

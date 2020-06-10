@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'server.infinitysolutions.co.id'),
+    'host' => env('MAIL_HOST', 'server.sarjanamalam.com'),
 
     /*
     |--------------------------------------------------------------------------

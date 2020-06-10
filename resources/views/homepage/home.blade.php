@@ -82,7 +82,6 @@ untuk saling berbagi ide dan saling berinteraksi untuk merealisasikan ide terseb
                     date_default_timezone_set("Asia/Jakarta");
                     $timeNow = date('H:i');
                     $Hour = date('H');
-
                     ?>
                 <span class="text-gradient-white-sarjana"
                     style="font-size: 6rem; line-height:0.3em;">{{$timeNow}}</span>

@@ -102,35 +102,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-6 m-b-30">
-                            <h4>What we build</h4>
-                            <div class="social-icons">
-                                <div class="webuild">
-                                    <ul>
-                                        <li class="social-facebook"><a
-                                                href="https://facebook.com/sarjanamalamdotcom"><img
-                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
-                                                    alt=""></a>
-                                        </li>
-                                        <li class="social-facebook"><a
-                                                href="https://facebook.com/sarjanamalamdotcom"><img
-                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
-                                                    alt=""></a>
-                                        </li>
-                                        <li class="social-facebook"><a
-                                                href="https://facebook.com/sarjanamalamdotcom"><img
-                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
-                                                    alt=""></a>
-                                        </li>
-                                        <li class="social-facebook"><a
-                                                href="https://facebook.com/sarjanamalamdotcom"><img
-                                                    src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585878872/Occulto/Based/icon128_bwts79.png"
-                                                    alt=""></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

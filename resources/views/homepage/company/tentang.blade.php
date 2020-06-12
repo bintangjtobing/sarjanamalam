@@ -121,7 +121,7 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="offset-4 col-lg-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
@@ -138,7 +138,7 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            {{-- <div class="col-lg-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
@@ -155,8 +155,8 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                             alt="">
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
+            </div> --}}
+            {{-- <div class="col-lg-6">
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
@@ -174,7 +174,7 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                             alt="">
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

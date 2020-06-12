@@ -60,7 +60,8 @@ Route::get('/sarjanamalam-peduli-sehat', 'OptionalController@index');
 
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    return view('homepage.home');
+    $tokens = bin2hex(openssl_random_pseudo_bytes(64));
+    return redirect('/signin/' . $tokens);
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.login');
@@ -116,7 +117,7 @@ Route::group(['middleware' => 'auth'], function () {
         return view('homepage.home');
     });
     // FORUM
-    Route::get('/forum/{csrf_token}', 'ForumController@index');
+    Route::get('/forum/{csrf_token}', 'ForumController@index')->name('indexforum');
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
     Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');

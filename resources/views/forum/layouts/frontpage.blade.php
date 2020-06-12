@@ -13,6 +13,7 @@
         content="Complex search engine, including discussions in the community system. Sarjanamalam can help you in your lectures and daily activities.">
     <meta name="language" content="English">
     <meta name="author" content="Sarjanamalam.">
+    <meta name="keywords" content="sarjanamalam, sarjanamalam communities, sarjana,malam, communities, forum online">
     <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 
     {{-- CUSTOM CSS --}}
@@ -32,6 +33,8 @@
     <meta property="og:type" content="@yield('ogtype')" />
     <meta property="og:title" content="@yield('title')" />
     <meta property="og:description" content="@yield('metadesc')" />
+    <meta property="og:image"
+        content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584421114/based/Official_sarjanamalam_logo_copyright_2020_hecjnh.jpg    ')!!}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"

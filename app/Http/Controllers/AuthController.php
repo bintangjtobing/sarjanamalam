@@ -16,13 +16,15 @@ class AuthController extends Controller
             'password' => $request->password,
             'status' => 'active',
         ])) {
-            return redirect('/');
+            $csrf_token = bin2hex(openssl_random_pseudo_bytes(64));
+            return redirect('/forum/' . $csrf_token);
         }
         return back()->with('gagal', 'Otorisasi keanggotaan gagal atau silahkan cek kembali username atau password anda.');
     }
     public function logout($log)
     {
         Auth::logout();
-        return redirect('/');
+        $tokens = bin2hex(openssl_random_pseudo_bytes(64));
+        return redirect('/signin/' . $tokens);
     }
 }

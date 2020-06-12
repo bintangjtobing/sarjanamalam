@@ -5,7 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('titleweb')</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-68593210-11"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-68593210-11');
+
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5DKG7BR');
+
+    </script>
+    <!-- End Google Tag Manager -->
     <meta name="description" content="@yield('desctitle')">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="keywords" content="sarjanamalam, sarjanamalam communities, sarjana,malam, communities, forum online">
+    <meta name="_token" conntent="{{csrf_token()}}">
+
     <link rel="shortcut icon" href="{!!asset('storage/webicon.png')!!}" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -29,9 +66,29 @@
     <meta property="og:description" content="@yield('metadesc')" />
     <meta property="og:image"
         content="{!!url('https://res.cloudinary.com/sarjanamalam/image/upload/v1584496636/based/join_p9rabw.jpg')!!}">
+    {{-- VERIFICATION --}}
+    <meta name="yandex-verification" content="047b2f981a7891e7" />
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DKG7BR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Sarjanamalam",
+            "url": "https://sarjanamalam.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sarjanamalam.com/search?={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+
+    </script>
+
     <?php $tokens=bin2hex(openssl_random_pseudo_bytes(64));?>
     <div class="form-body">
         <div class="website-logo">

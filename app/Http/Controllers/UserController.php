@@ -74,7 +74,8 @@ class UserController extends Controller
         try {
             $socialUser = Socialite::driver($provider)->user();
         } catch (\Exception $e) {
-            return redirect('/');
+            $csrf_token = bin2hex(openssl_random_pseudo_bytes(64));
+            return redirect('/forum/' . $csrf_token);
         }
         // check  if we have a logged providers
         $socialProvider = socialprovider::where('provider_id', $socialProvider->getId())->first();
@@ -92,8 +93,8 @@ class UserController extends Controller
             $user = $socialProvider->user;
 
             auth()->login($user);
-
-            return redirect('/');
+            $csrf_token = bin2hex(openssl_random_pseudo_bytes(64));
+            return redirect('/forum/' . $csrf_token);
         }
     }
     public function verification(Request $request, $enc_id)

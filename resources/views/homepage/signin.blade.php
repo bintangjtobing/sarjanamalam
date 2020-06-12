@@ -120,9 +120,10 @@
                         </div>
                         @yield('contentauth')
                         <div class="other-links">
-                            <span>Atau login / daftar menggunakan </span><a href="/auth/facebook"
-                                target="_blank">Facebook</a><a href="/auth/google" target="_blank">Google</a><a
-                                href="/auth/twitter" target="_blank">Twitter</a>
+                            <?php $year = date('Y'); ?>
+                            <span>&copy; {{$year}} Sarjanamalam - beta version</span><a
+                                href="/tentang-sarjana-malam">Tentang Kami</a>
+                            <a href="/privacy">Privasi</a>
                         </div>
                     </div>
                 </div>

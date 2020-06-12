@@ -82,6 +82,7 @@
     </div>
 </div>
 @endif
+@if(Auth::check())
 <div class="post-item">
     <div class="card">
         <div class="card-body">
@@ -129,5 +130,39 @@
         </div>
     </div>
 </div>
+@else
+<div class="post-item">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-text">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h4><b>Ayo kita bahas selengkapnya di forum ini.</b></h4>
+                    </div>
+                </div>
+            </div>
+            <form action="/response-comments/{{$enc_id}}" method="post">
+                {{ csrf_field() }}
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-lg-6 my-3">
+                            <form action="/signin">
+                                <button type="submit" class="btn btn-primary btn-block btn-lg">Login
+                                    Account</button>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 my-3">
+                            <form action="/register">
+                                <button type="submit" class="btn btn-success btn-block btn-lg">Create Your
+                                    Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endif
 @endforeach
 @endsection

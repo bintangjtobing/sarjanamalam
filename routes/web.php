@@ -60,8 +60,8 @@ Route::get('/sarjanamalam-peduli-sehat', 'OptionalController@index');
 
 // HOMEPAGE WEB ROUTE
 Route::get('/', function () {
-    $tokens = bin2hex(openssl_random_pseudo_bytes(64));
-    return redirect('/signin/' . $tokens);
+    $csrf_token = bin2hex(openssl_random_pseudo_bytes(64));
+    return redirect('/forum/' . $csrf_token);
 });
 Route::get('/signin/{tokens}', function () {
     return view('homepage.login');
@@ -111,6 +111,7 @@ Route::post('/kirim-pesan', 'companyController@kirimpesan');
 Route::get('/request-ad-event', 'companyController@requestevent');
 Route::get('/read-blog/{blog_id}/{tokens}', 'companyController@readblog');
 
+Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', function () {
@@ -121,7 +122,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/add-new-topic/{csrf_token}', 'ForumController@addnewtopic');
     Route::post('/verify-add-new-topic/{tokens}', 'ForumController@verifyadd');
     Route::get('/delete-threads/{id}/verify/{tokens}', 'ForumController@deletethreads');
-    Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
+    // Route::get('/details/{enc_id}', 'ForumController@detailsthreads');
     Route::post('/response-comments/{enc_id}', 'ForumController@comments');
     Route::get('/search-events/{tokens}', 'ForumController@searchforum');
     Route::get('/jobs/{tokens}', 'ForumController@jobs');

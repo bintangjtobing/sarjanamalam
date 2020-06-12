@@ -65,18 +65,24 @@
                             </li>
                             <li>
                                 <div class="p-dropdown">
-                                    <a href="#"><img
+                                    <a href="#">
+                                        @if(Auth::check())<img
                                             src="@if(!auth()->user()->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                             @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.auth()->user()->displaypic)!!}@endif"
                                             alt="Profile picture"
-                                            class="img-roundedforum"></a>@if(auth()->user()->verified==1)
-                                    <span title="Verified"
-                                        style="position: relative; margin-left: -15px; margin-top: 25px; border-radius: 50%;top: 15px; right: 3px;">
-                                        <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
-                                            alt="Verified" style="width:15px !important; height:15px !important;
+                                            class="img-roundedforum">@if(auth()->user()->verified==1)
+                                        <span title="Verified"
+                                            style="position: relative; margin-left: -15px; margin-top: 25px; border-radius: 50%;top: 15px; right: 3px;">
+                                            <img src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
+                                                alt="Verified" style="width:15px !important; height:15px !important;
                                             margin-left:2px;position:relative;"></span>
-                                    @else
-                                    @endif
+                                        @else
+                                        @endif
+                                        @else
+                                        <img src="{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}"
+                                            alt="Profile picture" class="img-roundedforum">
+                                        @endif</a>
+                                    @if(Auth::check())
                                     <?php $enc_id = Crypt::encrypt(auth()->user()->id); ?>
                                     <ul class="p-dropdown-content">
                                         <?php $enc_id = base64_encode(auth()->user()->id) ?>
@@ -88,6 +94,14 @@
                                         </li>
                                         <li><a href="/logout/{{auth()->user()->id}}/{{$tokens}}">Sign out</a></li>
                                     </ul>
+                                    @else
+                                    <ul class="p-dropdown-content">
+                                        <li>Already have an account?</a>
+                                        </li>
+                                        <li><a href="/">Login / Create Your Account</a>
+                                        </li>
+                                    </ul>
+                                    @endif
                                 </div>
                             </li>
 

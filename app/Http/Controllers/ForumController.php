@@ -9,6 +9,7 @@ use \App\Thread;
 use \App\UserMod;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\MessageBag;
+use Illuminate\Support\Facades\Auth;
 
 class ForumController extends Controller
 {
@@ -71,11 +72,18 @@ class ForumController extends Controller
         $category_data = DB::table('category')
             ->select('category.*')
             ->get();
-        $threadsActive = DB::table('threads')
-            ->join('users', 'users.id', '=', 'threads.id')
-            ->where('threads.created_by', '=', auth()->user()->name)
-            ->select('threads.*', 'users.*')
-            ->get();
+        if (Auth::check()) {
+            $threadsActive = DB::table('threads')
+                ->join('users', 'users.id', '=', 'threads.id')
+                ->where('threads.created_by', '=', auth()->user()->name)
+                ->select('threads.*', 'users.*')
+                ->get();
+        } else {
+            $threadsActive = DB::table('threads')
+                ->join('users', 'users.id', '=', 'threads.id')
+                ->select('threads.*', 'users.*')
+                ->get();
+        }
 
         $view = \App\Thread::find($decrypt);
         $view->view_count += 1;

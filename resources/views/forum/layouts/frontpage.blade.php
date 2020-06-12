@@ -144,19 +144,22 @@
         <section id="page-content" class="sidebar-both">
             <div class="container">
                 <div class="row">
+                    @if(Auth::check())
                     <div class="sidebar sticky-sidebar col-lg-3">
                         <div class="widget widget-tags mb-3">
                             <h3 class="widget-title">5 Trendic Topics</h3>
                             <ul class="list list-arrow-icons" style="margin-bottom:0 !important;">
                                 @foreach ($countdesc as $count)
-
+                                <?php $enc_id = Crypt::encrypt($count->id); ?>
                                 <li class="lilist"><a class="trend-list"
                                         href="/details/{{$enc_id}}/">{{Str::limit($count->subject, 40)}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
                     </div>
-                    <div class="content col-lg-9">
+                    @else
+                    @endif
+                    <div class="content @if(!Auth::check())col-lg-12 @else col-lg-9 @endif">
                         @yield('content')
                     </div>
                 </div>

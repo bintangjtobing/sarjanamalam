@@ -96,10 +96,9 @@
                                     </ul>
                                     @else
                                     <ul class="p-dropdown-content">
-                                        <li>Already have an account?</a>
+                                        <li><a href="/">Login Account</a>
                                         </li>
-                                        <li><a href="/">Login / Create Your Account</a>
-                                        </li>
+                                        <li><a href="/register">Create your account</a></li>
                                     </ul>
                                     @endif
                                 </div>
@@ -116,6 +115,7 @@
                                 <ul>
                                     <li class="dropdown"><a href="#">@yield('discover') <i
                                                 class="fas fa-caret-down"></i></a>
+                                        @if(Auth::check())
                                         <ul class="dropdown-menu">
                                             <li><a href="/forum/{{$tokens}}"
                                                     class="@yield('aktifdw-threads')">Threads</a></li>
@@ -125,6 +125,8 @@
                                             <li><a href="/jobs/{{$tokens}}" class="@yield('aktifdw-jobs')">Jobs</a>
                                             </li>
                                         </ul>
+                                        @else
+                                        @endif
                                     </li>
                                     <li>
                                         <form action="/search?" method="GET"><input type="search" class="search-for"

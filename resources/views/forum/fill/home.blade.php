@@ -32,12 +32,16 @@
         <div class="ac-item ac-active">
             <h5 class="ac-title my-3"><i class="fa fa-rocket"></i> Bagikan topik baru</h5>
             <div class="ac-content">
-                <form action="/verify-add-new-topic/{{$tokens}}" method="post">
+                <form action="/verify-add-new-topic/{{$tokens}}" enctype="multipart/form-data" method="post">
                     {{ csrf_field() }}
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-8">
                             <label for="">Judul topik pembahasan</label>
                             <input type="text" name="subject" id="subject" class="form-control mb-3" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="">Foto sampul</label>
+                            <input type="file" name="photofeatures" id="photofeatures" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -52,8 +56,8 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12 mb-3">
-                            <textarea name="threads" id="newwrite" placeholder="Tulis disini" cols="30" rows="10"
-                                autofocus required></textarea>
+                            <textarea name="threads" id="newwrite" placeholder="Apa yang ingin kamu bagikan hari ini?"
+                                cols="30" rows="10" autofocus required></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -102,8 +106,13 @@
                     <h4><a href="/details/{{$enc_id}}/" style="font-weight: 600;">{{$thread->subject}}</a> </h4>
                     <p class="muted-text">Dibuat {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
                 </div>
-                <div class="card-text">
+                <div class="card-text my-3">
                     <p>{!!Str::limit($thread->thread, 120);!!}</p>
+                    @if(!$thread->photofeatures == '')
+                    <img class="imgthreads-forum" src="{!!asset('file/forum/'.$thread->photofeatures)!!}"
+                        alt="{{$thread->subject}} thumbnail image">
+                    @else
+                    @endif
                 </div>
                 <div class="card-text">
                     <div class="row">

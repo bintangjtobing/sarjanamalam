@@ -6475,6 +6475,12 @@ h6.font-parisienne {
     border-radius: 50%;
 }
 
+.post-item .imgthreads-forum {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+}
+
 .post-item .post-image,
 .post-item .post-slider,
 .post-item .post-video,

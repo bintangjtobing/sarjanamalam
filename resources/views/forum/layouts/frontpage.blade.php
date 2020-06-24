@@ -159,7 +159,7 @@
                     </div>
                     @else
                     @endif
-                    <div class="content @if(!Auth::check())col-lg-12 @else col-lg-9 @endif">
+                    <div class="content @if(!Auth::check())col-lg-12 @else col-lg-7 @endif">
                         @yield('content')
                     </div>
                 </div>
@@ -206,10 +206,10 @@
     <script>
         tinymce.init({
             selector: 'textarea#newwrite',
-            toolbar: false,
-            statusbar: false,
+            toolbar: true,
+            statusbar: true,
             branding: false,
-            menubar: false,
+            menubar: true,
             setup: function (editor) {
                 editor.on('change', function (e) {
                     editor.save();

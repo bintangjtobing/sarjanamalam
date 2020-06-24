@@ -138,6 +138,7 @@ class ForumController extends Controller
      */
     public function verifyadd(Request $request)
     {
+
         // $ip = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"));
         $threadsnew = new \App\Thread;
         $threadsnew->subject = $request->subject;
@@ -148,9 +149,18 @@ class ForumController extends Controller
         $threadsnew->logIp = $request->getClientIp();
         $threadsnew->created_by = auth()->user()->id;
         $threadsnew->updated_by = auth()->user()->name;
+        if (!$request->hasFile('photofeatures')) {
+            $threadsnew->save();
+        } else {
+            $avatar = $request->file('photofeatures');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            $request->file('photofeatures')->move('file/forum/', $filename);
+            $threadsnew->photofeatures = $filename;
+            $threadsnew->save();
+        }
         $threadsnew->save();
-
         return back()->with('suksestambahdiskusi', 'Yes! Topik diskusi kamu sudah berhasil diterbitkan.');
+        // dd($threadsnew);
     }
 
     public function comments($enc_id, Request $request)

@@ -34,6 +34,11 @@
                                 @else {{$thread->view_count}} view @endif</a></span></p>
                 </div>
                 <div class="card-text">
+                    @if(!$thread->photofeatures == '')
+                    <img class="imgthreads-forum" src="{!!asset('file/forum/'.$thread->photofeatures)!!}"
+                        alt="{{$thread->subject}} thumbnail image">
+                    @else
+                    @endif
                     <p>{!!$thread->thread!!}</p>
                 </div>
                 <hr>

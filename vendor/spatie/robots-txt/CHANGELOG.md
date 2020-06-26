@@ -2,6 +2,14 @@
 
 All notable changes to `robots-txt` will be documented in this file
 
+## 1.0.7 - 2020-04-29
+
+- fix find robots meta tag line if minified code (#23)
+
+## 1.0.6 - 2020-04-07
+
+- fix headers checking (nofollow, noindex) for custom userAgent (#21)
+
 ## 1.0.5 - 2019-08-08
 
 - improvements around handling of wildcards, end-of-string, query string

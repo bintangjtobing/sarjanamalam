@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/crawler.svg?style=flat-square)](https://packagist.org/packages/spatie/crawler)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/spatie/crawler/master.svg?style=flat-square)](https://travis-ci.org/spatie/crawler)
+![run-tests](https://github.com/spatie/crawler/workflows/run-tests/badge.svg)
 [![StyleCI](https://styleci.io/repos/45406338/shield)](https://styleci.io/repos/45406338)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/crawler.svg?style=flat-square)](https://packagist.org/packages/spatie/crawler)
 
@@ -25,7 +25,6 @@ composer require spatie/crawler
 The crawler can be instantiated like this
 
 ```php
-
 use Spatie\Crawler\Crawler;
 
 Crawler::create()
@@ -233,12 +232,23 @@ Crawler::create()
 
 ## Add a delay between requests
 
-In some cases you might get rate-limited when crawling too agressively. To circumvent this, you can use the `setDelayBetweenRequests()` method to add a pause between every request. This value is expressed in miliseconds.
+In some cases you might get rate-limited when crawling too aggressively. To circumvent this, you can use the `setDelayBetweenRequests()` method to add a pause between every request. This value is expressed in milliseconds.
 
 ```php
 Crawler::create()
     ->setDelayBetweenRequests(150) // After every page crawled, the crawler will wait for 150ms
 ```
+
+## Limiting which content-types to parse
+
+By default, every found page will be downloaded (up to `setMaximumResponseSize()` in size) and parsed for additional links. You can limit which content-types should be downloaded and parsed by setting the `setParseableMimeTypes()` with an array of allowed types.
+
+```php
+Crawler::create()
+    ->setParseableMimeTypes(['text/html', 'text/plain'])
+```
+
+This will prevent downloading the body of pages that have different mime types, like binary files, audio/video, ... that are unlikely to have links embedded in them. This feature mostly saves bandwidth.
 
 ## Using a custom crawl queue
 
@@ -253,7 +263,7 @@ Crawler::create()
     ->setCrawlQueue(<implementation of \Spatie\Crawler\CrawlQueue\CrawlQueue>)
 ```
 
-Here 
+Here
 
 - [ArrayCrawlQueue](https://github.com/spatie/crawler/blob/master/src/CrawlQueue/ArrayCrawlQueue.php)
 - [CollectionCrawlQueue](https://github.com/spatie/crawler/blob/master/src/CrawlQueue/CollectionCrawlQueue.php) (`Illuminate\Support\Collection` or `Tightenco\Collect\Support\Collection`)
@@ -269,12 +279,18 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Testing
 
+First, install the Puppeteer dependency, or your tests will fail.
+
+```
+npm install puppeteer
+```
+
 To run the tests you'll have to start the included node based server first in a separate terminal window.
 
 ```bash
 cd tests/server
 npm install
-./start_server.sh
+node server.js
 ```
 
 With the server running, you can start testing.

@@ -2,6 +2,22 @@
 
 All notable changes to `spatie/crawler` will be documented in this file.
 
+## 4.7.2 - 2020-05-06
+
+- only crawl links that are completely parsed
+
+## 4.7.1 - 2020-04-14
+
+- fix curl streaming responses (#295)
+
+## 4.7.0 - 2020-04-14
+
+- add `setParseableMimeTypes()` (#293)
+
+## 4.6.9 - 2020-04-11
+
+- fix LinkAdder not receiving the updated DOM (#292)
+
 ## 4.6.8 - 2020-03-12
 
 - allow tightenco/collect 7 (#282)

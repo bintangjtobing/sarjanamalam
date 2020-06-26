@@ -35,9 +35,26 @@ Browsershot also can get the body of an html page after JavaScript has been exec
 Browsershot::url('https://example.com')->bodyHtml(); // returns the html of the body
 ```
 
+If you wish to retrieve an array list with all of the requests that the page triggered you can do so:
+
+```php
+$requests = Browsershot::url('https://example.com')
+    ->triggeredRequests();
+
+foreach ($requests as $request) {
+    $url = $request['url']; //https://example.com/
+}
+```
+
+**`triggeredRequests()` works well with `waitUntilNetworkIdle` as described [here](#waiting-for-lazy-loaded-resources)**
+
 ## Support us
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us). 
+Learn how to create a package like this one, by watching our premium video course:
+
+[![Laravel Package training](https://spatie.be/github/package-training.jpg)](https://laravelpackage.training)
+
+We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
 We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
@@ -61,7 +78,7 @@ On a [Forge](https://forge.laravel.com) provisioned Ubuntu 16.04 server you can 
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt-get install -y nodejs gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+sudo apt-get install -y nodejs gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libgbm-dev
 sudo npm install --global --unsafe-perm puppeteer
 sudo chmod -R o+rx /usr/lib/node_modules/puppeteer/.local-chromium
 ```
@@ -229,7 +246,6 @@ Browsershot::url('https://example.com')
     ->save($pathToImage);
 ```
 
-
 #### Taking a full page screenshot
 
 You can take a screenshot of the full length of the page by using `fullPage()`.
@@ -266,7 +282,7 @@ Browsershot::url('https://example.com')
 
 #### Device emulation
 
-You can emulate a device view with the `device` method. The devices' names can be found [Here](https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js).
+You can emulate a device view with the `device` method. The devices' names can be found [Here](https://github.com/puppeteer/puppeteer/blob/master/src/DeviceDescriptors.ts).
 
 ```php
 $browsershot = new Browsershot('https://example.com', true);
@@ -393,7 +409,6 @@ Browsershot::url('https://example.com')
     ->save($pathToImage);
 ```
 
-
 #### Output directly to the browser
 You can output the image directly to the browser using the `screenshot()` method.
 
@@ -470,7 +485,6 @@ Browsershot::html($someHtml)
 ```
 
 Optionally you can give a custom unit to the `margins` as the fifth parameter.
-
 
 #### Headers and footers
 
@@ -595,7 +609,7 @@ Browsershot::url('https://example.com')
 
 #### Setting the CSS media type of the page
 
-You can emulate the media type, especially usefull when you're generating pdf shots, because it will try to emulate the print version of the page by default.
+You can emulate the media type, especially useful when you're generating pdf shots, because it will try to emulate the print version of the page by default.
 
 ```php
 Browsershot::url('https://example.com')
@@ -613,7 +627,7 @@ Browsershot::url('https://example.com')
 
 #### Disable sandboxing
 
-When running Linux in certain virtualization enviroments it might need to disable sandboxing.
+When running Linux in certain virtualization environments it might need to disable sandboxing.
 
 ```php
 Browsershot::url('https://example.com')
@@ -753,7 +767,6 @@ Browsershot::url('https://example.com')
 ## Related packages
 
 * Laravel wrapper: [laravel-browsershot](https://github.com/verumconsilium/laravel-browsershot)
-
 
 ## Contributing
 

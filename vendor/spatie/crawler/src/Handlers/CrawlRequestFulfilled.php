@@ -31,7 +31,7 @@ class CrawlRequestFulfilled
 
     public function __invoke(ResponseInterface $response, $index)
     {
-        $body = $this->convertBodyToString($response->getBody(), $this->crawler->getMaximumResponseSize());
+        $body = $this->getBody($response);
 
         $robots = new CrawlerRobots(
             $response->getHeaders(),
@@ -42,9 +42,9 @@ class CrawlRequestFulfilled
         $crawlUrl = $this->crawler->getCrawlQueue()->getUrlById($index);
 
         if ($this->crawler->mayExecuteJavaScript()) {
-            $html = $this->getBodyAfterExecutingJavaScript($crawlUrl->url);
+            $body = $this->getBodyAfterExecutingJavaScript($crawlUrl->url);
 
-            $response = $response->withBody(stream_for($html));
+            $response = $response->withBody(stream_for($body));
         }
 
         if ($robots->mayIndex()) {
@@ -86,11 +86,24 @@ class CrawlRequestFulfilled
 
     protected function convertBodyToString(StreamInterface $bodyStream, $readMaximumBytes = 1024 * 1024 * 2): string
     {
-        $bodyStream->rewind();
+        if ($bodyStream->isSeekable()) {
+            $bodyStream->rewind();
+        }
 
         $body = $bodyStream->read($readMaximumBytes);
 
         return $body;
+    }
+
+    protected function getBody(ResponseInterface $response): string
+    {
+        $contentType = $response->getHeaderLine('Content-Type');
+
+        if (! $this->isMimetypeAllowedToParse($contentType)) {
+            return '';
+        }
+
+        return $this->convertBodyToString($response->getBody(), $this->crawler->getMaximumResponseSize());
     }
 
     protected function getBodyAfterExecutingJavaScript(UriInterface $url): string
@@ -100,5 +113,24 @@ class CrawlRequestFulfilled
         $html = $browsershot->setUrl((string) $url)->bodyHtml();
 
         return html_entity_decode($html);
+    }
+
+    protected function isMimetypeAllowedToParse($contentType): bool
+    {
+        if (empty($contentType)) {
+            return true;
+        }
+
+        if (! count($this->crawler->getParseableMimeTypes())) {
+            return true;
+        }
+
+        foreach ($this->crawler->getParseableMimeTypes() as $allowedType) {
+            if (stristr($contentType, $allowedType)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

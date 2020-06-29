@@ -256,8 +256,7 @@
                             @endif
                             @endforeach</p>
                         </div>
-
-                        <hr>
+                        {{-- <hr>
                         <div class="row text-center col-newgen">
                             <div class="col-6 bord">
                                 <h3>698</h3>
@@ -267,7 +266,7 @@
                                 <h3>1K+</h3>
                                 <p>Impress</p>
                             </div>
-                        </div>
+                        </div> --}}
                         @foreach ($user as $us)
                         @if(Auth()->user()->id == $us->id)
                         <hr>

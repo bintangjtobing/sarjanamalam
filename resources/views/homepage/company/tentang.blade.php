@@ -20,7 +20,6 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
         </div>
     </div>
 </section>
-
 <section class="background-grey text-center">
     <div class="container">
         <div class="row">

@@ -121,7 +121,7 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
             </div>
         </div>
         <div class="row">
-            <div class="offset-4 col-lg-4">
+            <div class="offset-2 col-lg-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
@@ -138,24 +138,24 @@ dalam mencari tempat untuk saling berbagi ide dan saling berinteraksi untuk mere
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-lg-4">
+            <div class="col-lg-4">
                 <div class="card text-center">
                     <div class="card-body">
                         <h5 class="card-title"><img
-                                src="https://res.cloudinary.com/sarjanamalam/image/upload/v1586243803/Sarjanaku/based/icon_owwtuf.png"
+                                src="https://res.cloudinary.com/sarjanamalam/image/upload/v1593165282/branchlink_log_idasfz.png"
                                 alt=""></h5>
-                        <h4>Sarjanaku</h4>
-                        <p class="card-text">Supporting you in your projects. We are integrated trusted technology
-                            partner.
+                        <h4>Branchlink.in</h4>
+                        <p class="card-text">Create custom of your archives
+                            of links in one page - no purchasing needed.
                         </p>
-                        <a href="#" target="_blank" class="card-link"><b>Get Started</b></a>
+                        <a href="https://branchlink.in" target="_blank" class="card-link"><b>Get Started</b></a>
                         <a href="/hubungi-sarjanamalam" class="card-link"><b>Help</b></a>
                         <img class="mockup-build img-responsive"
-                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1588389948/sarjanaku_vca4n2.png"
+                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1593165700/branclink_prev_w6uksf.png"
                             alt="">
                     </div>
                 </div>
-            </div> --}}
+            </div>
             {{-- <div class="col-lg-6">
                 <div class="card text-center">
                     <div class="card-body">

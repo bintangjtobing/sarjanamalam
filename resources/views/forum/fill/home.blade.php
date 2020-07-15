@@ -57,7 +57,7 @@
                     <div class="row">
                         <div class="col-lg-12 mb-3">
                             <textarea name="threads" id="newwrite" placeholder="Apa yang ingin kamu bagikan hari ini?"
-                                cols="30" rows="10" autofocus required></textarea>
+                                cols="30" rows="30" autofocus required></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -73,80 +73,68 @@
         </div>
     </div>
 </div>
-<div id="blog">
-    @foreach ($threadsdata as $thread)
-    <div class="post-item">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-lg-8 text-left">
-                            <p><span class="post-meta-date"><img
-                                        src="@if(!$thread->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
+<div class="row">
+    <div id="blog" class="" data-item="post-item">
+        @foreach ($threadsdata as $thread)
+        <div class="post-item border col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <div class="row">
+                            <div class="col-lg-8 text-left">
+                                <p><span class="post-meta-date"><img
+                                            src="@if(!$thread->displaypic){!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/v1583995015/sa-default_mdrqnt.png')!!}
                                         @else{!!asset('https://res.cloudinary.com/sarjanamalam/image/upload/'.$thread->displaypic)!!}@endif"
-                                        alt="img-profile-user" class="img-fluid thread-profilepic">
-                                    <a href="/{{$thread->username}}"
-                                        style="color: #3c3c3c !important; font-weight:600;">{{$thread->name}}</a></span>
-                                @if($thread->verified==1)
-                                <span title="Verified"><img
-                                        src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
-                                        alt="Verified"
-                                        style="width:15px !important; height:15px !important; margin-left:.10rem;"></span>
-                                @else
-                                @endif
-                            </p>
-                        </div>
-                        <div class="col-lg-4 text-right">
-                            <span class="text-gradient-blue-sarjana">#{{$thread->category}}</span>
+                                            alt="img-profile-user" class="img-fluid thread-profilepic">
+                                        <a href="/{{$thread->username}}"
+                                            style="color: #3c3c3c !important; font-weight:600;">{{$thread->name}}</a></span>
+                                    @if($thread->verified==1)
+                                    <span title="Verified"><img
+                                            src="https://res.cloudinary.com/sarjanamalam/image/upload/v1585802082/based/eight-check-verified_ge92d7.png"
+                                            alt="Verified"
+                                            style="width:15px !important; height:15px !important; margin-left:.10rem;"></span>
+                                    @else
+                                    @endif
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-title">
-                    <?php $enc_id = Crypt::encrypt($thread->id); ?>
-                    <h4><a href="/details/{{$enc_id}}/" style="font-weight: 600;">{{$thread->subject}}</a> </h4>
-                    <p class="muted-text">Dibuat {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}</p>
-                </div>
-                <div class="card-text my-3">
-                    <p>{!!Str::limit($thread->thread, 120);!!}</p>
-                    @if(!$thread->photofeatures == '')
-                    <img class="imgthreads-forum" src="{!!asset('file/forum/'.$thread->photofeatures)!!}"
-                        alt="{{$thread->subject}} thumbnail image">
-                    @else
-                    @endif
-                </div>
-                <div class="card-text">
-                    <div class="row">
-                        <div class="col-lg-7 text-left">
-                            {{-- <span style="font-size: .75rem;" class="mr-3"><a href="#"><i class="fas fa-bookmark"></i>
-                                    1,985
-                                    favorited</a></span> --}}
-                            <span style="font-size: .75rem;" class="mr-2"><a href="#"><i class="far fa-eye"></i>
-                                    @if($thread->view_count>999){{$thread->view_count/1000}}
-                                    views
-                                    @elseif($thread->view_count>1){{$thread->view_count}}
-                                    views
-                                    @else {{$thread->view_count}} view @endif</a></span>
-                            <span style="font-size: .75rem;"><a href="#"><i class="fas fa-comment"></i>
-                                    {{$commentData->count()}} response</a></span>
-
-                        </div>
+                    <div class="card-title">
+                        <?php $enc_id = Crypt::encrypt($thread->id); ?>
+                        <h4><a href="/details/{{$enc_id}}/" style="font-weight: 600;">{{$thread->subject}}</a> </h4>
                     </div>
-                </div>
-                <div class="card-text my-3">
-                    <div class="row">
-                        <div class="col-lg-12 text-left">
-                            {{-- <span style="font-size: 1rem;" class="mr-3"><a><i class="bookmark far fa-bookmark"></i>
-                                    Favorite</a></span> --}}
-                            <span style="font-size: 1rem;"><a href="/details/{{$enc_id}}"><i class="far fa-comment"></i>
-                                    Gabung pembahasan</a></span>
+                    <div class="card-text my-3">
+                        @if(!$thread->photofeatures == '')
+                        <img class="imgthreads-forum" src="{!!asset('file/forum/'.$thread->photofeatures)!!}"
+                            alt="{{$thread->subject}} thumbnail image">
+                        @else
+                        @endif
+                        <p>{!!Str::limit($thread->thread, 120);!!}</p>
+                    </div>
+                    <div class="card-text">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 text-left">
+                                <span style="font-size:.75rem;">Dibuat
+                                    {{Carbon\Carbon::parse($thread->created_at)->diffForHumans()}}
+                                </span>
+                            </div>
+                            <div class="col-lg-6 col-md-12 text-right">
+                                <span style="font-size: .75rem;" class="mr-2"><a href="#"><i class="far fa-eye"></i>
+                                        @if($thread->view_count>999){{$thread->view_count/1000}}
+                                        views
+                                        @elseif($thread->view_count>1){{$thread->view_count}}
+                                        views
+                                        @else {{$thread->view_count}} view @endif</a></span>
+                                <span style="font-size: .75rem;"><a href="#"><i class="fas fa-comment"></i>
+                                        {{$commentData->count()}} response</a></span>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 <ul class="pagination justify-content-center">
     {{$threadsdata->links()}}

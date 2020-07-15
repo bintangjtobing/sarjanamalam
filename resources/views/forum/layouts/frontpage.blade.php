@@ -14,6 +14,20 @@
     <meta name="language" content="English">
     <meta name="author" content="Sarjanamalam.">
     <meta name="keywords" content="sarjanamalam, sarjanamalam communities, sarjana,malam, communities, forum online">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "Sarjanamalam",
+            "url": "https://sarjanamalam.com/tentang-sarjana-malam",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sarjanamalam.com/{search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+
+    </script>
     <?php $tokens  = bin2hex(openssl_random_pseudo_bytes(64)); ?>
 
     {{-- CUSTOM CSS --}}
@@ -159,7 +173,7 @@
                     </div>
                     @else
                     @endif
-                    <div class="content @if(!Auth::check())col-lg-12 @else col-lg-7 @endif">
+                    <div class="content @if(!Auth::check())col-lg-12 @else col-lg-9 @endif">
                         @yield('content')
                     </div>
                 </div>
@@ -167,34 +181,21 @@
         </section>
 
     </div>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "WebSite",
-            "name": "Sarjanamalam",
-            "url": "https://sarjanamalam.com/tentang-sarjana-malam",
-            "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://sarjanamalam.com/{search_term_string}",
-                "query-input": "required name=search_term_string"
-            }
-        }
 
-    </script>
     <script src="{!!asset('js/jquery.js')!!}"></script>
     <script src="{!!asset('js/plugins.js')!!}"></script>
     <script src="{!!asset('js/functions.js')!!}"></script>
+    <script src="{!!asset('js/metafizzy/infinite-scroll.min.js')!!}"></script>
     <script type='text/javascript'
         src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIus-_huNW25Jl7RPmHgoGZjD5udgBMI'>
     </script>
     <script src="{!!asset('js/gmap3.min.js')!!}"></script>
     <script src="{!!asset('js/map-styles.js')!!}"></script>
-    <script src="{!!asset('css/new/plugins/js/infinite-scroll.min.js')!!}"></script>
 
     {{-- Javacript started --}}
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    {{-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+    </script> --}}
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -206,10 +207,15 @@
     <script>
         tinymce.init({
             selector: 'textarea#newwrite',
+            height: 600,
             toolbar: true,
-            statusbar: true,
+            statusbar: false,
             branding: false,
             menubar: true,
+            mobile: {
+                menubar: true
+            }
+            plugins: 'lists code emoticons',
             setup: function (editor) {
                 editor.on('change', function (e) {
                     editor.save();
@@ -221,10 +227,15 @@
     <script>
         tinymce.init({
             selector: 'textarea',
+            height: 600,
             toolbar: true,
             statusbar: false,
             branding: false,
-            menubar: false,
+            menubar: true,
+            mobile: {
+                menubar: true
+            }
+            plugins: 'lists code emoticons',
             setup: function (editor) {
                 editor.on('change', function (e) {
                     editor.save();

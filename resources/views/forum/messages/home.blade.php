@@ -35,7 +35,7 @@
                                             <span class="badge badge-light">{{$user->unread}}</span>
                                             @endif
                                             </h5>
-                                            <p class="muted-text">{{$user->email}}</p>
+                                            <p class="muted-text">{{$user->username}}</p>
                                     </div>
                                 </div>
                                 @endforeach

@@ -60,11 +60,14 @@ kamu ingin cari tau.')
     <div class="form-row">
         <div class="col-md-6">
             <input class="form-control" type="password" name="password" id="password" placeholder="Password" required
-                pattern=".{8,}">
+                pattern=".{8,}" oninvalid="setCustomValidity('Minimal character password adalah 8 abjad/angka. ')"
+                onchange="try{setCustomValidity('')}catch(e){}">
         </div>
         <div class="col-md-6">
             <input class="form-control" type="password" name="ver_password" id="ver_password"
-                placeholder="Ulangi password" required pattern=".{8,}">
+                placeholder="Ulangi password" required pattern=".{8,}"
+                oninvalid="setCustomValidity('Minimal character password adalah 8 abjad/angka. ')"
+                onchange="try{setCustomValidity('')}catch(e){}">
         </div>
     </div>
 

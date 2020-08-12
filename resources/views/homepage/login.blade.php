@@ -20,7 +20,9 @@ kamu ingin cari tau.')
 <form action="/get-verification/{{$tokens}}" method="post">
     @csrf
     <input class="form-control" type="text" name="username" placeholder="Username" required autofocus>
-    <input class="form-control" type="password" name="password" placeholder="Password" required>
+    <input class="form-control" type="password" name="password" placeholder="Password" required pattern=".{8,}"
+        oninvalid="setCustomValidity('Minimal character password adalah 8 abjad/angka. ')"
+        onchange="try{setCustomValidity('')}catch(e){}">
     {{-- <input type="checkbox" id="chk1"><label for="chk1">Remeber me</label> --}}
     <div class="form-button">
         <button id="submit" type="submit" class="ibtn">Login</button></form> <a href="" data-toggle="modal"
